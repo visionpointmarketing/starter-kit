@@ -1,0 +1,46 @@
+@mixin floatblock(){
+	display:block;
+	float:left;
+	width:100%;
+}
+@mixin floatblock-r(){
+	display:block;
+	float:right;
+	width:100%;
+}
+@mixin centerblock($maxwidth){
+	display:block;
+	width:100%;
+	margin:auto;
+	clear:both;
+	max-width:$maxwidth;
+}
+@mixin eq-p(){
+	overflow:hidden;
+}
+@mixin eq(){
+	padding-bottom:2000px;
+	margin-bottom:-2000px;
+}
+@mixin font($weight-keyword,$size,$lineheight,$stack,$weight:""){
+	font: $weight-keyword #{$size}/#{$lineheight} $stack;
+	font-weight:#{$weight};
+}
+@mixin gradient($start,$end){
+	background-color: $end; // Old browsers
+	@include filter-gradient($start, $end, horizontal); // IE6-9
+	background-image: -ms-linear-gradient(left, $start 0%, $end 60%);
+	@include background-image(linear-gradient(left,  $start 0%,$end 60%));
+}
+@mixin gradient-v($start,$end){
+	background-color: $end; // Old browsers
+	@include filter-gradient($start, $end, vertical); // IE6-9
+	background-image: -ms-linear-gradient(top, $start 0%, $end 60%);
+	@include background-image(linear-gradient(top,  $start 0%,$end 60%));
+}
+@mixin transition($time,$type,$element:"all"){
+	-webkit-transition:		$element $time $type;
+	-moz-transition:		$element $time $type;
+	-o-transition:			$element $time $type;
+	transition:				$element $time $type;
+}
