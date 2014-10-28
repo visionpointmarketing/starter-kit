@@ -116,14 +116,21 @@ h2{
 	width:auto;
 	position: absolute;
 	right: 10px;
+	background:white;
 	h2.block__title{
 		float:right;
 		cursor:pointer;
 		border:1px solid black;
 		padding:5px;
 		border-radius:5px;
+		font-size:14px;
+		line-height:14px;
 		&:before{
 			display:none!important;
+		}
+		&:hover{
+			background:$ltgray;
+			color:black;
 		}
 	}
 	.block__content{
@@ -135,7 +142,7 @@ h2{
 		right: 0;
 		border: 1px solid #444;
 		border-radius: 5px;
-		padding: 5px;
+		padding: 0 5px;
 		box-shadow: 0 0 10px rgba(0,0,0,0.7);
 		form.user-login-form{
 			.form-item{
@@ -161,11 +168,15 @@ h2{
 			#edit-actions{
 				display:block;
 				margin:5px auto;
-				width:60px;
+				width:100%;
+				input{
+					width:100%;
+				}
 			}
 		}
 		&.open{
 			display:block;
+			z-index:1;
 		}
 	}
 }
@@ -233,6 +244,7 @@ h2{
 					}
 				}
 			}
+			/*second level down*/
 			ul{
 				margin-left:10px;
 				width:calc(100% - 10px);

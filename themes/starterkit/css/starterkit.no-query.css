@@ -98,15 +98,21 @@ h2 {
   display: block;
   width: auto;
   position: absolute;
-  right: 10px; }
+  right: 10px;
+  background: white; }
   #block-user-login h2.block__title {
     float: right;
     cursor: pointer;
     border: 1px solid black;
     padding: 5px;
-    border-radius: 5px; }
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 14px; }
     #block-user-login h2.block__title:before {
       display: none !important; }
+    #block-user-login h2.block__title:hover {
+      background: #d5d5d5;
+      color: black; }
   #block-user-login .block__content {
     display: none;
     position: absolute;
@@ -116,7 +122,7 @@ h2 {
     right: 0;
     border: 1px solid #444;
     border-radius: 5px;
-    padding: 5px;
+    padding: 0 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); }
     #block-user-login .block__content form.user-login-form .form-item {
       display: block;
@@ -137,9 +143,12 @@ h2 {
     #block-user-login .block__content form.user-login-form #edit-actions {
       display: block;
       margin: 5px auto;
-      width: 60px; }
+      width: 100%; }
+      #block-user-login .block__content form.user-login-form #edit-actions input {
+        width: 100%; }
     #block-user-login .block__content.open {
-      display: block; }
+      display: block;
+      z-index: 1; }
 
 /*main menu block*/
 #block-menu-block-1 {
@@ -180,7 +189,8 @@ h2 {
   float: left;
   width: 100%;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  /*second level down*/ }
   #block-menu-block-2 .menu-block-wrapper ul li {
     display: block;
     float: left;
