@@ -20,17 +20,17 @@ html {
           @media (min-width: 45em) {
             html body .l-page .l-header .l-header-first {
               width: 50%;
-              float: right;
+              clear: right;
+              float: left;
               margin-left: 0;
-              margin-right: 0;
-              clear: none; } }
+              margin-right: 0%; } }
           @media (min-width: 70em) {
             html body .l-page .l-header .l-header-first {
               width: 50%;
+              clear: right;
               float: left;
-              margin-right: -100%;
-              margin-left: 0%;
-              clear: none; } }
+              margin-left: 0;
+              margin-right: 0%; } }
         html body .l-page .l-header .l-header-second {
           width: 100%;
           float: right;
@@ -40,17 +40,17 @@ html {
           @media (min-width: 45em) {
             html body .l-page .l-header .l-header-second {
               width: 50%;
+              clear: right;
               float: left;
-              margin-right: -100%;
-              margin-left: 0%;
-              clear: none; } }
+              margin-left: 0;
+              margin-right: 0%; } }
           @media (min-width: 70em) {
             html body .l-page .l-header .l-header-second {
               width: 50%;
-              float: right;
+              clear: right;
+              float: left;
               margin-left: 0;
-              margin-right: 0;
-              clear: none; } }
+              margin-right: 0%; } }
         html body .l-page .l-header .l-header-third {
           width: 100%;
           float: right;
