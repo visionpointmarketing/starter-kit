@@ -45,6 +45,7 @@ layout[default_inner][all][] = css/layouts/default_inner/starterkit_default_inne
 layout[twocolumn][all][] = css/layouts/twocolumn/starterkit_twocolumn.layout.css
 layout[sitemap][all][] = css/layouts/sitemap/starterkit_sitemap.layout.css
 layout[peeler][all][] = css/layouts/sitemap/peeler.layout.css
+layout[longscroll][all][] = css/layouts/longscroll/longscroll.layout.css
 
 ; ========================================
 ; Settings
