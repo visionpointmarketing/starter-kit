@@ -23,10 +23,10 @@ regions[footer_second] = Footer Second
 ; ========================================
 stylesheets[all][] = css/layouts/peeler/peeler.layout.css
 stylesheets[all][] = css/layouts/peeler/peeler.layout.no-query.css
-;stylesheets[all][] = libraries/peeler/css/peeler.css
+; stylesheets[all][] = libraries/peeler/css/peeler.css
 
 ; ========================================
 ; Scripts
 ; ========================================
-scripts[] = libraries/peeler/js/peeler.js
-scripts[] = js/peeler-init.js
+; scripts[] = libraries/peeler/js/peeler.js
+; scripts[] = js/peeler-init.js

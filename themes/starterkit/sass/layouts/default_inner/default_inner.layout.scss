@@ -18,10 +18,7 @@
 @import "../../variables/**/*";
 
 html{
-	background:#ccc;
 	body{
-		max-width:1600px;
-		margin:0 auto;
 		.l-page{
 			@include floatblock();
 			.l-header{
