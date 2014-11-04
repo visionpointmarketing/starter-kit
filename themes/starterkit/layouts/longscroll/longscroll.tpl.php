@@ -90,7 +90,6 @@
         <li class="a2"><a href="#a2"></a></li>
         <li class="a3"><a href="#a3"></a></li>
         <li class="a4"><a href="#a4"></a></li>
-        <li class="a5"><a href="#a5"></a></li>
       </ul>
     </div>
     <div id="content" class="l-main">
@@ -109,9 +108,8 @@
           </div>
         </li>
         <li id="a2"><?php print render($page['above_content']); ?></li>
-        <li id="a3"><?php print render($page['content']); ?></li>
-        <li id="a4"><?php print render($page['below_content']); ?></li>
-        <li id="a5"><?php print render($page['content_footer']); ?></li>
+        <li id="a3"><?php print render($page['below_content']); ?></li>
+        <li id="a4"><?php print render($page['content_footer']); ?></li>
       </ul>
     </div>
   </div>
