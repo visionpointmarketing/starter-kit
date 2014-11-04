@@ -1,15 +1,16 @@
-header {
-  display: block;
-  float: left;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 1; }
-
-footer {
-  display: block;
-  float: left;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  z-index: 1; }
+/* header{
+	display: block;
+	float: left;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+}
+footer{
+	display: block;
+	float: left;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	z-index: 1;
+} */
