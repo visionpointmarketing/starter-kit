@@ -4,7 +4,7 @@ img, media {
 
 .l-header .l-region,
 .l-footer .l-region,
-.l-content-header,
+.l-region--content-header,
 .l-content-center,
 .l-nav-sidebar,
 .l-content-wrapper,
@@ -222,3 +222,44 @@ h2 {
     #block-menu-block-2 .menu-block-wrapper ul ul li.active-trail.active > a {
       border: 2px solid #444444;
       color: #444444; }
+
+/*quicktabs block*/
+.block {
+  display: block;
+  float: left;
+  width: 100%; }
+  .block.block--quicktabs ul.quicktabs-tabs {
+    display: block;
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 0; }
+    .block.block--quicktabs ul.quicktabs-tabs li a {
+      display: block;
+      float: left;
+      border-top: 1px solid #444444;
+      border-left: 1px solid #444444;
+      border-right: 1px solid #444444;
+      border-bottom: 1px solid #444444;
+      padding: 10px;
+      margin: 0 3px;
+      border-radius: 5px 5px 0 0;
+      background: #d5d5d5;
+      text-decoration: none;
+      position: relative;
+      bottom: -1px; }
+    .block.block--quicktabs ul.quicktabs-tabs li.active a {
+      background: white;
+      border-bottom: 1px solid transparent; }
+  .block.block--quicktabs .quicktabs_main {
+    display: block;
+    float: left;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444444; }
+
+html {
+  background: #d5d5d5; }
+  html body {
+    max-width: 1600px;
+    margin: 0 auto; }

@@ -23,7 +23,7 @@
 
 .l-header .l-region,
 .l-footer .l-region,
-.l-content-header,
+.l-region--content-header,
 .l-content-center,
 .l-nav-sidebar,
 .l-content-wrapper,
@@ -266,5 +266,55 @@ h2{
 				}
 			}
 		}
+	}
+}
+/*quicktabs block*/
+.block{
+	@include floatblock();
+	&.block--quicktabs{
+		ul.quicktabs-tabs{
+			@include floatblock();
+			margin:0;
+			padding:0;
+			li{
+				a{
+					display:block;
+					float:left;
+					border-top:1px solid $dkgray;
+					border-left:1px solid $dkgray;
+					border-right:1px solid $dkgray;
+					border-bottom:1px solid $dkgray;
+					padding:10px;
+					margin:0 3px;
+					border-radius:5px 5px 0 0;
+					background:$ltgray;
+					text-decoration:none;
+					position:relative;
+					bottom:-1px;
+				}
+				&.active{
+					a{
+						background:white;
+						border-bottom:1px solid transparent;
+					}
+				}
+			}
+		}
+		.quicktabs_main{
+			@include floatblock();
+			padding:10px;
+			border:1px solid $dkgray;
+			.quicktabs-tabpage{
+				&.quicktabs-hide{}
+			}
+		}
+	}
+}
+html{
+	background:$ltgray;
+	body{
+		max-width:1600px;
+		margin:0 auto;
+		.l-page{}
 	}
 }
