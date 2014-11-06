@@ -71,36 +71,16 @@
  */
 ?>
 <div class="l-page">
-  <header class="l-header" role="banner">
-    <div class="l-header-first">
-      <?php print render($page['header_first']); ?>
-    </div>
-    <div class="l-header-second">
-      <?php print render($page['header_second']); ?>
-    </div>
-    <div class="l-header-third">
-      <?php print render($page['header_third']); ?>
-    </div>
-  </header>
   
   <div class="l-main">
-    <article><?php print render($page['content_header']); ?></article>
-    <article><?php print render($page['above_content']); ?></article>
-    <?php print render($page['content']); ?>
-    <article><?php print render($page['below_content']); ?></article>
-    <article><?php print render($page['content_footer']); ?></article>
-    <script type="text/javascript">
-      var peeler = new Peeler();
-      peeler.bind();
-    </script>
+    <div id="content-region1" class="content-region"><img class="background" src="http://placehold.it/1500x800/444444/000&text=REGION1"><?php print render($page['content_header']); ?></div>
+    <div id="content-region2" class="content-region"><img class="background" src="http://placehold.it/1500x800/898989/000&text=REGION2"><?php print render($page['above_content']); ?></div>
+    <div id="content-region3" class="content-region"><img class="background" src="http://placehold.it/1500x800/D5D5D5/000&text=REGION3"><<?php print render($page['below_content']); ?></div>
+    <div id="content-region4" class="content-region"><img class="background" src="http://placehold.it/1500x800/FFFFFF/000&text=REGION4"><<?php print render($page['content_footer']); ?></div>
   </div>
-
-  <footer class="l-footer" role="contentinfo">
-    <div class="l-footer-first">
-      <?php print render($page['footer_first']); ?>
-    </div>
-    <div class="l-footer-second">
-      <?php print render($page['footer_second']); ?>
-    </div>
-  </footer>
 </div>
+<script type="text/javascript" src="sites/all/themes/starterkit/libraries/peeler/js/peeler.js"></script>
+<script type="text/javascript">
+  var peeler = new Peeler();
+  peeler.bind();
+</script>

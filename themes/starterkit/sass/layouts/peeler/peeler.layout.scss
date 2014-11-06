@@ -17,7 +17,7 @@
 // dependencies shouldn't be a problem.
 @import "../../variables/**/*";
 
-/* header{
+header{
 	display: block;
 	float: left;
 	width: 100%;
@@ -32,4 +32,39 @@ footer{
 	position: fixed;
 	bottom: 0;
 	z-index: 1;
-} */
+}
+.l-region {
+	position: relative;
+	top: -85px;
+}
+div#content-region1{  
+  background-color: $dkgray;
+}
+div#content-region2{  
+  background-color: $gray;
+}
+div#content-region3{  
+  background-color: $ltgray;
+}
+div#content-region4{  
+  background-color: $whitegray;
+}
+div.content-region {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  display: block;
+  -moz-box-shadow: 0 0 12px #666;
+  -webkit-box-shadow: 0 0 12px #666;
+  box-shadow: 0 0 12px #666;
+  background: #f2f2f2;
+  overflow: hidden;
+  border: 5px solid #000;
+}
+div.content-region .background {
+  height: 100%;
+  width: 100%;
+  display: block;
+}

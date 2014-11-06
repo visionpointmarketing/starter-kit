@@ -5,13 +5,15 @@
       Peeler = function(opts) {
         this.options = opts || {};
       },
-      articles = document.querySelectorAll("article"),
+      articles = document.querySelectorAll("div.content-region"),
       backgroundImages = document.querySelectorAll(".background"),
       viewportWidth = root.innerWidth,
       aspectRatio = 1200/1440,
       bodyHeight = 0,
       articleStates = [];
-
+      // test = document.getElementById("content-region1");
+      // console.log(test);
+      // console.log(articles);
   Peeler.prototype.bind = function(opts) {
     var article,
         i,
