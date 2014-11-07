@@ -71,7 +71,17 @@
  */
 ?>
 <div class="l-page">
-  
+  <header class="l-header" role="banner">
+    <div class="l-header-first">
+      <?php print render($page['header_first']); ?>
+    </div>
+    <div class="l-header-second">
+      <?php print render($page['header_second']); ?>
+    </div>
+    <div class="l-header-third">
+      <?php print render($page['header_third']); ?>
+    </div>
+  </header>
   <div class="l-main">
     <div id="content-region1" class="content-region"><img class="background" src="http://placehold.it/1500x800/444444/000&text=REGION1"><?php print render($page['content_header']); ?></div>
     <div id="content-region2" class="content-region"><img class="background" src="http://placehold.it/1500x800/898989/000&text=REGION2"><?php print render($page['above_content']); ?></div>

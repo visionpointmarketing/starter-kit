@@ -16,14 +16,16 @@
 // output any styles themselves: Importing them multiple times to resolve
 // dependencies shouldn't be a problem.
 @import "../../variables/**/*";
-
+#admin-menu{
+  z-index:1002;
+}
 header{
 	display: block;
 	float: left;
 	width: 100%;
-	position: fixed;
-	top: 0;
-	z-index: 1;
+	position: relative;
+	top: 90px;
+	z-index: 1001;
 }
 footer{
 	display: block;
