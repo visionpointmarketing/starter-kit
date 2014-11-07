@@ -1,0 +1,54 @@
+#content > ul {
+  padding: 0; }
+  #content > ul > li {
+    min-height: 101vh;
+    display: block;
+    float: left;
+    width: 100%; }
+
+html body {
+  max-width: 100%; }
+  html body .l-page {
+    display: block;
+    float: left;
+    width: 100%; }
+    html body .l-page header {
+      display: block;
+      float: left;
+      width: 100%;
+      z-index: 1;
+      position: relative;
+      background: #eee;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.4); }
+  html body .l-main {
+    display: block;
+    float: left;
+    width: 100%; }
+    html body .l-main #content ul li {
+      display: block;
+      float: left;
+      width: 100%; }
+      html body .l-main #content ul li .l-region {
+        height: 101vh;
+        margin-bottom: 200px; }
+  html body .l-footer {
+    display: block;
+    float: left;
+    width: 100%; }
+  html body .backgrounds div {
+    display: none; }
+    html body .backgrounds div img {
+      position: fixed;
+      top: 0;
+      left: 0;
+      max-width: 100%;
+      min-width: 100%;
+      height: auto; }
+    html body .backgrounds div.b1 {
+      display: block; }
+  html body.a2 .backgrounds .b2 {
+    display: block; }
+  html body.a3 .backgrounds .b3 {
+    display: block; }
+  html body.a4 .backgrounds .b4 {
+    display: block; }

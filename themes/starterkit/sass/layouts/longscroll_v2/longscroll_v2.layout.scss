@@ -1,0 +1,98 @@
+// Import external libraries.
+@import "compass";
+@import "breakpoint";
+@import "singularitygs";
+
+// Import variables, abstractions, base styles and components using globbing.
+//
+// Globbing will always import files alphabetically. Optimally, all your
+// components should be self-contained and explicit enough to not have any
+// contained styles leak into unrelated components: The import order should not
+// affect the result.
+//
+// If there are variables, functions or mixins that depend on each other and
+// therefore need to be imported in a specific order you can import them
+// directly. Variables-, function- or mixin providing partials should never
+// output any styles themselves: Importing them multiple times to resolve
+// dependencies shouldn't be a problem.
+@import "../../variables/**/*";
+
+#content{
+	&>ul{
+		padding:0;
+		&>li{
+			min-height:101vh;
+			@include floatblock();
+		}
+	}
+}
+html{
+	body{
+		max-width:100%;
+		.l-page{
+			@include floatblock();
+			header{
+				@include floatblock();
+				z-index: 1;
+				position: relative;
+				background: #eee;
+				box-shadow: 0 0 5px rgba(0,0,0,0.4);
+			}
+		}
+		.l-main{
+			@include floatblock();
+			#content{
+				ul{
+					li{
+						@include floatblock();
+						.l-region{
+							height:101vh;
+							margin-bottom:200px;
+						}
+					}
+				}
+			}
+		}
+		.l-footer{
+			@include floatblock();
+		}
+
+		.backgrounds{
+			div{
+				display:none;
+				img{
+					position:fixed;
+					top:0;
+					left:0;
+					max-width:100%;
+					min-width:100%;
+					height:auto;
+				}
+				&.b1{
+					display:block;
+				}
+			}
+		}
+		&.a2{
+			.backgrounds{
+				.b2{
+					display:block;
+				}
+			}
+		}
+		&.a3{
+			.backgrounds{
+				.b3{
+					display:block;
+				}
+			}
+		}
+		&.a4{
+			.backgrounds{
+				.b4{
+					display:block;
+				}
+			}
+		}
+	}
+}
