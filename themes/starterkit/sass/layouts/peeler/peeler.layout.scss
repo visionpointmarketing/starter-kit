@@ -33,7 +33,8 @@ footer{
 	width: 100%;
 	position: fixed;
 	bottom: 0;
-	z-index: 1;
+	z-index: 1000;
+  height:0;
 }
 .l-region {
 	position: relative;
@@ -69,4 +70,9 @@ div.content-region .background {
   height: 100%;
   width: 100%;
   display: block;
+}
+.l-footer .l-region--footer-first,
+.l-footer .l-region--footer-second{
+  @include float-span(6);
+  margin-top:12px;
 }

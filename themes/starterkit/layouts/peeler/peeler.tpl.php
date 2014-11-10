@@ -88,6 +88,10 @@
     <div id="content-region3" class="content-region"><img class="background" src="http://placehold.it/1500x800/D5D5D5/000&text=REGION3"><<?php print render($page['below_content']); ?></div>
     <div id="content-region4" class="content-region"><img class="background" src="http://placehold.it/1500x800/FFFFFF/000&text=REGION4"><<?php print render($page['content_footer']); ?></div>
   </div>
+  <footer class="l-footer" role="contentinfo">
+    <?php print render($page['footer_first']); ?>
+    <?php print render($page['footer_second']); ?>
+  </footer>
 </div>
 <script type="text/javascript" src="sites/all/themes/starterkit/libraries/peeler/js/peeler.js"></script>
 <script type="text/javascript">
