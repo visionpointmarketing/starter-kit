@@ -9,3 +9,31 @@ jQuery(document).ready(function () {
 		jQuery('body').addClass(selector);
 	});
 });
+
+function preloader() {
+	if (document.images) {
+		var img1 = new Image();
+		var img2 = new Image();
+		var img3 = new Image();
+		var img4 = new Image();
+
+		img1.src = "../images/a1.jpg";
+		img1.src = "../images/a2.jpg";
+		img1.src = "../images/a3.jpg";
+		img1.src = "../images/a4.jpg";
+	}
+}
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(preloader);

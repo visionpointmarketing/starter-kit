@@ -30,7 +30,11 @@ html body {
       width: 100%; }
       html body .l-main #content ul li .l-region {
         height: 101vh;
-        margin-bottom: 200px; }
+        margin-bottom: 200px;
+        border-radius: 0;
+        border: none;
+        border-top: 5px solid #111;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); }
   html body .l-footer {
     display: block;
     float: left;
@@ -39,11 +43,16 @@ html body {
     display: none; }
     html body .backgrounds div img {
       position: fixed;
-      top: 0;
-      left: 0;
+      display: block;
+      height: auto;
+      top: -9999px;
+      bottom: -9999px;
+      left: -9999px;
+      right: -9999px;
       max-width: 100%;
-      min-width: 100%;
-      height: auto; }
+      min-height: 100%;
+      margin: auto;
+      min-width: 1200px; }
     html body .backgrounds div.b1 {
       display: block; }
   html body.a2 .backgrounds .b2 {

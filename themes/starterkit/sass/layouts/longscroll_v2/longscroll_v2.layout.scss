@@ -48,6 +48,10 @@ html{
 						.l-region{
 							height:101vh;
 							margin-bottom:200px;
+							border-radius: 0;
+							border: none;
+							border-top:5px solid #111;
+							box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
 						}
 					}
 				}
@@ -62,11 +66,16 @@ html{
 				display:none;
 				img{
 					position:fixed;
-					top:0;
-					left:0;
-					max-width:100%;
-					min-width:100%;
-					height:auto;
+					display: block;
+					height: auto;
+					top: -9999px;
+					bottom: -9999px;
+					left: -9999px;
+					right: -9999px;
+					max-width: 100%;
+					min-height:100%;
+					margin:auto;
+					min-width:1200px;
 				}
 				&.b1{
 					display:block;
