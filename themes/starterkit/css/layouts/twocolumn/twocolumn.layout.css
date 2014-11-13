@@ -11,7 +11,8 @@ html body .l-page {
       float: right;
       margin-left: 0;
       margin-right: 0;
-      clear: none; }
+      clear: none;
+      margin: 0; }
       @media (min-width: 45em) {
         html body .l-page .l-header .l-header-first {
           width: 50%;
@@ -31,7 +32,8 @@ html body .l-page {
       float: right;
       margin-left: 0;
       margin-right: 0;
-      clear: none; }
+      clear: none;
+      margin: 0; }
       @media (min-width: 45em) {
         html body .l-page .l-header .l-header-second {
           width: 50%;
@@ -51,7 +53,8 @@ html body .l-page {
       float: right;
       margin-left: 0;
       margin-right: 0;
-      clear: none; }
+      clear: none;
+      margin: 0; }
       @media (min-width: 45em) {
         html body .l-page .l-header .l-header-third {
           width: 100%;
@@ -132,3 +135,82 @@ html body .l-page {
       display: block;
       float: left;
       width: 100%; }
+
+@media print {
+  body.print-tablet {
+    width: 45em !important; }
+    body.print-tablet .l-page .l-header .l-header-first {
+      width: 50%;
+      float: left;
+      margin-right: -100%;
+      margin-left: 0%;
+      clear: none; }
+    body.print-tablet .l-page .l-header .l-header-second {
+      width: 50%;
+      float: right;
+      margin-left: 0;
+      margin-right: 0;
+      clear: none; }
+    body.print-tablet .l-page .l-header .l-header-third {
+      width: 100%;
+      float: right;
+      margin-left: 0;
+      margin-right: 0;
+      clear: none; }
+    body.print-tablet .l-page .l-main .l-content-center {
+      overflow: hidden; }
+      body.print-tablet .l-page .l-main .l-content-center .l-region--content-left {
+        padding-bottom: 2000px;
+        margin-bottom: -2000px;
+        width: 50%;
+        clear: right;
+        float: left;
+        margin-left: 0;
+        margin-right: 0%; }
+      body.print-tablet .l-page .l-main .l-content-center .l-region--content-right {
+        padding-bottom: 2000px;
+        margin-bottom: -2000px;
+        width: 50%;
+        clear: right;
+        float: left;
+        margin-left: 0;
+        margin-right: 0%; }
+
+  body.print-desktop {
+    width: 70em !important; }
+    body.print-desktop .l-page .l-header .l-header-first {
+      width: 50%;
+      float: left;
+      margin-right: -100%;
+      margin-left: 0%;
+      clear: none; }
+    body.print-desktop .l-page .l-header .l-header-second {
+      width: 50%;
+      float: right;
+      margin-left: 0;
+      margin-right: 0;
+      clear: none; }
+    body.print-desktop .l-page .l-header .l-header-third {
+      width: 100%;
+      float: right;
+      margin-left: 0;
+      margin-right: 0;
+      clear: none; }
+    body.print-desktop .l-page .l-main .l-content-center {
+      overflow: hidden; }
+      body.print-desktop .l-page .l-main .l-content-center .l-region--content-left {
+        padding-bottom: 2000px;
+        margin-bottom: -2000px;
+        width: 50%;
+        clear: right;
+        float: left;
+        margin-left: 0;
+        margin-right: 0%; }
+      body.print-desktop .l-page .l-main .l-content-center .l-region--content-right {
+        padding-bottom: 2000px;
+        margin-bottom: -2000px;
+        width: 50%;
+        clear: right;
+        float: left;
+        margin-left: 0;
+        margin-right: 0%; } }

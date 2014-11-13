@@ -76,3 +76,12 @@ div.content-region .background {
   @include float-span(6);
   margin-top:12px;
 }
+
+@media print{
+  body.print-mobile{
+  }
+  body.print-tablet{
+  }
+  body.print-desktop{
+  }
+}
