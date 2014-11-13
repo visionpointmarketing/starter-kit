@@ -318,3 +318,97 @@ html{
 		.l-page{}
 	}
 }
+
+.print-buttons{
+	position:fixed;
+	left:-60px;
+	z-index:9999;
+	background:rgb(255, 126, 0);
+	border:2px solid #334477;
+	padding-right:16px;
+	border-radius:0 5px 5px 0;
+	transition: all 1s;
+	-webkit-transition: all 1s;
+	&:after {
+		content: '\f02f';
+		font-family: FontAwesome;
+		position: absolute;
+		right: 2px;
+		top: calc(50% - 8px);
+		font-size:16px;
+		color: rgb(242, 242, 242);
+		text-shadow: 0 0 10px #111;
+	}
+	&.open{
+		left:-2px;
+		transition: all 1s;
+		-webkit-transition: all 1s;
+	}
+	ul{
+		margin:0;
+		list-style-type:none;
+		width:60px;
+		padding:0;
+		display:block;
+		float:left;
+		padding:5px 0;
+		li{
+			padding:5px;
+			display:block;
+			float:left;
+			width:100%;
+			button{
+				width:40px;
+				height:40px;
+				display:block;
+				float:right;
+				background:none;
+				border:2px solid #444;
+				border-radius:5px;
+				outline:0;
+				padding:0;
+				&:before{
+					font-size:25px;
+					line-height:35px;
+					font-family:FontAwesome;
+				}
+				&.mobile:before{
+					content:"\f10b";
+				}
+				&.tablet:before{
+					content:"\f10a";
+				}
+				&.desktop:before{
+					content:"\f108";
+				}
+				&:hover{
+					background:rgba(255, 218, 187, 0.43);
+				}
+			}
+		}
+	}
+}
+@page {
+	margin: 0.2in;
+}
+@media print{
+	body{
+		.printheader{
+			img{
+				width:30%;
+				display:block;
+				float:left;
+			}
+			.date{
+				width:30%;
+				display:block;
+				float:right;
+				text-align:right;
+			}
+		}
+	}
+	.print-buttons,
+	.tabs--primary{
+		display:none!important;
+	}
+}

@@ -25,6 +25,7 @@ html{
 				@include floatblock();
 				.l-header-first{
 					@include grid-span(12,1);
+					margin:0;
 					@include breakpoint($tab,true){
 						@include grid-span(6,1);
 					}
@@ -35,6 +36,7 @@ html{
 				}
 				.l-header-second{
 					@include grid-span(12,1);
+					margin:0;
 					@include breakpoint($tab,true){
 						@include grid-span(6,7);
 					}
@@ -45,6 +47,7 @@ html{
 				}
 				.l-header-third{
 					@include grid-span(12,1);
+					margin:0;
 					@include breakpoint($tab,true){
 						@include grid-span(12,1);
 					}
@@ -115,6 +118,68 @@ html{
 						@include floatblock();
 						@include breakpoint($tab,true){}
 						@include breakpoint($desk,true){}
+					}
+				}
+			}
+		}
+	}
+}
+@media print{
+	body.print-mobile{
+	}
+	body.print-tablet{
+		width:$tab!important;
+		.l-page{
+			.l-header{
+				.l-header-first{
+					@include grid-span(6,1);
+				}
+				.l-header-second{
+					@include grid-span(6,7);
+				}
+				.l-header-third{
+					@include grid-span(12,1);
+				}
+			}
+			.l-main{
+				.l-content-center{
+					@include eq-p();
+					.l-region--content-left{
+						@include eq();
+						@include float-span(6);
+					}
+					.l-region--content-right{
+						@include eq();
+						@include float-span(6);
+					}
+				}
+			}
+		}
+	}
+	body.print-desktop{
+		width:$desk!important;
+		.l-page{
+			.l-header{
+				.l-header-first{
+					@include grid-span(6,1);
+				}
+				.l-header-second{
+					@include grid-span(6,7);
+				}
+				.l-header-third{
+					@include grid-span(12,1);
+				}
+			}
+			.l-main{
+				.l-content-center{
+					@include eq-p();
+					.l-region--content-left{
+						@include eq();
+						@include float-span(6);
+					}
+					.l-region--content-right{
+						@include eq();
+						@include float-span(6);
 					}
 				}
 			}
