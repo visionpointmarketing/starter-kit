@@ -83,7 +83,19 @@ html{
 					li a{ border: 4px solid $gray; }
 					li li a{ border: 4px solid $ltgray; }
 					li li li a{ border: 4px solid $whitegray; }
+					a.hide{ display: none; }
 				}
+				li.hide{ display: none; }
+				i.toggle-icon{
+					position: absolute;
+					margin: -10px 0 0 -34px;
+					background: #fff;
+					color: #000;
+					border-radius: 50%;
+					font-size: 16px;;
+				}
+				i.fa-times{ padding: 1px 3px; }
+				i.fa-plus{ padding: 3px 3px 0px 3px; }
 				> li:before{
 					content: "";
 					display: block;

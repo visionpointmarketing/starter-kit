@@ -44,8 +44,16 @@ jQuery(document).ready(function ($) {
         $('#option-switch').addClass(target_id);
     });
 
-    //add HTML to display home link (font-awesome icon)
+    //add HTML to display home link icon (font-awesome)
     $('.menu-block-wrapper').prepend('<a href="/" class="home"><i class="fa fa-home"></i></a>');
+
+    //add HTML to show toggle icon (font-awesome)
+    $('ul.menu li').prepend('<i class="toggle-icon fa fa-times"></i>');
+    //toggle functionality to show and hide menu items
+    $('.toggle-icon').on('click', function(e){
+        $(this).siblings().children().toggleClass("hide");
+        $(this).toggleClass("fa-plus");
+    });
 
 });
 
