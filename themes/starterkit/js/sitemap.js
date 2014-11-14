@@ -27,10 +27,46 @@ function visitBfs(node, func) {
     }
 }
 
+jQuery.fn.doFade = function(settings) {
+
+    // if no paramaters supplied...
+    settings = jQuery.extend({
+        fadeColor: "black",
+        duration: 200,
+        fadeOn: 0.95,
+        fadeOff: 0.5
+    }, settings);
+
+    var duration = settings.duration;
+    var fadeOff = settings.fadeOff;
+    var fadeOn = settings.fadeOn;
+    var fadeColor = settings.fadeColor;
+    //console.log(fadeColor);
+        
+    jQuery(this).hover(function(){
+      jQuery(this)
+          .stop()
+          .data("origColor", jQuery(this).css("background-color"))
+          .animate({
+              opacity: fadeOn,
+              backgroundColor: fadeColor
+          }, duration)
+    }, function() {
+      jQuery(this)
+          .stop()
+          .animate({
+              opacity: fadeOff,
+              backgroundColor: jQuery(this).data("origColor")
+          }, duration)
+    });
+
+};
+
 jQuery(document).ready(function ($) {
     var node = document.getElementsByClassName('menu')[0];
     visitBfs(node);
 
+    //options bar functionality to switch b/w horizontal & vertical views
     $('.options li').on('click', function(event){
         //remove all active classes from the options
         $('.options li').each(function(index){
@@ -55,5 +91,12 @@ jQuery(document).ready(function ($) {
         $(this).toggleClass("fa-plus");
     });
 
-});
 
+    /* Color Change On Hover (jquery.color.js only works with jquery version 1.7 or below) */
+    //$("ul.menu").css("opacity", "0.5");
+    $("html body .sitemap ul.menu").doFade({ fadeColor: "#362b40", fadeOff: "0.5", fadeOn: "0.99" });
+    $("html body .sitemap ul.menu ul.menu").doFade({ fadeColor: "#354668", fadeOff: "0.5", fadeOn: "0.99" });
+    $("html body .sitemap ul.menu ul.menu ul.menu").doFade({ fadeColor: "#304531", fadeOff: "0.5", fadeOn: "0.99" });
+    $("html body .sitemap ul.menu ul.menu ul.menu ul.menu").doFade({ fadeColor: "#72352d", fadeOff: "0.5", fadeOn: "0.99" });
+
+});

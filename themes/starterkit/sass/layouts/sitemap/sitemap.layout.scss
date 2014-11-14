@@ -18,9 +18,9 @@
 @import "../../variables/**/*";
 
 html{
+	background: #d5d5d5;
 	margin-bottom: 20px;
     body{
-    	background: #ccc;
         .options{
         	display: block;
 			float: left;
@@ -43,7 +43,7 @@ html{
 					vertical-align: middle;
 					border: 1px solid #000;
 					cursor: pointer;
-					padding: 0 !important; 
+					padding: 0 !important;
 				}
 				li.active{
 					background: #ccc;
@@ -53,8 +53,50 @@ html{
 		.sitemap{
 			padding: 30px 20px 20px 20px;
 			.menu-block-wrapper{
+				ul.menu{
+					margin: 0;
+					padding: 0;
+					border-left: 1px solid #000;
+					li{
+						float: none;
+						width: 100%;
+						padding: 0 0 0 25px;
+						list-style: none;
+						text-align: left;
+						box-sizing: border-box;
+						a{ border: 4px solid $dkgray; }
+						li a{ border: 4px solid $gray; }
+						li li a{ border: 4px solid $ltgray; }
+						li li li a{ border: 4px solid $whitegray; }
+						a.hide{ display: none; }
+					}
+					li.hide{ display: none; }
+					i.toggle-icon{
+						position: absolute;
+						margin: -10px 0 0 -34px;
+						background: #fff;
+						color: #000;
+						border-radius: 50%;
+						font-size: 16px;;
+					}
+					i.fa-times{ padding: 1px 3px; }
+					i.fa-plus{ padding: 3px 3px 0px 3px; }
+					> li:before{
+						content: "";
+						display: block;
+						width: 25px;
+						height: 30px;
+						margin-left: -25px;
+						border-bottom: 1px solid #000;
+					}
+					> li a{
+						margin-top: -20px;
+					}
+				}
 				> ul.menu{
-					> li{ float: left; }
+					> li{ 
+						float: left;
+					}
 					> li.width-1{ width: 100%; }
 					> li.width-2{ width: 50%; }
 					> li.width-3{ width: 33%; }
@@ -67,73 +109,53 @@ html{
 					> li.width-10{ width: 10%; }
 					> li:before{ border-left: 1px solid #000; }
 				}
-			}
-			ul.menu{
-				margin: 0;
-				padding: 0;
-				border-left: 1px solid #000;
-				li{
-					float: none;
-					width: 100%;
-					padding: 0 0 0 25px;
-					list-style: none;
-					text-align: left;
-					box-sizing: border-box;
-					a{ border: 4px solid $dkgray; }
-					li a{ border: 4px solid $gray; }
-					li li a{ border: 4px solid $ltgray; }
-					li li li a{ border: 4px solid $whitegray; }
-					a.hide{ display: none; }
-				}
-				li.hide{ display: none; }
-				i.toggle-icon{
-					position: absolute;
-					margin: -10px 0 0 -34px;
-					background: #fff;
-					color: #000;
-					border-radius: 50%;
-					font-size: 16px;;
-				}
-				i.fa-times{ padding: 1px 3px; }
-				i.fa-plus{ padding: 3px 3px 0px 3px; }
-				> li:before{
-					content: "";
+				a{
 					display: block;
-					width: 25px;
-					height: 30px;
-					margin-left: -25px;
+					background: #fff;
+					width: 110px;
+					min-height: 38px;
+					padding: 5px 8px;
+					font: bold 14px Arial, Helvetica, sans-serif;
+					color: #444;
+					text-align: center;
+					text-decoration: none;
+					box-sizing: border-box;
+				}
+				a.home{
+					background: none;
+					float: left;
+					width: 100%;
+					margin-top: 25px;
+					font-size: 30px;
+					color: #444;
+					text-align: center;
 					border-bottom: 1px solid #000;
 				}
-				> li a{
-					margin-top: -20px;
-				}
-			}
-			a{
-				display: block;
-				background: #fff;
-				width: 110px;
-				min-height: 38px;
-				padding: 5px 8px;
-				font: bold 14px Arial, Helvetica, sans-serif;
-				color: #444;
-				text-align: center;
-				text-decoration: none;
-				box-sizing: border-box;
-			}
-			a.home{
-				background: none;
-				float: left;
-				width: 100%;
-				margin-top: 25px;
-				font-size: 30px;
-				color: #444;
-				text-align: center;
-				border-bottom: 1px solid #000;
 			}
 		}
-		.o2{	/* Vertical Allignment (Option 2) */
+		/* Color Change On Hover */
+		.sitemap .menu-block-wrapper{ 
+			ul.menu{
+				padding: 0px 25px 20px 0px;
+				-webkit-box-shadow: 2px 2px 5px black;
+				background: #282828;
+				ul.menu{
+					background: #393939;
+					ul.menu{
+						background: #4b4b4b;
+						ul.menu{
+							background: #5a5a5a;
+							}
+						}
+					}
+				}
+			> ul.menu { padding: 0; }
+			}
+		/* Vertical Allignment (Option 2) */
+		.o2{
 			.sitemap{
 				padding: 50px 0 0 20px;
+				.menu-block-wrapper > ul.menu { padding: 0px 25px 20px 0px; }
 				.menu-block-wrapper{
 					ul.menu > li:before{
 						height: 60px;
