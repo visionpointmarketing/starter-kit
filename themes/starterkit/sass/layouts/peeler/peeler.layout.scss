@@ -78,6 +78,27 @@ div.content-region .background {
 }
 
 @media print{
+  div.content-region{
+    display:block;
+    float:left;
+    width:100%;
+    position:relative!important;
+  }
+  header.l-header,
+  div.l-main,
+  footer.l-footer{
+    display:block;
+    float:left;
+    width:100%;
+    position:relative;
+    height:auto;
+  }
+  .l-footer{
+    .l-region--footer-first, 
+    .l-region--footer-second{
+      top:initial;
+    }
+  }
   body.print-mobile{
   }
   body.print-tablet{

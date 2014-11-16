@@ -29,7 +29,7 @@ html body {
       float: left;
       width: 100%; }
       html body .l-main #content ul li .l-region {
-        height: 101vh;
+        height: 111vh;
         margin-bottom: 200px;
         border-radius: 0;
         border: none;
@@ -52,7 +52,7 @@ html body {
       max-width: 100%;
       min-height: 100%;
       margin: auto;
-      min-width: 1200px; }
+      min-width: 100%; }
     html body .backgrounds div.b1 {
       display: block; }
   html body.a2 .backgrounds .b2 {
@@ -61,3 +61,9 @@ html body {
     display: block; }
   html body.a4 .backgrounds .b4 {
     display: block; }
+
+@media print {
+  html body .backgrounds div {
+    display: none; }
+    html body .backgrounds div img {
+      display: none; } }

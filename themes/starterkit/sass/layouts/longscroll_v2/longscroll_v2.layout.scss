@@ -46,7 +46,7 @@ html{
 					li{
 						@include floatblock();
 						.l-region{
-							height:101vh;
+							height:111vh;
 							margin-bottom:200px;
 							border-radius: 0;
 							border: none;
@@ -75,7 +75,7 @@ html{
 					max-width: 100%;
 					min-height:100%;
 					margin:auto;
-					min-width:1200px;
+					min-width:100%;
 				}
 				&.b1{
 					display:block;
@@ -106,6 +106,18 @@ html{
 	}
 }
 @media print{
+	html{
+		body{
+			.backgrounds{
+				div{
+					display:none;
+					img{
+						display:none;
+					}
+				}
+			}
+		}
+	}
 	body.print-mobile{
 	}
 	body.print-tablet{

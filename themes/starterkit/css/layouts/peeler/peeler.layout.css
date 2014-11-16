@@ -61,3 +61,23 @@ div.content-region .background {
   margin-left: 0;
   margin-right: 0%;
   margin-top: 12px; }
+
+@media print {
+  div.content-region {
+    display: block;
+    float: left;
+    width: 100%;
+    position: relative !important; }
+
+  header.l-header,
+  div.l-main,
+  footer.l-footer {
+    display: block;
+    float: left;
+    width: 100%;
+    position: relative;
+    height: auto; }
+
+  .l-footer .l-region--footer-first,
+  .l-footer .l-region--footer-second {
+    top: initial; } }
