@@ -1,4 +1,5 @@
 jQuery( document ).ready(function () {
+
 	jQuery('#block-menu-block-2 .block__title').on('click',function(e){
 	    jQuery(this).siblings('.menu-block-wrapper').children('ul').toggleClass("open");
 	});
@@ -32,6 +33,28 @@ jQuery( document ).ready(function () {
 		
 		window.print();
 		jQuery(".printheader").remove();
+	});
+	jQuery(".regiontoggle.open").on('click',function(e){
+	});
+	jQuery(".regiontoggle").on('click',function(e){
+		jQuery(this).siblings('.seemore').toggleClass('open');
+		jQuery(this).toggleClass('open');
+			var elem = jQuery(this);
+			var html = elem.html();
+		if(jQuery(this).hasClass('open')){
+			elem.html(html.replace('More', 'Less'));
+			jQuery(this).siblings('.seemore').each(function(){
+				var height = jQuery(this).height() + 50;
+				if(parseInt(jQuery(this).parents('.l-region').css('padding-bottom'),10) == 2000 
+					|| 
+					parseInt(jQuery(this).parents('.l-region-container').css('padding-bottom'),10) == 2000 ){
+					jQuery(this).parents('.entity-bean').css('min-height',height);
+				}
+			});
+		}else{
+			elem.html(html.replace('Less', 'More'));
+			jQuery(this).parents('.entity-bean').css('min-height',0);
+		}
 	});
 });
 jQuery(document).mouseup(function(e){

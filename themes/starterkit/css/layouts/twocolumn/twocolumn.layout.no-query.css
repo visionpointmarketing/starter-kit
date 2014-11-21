@@ -47,16 +47,19 @@ html body .l-page {
       margin-right: 0;
       clear: none;
       margin: 0;
+      clear: both;
       width: 100%;
       float: right;
       margin-left: 0;
       margin-right: 0;
       clear: none;
+      clear: both;
       width: 100%;
       float: right;
       margin-left: 0;
       margin-right: 0;
-      clear: none; }
+      clear: none;
+      clear: both; }
   html body .l-page .l-main {
     display: block;
     width: 100%;
@@ -64,8 +67,7 @@ html body .l-page {
     clear: both;
     max-width: 1020px; }
     html body .l-page .l-main p {
-      font: 300 16px/16px Arial;
-      color: #d5d5d5; }
+      font: 300 16px/16px Arial; }
     html body .l-page .l-main .l-content-header {
       display: block;
       float: left;
