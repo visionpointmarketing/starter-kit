@@ -70,13 +70,30 @@
  * @see omega_preprocess_page()
  */
 ?>
-<div class="options">
-  <ul>
-    <li id="o1" class="active">Horizontal</li>
-    <li id="o2">Vertical</li>
-  </ul>
+<!-- Extra Features Control Panel -->
+<div class="control-panel">
+	<div class="layout-switch">
+	  <ul>
+	    <li id="o1" class="active">Horizontal</li>
+	    <li id="o2">Vertical</li>
+	  </ul>
+	</div>
+	<div class="hover-switch">
+		<ul>
+	    <li id="o3">Hover On</li>
+	    <li id="o4" class="active">Hover Off</li>
+	  </ul>
+	</div>
+	<div class="toggle-switch">
+		<ul>
+	    <li id="o5" class="active">Toggle On</li>
+	    <li id="o6">Toggle Off</li>
+	  </ul>
+	</div>
+	<i class="fa fa-cog"></i>
 </div>
-<div id='option-switch'class="o1">
+<!-- Sitemap -->
+<div id='option-switch'class="o1 o4 o5">
   <div class="sitemap">
   <?php print render($page['content']); ?>
   </div>

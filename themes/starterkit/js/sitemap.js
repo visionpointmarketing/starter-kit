@@ -66,18 +66,67 @@ jQuery(document).ready(function ($) {
     var node = document.getElementsByClassName('menu')[0];
     visitBfs(node);
 
-    //options bar functionality to switch b/w horizontal & vertical views
-    $('.options li').on('click', function(event){
-        //remove all active classes from the options
-        $('.options li').each(function(index){
+    /* Extra Features Control Panel */
+    $('.control-panel').on('click',function(e){
+        $(this).toggleClass('open');
+    });
+    //switch b/w horizontal & vertical views
+    $('.layout-switch li').on('click', function(event){
+        $('.control-panel').toggleClass('open'); //keep control panel open
+        //remove all active classes from li's
+        $('.layout-switch li').each(function(index){
             $(this).removeClass('active');
         });
+        //add active class to appropriate li
         $(this).addClass('active');
-        //remove all classes from the nav
-        $('#option-switch').removeClass();
         //get the ID of the option selected
         var target_id = $(this).attr('id');
-        $('#option-switch').addClass(target_id);
+        if (target_id == 'o1'){
+            $('#option-switch').removeClass('o2');
+            $('#option-switch').addClass('o1');
+        }
+        if (target_id == 'o2'){
+            $('#option-switch').removeClass('o1');
+            $('#option-switch').addClass('o2');
+        }
+    });
+    $('.hover-switch li').on('click', function(event){
+        $('.control-panel').toggleClass('open'); //keep control panel open
+        //remove all active classes from li's
+        $('.hover-switch li').each(function(index){
+            $(this).removeClass('active');
+        });
+        //add active class to appropriate li
+        $(this).addClass('active');
+        //get the ID of the option selected
+        var target_id = $(this).attr('id');
+        if (target_id == 'o3'){
+            $('#option-switch').removeClass('o4');
+            $('#option-switch').addClass('o3');
+        }
+        if (target_id == 'o4'){
+            $('#option-switch').removeClass('o3');
+            $('#option-switch').addClass('o4');
+        }
+    });
+    $('.toggle-switch li').on('click', function(event){
+        $('.control-panel').toggleClass('open'); //keep control panel open
+        //remove all active classes from li's
+        $('.toggle-switch li').each(function(index){
+            $(this).removeClass('active');
+        });
+        //add active class to appropriate li
+        $(this).addClass('active');
+        //get the ID of the option selected
+        var target_id = $(this).attr('id');
+        if (target_id == 'o5'){
+            $('#option-switch').removeClass('o6');
+            $('#option-switch').addClass('o5');
+        }
+        if (target_id == 'o6'){
+            $('#option-switch').removeClass('o5');
+            $('#option-switch').addClass('o6');
+        }
     });
 
     //add HTML to display home link icon (font-awesome)
@@ -94,9 +143,9 @@ jQuery(document).ready(function ($) {
 
     /* Color Change On Hover (jquery.color.js only works with jquery version 1.7 or below) */
     //$("ul.menu").css("opacity", "0.5");
-    $("html body .sitemap ul.menu").doFade({ fadeColor: "#362b40", fadeOff: "0.5", fadeOn: "0.99" });
-    $("html body .sitemap ul.menu ul.menu").doFade({ fadeColor: "#354668", fadeOff: "0.5", fadeOn: "0.99" });
-    $("html body .sitemap ul.menu ul.menu ul.menu").doFade({ fadeColor: "#304531", fadeOff: "0.5", fadeOn: "0.99" });
-    $("html body .sitemap ul.menu ul.menu ul.menu ul.menu").doFade({ fadeColor: "#72352d", fadeOff: "0.5", fadeOn: "0.99" });
+    /*$("html body .sitemap ul.menu").doFade({ fadeColor: "#444", fadeOff: "0.9", fadeOn: "0.99" });
+    $("html body .sitemap ul.menu ul.menu").doFade({ fadeColor: "#898989", fadeOff: "0.9", fadeOn: "0.99" });
+    $("html body .sitemap ul.menu ul.menu ul.menu").doFade({ fadeColor: "#D5D5D5", fadeOff: "0.9", fadeOn: "0.99" });
+    $("html body .sitemap ul.menu ul.menu ul.menu ul.menu").doFade({ fadeColor: "#e0e0e0", fadeOff: "0.9", fadeOn: "0.99" });*/
 
 });

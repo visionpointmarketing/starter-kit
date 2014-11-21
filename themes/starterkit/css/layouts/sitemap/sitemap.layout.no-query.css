@@ -1,39 +1,57 @@
 html {
-  background: #d5d5d5;
+  background: #eee;
   margin-bottom: 20px; }
   html body {
-    /* Color Change On Hover */
+    /* Toggle Switch */
+    /* Hover Color Switch */
     /* Vertical Allignment (Option 2) */ }
-    html body .options {
+    html body .control-panel.open {
+      top: -10px;
+      transition: all 1s;
+      -webkit-transition: all 1s; }
+    html body .control-panel {
       display: block;
-      float: left;
       position: fixed;
+      top: -101px;
+      left: calc(50% - 100px);
       margin-top: 10px;
-      left: calc(50% - 112px);
-      background: #eee;
-      z-index: 1; }
-      html body .options ul {
-        float: left;
-        display: table;
-        margin: 0;
-        padding: 0; }
-        html body .options ul li {
-          width: 100px !important;
-          height: 30px !important;
-          display: table-cell;
-          float: none !important;
-          text-align: center !important;
-          vertical-align: middle;
-          border: 1px solid #000;
-          cursor: pointer;
-          padding: 0 !important; }
-        html body .options ul li.active {
-          background: #ccc; }
+      background: #ff7e00;
+      z-index: 9999;
+      border: 2px solid #334477;
+      text-align: center;
+      transition: all 1s;
+      -webkit-transition: all 1s; }
+      html body .control-panel i.fa-cog {
+        padding: 10px;
+        color: #fff;
+        font-size: 24px;
+        text-shadow: 0 0 5px #111; }
+      html body .control-panel .toggle-switch, html body .control-panel .hover-switch, html body .control-panel .layout-switch {
+        display: block;
+        background: #eee;
+        z-index: 1; }
+        html body .control-panel .toggle-switch ul, html body .control-panel .hover-switch ul, html body .control-panel .layout-switch ul {
+          display: table;
+          margin: 0;
+          padding: 0; }
+          html body .control-panel .toggle-switch ul li, html body .control-panel .hover-switch ul li, html body .control-panel .layout-switch ul li {
+            width: 100px !important;
+            height: 30px !important;
+            display: table-cell;
+            float: none !important;
+            text-align: center !important;
+            vertical-align: middle;
+            border: 1px solid #000;
+            cursor: pointer;
+            padding: 0 !important; }
+          html body .control-panel .toggle-switch ul li.active, html body .control-panel .hover-switch ul li.active, html body .control-panel .layout-switch ul li.active {
+            background: #ccc; }
     html body .sitemap {
-      padding: 30px 20px 20px 20px; }
+      margin-top: 115px;
+      padding: 0px 20px 20px 20px; }
       html body .sitemap .menu-block-wrapper ul.menu {
         margin: 0;
-        padding: 0;
+        padding: 0px 25px 20px 0px;
         border-left: 1px solid #000; }
         html body .sitemap .menu-block-wrapper ul.menu li {
           float: none;
@@ -55,6 +73,7 @@ html {
         html body .sitemap .menu-block-wrapper ul.menu li.hide {
           display: none; }
         html body .sitemap .menu-block-wrapper ul.menu i.toggle-icon {
+          display: block;
           position: absolute;
           margin: -10px 0 0 -34px;
           background: #fff;
@@ -74,30 +93,32 @@ html {
           border-bottom: 1px solid #000; }
         html body .sitemap .menu-block-wrapper ul.menu > li a {
           margin-top: -20px; }
-      html body .sitemap .menu-block-wrapper > ul.menu > li {
-        float: left; }
-      html body .sitemap .menu-block-wrapper > ul.menu > li.width-1 {
-        width: 100%; }
-      html body .sitemap .menu-block-wrapper > ul.menu > li.width-2 {
-        width: 50%; }
-      html body .sitemap .menu-block-wrapper > ul.menu > li.width-3 {
-        width: 33%; }
-      html body .sitemap .menu-block-wrapper > ul.menu > li.width-4 {
-        width: 25%; }
-      html body .sitemap .menu-block-wrapper > ul.menu > li.width-5 {
-        width: 20%; }
-      html body .sitemap .menu-block-wrapper > ul.menu > li.width-6 {
-        width: 16%; }
-      html body .sitemap .menu-block-wrapper > ul.menu > li.width-7 {
-        width: 14%; }
-      html body .sitemap .menu-block-wrapper > ul.menu > li.width-8 {
-        width: 12.5%; }
-      html body .sitemap .menu-block-wrapper > ul.menu > li.width-9 {
-        width: 11%; }
-      html body .sitemap .menu-block-wrapper > ul.menu > li.width-10 {
-        width: 10%; }
-      html body .sitemap .menu-block-wrapper > ul.menu > li:before {
-        border-left: 1px solid #000; }
+      html body .sitemap .menu-block-wrapper > ul.menu {
+        padding: 0; }
+        html body .sitemap .menu-block-wrapper > ul.menu > li {
+          float: left; }
+        html body .sitemap .menu-block-wrapper > ul.menu > li.width-1 {
+          width: 100%; }
+        html body .sitemap .menu-block-wrapper > ul.menu > li.width-2 {
+          width: 50%; }
+        html body .sitemap .menu-block-wrapper > ul.menu > li.width-3 {
+          width: 33%; }
+        html body .sitemap .menu-block-wrapper > ul.menu > li.width-4 {
+          width: 25%; }
+        html body .sitemap .menu-block-wrapper > ul.menu > li.width-5 {
+          width: 20%; }
+        html body .sitemap .menu-block-wrapper > ul.menu > li.width-6 {
+          width: 16%; }
+        html body .sitemap .menu-block-wrapper > ul.menu > li.width-7 {
+          width: 14%; }
+        html body .sitemap .menu-block-wrapper > ul.menu > li.width-8 {
+          width: 12.5%; }
+        html body .sitemap .menu-block-wrapper > ul.menu > li.width-9 {
+          width: 11%; }
+        html body .sitemap .menu-block-wrapper > ul.menu > li.width-10 {
+          width: 10%; }
+        html body .sitemap .menu-block-wrapper > ul.menu > li:before {
+          border-left: 1px solid #000; }
       html body .sitemap .menu-block-wrapper a {
         display: block;
         background: #fff;
@@ -118,29 +139,39 @@ html {
         color: #444;
         text-align: center;
         border-bottom: 1px solid #000; }
-    html body .sitemap .menu-block-wrapper ul.menu {
-      padding: 0px 25px 20px 0px;
-      -webkit-box-shadow: 2px 2px 5px black;
-      background: #282828; }
-      html body .sitemap .menu-block-wrapper ul.menu ul.menu {
-        background: #393939; }
-        html body .sitemap .menu-block-wrapper ul.menu ul.menu ul.menu {
-          background: #4b4b4b; }
-          html body .sitemap .menu-block-wrapper ul.menu ul.menu ul.menu ul.menu {
-            background: #5a5a5a; }
-    html body .sitemap .menu-block-wrapper > ul.menu {
-      padding: 0; }
+    html body .o6 .sitemap .menu-block-wrapper ul.menu i.toggle-icon {
+      display: none; }
+    html body .o3 .sitemap .menu-block-wrapper > ul.menu {
+      height: 80vh;
+      padding: 0;
+      border-left: none; }
+    html body .o3 .sitemap .menu-block-wrapper ul.menu:hover {
+      background: #444; }
+    html body .o3 .sitemap .menu-block-wrapper ul.menu ul.menu:hover {
+      background: #898989;
+      -webkit-box-shadow: 2px 2px 5px black; }
+    html body .o3 .sitemap .menu-block-wrapper ul.menu ul.menu ul.menu:hover {
+      background: #D5D5D5;
+      -webkit-box-shadow: 2px 2px 5px black; }
+    html body .o3 .sitemap .menu-block-wrapper ul.menu ul.menu ul.menu ul.menu:hover {
+      background: #e0e0e0;
+      -webkit-box-shadow: 2px 2px 5px black; }
     html body .o2 .sitemap {
       padding: 50px 0 0 20px; }
       html body .o2 .sitemap .menu-block-wrapper > ul.menu {
         padding: 0px 25px 20px 0px; }
+      html body .o2 .sitemap .menu-block-wrapper ul.menu {
+        display: inline-block; }
       html body .o2 .sitemap .menu-block-wrapper ul.menu > li:before {
-        height: 60px; }
-      html body .o2 .sitemap .menu-block-wrapper > ul.menu > li {
-        float: none;
-        width: 100%; }
-      html body .o2 .sitemap .menu-block-wrapper > ul.menu > li:before {
-        border-left: none; }
+        height: 45px; }
+      html body .o2 .sitemap .menu-block-wrapper > ul.menu {
+        height: auto;
+        border-left: 1px solid #000; }
+        html body .o2 .sitemap .menu-block-wrapper > ul.menu > li {
+          float: none;
+          width: 100%; }
+        html body .o2 .sitemap .menu-block-wrapper > ul.menu > li:before {
+          border-left: none; }
       html body .o2 .sitemap .menu-block-wrapper a.home {
         margin: 0;
         text-align: left;

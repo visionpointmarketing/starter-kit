@@ -18,44 +18,65 @@
 @import "../../variables/**/*";
 
 html{
-	background: #d5d5d5;
+	background: #eee;
 	margin-bottom: 20px;
     body{
-        .options{
-        	display: block;
-			float: left;
+    	.control-panel.open {
+			top: -10px;
+			transition: all 1s;
+			-webkit-transition: all 1s;
+		}
+    	.control-panel{
+    		display: block;
 			position: fixed;
+			top: -101px;
+			left: calc(50% - 100px);
 			margin-top: 10px;
-			left: calc(50% - 112px);
-			background: #eee;
-			z-index: 1;
-			ul{
-				float: left;
-				display: table;
-				margin: 0;
-				padding: 0;
-				li{
-					width: 100px !important;
-					height: 30px !important;
-					display: table-cell;
-					float: none !important;
-					text-align: center !important;
-					vertical-align: middle;
-					border: 1px solid #000;
-					cursor: pointer;
-					padding: 0 !important;
-				}
-				li.active{
-					background: #ccc;
+			background: #ff7e00;
+			z-index: 9999;
+			border: 2px solid #334477;
+			text-align: center;
+			transition: all 1s;
+			-webkit-transition: all 1s;
+			i.fa-cog {
+				padding: 10px;
+				color: #fff;
+				font-size: 24px;
+				text-shadow: 0 0 5px #111;
+			}
+	        .toggle-switch,.hover-switch,.layout-switch{
+	        	display: block;
+				background: #eee;
+				z-index: 1;
+				ul{
+					//float: left;
+					display: table;
+					margin: 0;
+					padding: 0;
+					li{
+						width: 100px !important;
+						height: 30px !important;
+						display: table-cell;
+						float: none !important;
+						text-align: center !important;
+						vertical-align: middle;
+						border: 1px solid #000;
+						cursor: pointer;
+						padding: 0 !important;
+					}
+					li.active{
+						background: #ccc;
+					}
 				}
 			}
 		}
 		.sitemap{
-			padding: 30px 20px 20px 20px;
+			margin-top: 115px;
+			padding: 0px 20px 20px 20px;
 			.menu-block-wrapper{
 				ul.menu{
 					margin: 0;
-					padding: 0;
+					padding: 0px 25px 20px 0px;
 					border-left: 1px solid #000;
 					li{
 						float: none;
@@ -72,6 +93,7 @@ html{
 					}
 					li.hide{ display: none; }
 					i.toggle-icon{
+						display: block;
 						position: absolute;
 						margin: -10px 0 0 -34px;
 						background: #fff;
@@ -94,6 +116,7 @@ html{
 					}
 				}
 				> ul.menu{
+					padding: 0;
 					> li{ 
 						float: left;
 					}
@@ -133,34 +156,47 @@ html{
 				}
 			}
 		}
-		/* Color Change On Hover */
-		.sitemap .menu-block-wrapper{ 
-			ul.menu{
-				padding: 0px 25px 20px 0px;
-				-webkit-box-shadow: 2px 2px 5px black;
-				background: #282828;
-				ul.menu{
-					background: #393939;
-					ul.menu{
-						background: #4b4b4b;
-						ul.menu{
-							background: #5a5a5a;
-							}
-						}
-					}
-				}
-			> ul.menu { padding: 0; }
+		/* Toggle Switch */
+		.o6 .sitemap .menu-block-wrapper ul.menu i.toggle-icon { display: none; }
+		/* Hover Color Switch */
+		.o3 .sitemap .menu-block-wrapper{
+			ul.menu{}
+			> ul.menu {
+				height: 80vh; //so first level hover will work when horizontal
+				padding: 0;
+				border-left: none; //hides line down left when horizontal
 			}
+			ul.menu:hover{
+				background: #444;
+			}
+			ul.menu ul.menu:hover{
+				background: #898989;
+				-webkit-box-shadow: 2px 2px 5px black;
+			}
+			ul.menu ul.menu	ul.menu:hover{
+				background: #D5D5D5;
+				-webkit-box-shadow: 2px 2px 5px black;
+			}
+			ul.menu ul.menu ul.menu ul.menu:hover{
+				background: #e0e0e0;
+				-webkit-box-shadow: 2px 2px 5px black;
+			}
+		}
 		/* Vertical Allignment (Option 2) */
 		.o2{
 			.sitemap{
 				padding: 50px 0 0 20px;
 				.menu-block-wrapper > ul.menu { padding: 0px 25px 20px 0px; }
 				.menu-block-wrapper{
+					ul.menu {
+						display: inline-block;
+					}
 					ul.menu > li:before{
-						height: 60px;
+						height: 45px;
 					}
 					> ul.menu{
+						height: auto;
+						border-left: 1px solid #000;
 						> li{
 							float: none;
 							width: 100%;
