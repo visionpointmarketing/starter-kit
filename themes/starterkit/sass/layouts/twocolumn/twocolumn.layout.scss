@@ -48,11 +48,14 @@ html{
 				.l-header-third{
 					@include grid-span(12,1);
 					margin:0;
+					clear:both;
 					@include breakpoint($tab,true){
 						@include grid-span(12,1);
+						clear:both;
 					}
 					@include breakpoint($desk,true){
 						@include grid-span(12,1);
+						clear:both;
 					}
 					.l-region--header-third{}
 				}
@@ -62,7 +65,6 @@ html{
 				//default styles for the main content area
 				p{
 					@include font(300,16px,16px,Arial);
-					color:$ltgray;
 				}
 				h1{}
 				h2{}
@@ -139,6 +141,7 @@ html{
 				}
 				.l-header-third{
 					@include grid-span(12,1);
+
 				}
 			}
 			.l-main{

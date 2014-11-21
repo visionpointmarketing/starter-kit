@@ -95,13 +95,13 @@
       </div>
       <?php print render($page['content_header']); ?>
     </div>
-    <div class="l-content-center">
+    <div class="l-content-center l-region-container">
       <div class="l-nav-sidebar">
         <?php print render($page['nav_sidebar']); ?>
       </div>
-      <div class="l-content-wrapper">
+      <div class="l-content-wrapper l-region-container">
         <?php print render($page['featured']); ?>
-        <div class="l-content" role="main">
+        <div class="l-content l-region-container" role="main">
           <a id="main-content"></a>
           <?php print render($page['above_content']); ?>
               <?php print $messages; ?>
@@ -114,7 +114,7 @@
           <?php print render($page['below_content']); ?>
               <?php print $feed_icons; ?>
         </div>
-        <div class="l-promo-sidebar">
+        <div class="l-promo-sidebar l-region-container">
           <?php print render($page['promo_sidebar']); ?>
         </div>
       </div>

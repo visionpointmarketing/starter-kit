@@ -51,6 +51,14 @@
 .block{
 	@include floatblock();
 }
+/*site logo block*/
+#block-block-16{
+	width:200px;
+	p{
+		margin:0;
+	}
+}
+#block-block-16
 /*don't need to see these for display purposes*/
 .messages{
 	display:none;
@@ -58,6 +66,59 @@
 /*it's somehow getting a width...*/
 .element-invisible{
 	max-width:1px;
+}
+/*all beans, need to figure out the best way to add a type class to the bean wrapper*/
+.block.block--bean{
+	display:block;
+	float:left;
+	width:auto;
+	.block__title{
+		display:block;
+		float:left;
+		width:auto;
+	}
+	/*beans for the IA theme info*/
+	.bean-ia-theme-information{
+		position:relative;
+		.regiontoggle{
+			width:100%;
+			border:1px solid #ccc;
+			border-bottom:1px solid #fff;
+			border-radius:5px 5px 0 0;
+			background:none;
+			outline:0;
+			width:100px;
+			float:right;
+			top:1px;
+			left:-30px;
+			position:relative;
+			line-height:20px;
+		}
+		.seemore{
+			display:none;
+			float:right;
+			width:400px;
+			position:absolute;
+			&.open{
+				display:block;
+				background:white;
+				z-index:3;
+				top:30px;
+				left:0;
+				border:1px solid #444;
+				padding:10px;
+				border-radius:5px;
+				box-shadow:0 0 10px rgba(0,0,0,0.4);
+			}
+		}
+		.field{
+			display:block;
+			float:left;
+			width:100%;
+			padding:10px 0;
+			border-top:1px solid #ccc;
+		}
+	}
 }
 h1{
 	color:$dkgray;
@@ -392,23 +453,43 @@ html{
 	margin: 0.2in;
 }
 @media print{
-	body{
-		.printheader{
-			img{
-				width:30%;
-				display:block;
-				float:left;
+	html{
+		body{
+			.printheader{
+				img{
+					width:30%;
+					display:block;
+					float:left;
+				}
+				.date{
+					width:30%;
+					display:block;
+					float:right;
+					text-align:right;
+				}
 			}
-			.date{
-				width:30%;
-				display:block;
-				float:right;
-				text-align:right;
+			.l-page{
+				.l-header{
+					.l-header-third{
+						clear:both!important;
+					}
+				}
 			}
 		}
 	}
 	.print-buttons,
 	.tabs--primary{
 		display:none!important;
+	}
+	.block.block--bean{
+		.block__title{
+			display:block;
+			float:left;
+			width:auto;
+		}
+		/*beans for the IA theme info*/
+		.bean-ia-theme-information{
+			display:none;
+		}
 	}
 }
