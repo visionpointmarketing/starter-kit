@@ -42,7 +42,7 @@ jQuery( document ).ready(function () {
 			var elem = jQuery(this);
 			var html = elem.html();
 		if(jQuery(this).hasClass('open')){
-			elem.html(html.replace('More', 'Less'));
+			// elem.html(html.replace('More', 'Less'));
 			jQuery(this).siblings('.seemore').each(function(){
 				var height = jQuery(this).height() + 50;
 				if(parseInt(jQuery(this).parents('.l-region').css('padding-bottom'),10) == 2000 
@@ -52,7 +52,7 @@ jQuery( document ).ready(function () {
 				}
 			});
 		}else{
-			elem.html(html.replace('Less', 'More'));
+			// elem.html(html.replace('Less', 'More'));
 			jQuery(this).parents('.entity-bean').css('min-height',0);
 		}
 	});

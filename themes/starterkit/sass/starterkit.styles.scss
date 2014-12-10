@@ -76,23 +76,29 @@
 		display:block;
 		float:left;
 		width:auto;
+		font-size:14px;
+		color:#ccc;
+		&:before{
+			content:'';
+		}
 	}
 	/*beans for the IA theme info*/
 	.bean-ia-theme-information{
 		position:relative;
 		.regiontoggle{
-			width:100%;
-			border:1px solid #ccc;
-			border-bottom:1px solid #fff;
-			border-radius:5px 5px 0 0;
-			background:none;
-			outline:0;
-			width:100px;
-			float:right;
-			top:1px;
-			left:-30px;
-			position:relative;
-			line-height:20px;
+			border: 1px solid #000;
+			border-radius: 26%;
+			outline: 0;
+			width: 16px;
+			height: 16px;
+			float: right;
+			position: relative;
+			left: -40px;
+			text-align: center;
+			font-size: 10px;
+			line-height: 16px;
+			padding: 0;
+			background: rgb(181, 181, 181);
 		}
 		.seemore{
 			display:none;
@@ -117,6 +123,9 @@
 			width:100%;
 			padding:10px 0;
 			border-top:1px solid #ccc;
+			&.field--name-field-content-examples{
+				color:#ccc;
+			}
 		}
 	}
 }
