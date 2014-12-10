@@ -58,7 +58,7 @@ img, media {
     float: left;
     width: auto;
     font-size: 14px;
-    color: #ccc; }
+    color: #666; }
     .block.block--bean .block__title:before {
       content: ''; }
   .block.block--bean .bean-ia-theme-information {
@@ -99,7 +99,7 @@ img, media {
       padding: 10px 0;
       border-top: 1px solid #ccc; }
       .block.block--bean .bean-ia-theme-information .field.field--name-field-content-examples {
-        color: #ccc; }
+        color: #666; }
 
 h1 {
   color: #444444;
