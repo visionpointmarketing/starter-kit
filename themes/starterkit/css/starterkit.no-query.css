@@ -56,22 +56,27 @@ img, media {
   .block.block--bean .block__title {
     display: block;
     float: left;
-    width: auto; }
+    width: auto;
+    font-size: 14px;
+    color: #666; }
+    .block.block--bean .block__title:before {
+      content: ''; }
   .block.block--bean .bean-ia-theme-information {
     position: relative; }
     .block.block--bean .bean-ia-theme-information .regiontoggle {
-      width: 100%;
-      border: 1px solid #ccc;
-      border-bottom: 1px solid #fff;
-      border-radius: 5px 5px 0 0;
-      background: none;
+      border: 1px solid #000;
+      border-radius: 26%;
       outline: 0;
-      width: 100px;
+      width: 16px;
+      height: 16px;
       float: right;
-      top: 1px;
-      left: -30px;
       position: relative;
-      line-height: 20px; }
+      left: -40px;
+      text-align: center;
+      font-size: 10px;
+      line-height: 16px;
+      padding: 0;
+      background: #b5b5b5; }
     .block.block--bean .bean-ia-theme-information .seemore {
       display: none;
       float: right;
@@ -93,6 +98,8 @@ img, media {
       width: 100%;
       padding: 10px 0;
       border-top: 1px solid #ccc; }
+      .block.block--bean .bean-ia-theme-information .field.field--name-field-content-examples {
+        color: #666; }
 
 h1 {
   color: #444444;
