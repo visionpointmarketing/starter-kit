@@ -92,6 +92,9 @@
 	</div>
 	<i class="fa fa-cog"></i>
 </div>
+<div class="edit-menu-wrap">
+  <a href="/admin/structure/menu/manage/main-menu" target="_blank">Edit Menu</a>
+</div>
 <!-- Sitemap -->
 <div id='option-switch'class="o1 o4 o5">
   <div class="sitemap">
