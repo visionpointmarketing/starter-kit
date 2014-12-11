@@ -2,6 +2,9 @@
 img, media {
   max-width: 100%; }
 
+.messages {
+  display: none; }
+
 .l-header .l-region,
 .l-footer .l-region,
 .l-region--content-header,
@@ -64,7 +67,7 @@ img, media {
   .block.block--bean .bean-ia-theme-information {
     position: relative; }
     .block.block--bean .bean-ia-theme-information .regiontoggle {
-      border: 1px solid #000;
+      border: none;
       border-radius: 26%;
       outline: 0;
       width: 16px;
@@ -76,7 +79,8 @@ img, media {
       font-size: 10px;
       line-height: 16px;
       padding: 0;
-      background: #b5b5b5; }
+      background: none;
+      color: blue; }
     .block.block--bean .bean-ia-theme-information .seemore {
       display: none;
       float: right;

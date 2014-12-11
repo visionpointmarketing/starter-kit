@@ -29,12 +29,12 @@
 ?>
 <div class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <div class="content"<?php print $content_attributes; ?>>
-  	<button class="regiontoggle">?</button>
-  	<div class="seemore">
-  		<?php print render($content['field_region_description']); ?>
-  		<?php print render($content['field_technical_information']); ?>
-  	</div>
-  	<?php print render($content['field_content_examples']); ?>
+	<button class="regiontoggle"><i class="fa fa-info-circle"></i></button>
+	<div class="seemore">
+		<?php print render($content['field_region_description']); ?>
+		<?php print render($content['field_technical_information']); ?>
+		<?php print render($content['field_content_examples']); ?>
+	</div>
   </div>
 </div>
 
