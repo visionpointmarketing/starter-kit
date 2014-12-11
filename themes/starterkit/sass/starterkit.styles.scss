@@ -73,13 +73,14 @@
 .block.block--bean{
 	display:block;
 	float:left;
-	width:auto;
+	width:100%;
+	padding:5px;
 	.block__title{
 		display:block;
 		float:left;
 		width:auto;
 		font-size:14px;
-		color:#666;
+		color: $purple;
 		&:before{
 			content:'';
 		}
@@ -89,19 +90,12 @@
 		position:relative;
 		.regiontoggle{
 			border: none;
-			border-radius: 26%;
-			outline: 0;
-			width: 16px;
-			height: 16px;
-			float: right;
-			position: relative;
-			left: -40px;
-			text-align: center;
-			font-size: 10px;
-			line-height: 16px;
-			padding: 0;
+			float: left;
+			font-size: 14px;
+			line-height: 20px;
 			background: none;
-			color:blue;
+			color: $purple;
+			outline: 0;
 		}
 		.seemore{
 			display:none;
@@ -112,12 +106,13 @@
 				display:block;
 				background:white;
 				z-index:3;
-				top:30px;
+				top:25px;
 				left:0;
 				border:1px solid #444;
 				padding:10px;
 				border-radius:5px;
 				box-shadow:0 0 10px rgba(0,0,0,0.4);
+				max-width: calc(100vw - 20px);
 			}
 		}
 		.field{

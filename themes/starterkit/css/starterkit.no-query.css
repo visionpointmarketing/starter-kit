@@ -54,33 +54,27 @@ img, media {
 .block.block--bean {
   display: block;
   float: left;
-  width: auto;
+  width: 100%;
+  padding: 5px;
   /*beans for the IA theme info*/ }
   .block.block--bean .block__title {
     display: block;
     float: left;
     width: auto;
     font-size: 14px;
-    color: #666; }
+    color: #7100ff; }
     .block.block--bean .block__title:before {
       content: ''; }
   .block.block--bean .bean-ia-theme-information {
     position: relative; }
     .block.block--bean .bean-ia-theme-information .regiontoggle {
       border: none;
-      border-radius: 26%;
-      outline: 0;
-      width: 16px;
-      height: 16px;
-      float: right;
-      position: relative;
-      left: -40px;
-      text-align: center;
-      font-size: 10px;
-      line-height: 16px;
-      padding: 0;
+      float: left;
+      font-size: 14px;
+      line-height: 20px;
       background: none;
-      color: blue; }
+      color: #7100ff;
+      outline: 0; }
     .block.block--bean .bean-ia-theme-information .seemore {
       display: none;
       float: right;
@@ -90,12 +84,13 @@ img, media {
         display: block;
         background: white;
         z-index: 3;
-        top: 30px;
+        top: 25px;
         left: 0;
         border: 1px solid #444;
         padding: 10px;
         border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        max-width: calc(100vw - 20px); }
     .block.block--bean .bean-ia-theme-information .field {
       display: block;
       float: left;
