@@ -139,19 +139,24 @@ h2 {
   font: 300 16px/16px Arial;
   color: #444444; }
 
-.breadcrumb {
-  list-style-type: none;
-  padding: 0;
-  display: block;
-  float: left;
-  width: 100%; }
-  .breadcrumb li {
+.breadcrumbs {
+  padding-left: 0; }
+  .breadcrumbs .breadcrumb {
+    list-style-type: none;
+    padding: 0;
     display: block;
     float: left;
-    position: relative;
-    padding-right: 5px; }
-    .breadcrumb li a, .breadcrumb li span {
-      color: #444444; }
+    padding: 5px; }
+    .breadcrumbs .breadcrumb span {
+      padding: 0;
+      font-size: initial;
+      line-height: 16px; }
+  .breadcrumbs span {
+    font-size: 9px;
+    line-height: 16px;
+    display: block;
+    float: left;
+    padding: 5px; }
 
 #block-user-login {
   display: block;

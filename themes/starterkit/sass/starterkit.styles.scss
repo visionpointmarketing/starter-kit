@@ -164,19 +164,26 @@ h2{
 	@include font(300,16px,16px,Arial);
 	color:$dkgray;
 }
-.breadcrumb{
-	list-style-type:none;
-	padding:0;
-	@include floatblock();
-	li{
+.breadcrumbs{
+	padding-left:0;
+	.breadcrumb{
+		list-style-type:none;
+		padding:0;
 		display:block;
 		float:left;
-		position:relative;
-		padding-right:5px;
-		a,span{
-			color:$dkgray;
+		padding:5px;
+		span{
+			padding:0;
+			font-size:initial;
+			line-height:16px;
 		}
-		&:after{}
+	}
+	span{
+		font-size:9px;
+		line-height:16px;
+		display:block;
+		float:left;
+		padding:5px;
 	}
 }
 #block-user-login{

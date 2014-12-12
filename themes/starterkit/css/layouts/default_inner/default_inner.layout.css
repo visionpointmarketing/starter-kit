@@ -92,9 +92,9 @@ html body .l-page {
         @media (min-width: 45em) {
           html body .l-page .l-main .l-content-center .l-nav-sidebar {
             width: 25%;
-            float: right;
-            margin-left: 0;
-            margin-right: 0;
+            float: left;
+            margin-right: -100%;
+            margin-left: 0%;
             clear: none;
             padding-bottom: 2000px;
             margin-bottom: -2000px; } }
@@ -115,9 +115,9 @@ html body .l-page {
             margin-bottom: -2000px;
             overflow: hidden;
             width: 75%;
-            float: left;
-            margin-right: -100%;
-            margin-left: 0%;
+            float: right;
+            margin-left: 0;
+            margin-right: 0;
             clear: none; } }
         @media (min-width: 70em) {
           html body .l-page .l-main .l-content-center .l-content-wrapper {

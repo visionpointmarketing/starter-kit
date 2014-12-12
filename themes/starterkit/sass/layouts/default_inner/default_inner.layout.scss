@@ -79,7 +79,7 @@ html{
 					.l-nav-sidebar{
 						@include floatblock();
 						@include breakpoint($tab,true){
-							@include grid-span(3,10);
+							@include grid-span(3,1);
 							@include eq();
 						}
 						@include breakpoint($desk,true){
@@ -92,7 +92,7 @@ html{
 						@include breakpoint($tab,true){
 							@include eq();
 							@include eq-p();
-							@include grid-span(9,1);
+							@include grid-span(9,4);
 						}
 						@include breakpoint($desk,true){
 							@include grid-span(9,4);
