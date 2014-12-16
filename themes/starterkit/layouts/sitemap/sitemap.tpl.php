@@ -86,8 +86,8 @@
 	</div>
 	<div class="toggle-switch">
 		<ul>
-	    <li id="o5" class="active">Toggle On</li>
-	    <li id="o6">Toggle Off</li>
+	    <li id="o5">Toggle On</li>
+	    <li id="o6" class="active">Toggle Off</li>
 	  </ul>
 	</div>
 	<i class="fa fa-cog"></i>
@@ -95,8 +95,10 @@
 <div class="edit-menu-wrap">
   <a href="/admin/structure/menu/manage/main-menu" target="_blank">Edit Menu</a>
 </div>
-<!-- Sitemap -->
-<div id='option-switch'class="o1 o4 o5">
+<!-- Option Switch: to change default settings:
+  o1=horizontal, o2=vertical, o3=hover on, o4=hover off, o5=toggle on, o6=toggle off -->
+<div id='option-switch'class="o1 o4 o6">
+  <!-- Sitemap -->
   <div class="sitemap">
   <?php print render($page['content']); ?>
   </div>
