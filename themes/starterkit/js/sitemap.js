@@ -27,43 +27,10 @@ function visitBfs(node, func) {
     }
 }
 
-jQuery.fn.doFade = function(settings) {
-
-    // if no paramaters supplied...
-    settings = jQuery.extend({
-        fadeColor: "black",
-        duration: 200,
-        fadeOn: 0.95,
-        fadeOff: 0.5
-    }, settings);
-
-    var duration = settings.duration;
-    var fadeOff = settings.fadeOff;
-    var fadeOn = settings.fadeOn;
-    var fadeColor = settings.fadeColor;
-    //console.log(fadeColor);
-        
-    jQuery(this).hover(function(){
-      jQuery(this)
-          .stop()
-          .data("origColor", jQuery(this).css("background-color"))
-          .animate({
-              opacity: fadeOn,
-              backgroundColor: fadeColor
-          }, duration)
-    }, function() {
-      jQuery(this)
-          .stop()
-          .animate({
-              opacity: fadeOff,
-              backgroundColor: jQuery(this).data("origColor")
-          }, duration)
-    });
-
-};
-
 jQuery(document).ready(function ($) {
-    var node = document.getElementsByClassName('menu')[0];
+    $(".menu-block-wrapper > .menu").addClass('parse');
+    var node = document.getElementsByClassName('parse')[0];
+    // console.log(node);    /* displays menu being parsed  */
     visitBfs(node);
 
     /* Extra Features Control Panel */
@@ -140,12 +107,5 @@ jQuery(document).ready(function ($) {
         $(this).toggleClass("fa-plus");
     });
 
-
-    /* Color Change On Hover (jquery.color.js only works with jquery version 1.7 or below) */
-    //$("ul.menu").css("opacity", "0.5");
-    /*$("html body .sitemap ul.menu").doFade({ fadeColor: "#444", fadeOff: "0.9", fadeOn: "0.99" });
-    $("html body .sitemap ul.menu ul.menu").doFade({ fadeColor: "#898989", fadeOff: "0.9", fadeOn: "0.99" });
-    $("html body .sitemap ul.menu ul.menu ul.menu").doFade({ fadeColor: "#D5D5D5", fadeOff: "0.9", fadeOn: "0.99" });
-    $("html body .sitemap ul.menu ul.menu ul.menu ul.menu").doFade({ fadeColor: "#e0e0e0", fadeOff: "0.9", fadeOn: "0.99" });*/
 
 });

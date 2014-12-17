@@ -24,5 +24,4 @@ stylesheets[all][] = css/layouts/sitemap/sitemap.layout.no-query.css
 ; Scripts
 ; ========================================
 scripts[] = libraries/underscore/underscore-min.js
-scripts[] = libraries/jquery-color/jquery.color.js
 scripts[] = js/sitemap.js
