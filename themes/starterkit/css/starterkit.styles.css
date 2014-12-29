@@ -286,8 +286,8 @@ img, media {
 /*all beans, need to figure out the best way to add a type class to the bean wrapper*/
 .l-region:hover .block.block--bean .block__title {
   color: #7100ff; }
-  .l-region:hover .block.block--bean .block__title .bean-ia-theme-information .regiontoggle {
-    color: #7100ff; }
+.l-region:hover .block.block--bean .bean-ia-theme-information .regiontoggle {
+  color: #7100ff; }
 
 .block.block--bean {
   display: block;
