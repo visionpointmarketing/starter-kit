@@ -1,162 +1,159 @@
-.page-node-21 .l-header .l-region,
-.page-node-21 .l-footer .l-region,
-.page-node-21 .l-region--content-header,
-.page-node-21 .l-content-center,
-.page-node-21 .l-nav-sidebar,
-.page-node-21 .l-content-wrapper,
-.page-node-21 .l-region--featured,
-.page-node-21 .l-content,
-.page-node-21 .l-region--above-content,
-.page-node-21 .l-region--below-content,
-.page-node-21 .l-promo-sidebar,
-.page-node-21 .l-region--content-footer,
-.page-node-21 .l-region--content-left,
-.page-node-21 .l-region--content-right,
-.page-node-28 .l-header .l-region,
-.page-node-28 .l-footer .l-region,
-.page-node-28 .l-region--content-header,
-.page-node-28 .l-content-center,
-.page-node-28 .l-nav-sidebar,
-.page-node-28 .l-content-wrapper,
-.page-node-28 .l-region--featured,
-.page-node-28 .l-content,
-.page-node-28 .l-region--above-content,
-.page-node-28 .l-region--below-content,
-.page-node-28 .l-promo-sidebar,
-.page-node-28 .l-region--content-footer,
-.page-node-28 .l-region--content-left,
-.page-node-28 .l-region--content-right,
-.page-node-32 .l-header .l-region,
-.page-node-32 .l-footer .l-region,
-.page-node-32 .l-region--content-header,
-.page-node-32 .l-content-center,
-.page-node-32 .l-nav-sidebar,
-.page-node-32 .l-content-wrapper,
-.page-node-32 .l-region--featured,
-.page-node-32 .l-content,
-.page-node-32 .l-region--above-content,
-.page-node-32 .l-region--below-content,
-.page-node-32 .l-promo-sidebar,
-.page-node-32 .l-region--content-footer,
-.page-node-32 .l-region--content-left,
-.page-node-32 .l-region--content-right {
-  background: none;
-  padding: 0px;
-  box-sizing: border-box;
-  border-radius: 0px;
-  border: none;
-  margin-bottom: 0px;
-  width: auto;
-  float: left; }
-.page-node-21 .print-buttons,
-.page-node-28 .print-buttons,
-.page-node-32 .print-buttons {
-  display: none; }
-.page-node-21 .block--bean .entity-bean,
-.page-node-28 .block--bean .entity-bean,
-.page-node-32 .block--bean .entity-bean {
-  display: none !important; }
+/*
+Syntax error: Undefined mixin 'floatblock'.
+        on line 70 of /var/www/cf-0/sites/all/themes/starterkit/sass/variables/temp_styles.scss, in `floatblock'
+        from line 70 of /var/www/cf-0/sites/all/themes/starterkit/sass/variables/temp_styles.scss
 
-body.page-node-21 .l-header {
-  background: #256e42;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
-  body.page-node-21 .l-header .l-header-first {
-    background: rgba(0, 0, 0, 0.4);
-    height: 110px; }
-  body.page-node-21 .l-header .l-header-second {
-    background: rgba(0, 0, 0, 0.4);
-    height: 110px; }
-  body.page-node-21 .l-header .l-header-third .menu-block-1 .menu {
-    margin: 0; }
-    body.page-node-21 .l-header .l-header-third .menu-block-1 .menu li {
-      border: none !important; }
-body.page-node-21 .l-main {
-  background: #b5b5b5;
-  min-height: 100vh;
-  border-left: 1px solid rgba(0, 0, 0, 0.5);
-  border-right: 1px solid rgba(0, 0, 0, 0.5);
-  box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.4);
-  padding: 10px; }
-body.page-node-21 .l-footer {
-  display: block;
-  float: left;
-  width: 100%;
-  height: 100px;
-  background: rgba(0, 0, 0, 0.4);
-  box-shadow: inset 0px 3px 20px rgba(0, 0, 0, 0.3); }
-body.page-node-28 .l-header {
-  width: 20% !important;
-  height: 80vh;
-  background: blue; }
-  body.page-node-28 .l-header .l-header-first {
-    width: 100% !important; }
-    body.page-node-28 .l-header .l-header-first #block-block-16 {
-      width: 100%; }
-  body.page-node-28 .l-header .l-header-third {
-    background: #2d5dd8;
-    width: 100%; }
-    body.page-node-28 .l-header .l-header-third .menu {
-      padding: 0;
-      margin: 0; }
-      body.page-node-28 .l-header .l-header-third .menu li {
-        width: 100% !important;
-        border: none !important;
-        border-bottom: 1px solid black !important;
-        padding: 0 !important;
-        font-size: 11px !important;
-        margin: 0 !important; }
-        body.page-node-28 .l-header .l-header-third .menu li.active-trail {
-          margin: 0 2px !important;
-          border-right: 2px solid rgba(30, 30, 34, 0.22) !important; }
-body.page-node-28 .l-main {
-  display: block;
-  float: left;
-  height: 80vh;
-  width: 80% !important;
-  padding: 20px;
-  box-sizing: border-box;
-  clear: none !important; }
-body.page-node-28 .l-footer {
-  height: 20vh !important;
-  background: #444; }
-body.page-node-32 .l-header {
-  display: block;
-  position: fixed !important; }
-  body.page-node-32 .l-header .l-header-first {
-    display: block;
-    float: left;
-    height: 100px;
-    background: rgba(0, 0, 0, 0.5);
-    width: 20% !important; }
-  body.page-node-32 .l-header .l-header-second {
-    display: none; }
-  body.page-node-32 .l-header .l-header-third {
-    background: rgba(0, 0, 0, 0.7);
-    height: 100px;
-    width: 80% !important;
-    float: left;
-    display: block;
-    padding: 0; }
-    body.page-node-32 .l-header .l-header-third .l-region--header-third {
-      width: 100% !important; }
-    body.page-node-32 .l-header .l-header-third .menu {
-      display: table !important;
-      padding: 0;
-      margin: 0; }
-      body.page-node-32 .l-header .l-header-third .menu li {
-        display: table-cell !important;
-        float: none !important; }
-        body.page-node-32 .l-header .l-header-third .menu li a {
-          line-height: 100px !important; }
-body.page-node-32 .l-main {
-  margin-top: 100px !important;
-  position: relative;
-  z-index: -1;
-  background: white;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
-  padding: 20px;
-  box-sizing: border-box;
-  height: 100vh; }
-body.page-node-32 .l-footer {
-  height: 200px !important;
-  background: white !important; }
+Backtrace:
+/var/www/cf-0/sites/all/themes/starterkit/sass/variables/temp_styles.scss:70:in `floatblock'
+/var/www/cf-0/sites/all/themes/starterkit/sass/variables/temp_styles.scss:70
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:253:in `visit_mixin'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `visit'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `map'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `visit'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `map'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `visit'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `map'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `visit'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `map'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `visit'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `map'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `visit'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `map'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `visit'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `map'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `visit'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `map'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `visit'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `map'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `visit'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `map'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `visit'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/tree/root_node.rb:20:in `render'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/engine.rb:315:in `_render'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/sass-3.2.19/lib/sass/engine.rb:262:in `render'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/compass-0.12.6/lib/compass/compiler.rb:139:in `block (2 levels) in compile'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/compass-0.12.6/lib/compass/compiler.rb:126:in `timed'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/compass-0.12.6/lib/compass/compiler.rb:138:in `block in compile'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/compass-0.12.6/lib/compass/logger.rb:45:in `red'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/compass-0.12.6/lib/compass/compiler.rb:137:in `compile'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/compass-0.12.6/lib/compass/compiler.rb:118:in `compile_if_required'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/compass-0.12.6/lib/compass/compiler.rb:103:in `block (2 levels) in run'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/compass-0.12.6/lib/compass/compiler.rb:101:in `each'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/compass-0.12.6/lib/compass/compiler.rb:101:in `block in run'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/compass-0.12.6/lib/compass/compiler.rb:126:in `timed'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/compass-0.12.6/lib/compass/compiler.rb:100:in `run'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/compass-0.12.6/lib/compass/commands/watch_project.rb:147:in `recompile'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/fssm-0.2.10/lib/fssm/path.rb:73:in `call'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/fssm-0.2.10/lib/fssm/path.rb:73:in `run_callback'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/fssm-0.2.10/lib/fssm/path.rb:55:in `callback_action'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/fssm-0.2.10/lib/fssm/path.rb:35:in `update'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/fssm-0.2.10/lib/fssm/state/directory.rb:39:in `block in modified'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/fssm-0.2.10/lib/fssm/state/directory.rb:37:in `each'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/fssm-0.2.10/lib/fssm/state/directory.rb:37:in `modified'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/fssm-0.2.10/lib/fssm/state/directory.rb:18:in `refresh'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:17:in `block (2 levels) in run'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:17:in `each'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:17:in `block in run'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:15:in `loop'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:15:in `run'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/fssm-0.2.10/lib/fssm/monitor.rb:26:in `run'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/fssm-0.2.10/lib/fssm.rb:70:in `monitor'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/compass-0.12.6/lib/compass/commands/watch_project.rb:87:in `perform'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/compass-0.12.6/lib/compass/commands/base.rb:18:in `execute'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/compass-0.12.6/lib/compass/commands/project_base.rb:19:in `execute'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/compass-0.12.6/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/compass-0.12.6/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/compass-0.12.6/bin/compass:30:in `block in <top (required)>'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/compass-0.12.6/bin/compass:44:in `call'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/gems/compass-0.12.6/bin/compass:44:in `<top (required)>'
+/home/vagrant/.rvm/rubies/ruby-1.9.3-p547/bin/compass:23:in `load'
+/home/vagrant/.rvm/rubies/ruby-1.9.3-p547/bin/compass:23:in `<main>'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/bin/ruby_executable_hooks:15:in `eval'
+/home/vagrant/.rvm/gems/ruby-1.9.3-p547@global/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined mixin 'floatblock'.\A         on line 70 of /var/www/cf-0/sites/all/themes/starterkit/sass/variables/temp_styles.scss, in `floatblock'\A         from line 70 of /var/www/cf-0/sites/all/themes/starterkit/sass/variables/temp_styles.scss"; }

@@ -70,6 +70,18 @@
 	max-width:1px;
 }
 /*all beans, need to figure out the best way to add a type class to the bean wrapper*/
+.l-region:hover{
+	.block.block--bean{
+		.block__title{
+			color: $purple;
+			.bean-ia-theme-information{
+				.regiontoggle{
+					color: $purple;
+				}
+			}
+		}
+	}
+}
 .block.block--bean{
 	display:block;
 	float:left;
@@ -80,7 +92,7 @@
 		float:left;
 		width:auto;
 		font-size:14px;
-		color: $purple;
+		color:rgba(0,0,0,0.4);
 		&:before{
 			content:'';
 		}
@@ -94,7 +106,7 @@
 			font-size: 14px;
 			line-height: 20px;
 			background: none;
-			color: $purple;
+			color:rgba(0,0,0,0.4);
 			outline: 0;
 		}
 		.seemore{
@@ -339,6 +351,30 @@ h2{
 							}
 						}
 					}
+				}
+			}
+		}
+	}
+}
+#block-menu-block-4{
+	.menu-block-wrapper{
+		ul{
+			margin:0;
+			padding:0;
+			li{
+				width: auto;
+				display: block;
+				float: left;
+				margin: 10px 10px 10px 0;
+				padding-right: 10px;
+				border-right: 1px solid black;
+				&:last-child{
+					border-right:none;
+				}
+				a{
+					padding:0px;
+					@include floatblock();
+					text-decoration:none;
 				}
 			}
 		}
