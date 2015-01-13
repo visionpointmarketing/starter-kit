@@ -238,7 +238,7 @@ html {
     display: block;
     position: absolute;
     top: 100px;
-    left: 55px; }
+    left: calc(50% - 34px); }
   html body {
     /* Toggle Switch */
     /* Hover Color Switch */
@@ -246,46 +246,57 @@ html {
     html body .edit-menu-wrap {
       display: none; }
     html body .control-panel.open {
-      top: -10px;
+      left: 0px;
       transition: all 1s;
       -webkit-transition: all 1s; }
     html body .control-panel {
       display: block;
+      width: 250px;
       position: fixed;
-      top: -101px;
-      left: calc(50% - 100px);
-      margin-top: 10px;
-      background: #ff7e00;
+      top: 50px;
+      left: -200px;
       z-index: 9999;
       border: 2px solid #334477;
       text-align: center;
       transition: all 1s;
       -webkit-transition: all 1s; }
-      html body .control-panel i.fa-cog {
-        padding: 10px;
-        color: #fff;
-        font-size: 24px;
-        text-shadow: 0 0 5px #111; }
-      html body .control-panel .toggle-switch, html body .control-panel .hover-switch, html body .control-panel .layout-switch {
+      html body .control-panel .switch-wrap {
         display: block;
-        background: #eee;
-        z-index: 1; }
-        html body .control-panel .toggle-switch ul, html body .control-panel .hover-switch ul, html body .control-panel .layout-switch ul {
-          display: table;
-          margin: 0;
-          padding: 0; }
-          html body .control-panel .toggle-switch ul li, html body .control-panel .hover-switch ul li, html body .control-panel .layout-switch ul li {
-            width: 100px !important;
-            height: 30px !important;
-            display: table-cell;
-            float: none !important;
-            text-align: center !important;
-            vertical-align: middle;
-            border: 1px solid #000;
-            cursor: pointer;
-            padding: 0 !important; }
-          html body .control-panel .toggle-switch ul li.active, html body .control-panel .hover-switch ul li.active, html body .control-panel .layout-switch ul li.active {
-            background: #ccc; }
+        float: left;
+        width: 80%; }
+        html body .control-panel .switch-wrap .toggle-switch, html body .control-panel .switch-wrap .hover-switch, html body .control-panel .switch-wrap .layout-switch {
+          display: block;
+          background: #eee;
+          z-index: 1; }
+          html body .control-panel .switch-wrap .toggle-switch ul, html body .control-panel .switch-wrap .hover-switch ul, html body .control-panel .switch-wrap .layout-switch ul {
+            display: table;
+            margin: 0;
+            padding: 0; }
+            html body .control-panel .switch-wrap .toggle-switch ul li, html body .control-panel .switch-wrap .hover-switch ul li, html body .control-panel .switch-wrap .layout-switch ul li {
+              width: 100px !important;
+              height: 30px !important;
+              display: table-cell;
+              float: none !important;
+              text-align: center !important;
+              vertical-align: middle;
+              border: 1px solid #000;
+              cursor: pointer;
+              padding: 0 !important; }
+            html body .control-panel .switch-wrap .toggle-switch ul li.active, html body .control-panel .switch-wrap .hover-switch ul li.active, html body .control-panel .switch-wrap .layout-switch ul li.active {
+              background: #ccc; }
+      html body .control-panel .config-wrap {
+        display: block;
+        float: left;
+        width: 20%;
+        height: 90px;
+        background: #ff7e00;
+        box-sizing: border-box; }
+        html body .control-panel .config-wrap i.fa-cog {
+          margin-top: 23px;
+          padding: 10px;
+          color: #fff;
+          font-size: 24px;
+          text-shadow: 0 0 5px #111; }
     html body .sitemap {
       margin-top: 115px;
       padding: 0px 20px 20px 20px; }
@@ -399,7 +410,8 @@ html {
     html body .o3 .sitemap .menu-block-wrapper ul.menu ul.menu ul.menu ul.menu ul.menu:hover {
       background: #fff; }
     html body .o2 .sitemap {
-      padding: 50px 0 0 20px; }
+      margin: 150px 0 0 70px;
+      padding: 0; }
       html body .o2 .sitemap .menu-block-wrapper > ul.menu {
         padding: 0px 25px 20px 0px; }
       html body .o2 .sitemap .menu-block-wrapper ul.menu {

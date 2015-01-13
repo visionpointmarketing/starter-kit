@@ -1,4 +1,5 @@
-function visitBfs(node, func) {
+function traverseBF(node, func) {
+    //breadth first tree traversal to determine how many items in each level (http://www.timlabonne.com/2013/07/tree-traversals-with-javascript)
     var q = [node];
     while (q.length > 0) {
         node = q.shift();
@@ -28,10 +29,11 @@ function visitBfs(node, func) {
 }
 
 jQuery(document).ready(function ($) {
+    //add class to correct menu block (w/o admin menu could be traversed)
     $(".menu-block-wrapper > .menu").addClass('parse');
     var node = document.getElementsByClassName('parse')[0];
     // console.log(node);    /* displays menu being parsed  */
-    visitBfs(node);
+    traverseBF(node);
 
     /* Extra Features Control Panel */
     $('.control-panel').on('click',function(e){
@@ -48,13 +50,17 @@ jQuery(document).ready(function ($) {
         $(this).addClass('active');
         //get the ID of the option selected
         var target_id = $(this).attr('id');
+        $("#option-switch.o1 .sitemap .menu-block-wrapper > ul.menu" ).css( "height", "auto" );
         if (target_id == 'o1'){
             $('#option-switch').removeClass('o2');
             $('#option-switch').addClass('o1');
+            //set height of 1st level based on page height so hover color will show
+            $("#option-switch.o1 .sitemap .menu-block-wrapper > ul.menu" ).css( "height", $(document).height() + "px" );
         }
         if (target_id == 'o2'){
             $('#option-switch').removeClass('o1');
             $('#option-switch').addClass('o2');
+            $("#option-switch.o1 .sitemap .menu-block-wrapper > ul.menu" ).css( "height", "auto" );
         }
     });
     $('.hover-switch li').on('click', function(event){
@@ -70,10 +76,13 @@ jQuery(document).ready(function ($) {
         if (target_id == 'o3'){
             $('#option-switch').removeClass('o4');
             $('#option-switch').addClass('o3');
+            //console.log(document.documentElement.scrollHeight);
+            $("#option-switch.o1 .sitemap .menu-block-wrapper > ul.menu" ).css( "height", $(document).height() + "px" );
         }
         if (target_id == 'o4'){
             $('#option-switch').removeClass('o3');
             $('#option-switch').addClass('o4');
+            $("#option-switch.o1 .sitemap .menu-block-wrapper > ul.menu" ).css( "height", "auto" );
         }
     });
     $('.toggle-switch li').on('click', function(event){
@@ -105,6 +114,9 @@ jQuery(document).ready(function ($) {
     $('.toggle-icon').on('click', function(e){
         $(this).siblings().children().toggleClass("hide");
         $(this).toggleClass("fa-plus");
+        //adjust height for hover color
+        $("#option-switch.o1 .sitemap .menu-block-wrapper > ul.menu" ).css( "height", "auto" );
+        $("#option-switch.o1 .sitemap .menu-block-wrapper > ul.menu" ).css( "height", $(document).height() + "px" );
     });
 
 

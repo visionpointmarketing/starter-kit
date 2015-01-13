@@ -72,25 +72,27 @@
 ?>
 <!-- Extra Features Control Panel -->
 <div class="control-panel">
-	<div class="layout-switch">
-	  <ul>
-	    <li id="o1" class="active">Horizontal</li>
-	    <li id="o2">Vertical</li>
-	  </ul>
+	<div class="switch-wrap">
+		<div class="layout-switch">
+		  <ul>
+		    <li id="o1" class="active">Horizontal</li>
+		    <li id="o2">Vertical</li>
+		  </ul>
+		</div>
+		<div class="hover-switch">
+			<ul>
+		    <li id="o3">Hover On</li>
+		    <li id="o4" class="active">Hover Off</li>
+		  </ul>
+		</div>
+		<div class="toggle-switch">
+			<ul>
+		    <li id="o5">Toggle On</li>
+		    <li id="o6" class="active">Toggle Off</li>
+		  </ul>
+		</div>
 	</div>
-	<div class="hover-switch">
-		<ul>
-	    <li id="o3">Hover On</li>
-	    <li id="o4" class="active">Hover Off</li>
-	  </ul>
-	</div>
-	<div class="toggle-switch">
-		<ul>
-	    <li id="o5">Toggle On</li>
-	    <li id="o6" class="active">Toggle Off</li>
-	  </ul>
-	</div>
-	<i class="fa fa-cog"></i>
+	<div class="config-wrap"><i class="fa fa-cog"></i></div>
 </div>
 <div class="edit-menu-wrap">
   <a href="/admin/structure/menu/manage/main-menu" target="_blank">Edit Menu</a>
