@@ -347,7 +347,8 @@ html {
         html body .sitemap .menu-block-wrapper ul.menu > li a {
           margin-top: -20px; }
       html body .sitemap .menu-block-wrapper > ul.menu {
-        padding: 0; }
+        padding: 0;
+        border-left: none; }
         html body .sitemap .menu-block-wrapper > ul.menu > li {
           float: left; }
           html body .sitemap .menu-block-wrapper > ul.menu > li.width-1 {
