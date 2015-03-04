@@ -83,10 +83,10 @@
     </div>
   </header>
   <div class="l-main">
-    <div id="content-region1" class="content-region"><img class="background" src="http://placehold.it/1500x800/444444/000&text=REGION1"><?php print render($page['content_header']); ?></div>
-    <div id="content-region2" class="content-region"><img class="background" src="http://placehold.it/1500x800/898989/000&text=REGION2"><?php print render($page['above_content']); ?></div>
-    <div id="content-region3" class="content-region"><img class="background" src="http://placehold.it/1500x800/D5D5D5/000&text=REGION3"><<?php print render($page['below_content']); ?></div>
-    <div id="content-region4" class="content-region"><img class="background" src="http://placehold.it/1500x800/FFFFFF/000&text=REGION4"><<?php print render($page['content_footer']); ?></div>
+    <div id="content-region1" class="content-region"><?php print render($page['content_header']); ?></div>
+    <div id="content-region2" class="content-region"><?php print render($page['above_content']); ?></div>
+    <div id="content-region3" class="content-region"><?php print render($page['below_content']); ?></div>
+    <div id="content-region4" class="content-region"><?php print render($page['content_footer']); ?></div>
   </div>
   <footer class="l-footer" role="contentinfo">
     <?php print render($page['footer_first']); ?>
