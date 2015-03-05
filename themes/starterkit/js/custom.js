@@ -56,6 +56,9 @@ jQuery( document ).ready(function () {
 			jQuery(this).parents('.entity-bean').css('min-height',0);
 		}
 	});
+	jQuery(".menu-toggle").on('click',function(e){
+		jQuery(this).parents('.l-region--header-third').toggleClass('open');
+	});
 });
 jQuery(document).mouseup(function(e){
 	var c1 = jQuery("#block-user-login");

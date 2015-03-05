@@ -90,13 +90,15 @@
   </div>
   <div class="l-main">
     <div id="content" class="l-main">
+      <?php if ($is_front){ ?> <h1><?php print render($site_slogan); ?></h1> <?php } ?>
       <ul>
         <li id="a1">
           <div class="l-content-header">
             <div class="l-content-header-meta">
               <div class="wrapper">
+                <?php print render($tabs); ?>
                 <?php print $breadcrumb; ?>
-                <?php if ($title): ?>
+                <?php if ($title && !$is_front): ?>
                   <h1><?php print $title; ?></h1>
                 <?php endif; ?>
               </div>

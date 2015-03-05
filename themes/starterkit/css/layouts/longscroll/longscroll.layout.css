@@ -1,8 +1,6 @@
 #content > ul {
   padding: 0; }
   #content > ul > li {
-    min-height: 101vh;
-    padding-top: 50px;
     display: block;
     float: left;
     width: 100%; }

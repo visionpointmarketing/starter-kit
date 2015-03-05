@@ -18,6 +18,7 @@ stylesheets[all][] = css/starterkit.no-query.css
 ; ========================================
 scripts[] = js/starterkit.behaviors.js
 scripts[] = js/custom.js
+scripts[] = js/instafeed.min.js
 
 ; ========================================
 ; Regions

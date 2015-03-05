@@ -21,8 +21,6 @@
 	&>ul{
 		padding:0;
 		&>li{
-			min-height:101vh;
-			padding-top:50px;
 			@include floatblock();
 		}
 	}

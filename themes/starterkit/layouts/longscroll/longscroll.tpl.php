@@ -93,6 +93,7 @@
       </ul>
     </div>
     <div id="content" class="l-main">
+      
       <ul>
         <li id="a1">
           <div class="l-content-header">
@@ -102,6 +103,7 @@
                 <?php if ($title): ?>
                   <h1><?php print $title; ?></h1>
                 <?php endif; ?>
+              <?php print render($tabs); ?>
               </div>
             </div>
             <?php print render($page['content_header']); ?>

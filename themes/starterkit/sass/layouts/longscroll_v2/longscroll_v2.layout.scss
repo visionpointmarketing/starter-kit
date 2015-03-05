@@ -29,6 +29,9 @@
 html{
 	body{
 		max-width:100%;
+		.l-header{
+			margin-bottom:10vw;
+		}
 		.l-page{
 			@include floatblock();
 			header{
@@ -42,16 +45,22 @@ html{
 		.l-main{
 			@include floatblock();
 			#content{
+				.breadcrumbs{
+					padding:10px 0;
+				}
 				ul{
 					li{
-						@include floatblock();
 						.l-region{
-							height:111vh;
-							margin-bottom:200px;
+							min-height: 111vh;
+							margin-bottom: 200px;
+							height: auto;
+							display: block;
+							float: left;
 							border-radius: 0;
 							border: none;
-							border-top:5px solid #111;
-							box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+							border-top: 5px solid #111;
+							box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+							width:100%;
 						}
 					}
 				}
