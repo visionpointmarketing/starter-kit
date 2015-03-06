@@ -29,7 +29,6 @@
 body.developer{
 	.l-header .l-region,
 	.l-footer .l-region,
-	.l-region--content-header,
 	.l-content-center,
 	.l-nav-sidebar,
 	.l-content-wrapper,
@@ -38,7 +37,6 @@ body.developer{
 	.l-region--above-content,
 	.l-region--below-content,
 	.l-promo-sidebar,
-	.l-region--content-footer,
 	.l-region--content-left,
 	.l-region--content-right
 	{
@@ -74,9 +72,14 @@ body.developer{
 	position:relative;
 }
 
-.block{
-	@include floatblock();
+/*tweak so we can see info block for these regions*/
+#block-bean-promo-sidebar-region{
+	.seemore{
+		right:0;
+		left:auto;
+	}
 }
+
 /*don't need to see these for display purposes*/
 .messages{
 	display:none;
@@ -97,6 +100,9 @@ body.developer{
 			}
 		}
 	}
+}
+.block{
+	@include floatblock();
 }
 form{
 	label{

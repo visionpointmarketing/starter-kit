@@ -10,7 +10,6 @@ img, media {
 
 body.developer .l-header .l-region,
 body.developer .l-footer .l-region,
-body.developer .l-region--content-header,
 body.developer .l-content-center,
 body.developer .l-nav-sidebar,
 body.developer .l-content-wrapper,
@@ -19,7 +18,6 @@ body.developer .l-content,
 body.developer .l-region--above-content,
 body.developer .l-region--below-content,
 body.developer .l-promo-sidebar,
-body.developer .l-region--content-footer,
 body.developer .l-region--content-left,
 body.developer .l-region--content-right {
   background: white;
@@ -51,10 +49,10 @@ body.developer .l-region--content-right {
 .l-region {
   position: relative; }
 
-.block {
-  display: block;
-  float: left;
-  width: 100%; }
+/*tweak so we can see info block for these regions*/
+#block-bean-promo-sidebar-region .seemore {
+  right: 0;
+  left: auto; }
 
 /*don't need to see these for display purposes*/
 .messages {
@@ -69,6 +67,11 @@ body.developer .l-region--content-right {
   color: #7100ff; }
 .l-region:hover .block.block--bean .bean-ia-theme-information .regiontoggle {
   color: #7100ff; }
+
+.block {
+  display: block;
+  float: left;
+  width: 100%; }
 
 form label {
   display: block;
