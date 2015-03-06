@@ -5,6 +5,9 @@ img, media {
 .messages {
   display: none; }
 
+#block-user-login {
+  display: none; }
+
 body.developer .l-header .l-region,
 body.developer .l-footer .l-region,
 body.developer .l-region--content-header,
@@ -664,24 +667,27 @@ img {
       border: 2px solid #444444;
       color: #444444; }
 
-#block-menu-block-4 .menu-block-wrapper ul {
-  margin: 0;
-  padding: 0; }
-  #block-menu-block-4 .menu-block-wrapper ul li {
-    width: auto;
-    display: block;
-    float: left;
-    margin: 10px 10px 10px 0;
-    padding-right: 10px;
-    border-right: 1px solid black; }
-    #block-menu-block-4 .menu-block-wrapper ul li:last-child {
-      border-right: none; }
-    #block-menu-block-4 .menu-block-wrapper ul li a {
-      padding: 0px;
+#block-menu-block-4 {
+  float: right;
+  width: auto; }
+  #block-menu-block-4 .menu-block-wrapper ul {
+    margin: 0;
+    padding: 0; }
+    #block-menu-block-4 .menu-block-wrapper ul li {
+      width: auto;
       display: block;
       float: left;
-      width: 100%;
-      text-decoration: none; }
+      margin: 10px 10px 10px 0;
+      padding-right: 10px;
+      border-right: 1px solid black; }
+      #block-menu-block-4 .menu-block-wrapper ul li:last-child {
+        border-right: none; }
+      #block-menu-block-4 .menu-block-wrapper ul li a {
+        padding: 0px;
+        display: block;
+        float: left;
+        width: 100%;
+        text-decoration: none; }
 
 /*quicktabs block*/
 .block {
