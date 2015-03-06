@@ -28,7 +28,6 @@
  */
 ?>
 
-<?php print_r($elements['field_text_links_image'][0]); ?>
 <div class="<?php print $classes; if(!isset($elements['field_text_links_image'][0])){echo ' noimg';} ?> a-<?php print($elements['field_alignment'][0]['#markup']); ?> clearfix"<?php print $attributes; ?>>
 	<div class="content <?php print $content_attributes ?>">
 		<?php if($title != ' '){ ?> <h2><?php print $title ?></h2> <?php } ?>
