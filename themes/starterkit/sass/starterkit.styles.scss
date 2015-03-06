@@ -23,6 +23,9 @@
 .messages{
 	display:none;
 }
+#block-user-login{
+	display:none;
+}
 body.developer{
 	.l-header .l-region,
 	.l-footer .l-region,
@@ -805,6 +808,7 @@ img{
 		}
 	}
 }
+
 /*default subnav block*/
 #block-menu-block-2{
 	.menu-block-wrapper{
@@ -861,6 +865,8 @@ img{
 	}
 }
 #block-menu-block-4{
+	float:right;
+	width:auto;
 	.menu-block-wrapper{
 		ul{
 			margin:0;
