@@ -349,6 +349,10 @@ body.longscrollv2{
 		&.noimg{
 			.promo-content-container{
 				width:100%;
+				max-width:initial;
+				.field--name-field-list-of-links{
+					@include floatblock();
+				}
 			}
 		}
 		.field--name-field-list-of-links{

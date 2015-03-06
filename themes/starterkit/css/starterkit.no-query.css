@@ -252,7 +252,12 @@ body.longscrollv2 .l-content-header-meta {
     max-width: 30%;
     width: auto; }
   .block.block--bean .bean-text-and-links-promo.noimg .promo-content-container {
-    width: 100%; }
+    width: 100%;
+    max-width: initial; }
+    .block.block--bean .bean-text-and-links-promo.noimg .promo-content-container .field--name-field-list-of-links {
+      display: block;
+      float: left;
+      width: 100%; }
   .block.block--bean .bean-text-and-links-promo .field--name-field-list-of-links .field__item a {
     display: block;
     width: 90%;
