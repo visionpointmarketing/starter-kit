@@ -139,6 +139,22 @@ body.front{
 		}
 	}
 }
+#block-bean-test-button-promo-1{
+	.field__item{
+		a{
+			display: block;
+			float: left;
+			width: 100%;
+			text-align: center;
+			border: 4px solid #555;
+			background: #666;
+			color: #ccc;
+			line-height: 42px;
+			border-radius: 8px;
+			text-decoration: none;
+		}
+	}
+}
 body.longscrollv2{
 	.l-region--content-header,
 	.l-region--content-footer{
@@ -328,6 +344,11 @@ body.longscrollv2{
 			@include breakpoint($tab,true){
 				max-width:30%;
 				width:auto;
+			}
+		}
+		&.noimg{
+			.promo-content-container{
+				width:100%;
 			}
 		}
 		.field--name-field-list-of-links{

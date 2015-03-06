@@ -98,6 +98,18 @@ body.page-node-73 .l-region .block.block--bean .block__title,
 body.front .l-region .block.block--bean .block__title {
   display: none; }
 
+#block-bean-test-button-promo-1 .field__item a {
+  display: block;
+  float: left;
+  width: 100%;
+  text-align: center;
+  border: 4px solid #555;
+  background: #666;
+  color: #ccc;
+  line-height: 42px;
+  border-radius: 8px;
+  text-decoration: none; }
+
 body.longscrollv2 .l-region--content-header,
 body.longscrollv2 .l-region--content-footer {
   background: white; }
@@ -251,6 +263,8 @@ body.longscrollv2 .l-content-header-meta {
       .block.block--bean .bean-text-and-links-promo .promo-content-container {
         max-width: 30%;
         width: auto; } }
+  .block.block--bean .bean-text-and-links-promo.noimg .promo-content-container {
+    width: 100%; }
   .block.block--bean .bean-text-and-links-promo .field--name-field-list-of-links .field__item a {
     display: block;
     width: 90%;
