@@ -47,6 +47,9 @@ body.developer{
 		border: 1px solid $dkgray;
 		margin-bottom:10px;
 	}
+	#block-user-login{
+		display:block;
+	}
 }
 	.l-header,
 	.l-header .l-region,
@@ -664,7 +667,7 @@ img{
 	}
 }
 #block-user-login{
-	display:block;
+	display:none;
 	width:auto;
 	position: absolute;
 	right: 10px;
@@ -973,7 +976,15 @@ html{
 		}
 	}
 }
-
+#block-bean-footer-address,
+#block-bean-footer-social{
+	display:block;
+	float:left;
+	width:100%;
+	@include breakpoint($tab,true){
+		width:50%;
+	}
+}
 .print-buttons{
 	position:fixed;
 	left:-60px;

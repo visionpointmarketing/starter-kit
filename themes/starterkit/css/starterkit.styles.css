@@ -26,6 +26,8 @@ body.developer .l-region--content-right {
   border-radius: 5px;
   border: 1px solid #444444;
   margin-bottom: 10px; }
+body.developer #block-user-login {
+  display: block; }
 
 .l-header,
 .l-header .l-region,
@@ -536,7 +538,7 @@ img {
     padding: 5px; }
 
 #block-user-login {
-  display: block;
+  display: none;
   width: auto;
   position: absolute;
   right: 10px;
@@ -786,6 +788,16 @@ html {
     margin: 0 auto; }
     html body .l-page {
       overflow: hidden; }
+
+#block-bean-footer-address,
+#block-bean-footer-social {
+  display: block;
+  float: left;
+  width: 100%; }
+  @media (min-width: 45em) {
+    #block-bean-footer-address,
+    #block-bean-footer-social {
+      width: 50%; } }
 
 .print-buttons {
   position: fixed;
