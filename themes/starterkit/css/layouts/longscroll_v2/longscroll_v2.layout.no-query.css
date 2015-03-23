@@ -14,7 +14,7 @@ html body {
     display: block;
     float: left;
     width: 100%; }
-    html body .l-page header {
+    html body .l-page > header {
       display: block;
       float: left;
       width: 100%;

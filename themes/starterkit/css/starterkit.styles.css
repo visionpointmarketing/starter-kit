@@ -211,7 +211,8 @@ body.longscrollv2 .l-content-header-meta {
   .block.block--bean .bean-showcase {
     display: block;
     float: left;
-    max-width: 100%; }
+    max-width: 100%;
+    width: 100%; }
     .block.block--bean .bean-showcase .showcase-intro {
       display: block;
       float: left;
@@ -231,6 +232,10 @@ body.longscrollv2 .l-content-header-meta {
         display: block;
         float: left;
         width: 100%; }
+        .block.block--bean .bean-showcase .showcase-elements .field__item .field--name-field-image-upload .field__items .field__item {
+          display: none; }
+          .block.block--bean .bean-showcase .showcase-elements .field__item .field--name-field-image-upload .field__items .field__item:first-child {
+            display: block; }
         .block.block--bean .bean-showcase .showcase-elements .field__item img {
           display: block;
           float: left;
@@ -388,6 +393,38 @@ body.longscrollv2 .l-content-header-meta {
           -webkit-text-fill-color: transparent;
           padding: 10px;
           box-sizing: border-box; }
+
+/* views blocks on sights and sounds home*/
+#block-views-media-block-1 .block__content .view-content .views-row {
+  display: block;
+  float: left;
+  width: 100%;
+  width: 20%; }
+  #block-views-media-block-1 .block__content .view-content .views-row .views-field-field-image-upload .field-content a {
+    display: none; }
+    #block-views-media-block-1 .block__content .view-content .views-row .views-field-field-image-upload .field-content a:first-child {
+      display: block; }
+
+#block-views-media-block-2 .block__content .view-content .views-row {
+  display: block;
+  float: left;
+  width: 100%;
+  width: 100%; }
+  @media (min-width: 45em) {
+    #block-views-media-block-2 .block__content .view-content .views-row {
+      width: 50%; } }
+  @media (min-width: 70em) {
+    #block-views-media-block-2 .block__content .view-content .views-row {
+      width: 33.3333%; } }
+
+#block-views-media-block-3 .block__content .view-content .views-row {
+  display: block;
+  float: left;
+  width: 100%;
+  width: 50%; }
+  #block-views-media-block-3 .block__content .view-content .views-row .views-field-field-video-url .player iframe {
+    max-width: 100%;
+    max-height: 34vw; }
 
 .block--views-news-block-1 .view-news {
   position: relative; }

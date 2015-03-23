@@ -34,7 +34,7 @@ html{
 		}
 		.l-page{
 			@include floatblock();
-			header{
+			& > header{
 				@include floatblock();
 				z-index: 1;
 				position: relative;
