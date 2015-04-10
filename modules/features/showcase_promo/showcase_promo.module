@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Showcase Promo feature.
+ */
+
+include_once 'showcase_promo.features.inc';
