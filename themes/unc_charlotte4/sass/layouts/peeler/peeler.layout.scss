@@ -1,0 +1,104 @@
+// Import external libraries.
+@import "compass";
+@import "breakpoint";
+@import "singularitygs";
+
+// Import variables, abstractions, base styles and components using globbing.
+//
+// Globbing will always import files alphabetically. Optimally, all your
+// components should be self-contained and explicit enough to not have any
+// contained styles leak into unrelated components: The import order should not
+// affect the result.
+//
+// If there are variables, functions or mixins that depend on each other and
+// therefore need to be imported in a specific order you can import them
+// directly. Variables-, function- or mixin providing partials should never
+// output any styles themselves: Importing them multiple times to resolve
+// dependencies shouldn't be a problem.
+@import "../../variables/**/*";
+#admin-menu{
+  z-index:1002;
+}
+header{
+	display: block;
+	float: left;
+	width: 100%;
+	position: relative;
+	z-index: 1001;
+}
+footer{
+	display: block;
+	float: left;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	z-index: 1000;
+  height:0;
+}
+.l-region {}
+div#content-region1{  
+  background-color: $dkgray;
+}
+div#content-region2{  
+  background-color: $gray;
+}
+div#content-region3{  
+  background-color: $ltgray;
+}
+div#content-region4{  
+  background-color: $whitegray;
+}
+div.content-region {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  display: block;
+  -moz-box-shadow: 0 0 12px #666;
+  -webkit-box-shadow: 0 0 12px #666;
+  box-shadow: 0 0 12px #666;
+  background: #f2f2f2;
+  overflow: hidden;
+  border: 5px solid #000;
+}
+div.content-region .background {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+.l-footer .l-region--footer-first,
+.l-footer .l-region--footer-second{
+  @include float-span(6);
+  margin-top:12px;
+}
+
+@media print{
+  div.content-region{
+    display:block;
+    float:left;
+    width:100%;
+    position:relative!important;
+  }
+  header.l-header,
+  div.l-main,
+  footer.l-footer{
+    display:block;
+    float:left;
+    width:100%;
+    position:relative;
+    height:auto;
+  }
+  .l-footer{
+    .l-region--footer-first, 
+    .l-region--footer-second{
+      top:initial;
+    }
+  }
+  body.print-mobile{
+  }
+  body.print-tablet{
+  }
+  body.print-desktop{
+  }
+}

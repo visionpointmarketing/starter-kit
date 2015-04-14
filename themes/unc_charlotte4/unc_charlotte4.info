@@ -1,0 +1,97 @@
+name = unc_charlotte4
+description = Please provide a description for your theme.
+base theme = omega
+screenshot = screenshot.png
+engine = phptemplate
+core = 7.x
+
+; ========================================
+; Stylesheets
+; ========================================
+stylesheets[all][] = css/unc_charlotte4.normalize.css
+stylesheets[all][] = css/unc_charlotte4.hacks.css
+stylesheets[all][] = css/unc_charlotte4.styles.css
+stylesheets[all][] = css/unc_charlotte4.no-query.css
+
+; ========================================
+; Scripts
+; ========================================
+scripts[] = js/unc_charlotte4.behaviors.js
+scripts[] = js/custom.js
+scripts[] = js/instafeed.min.js
+
+; ========================================
+; Regions
+; ========================================
+regions[header_first] = Header First
+regions[header_second] = Header Second
+regions[header_third] = Header Third
+regions[content_header] = Content Header
+regions[nav_sidebar] = Navigation Sidebar
+regions[featured] = Featured Content
+regions[above_content] = Above Content
+regions[content_left] = Content Left
+regions[content_right] = Content Right
+regions[content] = Content
+regions[below_content] = Below Content
+regions[promo_sidebar] = Promo Sidebar
+regions[content_footer] = Content Footer
+regions[footer_first] = Footer First
+regions[footer_second] = Footer Second
+
+; ========================================
+; Layout
+; ========================================
+layout[default_inner][all][] = css/layouts/default_inner/unc_charlotte4_default_inner.layout.css
+layout[twocolumn][all][] = css/layouts/twocolumn/unc_charlotte4_twocolumn.layout.css
+layout[sitemap][all][] = css/layouts/sitemap/unc_charlotte4_sitemap.layout.css
+layout[peeler][all][] = css/layouts/peeler/peeler.layout.css
+layout[longscroll][all][] = css/layouts/longscroll/longscroll.layout.css
+
+; ========================================
+; Settings
+; ========================================
+settings[toggle_logo] = 1
+settings[toggle_name] = 0
+settings[toggle_search] = 1
+settings[toggle_slogan] = 1
+settings[toggle_node_user_picture] = 1
+settings[toggle_comment_user_picture] = 1
+settings[toggle_comment_user_verification] = 1
+settings[toggle_favicon] = 1
+settings[toggle_main_menu] = 1
+settings[toggle_secondary_menu] = 1
+settings[omega_toggle_front_page_content] = 1
+settings[default_logo] = 1
+settings[logo_path] = ""
+settings[logo_upload] = ""
+settings[default_favicon] = 1
+settings[favicon_path] = ""
+settings[favicon_upload] = ""
+settings[omega_enable_warning] = 1
+settings[omega_toggle_extension_layouts] = 1
+settings[omega_layout] = default_inner
+settings[omega_toggle_extension_development] = 1
+settings[omega_enable_export_reminder] = 1
+settings[omega_rebuild_theme_registry] = 0
+settings[omega_rebuild_aggregates] = 0
+settings[omega_browser_width_indicator] = 0
+settings[omega_livereload] = 0
+settings[omega_livereload_script] = http://localhost:35729/livereload.js
+settings[omega_livereload_host] = localhost
+settings[omega_livereload_port] = 35729
+settings[omega_demo_regions] = 0
+settings[omega_toggle_extension_compatibility] = 1
+settings[omega_conditional_classes_html] = 1
+settings[omega_apple_touch] = 1
+settings[omega_cleartype] = 1
+settings[omega_handheld_friendly] = 1
+settings[omega_mobile_optimized] = 1
+settings[omega_viewport] = 1
+settings[omega_viewport_user_scaleable] = 1
+settings[omega_chrome_edge] = 1
+settings[omega_toggle_extension_assets] = 1
+settings[omega_libraries][selectivizr][status] = 1
+settings[omega_libraries][respond][status] = 1
+settings[omega_libraries][pie][status] = 1
+settings[omega_libraries][html5shiv][status] = 1

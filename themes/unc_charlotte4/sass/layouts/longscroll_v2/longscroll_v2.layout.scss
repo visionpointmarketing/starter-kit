@@ -1,0 +1,136 @@
+// Import external libraries.
+@import "compass";
+@import "breakpoint";
+@import "singularitygs";
+
+// Import variables, abstractions, base styles and components using globbing.
+//
+// Globbing will always import files alphabetically. Optimally, all your
+// components should be self-contained and explicit enough to not have any
+// contained styles leak into unrelated components: The import order should not
+// affect the result.
+//
+// If there are variables, functions or mixins that depend on each other and
+// therefore need to be imported in a specific order you can import them
+// directly. Variables-, function- or mixin providing partials should never
+// output any styles themselves: Importing them multiple times to resolve
+// dependencies shouldn't be a problem.
+@import "../../variables/**/*";
+
+#content{
+	&>ul{
+		padding:0;
+		&>li{
+			min-height:101vh;
+			@include floatblock();
+		}
+	}
+}
+html{
+	body{
+		max-width:100%;
+		.l-header{
+			margin-bottom:10vw;
+		}
+		.l-page{
+			@include floatblock();
+			& > header{
+				@include floatblock();
+				z-index: 1;
+				position: relative;
+				background: #eee;
+				box-shadow: 0 0 5px rgba(0,0,0,0.4);
+			}
+		}
+		.l-main{
+			@include floatblock();
+			#content{
+				.breadcrumbs{
+					padding:10px 0;
+				}
+				ul{
+					li{
+						.l-region{
+							min-height: 111vh;
+							margin-bottom: 200px;
+							height: auto;
+							display: block;
+							float: left;
+							border-radius: 0;
+							border: none;
+							border-top: 5px solid #111;
+							box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+							width:100%;
+						}
+					}
+				}
+			}
+		}
+		.l-footer{
+			@include floatblock();
+		}
+
+		.backgrounds{
+			div{
+				display:none;
+				img{
+					position:fixed;
+					display: block;
+					height: auto;
+					top: -9999px;
+					bottom: -9999px;
+					left: -9999px;
+					right: -9999px;
+					max-width: 100%;
+					min-height:100%;
+					margin:auto;
+					min-width:1000px;
+				}
+				&.b1{
+					display:block;
+				}
+			}
+		}
+		&.a2{
+			.backgrounds{
+				.b2{
+					display:block;
+				}
+			}
+		}
+		&.a3{
+			.backgrounds{
+				.b3{
+					display:block;
+				}
+			}
+		}
+		&.a4{
+			.backgrounds{
+				.b4{
+					display:block;
+				}
+			}
+		}
+	}
+}
+@media print{
+	html{
+		body{
+			.backgrounds{
+				div{
+					display:none;
+					img{
+						display:none;
+					}
+				}
+			}
+		}
+	}
+	body.print-mobile{
+	}
+	body.print-tablet{
+	}
+	body.print-desktop{
+	}
+}

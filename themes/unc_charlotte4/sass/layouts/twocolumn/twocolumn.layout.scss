@@ -1,0 +1,191 @@
+// Import external libraries.
+@import "compass";
+@import "breakpoint";
+@import "singularitygs";
+
+// Import variables, abstractions, base styles and components using globbing.
+//
+// Globbing will always import files alphabetically. Optimally, all your
+// components should be self-contained and explicit enough to not have any
+// contained styles leak into unrelated components: The import order should not
+// affect the result.
+//
+// If there are variables, functions or mixins that depend on each other and
+// therefore need to be imported in a specific order you can import them
+// directly. Variables-, function- or mixin providing partials should never
+// output any styles themselves: Importing them multiple times to resolve
+// dependencies shouldn't be a problem.
+@import "../../variables/**/*";
+
+html{
+	body{
+		.l-page{
+			@include floatblock();
+			.l-header{
+				@include floatblock();
+				.l-header-first{
+					@include grid-span(12,1);
+					margin:0;
+					@include breakpoint($tab,true){
+						@include grid-span(6,1);
+					}
+					@include breakpoint($desk,true){
+						@include grid-span(6,1);
+					}
+					.l-region--header-first{}
+				}
+				.l-header-second{
+					@include grid-span(12,1);
+					margin:0;
+					@include breakpoint($tab,true){
+						@include grid-span(6,7);
+					}
+					@include breakpoint($desk,true){
+						@include grid-span(6,7);
+					}
+					.l-region--header-second{}
+				}
+				.l-header-third{
+					@include grid-span(12,1);
+					margin:0;
+					clear:both;
+					@include breakpoint($tab,true){
+						@include grid-span(12,1);
+						clear:both;
+					}
+					@include breakpoint($desk,true){
+						@include grid-span(12,1);
+						clear:both;
+					}
+					.l-region--header-third{}
+				}
+			}
+			.l-main{
+				@include centerblock(1020px);
+				//default styles for the main content area
+				p{
+					@include font(300,16px,16px,Arial);
+				}
+				h1{}
+				h2{}
+				h3{}
+				h4{}
+				h5{}
+				h6{}
+				.l-content-header{
+					@include floatblock();
+					.l-region--content-header{}
+					.l-content-header-meta{}
+				}
+				.l-content-center{
+					@include floatblock();
+					@include breakpoint($tab,true){
+						@include eq-p();
+					}
+					.l-region--content-left{
+						@include floatblock();
+						@include breakpoint($tab,true){
+							@include eq();
+							@include float-span(6);
+						}
+					}
+					.l-region--content-right{
+						@include floatblock();
+						@include breakpoint($tab,true){
+							@include eq();
+							@include float-span(6);
+						}
+					}
+				}
+				.l-content-footer{
+					@include floatblock();
+					.l-region--content--footer{
+						@include floatblock();
+						@include breakpoint($tab,true){}
+						@include breakpoint($desk,true){}
+					}
+				}
+			}
+			.l-footer{
+				@include floatblock();
+				.l-footer-first{
+					.l-region--footer-first{
+						@include floatblock();
+						@include breakpoint($tab,true){}
+						@include breakpoint($desk,true){}
+					}
+				}
+				.l-footer-second{
+					.l-region--footer-second{
+						@include floatblock();
+						@include breakpoint($tab,true){}
+						@include breakpoint($desk,true){}
+					}
+				}
+			}
+		}
+	}
+}
+@media print{
+	body.print-mobile{
+	}
+	body.print-tablet{
+		width:$tab!important;
+		.l-page{
+			.l-header{
+				.l-header-first{
+					@include grid-span(6,1);
+				}
+				.l-header-second{
+					@include grid-span(6,7);
+				}
+				.l-header-third{
+					@include grid-span(12,1);
+
+				}
+			}
+			.l-main{
+				.l-content-center{
+					@include eq-p();
+					.l-region--content-left{
+						@include eq();
+						@include float-span(6);
+					}
+					.l-region--content-right{
+						@include eq();
+						@include float-span(6);
+					}
+				}
+			}
+		}
+	}
+	body.print-desktop{
+		width:$desk!important;
+		.l-page{
+			.l-header{
+				.l-header-first{
+					@include grid-span(6,1);
+				}
+				.l-header-second{
+					@include grid-span(6,7);
+				}
+				.l-header-third{
+					@include grid-span(12,1);
+				}
+			}
+			.l-main{
+				.l-content-center{
+					@include eq-p();
+					.l-region--content-left{
+						@include eq();
+						@include float-span(6);
+					}
+					.l-region--content-right{
+						@include eq();
+						@include float-span(6);
+					}
+				}
+			}
+		}
+	}
+}
