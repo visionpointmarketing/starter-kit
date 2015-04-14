@@ -29,7 +29,7 @@
 ?>
 <div class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 	<div class="content"<?php print $content_attributes; ?>>
-		<div class="billboard-image"><?php print render($content['field_billboard_image']); ?></div>
+		<div class="billboard-image <?php if(!isset($content['field_ctas'])){echo 'fullwidth';} ?>"><?php print render($content['field_billboard_image']); ?></div>
 		<div class="billboard-ctas"><?php print render($content['field_ctas']); ?></div>
 	</div>
 </div>

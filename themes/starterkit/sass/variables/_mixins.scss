@@ -44,3 +44,21 @@
 	-o-transition:			$element $time $type;
 	transition:				$element $time $type;
 }
+@mixin f-impact($size:20px){
+	font-family: "TradeGothic-CondEighteen", "Trade Gothic Cond Eighteen", "Trade Gothic Condensed Eighteen", "Trade Gothic", "TradeGothic", "Trade-Gothic", "ArialNarrow", "Arial-Narrow", "Arial Narrow", Arial, sans-serif;
+	font-stretch: condensed;
+	font-weight:600;
+	color:#444;
+	font-size:$size;
+	line-height:$size;
+}
+@mixin arrowafter(){
+	content: '\f04b';
+	font-family: FontAwesome;
+	font-size: 8px;
+	padding-left: 10px;
+	position: absolute;
+	top: calc(50% - 4px);
+	right: 5px;
+	color:$green;
+}

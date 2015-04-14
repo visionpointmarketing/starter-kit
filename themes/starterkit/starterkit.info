@@ -52,7 +52,8 @@ layout[longscroll][all][] = css/layouts/longscroll/longscroll.layout.css
 ; Settings
 ; ========================================
 settings[toggle_logo] = 1
-settings[toggle_name] = 1
+settings[toggle_name] = 0
+settings[toggle_search] = 1
 settings[toggle_slogan] = 1
 settings[toggle_node_user_picture] = 1
 settings[toggle_comment_user_picture] = 1

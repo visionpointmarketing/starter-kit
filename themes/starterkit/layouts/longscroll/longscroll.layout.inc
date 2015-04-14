@@ -28,4 +28,4 @@ stylesheets[all][] = css/layouts/longscroll/longscroll.layout.no-query.css
 ; Scripts
 ; ========================================
 scripts[] = libraries/waypoints/waypoints.min.js
-scripts[] = js/longscroll.js
+;scripts[] = js/longscroll.js
