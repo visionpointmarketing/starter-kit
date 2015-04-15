@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Featured Block - Basic Page feature.
+ */
+
+include_once 'featured_block_basic_page.features.inc';

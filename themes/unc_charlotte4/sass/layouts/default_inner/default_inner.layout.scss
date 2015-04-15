@@ -55,7 +55,6 @@ html{
 				}
 			}
 			.l-main{
-				@include centerblock(1020px);
 				//default styles for the main content area
 				p{
 					@include font(300,16px,16px,Arial);
@@ -76,58 +75,64 @@ html{
 					@include breakpoint($tab,true){
 						@include eq-p();
 					}
-					.l-nav-sidebar{
-						@include floatblock();
-						@include breakpoint($tab,true){
-							@include grid-span(3,1);
-							@include eq();
-						}
-						@include breakpoint($desk,true){
-							@include grid-span(3,1);
-						}
-						.l-region--nav-sidebar{}
-					}
-					.l-content-wrapper{
-						@include floatblock();
-						@include breakpoint($tab,true){
-							@include eq();
-							@include eq-p();
-							@include grid-span(9,4);
-						}
-						@include breakpoint($desk,true){
-							@include grid-span(9,4);
-						}
-						.l-region--featured{
+					.wrapper{
+						max-width:$maxwidth;
+						margin:auto;
+						display:block;
+						padding:0 20px;
+						.l-nav-sidebar{
 							@include floatblock();
-							@include breakpoint($tab,true){}
-							@include breakpoint($desk,true){}
+							@include breakpoint($tab,true){
+								@include grid-span(3,1);
+								@include eq();
+							}
+							@include breakpoint($desk,true){
+								@include grid-span(3,1);
+							}
+							.l-region--nav-sidebar{}
 						}
-						.l-content{
+						.l-content-wrapper{
 							@include floatblock();
 							@include breakpoint($tab,true){
 								@include eq();
-								@include float-span(9);
+								@include eq-p();
+								@include grid-span(9,4);
 							}
-							.l-region--above-content{
+							@include breakpoint($desk,true){
+								@include grid-span(9,4);
+							}
+							.l-region--featured{
 								@include floatblock();
 								@include breakpoint($tab,true){}
 								@include breakpoint($desk,true){}
 							}
-							article{}
-							.l-region--below-content{
+							.l-content{
 								@include floatblock();
-								@include breakpoint($tab,true){}
-								@include breakpoint($desk,true){}
+								@include breakpoint($tab,true){
+									@include eq();
+									@include float-span(9);
+								}
+								.l-region--above-content{
+									@include floatblock();
+									@include breakpoint($tab,true){}
+									@include breakpoint($desk,true){}
+								}
+								article{}
+								.l-region--below-content{
+									@include floatblock();
+									@include breakpoint($tab,true){}
+									@include breakpoint($desk,true){}
+								}
 							}
-						}
-						.l-promo-sidebar{
-							@include floatblock();
-							@include breakpoint($tab,true){
-								@include eq();
-								@include float-span(3);
-							}
-							.l-region--promo-sidebar{
-								@include breakpoint($desk,true){}
+							.l-promo-sidebar{
+								@include floatblock();
+								@include breakpoint($tab,true){
+									@include eq();
+									@include float-span(3);
+								}
+								.l-region--promo-sidebar{
+									@include breakpoint($desk,true){}
+								}
 							}
 						}
 					}

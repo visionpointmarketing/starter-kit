@@ -62,3 +62,8 @@
 	right: 5px;
 	color:$green;
 }
+@mixin f-text(){
+	font-family:arial;
+	font-size:16px;
+	color:#444;
+}

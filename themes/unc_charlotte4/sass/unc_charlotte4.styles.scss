@@ -34,6 +34,30 @@ p{
 	color:#444;
 	margin:10px 0;
 }
+body.front{
+	#a2,
+	#a3{
+		background:#eee;
+		.wrapper{
+			max-width:$maxwidth;
+			padding:0 10px;
+			display:block;
+			margin:auto;
+		}
+	}
+}
+/* join band page */
+body.page-node-73{
+	#a2,
+	#a4{
+		.wrapper{
+			max-width:$maxwidth;
+			padding:0 10px;
+			display:block;
+			margin:auto;
+		}
+	}
+}
 /*unc charlotte header*/
 #header-wrapper{
 	height:100px;
@@ -42,6 +66,7 @@ p{
 		height:100px;
 		margin:auto;
 		max-width:$maxwidth;
+		padding:0 10px;
 		#header-row{
 			background: url("/sites/all/themes/unc_charlotte4/img/header-logo-watermark.png") repeat-x scroll center center #FFFFFF;
 			height: 100px;
@@ -59,16 +84,7 @@ p{
 				float:left;
 				height:100px;
 				#site-name-title{
-					height: 0px;
-					text-align: left;
-					top: 25px;
-					position: relative;
-					display:block;
-					float: left;
-					color: white;
-					font-size: 1.25em;
-					line-height:1.5em;
-					font-family: times,"times new roman",serif;
+					font-size: 1em;
 					a{
 						color:white;
 						text-decoration:none;
@@ -170,6 +186,10 @@ p{
 .element-invisible{
 	max-width:1px;
 }
+/* overriding default style */
+body .field-collection-view{
+	border:none;
+}
 .block{
 	@include floatblock();
 }
@@ -230,20 +250,59 @@ body.front{
 		}
 	}
 }
-body.longscrollv2{
-	.l-region--content-header,
-	.l-region--content-footer{
-		background:white;
+.l-content-header-meta{
+	.container{
+		border-bottom:2px solid #eee;
 	}
-	h1{}
-	.l-content-header-meta{
-		display:block;
-		float:left;
-		width:100%;
-		z-index:1;
-		position:relative;
+	.wrapper{
+		max-width:$maxwidth;
+		padding:0 10px;
+		margin:auto;
+		.breadcrumbs{
+			padding:10px 5px;
+			.breadcrumb{
+				list-style-type:none;
+				padding:0;
+				display:block;
+				float:left;
+				padding:5px;
+				span{
+					@include f-text();
+					padding:0;
+					font-size:initial;
+					line-height:16px;
+				}
+				a{
+					color:$green;
+					border-bottom:1px dotted $green;
+					text-decoration:none;
+					&:hover{
+						border-bottom:1px solid $green;
+					}
+				}
+			}
+			span{
+				@include f-text();
+				font-size:9px;
+				line-height:16px;
+				display:block;
+				float:left;
+				padding:5px;
+			}
+		}
+	}
+	h1{
+		@include f-impact();
+		font-size:40px;
+		line-height:42px;
+		max-width:$maxwidth;
+		padding:0 10px;
+		margin:30px auto;
+		color:$green;
+		text-transform:uppercase;
 	}
 }
+
 .block.block--bean{
 	@include floatblock();
 	padding:5px;
@@ -309,6 +368,91 @@ body.longscrollv2{
 						text-align:center;
 						padding:20px;
 						border-radius:8px;
+					}
+				}
+			}
+		}
+	}
+	.bean-subsections{
+		> .content{
+			display: block;
+			float: left;
+			width: 100%;
+			border-top: 5px solid #444;
+			border-bottom: 5px solid #444;
+			padding: 20px 0 20px 0;
+			margin-top: -20px;
+			.field__item{
+				.field--name-field-subsection-gallery{
+					.field__items{
+						.field__item{
+							display:none;
+							float:left;
+							width:150px;
+							height:150px;
+							border-radius:50%;
+							overflow:hidden;
+							&:first-child{
+								display:block;
+							}
+						}
+					}
+					.field--name-field-caption{
+						display:none;
+					}
+				}
+				.field--name-field-subsection-title{
+					@include f-impact();
+					text-align:left;
+					font-size:20px;
+					line-height:20px;
+					float: left;
+					width: calc(100% - 150px);
+					text-transform:uppercase;
+					padding-left:20px;
+				}
+				.field--name-field-subsection-intro{
+					@include f-text();
+					display: block;
+					float: left;
+					width: Calc(100% - 150px);
+					padding: 10px 20px;
+				}
+				.field--name-field-subsection-link{
+					@include floatblock();
+					width:auto;
+					position:relative;
+					&:after{
+						@include arrowafter();
+					}
+					a{
+						display:block;
+						float:left;
+						padding:10px 20px;
+						color:$green;
+						text-decoration:none;
+						&:hover{
+							text-decoration:underline;
+						}
+					}
+				}
+			}
+			.field--name-field-promo-read-more{
+				.field__item{
+					position:relative;
+					padding-right:20px;
+					&:after{
+						@include arrowafter();
+						top:calc(50% + 4px);
+					}
+					a{
+						color:$green;
+						display:block;
+						float:right;
+						text-decoration:none;
+						&:hover{
+							text-decoration:underline;
+						}
 					}
 				}
 			}
@@ -482,6 +626,7 @@ body.longscrollv2{
 		.field--name-field-list-of-links{
 			.field__item{
 				a{
+					@include f-text();
 					display: block;
 					width: 90%;
 					margin: 5px auto;
@@ -496,8 +641,214 @@ body.longscrollv2{
 			}
 		}
 	}
+	.bean-basic-wyswiyg-block{
+		.content{}
+	}
+	.bean-faq{
+		.content{
+			.field--name-field-question{
+				.field__item{
+					@include floatblock();
+					.entity-field-collection-item{
+						.field--name-field-ask-question{
+							
+							font-weight:bold;
+							.field__item{
+								width:auto;
+								&:before{
+									content:"\f086";
+									font-family:FontAwesome;
+									color:$green;
+									font-size:20px;
+									width:30px;
+									padding-right:7px;
+									display:block;
+									float:left;
+								}
+								p{
+									@include floatblock();
+									width:calc(100% - 30px);
+									@include f-text();
+									margin:0;
+								}
+							}
+						}
+						.field--name-field-answer{
+							@include f-text();
+							padding-left:30px;
+						}
+					}
+				}
+			}
+			.field--name-field-read-more-link{
+				.field__item{
+					position:relative;
+					&:after{
+						@include arrowafter();
+					}
+					a{
+						text-decoration:none;
+						position:relative;
+						color:$green;
+						&:hover{
+							text-decoration:underline;
+						}
+					}
+				}
+			}
+		}
+	}
 }
-
+#block-bean-join-faqs{
+	@include floatblock();
+	width:100%;
+	@include breakpoint($tab,true){
+		width:300px;
+	}
+	background:#eee;
+	border-top:5px solid $gold;
+	h2.block__title{
+		@include f-impact();
+		display:block!important;
+		margin:0;
+		padding:10px;
+		text-transform:uppercase;
+	}
+}
+#block-bean-join-request-more-information{
+	h2.block__title{
+		@include f-impact();
+		display:block!important;
+		margin:auto;
+		padding:10px;
+		text-transform:uppercase;
+		width:300px;
+		float:none;
+		background:white;
+		position:relative;
+		text-align:center;
+	}
+}
+#block-bean-join-the-band-introduction{
+	padding:0;
+	&.block.block--bean{
+		.bean-text-and-links-promo{
+			.promo-image{
+				padding:0;
+				width:100%;
+				max-width:initial;
+				img{
+					width:100%;
+				}
+			}
+			.promo-content-container{
+				width:100%;
+				@include breakpoint($tab,true){
+					max-width:initial;
+					position:absolute;
+				}
+				.field--name-field-list-of-links{
+					@include breakpoint($tab,true){
+						max-width:$maxwidth;
+						padding:0 10px;
+						margin:auto;
+					}
+					.field__items{
+						background:#fff;
+						display:block;
+						float:left;
+						width:100%;
+						@include breakpoint($tab,true){
+							width:auto;
+						}
+						.field__item{
+							a{
+								width:100%;
+								margin:0;
+								border:none;
+								border-left:5px solid $gold;
+								border-radius:0;
+								background:#eee;
+								color:#444;
+								margin-bottom:1px;
+								&:hover{
+									border-left:7px solid $green;
+									padding-left:8px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+#block-bean-band-camp{
+	padding:0;
+	&.block.block--bean{
+		.bean-text-and-links-promo{
+			.promo-image{
+				padding:0;
+				width:100%;
+				max-width:initial;
+				img{
+					width:100%;
+				}
+			}
+			.promo-content-container{
+				width:100%;
+				@include breakpoint($tab,true){
+					max-width:initial;
+					position:absolute;
+				}
+				.field--name-field-intro-text{
+					@include breakpoint($tab,true){
+						max-width:$maxwidth;
+						padding:0 10px;
+						margin:auto;
+					}
+					.field__items{
+						background:$dkgreen-transparent;
+						display:block;
+						float:left;
+						width:100%;
+						@include breakpoint($tab,true){
+							background:$dkgreen;
+							margin-top:100px;
+							width:500px;
+							padding:20px;
+						}
+						.field__item{
+							position:relative;
+							h2{
+								@include f-impact();
+								color:white;
+								text-transform:uppercase;
+								margin:0;
+							}
+							p{
+								@include f-text();
+								color:white;
+							}
+							div{
+								&:after{
+									@include arrowafter();
+								}
+								a{
+									color:white;
+									text-decoration:none;
+									&:hover{
+										text-decoration:underline;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
 /* views blocks on sights and sounds home*/
 #block-views-media-block-1{
 	.block__content{
@@ -563,7 +914,7 @@ body.longscrollv2{
 
 #block-views-news-block-1{
 	@include floatblock();
-	padding: 20px 30px;
+	padding: 20px 20px 0 10px;
 	@include breakpoint($tab,true){
 		width:calc(100% - 300px);
 	}
@@ -644,6 +995,7 @@ body.longscrollv2{
 	}
 	.block__content{
 		max-width: $maxwidth;
+		padding:0 10px;
 		margin: auto;
 		float: none;
 		.view-events{
@@ -713,24 +1065,28 @@ body.longscrollv2{
 		}
 	}
 }
-#a2{
-	background:#eee;
-	.l-region--above-content{
-		max-width:$maxwidth;
-		display:block;
-		margin:auto;
+
+#block-bean-join-pride-of-niner-nation{
+	padding:20px 20px 0 10px;
+	@include floatblock();
+	@include breakpoint($tab,true){
+		width:calc(100% - 300px);
 	}
-}
-#a3{
-	background:#eee;
-	.l-region--below-content{
-		max-width:$maxwidth;
-		display:block;
-		margin:auto;
+	h2.block__title{
+		@include f-impact();
+		display:block!important;
+		color:#444;
+		text-transform:uppercase;
+		background: #fff;
+		text-align: center;
+		margin: auto;
+		width: 250px;
+		float: none;
+		position: relative;
 	}
 }
 #block-bean-home-pride-of-niner-nation{
-	padding:20px 30px;
+	padding:20px 20px 0 10px;
 	@include floatblock();
 	@include breakpoint($tab,true){
 		width:calc(100% - 300px);
@@ -746,92 +1102,6 @@ body.longscrollv2{
 		width: 250px;
 		float: none;
 		position: relative;
-	}
-	.block__content{
-		.entity-bean{
-			> .content{
-				display: block;
-				float: left;
-				width: 100%;
-				border-top: 5px solid #444;
-				border-bottom: 5px solid #444;
-				padding: 20px 0 20px 0;
-				margin-top: -20px;
-				.field__item{
-					.field--name-field-subsection-gallery{
-						.field__items{
-							.field__item{
-								display:none;
-								float:left;
-								width:150px;
-								height:150px;
-								border-radius:50%;
-								overflow:hidden;
-								&:first-child{
-									display:block;
-								}
-							}
-						}
-						.field--name-field-caption{
-							display:none;
-						}
-					}
-					.field--name-field-subsection-title{
-						@include f-impact();
-						text-align:left;
-						font-size:20px;
-						line-height:20px;
-						float: left;
-						width: calc(100% - 150px);
-						text-transform:uppercase;
-						padding-left:20px;
-					}
-					.field--name-field-subsection-intro{
-						display: block;
-						float: left;
-						width: Calc(100% - 150px);
-						padding: 10px 20px;
-					}
-					.field--name-field-subsection-link{
-						@include floatblock();
-						width:auto;
-						position:relative;
-						&:after{
-							@include arrowafter();
-						}
-						a{
-							display:block;
-							float:left;
-							padding:10px 20px;
-							color:$green;
-							text-decoration:none;
-							&:hover{
-								text-decoration:underline;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-	.field--name-field-promo-read-more{
-		.field__item{
-			position:relative;
-			padding-right:20px;
-			&:after{
-				@include arrowafter();
-				top:calc(50% + 4px);
-			}
-			a{
-				color:$green;
-				display:block;
-				float:right;
-				text-decoration:none;
-				&:hover{
-					text-decoration:underline;
-				}
-			}
-		}
 	}
 }
 #block-bean-home-support-the-band{
@@ -929,6 +1199,7 @@ body.longscrollv2{
 #block-bean-facilities-showcase{
 	.block__content{
 		max-width:$maxwidth;
+		padding:0 10px;
 		margin:auto;
 	}
 }
@@ -941,36 +1212,6 @@ img{
 
 }
 
-.breadcrumbs{
-	padding:10px 5px;
-	border-bottom:2px solid #eee;
-	.breadcrumb{
-		list-style-type:none;
-		padding:0;
-		display:block;
-		float:left;
-		padding:5px;
-		span{
-			padding:0;
-			font-size:initial;
-			line-height:16px;
-		}
-		a{
-			color:$green;
-			border-bottom:1px dotted $green;
-			&:hover{
-				border-bottom:1px solid $green;
-			}
-		}
-	}
-	span{
-		font-size:9px;
-		line-height:16px;
-		display:block;
-		float:left;
-		padding:5px;
-	}
-}
 #block-user-login{
 	display:none;
 	width:auto;
@@ -1089,6 +1330,7 @@ img{
 			display: block;
 			width: 100%;
 			max-width: $maxwidth;
+			padding:0 10px;
 			margin: auto;
 			height:auto;
 			.l-region--header-third{
@@ -1227,28 +1469,30 @@ img{
 		ul{
 			@include floatblock();
 			margin:0;
-			padding:0;
+			padding:0 20px 0 0;
 			li{
 				@include floatblock();
 				margin-bottom:2px;
 				a{
-					border:2px solid $ltgray;
-					background: $whitegray;
-					color: $gray;
-					padding:10px;
+					background: #eee;
+					color: #444;
+					padding:10px 15px;
 					@include floatblock();
 					text-decoration:none;
+					border-left:5px solid $gold;
 				}
 				&.active-trail{
 					&>a{
-						border:2px solid $dkgray;
-						background:white;
+						border-left:7px solid $green;
+						background:$whitegray;
+						padding-left:13px;
 					}
 				}
 				&:hover{
 					&>a{
+						border-left:7px solid $green;
 						background:$whitegray;
-						color:$dkgray;
+						padding-left:13px;
 					}
 				}
 			}
@@ -1259,15 +1503,25 @@ img{
 				margin-top: 3px;
 				li{
 					a{
-						border:2px solid $ltgray;
-						background:white;
-						color:$gray;
+						background:none;
+						border:none;
+						&:hover{
+							background:none;
+							border:none;
+							font-weight:bold;
+						}
 					}
 				&.active-trail{
+						a{
+							background:none;
+							border:none;
+							font-weight:bold;
+						}
 						&.active{
 							&>a{
-								border:2px solid $dkgray;
-								color:$dkgray;
+								background:none;
+								border:none;
+								font-weight:bold;
 							}
 						}
 					}
@@ -1354,6 +1608,7 @@ img{
 			display:block;
 			margin:auto;
 			max-width:$maxwidth;
+			padding:0 10px;
 			/* footer menu */
 			#block-menu-block-6{
 				width:auto;
@@ -1445,6 +1700,7 @@ img{
 	      .hidden-phone{}
 	      #utility-bar{
 	      	max-width:$maxwidth;
+			padding:0 10px;
 	      	margin:auto;
 	        height: 32px;
 	        ul{
@@ -1512,6 +1768,7 @@ img{
 	      }
 	      #footer-bottom{
 	      	max-width:$maxwidth;
+			padding:0 10px;
 	      	margin:auto;
 	        #footer-name{
 	          display:block;

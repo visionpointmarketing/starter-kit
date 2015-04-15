@@ -9,6 +9,6 @@ $desk: 70em;
 $maxwidth:1200px;
 
 $main-nav-height:60px;
-/* height and width restrictions of billboard image */
-$billboard-w:1200px;
-$billboard-h:800px;
+/* height and width restrictions of billboard image, set to initial for no restriction */
+$billboard-w:initial;
+$billboard-h:initial;

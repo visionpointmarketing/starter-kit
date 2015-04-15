@@ -1,7 +1,7 @@
 /* colors taken from UNC Charlotte branding standards */
 /* breakpoints */
 /* max width of site column */
-/* height and width restrictions of billboard image */
+/* height and width restrictions of billboard image, set to initial for no restriction */
 html body .l-page {
   display: block;
   float: left;
@@ -54,24 +54,23 @@ html body .l-page {
       margin-left: 0;
       margin-right: 0;
       clear: none; }
-  html body .l-page .l-main {
+  html body .l-page .l-main p {
+    font: 300 16px/16px Arial; }
+  html body .l-page .l-main .l-content-header {
     display: block;
+    float: left;
+    width: 100%; }
+  html body .l-page .l-main .l-content-center {
+    display: block;
+    float: left;
     width: 100%;
-    margin: auto;
-    clear: both;
-    max-width: 1020px; }
-    html body .l-page .l-main p {
-      font: 300 16px/16px Arial; }
-    html body .l-page .l-main .l-content-header {
+    overflow: hidden; }
+    html body .l-page .l-main .l-content-center .wrapper {
+      max-width: 1200px;
+      margin: auto;
       display: block;
-      float: left;
-      width: 100%; }
-    html body .l-page .l-main .l-content-center {
-      display: block;
-      float: left;
-      width: 100%;
-      overflow: hidden; }
-      html body .l-page .l-main .l-content-center .l-nav-sidebar {
+      padding: 0 20px; }
+      html body .l-page .l-main .l-content-center .wrapper .l-nav-sidebar {
         display: block;
         float: left;
         width: 100%;
@@ -87,7 +86,7 @@ html body .l-page {
         margin-right: -100%;
         margin-left: 0%;
         clear: none; }
-      html body .l-page .l-main .l-content-center .l-content-wrapper {
+      html body .l-page .l-main .l-content-center .wrapper .l-content-wrapper {
         display: block;
         float: left;
         width: 100%;
@@ -104,11 +103,11 @@ html body .l-page {
         margin-left: 0;
         margin-right: 0;
         clear: none; }
-        html body .l-page .l-main .l-content-center .l-content-wrapper .l-region--featured {
+        html body .l-page .l-main .l-content-center .wrapper .l-content-wrapper .l-region--featured {
           display: block;
           float: left;
           width: 100%; }
-        html body .l-page .l-main .l-content-center .l-content-wrapper .l-content {
+        html body .l-page .l-main .l-content-center .wrapper .l-content-wrapper .l-content {
           display: block;
           float: left;
           width: 100%;
@@ -119,15 +118,15 @@ html body .l-page {
           float: left;
           margin-left: 0;
           margin-right: 0%; }
-          html body .l-page .l-main .l-content-center .l-content-wrapper .l-content .l-region--above-content {
+          html body .l-page .l-main .l-content-center .wrapper .l-content-wrapper .l-content .l-region--above-content {
             display: block;
             float: left;
             width: 100%; }
-          html body .l-page .l-main .l-content-center .l-content-wrapper .l-content .l-region--below-content {
+          html body .l-page .l-main .l-content-center .wrapper .l-content-wrapper .l-content .l-region--below-content {
             display: block;
             float: left;
             width: 100%; }
-        html body .l-page .l-main .l-content-center .l-content-wrapper .l-promo-sidebar {
+        html body .l-page .l-main .l-content-center .wrapper .l-content-wrapper .l-promo-sidebar {
           display: block;
           float: left;
           width: 100%;
@@ -138,14 +137,14 @@ html body .l-page {
           float: left;
           margin-left: 0;
           margin-right: 0%; }
-    html body .l-page .l-main .l-content-footer {
+  html body .l-page .l-main .l-content-footer {
+    display: block;
+    float: left;
+    width: 100%; }
+    html body .l-page .l-main .l-content-footer .l-region--content--footer {
       display: block;
       float: left;
       width: 100%; }
-      html body .l-page .l-main .l-content-footer .l-region--content--footer {
-        display: block;
-        float: left;
-        width: 100%; }
   html body .l-page .l-footer {
     display: block;
     float: left;

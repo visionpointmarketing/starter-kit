@@ -126,8 +126,12 @@
   <div class="l-main">
     <div class="l-content-header">
       <div class="l-content-header-meta">
+        <div class="container">
+          <div class="wrapper">
+            <?php print $breadcrumb; ?>
+          </div>
+        </div>
         <div class="wrapper">
-          <?php print $breadcrumb; ?>
           <?php if ($title): ?>
             <h1><?php print $title; ?></h1>
           <?php endif; ?>
@@ -136,26 +140,28 @@
       <?php print render($page['content_header']); ?>
     </div>
     <div class="l-content-center l-region-container">
-      <div class="l-nav-sidebar">
-        <?php print render($page['nav_sidebar']); ?>
-      </div>
-      <div class="l-content-wrapper l-region-container">
-        <?php print render($page['featured']); ?>
-        <div class="l-content l-region-container" role="main">
-          <a id="main-content"></a>
-          <?php print render($page['above_content']); ?>
-              <?php print $messages; ?>
-              <?php print render($tabs); ?>
-              <?php print render($page['help']); ?>
-              <?php if ($action_links): ?>
-                <ul class="action-links"><?php print render($action_links); ?></ul>
-              <?php endif; ?>
-          <?php print render($page['content']); ?>
-          <?php print render($page['below_content']); ?>
-              <?php print $feed_icons; ?>
+      <div class="wrapper">
+        <div class="l-nav-sidebar">
+          <?php print render($page['nav_sidebar']); ?>
         </div>
-        <div class="l-promo-sidebar l-region-container">
-          <?php print render($page['promo_sidebar']); ?>
+        <div class="l-content-wrapper l-region-container">
+          <?php print render($page['featured']); ?>
+          <div class="l-content l-region-container" role="main">
+            <a id="main-content"></a>
+            <?php print render($page['above_content']); ?>
+                <?php print $messages; ?>
+                <?php print render($tabs); ?>
+                <?php print render($page['help']); ?>
+                <?php if ($action_links): ?>
+                  <ul class="action-links"><?php print render($action_links); ?></ul>
+                <?php endif; ?>
+            <?php print render($page['content']); ?>
+            <?php print render($page['below_content']); ?>
+                <?php print $feed_icons; ?>
+          </div>
+          <div class="l-promo-sidebar l-region-container">
+            <?php print render($page['promo_sidebar']); ?>
+          </div>
         </div>
       </div>
     </div>

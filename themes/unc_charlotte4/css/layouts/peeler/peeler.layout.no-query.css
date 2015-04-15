@@ -1,7 +1,7 @@
 /* colors taken from UNC Charlotte branding standards */
 /* breakpoints */
 /* max width of site column */
-/* height and width restrictions of billboard image */
+/* height and width restrictions of billboard image, set to initial for no restriction */
 #admin-menu {
   z-index: 1002; }
 

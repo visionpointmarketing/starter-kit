@@ -147,8 +147,12 @@
         <li id="a1">
           <div class="l-content-header">
             <div class="l-content-header-meta">
+              <div class="container">
+                <div class="wrapper">
+                  <?php print $breadcrumb; ?>
+                </div>
+              </div>
               <div class="wrapper">
-                <?php print $breadcrumb; ?>
                 <?php if ($title): ?>
                   <h1><?php print $title; ?></h1>
                 <?php endif; ?>
@@ -158,10 +162,10 @@
             <?php print render($page['content_header']); ?>
           </div>
         </li>
-        <li id="a2"><?php print render($page['above_content']); ?></li>
+        <li id="a2"><div class="wrapper"><?php print render($page['above_content']); ?></div></li>
 
-        <li id="a3"><?php print render($page['below_content']); ?></li>
-        <li id="a4"><?php print render($page['content_footer']); ?></li>
+        <li id="a3"><div class="wrapper"><?php print render($page['below_content']); ?></div></li>
+        <li id="a4"><div class="wrapper"><?php print render($page['content_footer']); ?></div></li>
       </ul>
     </div>
   </div>

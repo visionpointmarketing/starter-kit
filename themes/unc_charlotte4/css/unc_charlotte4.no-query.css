@@ -1,7 +1,7 @@
 /* colors taken from UNC Charlotte branding standards */
 /* breakpoints */
 /* max width of site column */
-/* height and width restrictions of billboard image */
+/* height and width restrictions of billboard image, set to initial for no restriction */
 /* No files to import found in abstractions/**\/* */
 img, media {
   max-width: 100%; }
@@ -16,6 +16,24 @@ p {
   color: #444;
   margin: 10px 0; }
 
+body.front #a2,
+body.front #a3 {
+  background: #eee; }
+  body.front #a2 .wrapper,
+  body.front #a3 .wrapper {
+    max-width: 1200px;
+    padding: 0 10px;
+    display: block;
+    margin: auto; }
+
+/* join band page */
+body.page-node-73 #a2 .wrapper,
+body.page-node-73 #a4 .wrapper {
+  max-width: 1200px;
+  padding: 0 10px;
+  display: block;
+  margin: auto; }
+
 /*unc charlotte header*/
 #header-wrapper {
   height: 100px;
@@ -23,7 +41,8 @@ p {
   #header-wrapper .container {
     height: 100px;
     margin: auto;
-    max-width: 1200px; }
+    max-width: 1200px;
+    padding: 0 10px; }
     #header-wrapper .container #header-row {
       background: url("/sites/all/themes/unc_charlotte4/img/header-logo-watermark.png") repeat-x scroll center center white;
       height: 100px; }
@@ -38,16 +57,7 @@ p {
         float: left;
         height: 100px; }
         #header-wrapper .container #header-row #branding #site-name-title {
-          height: 0px;
-          text-align: left;
-          top: 25px;
-          position: relative;
-          display: block;
-          float: left;
-          color: white;
-          font-size: 1.25em;
-          line-height: 1.5em;
-          font-family: times,"times new roman",serif; }
+          font-size: 1em; }
           #header-wrapper .container #header-row #branding #site-name-title a {
             color: white;
             text-decoration: none; }
@@ -129,6 +139,10 @@ p {
 .element-invisible {
   max-width: 1px; }
 
+/* overriding default style */
+body .field-collection-view {
+  border: none; }
+
 .block {
   display: block;
   float: left;
@@ -174,15 +188,56 @@ body.front .l-region .block.block--bean .block__title {
   border-radius: 8px;
   text-decoration: none; }
 
-body.longscrollv2 .l-region--content-header,
-body.longscrollv2 .l-region--content-footer {
-  background: white; }
-body.longscrollv2 .l-content-header-meta {
-  display: block;
-  float: left;
-  width: 100%;
-  z-index: 1;
-  position: relative; }
+.l-content-header-meta .container {
+  border-bottom: 2px solid #eee; }
+.l-content-header-meta .wrapper {
+  max-width: 1200px;
+  padding: 0 10px;
+  margin: auto; }
+  .l-content-header-meta .wrapper .breadcrumbs {
+    padding: 10px 5px; }
+    .l-content-header-meta .wrapper .breadcrumbs .breadcrumb {
+      list-style-type: none;
+      padding: 0;
+      display: block;
+      float: left;
+      padding: 5px; }
+      .l-content-header-meta .wrapper .breadcrumbs .breadcrumb span {
+        font-family: arial;
+        font-size: 16px;
+        color: #444;
+        padding: 0;
+        font-size: initial;
+        line-height: 16px; }
+      .l-content-header-meta .wrapper .breadcrumbs .breadcrumb a {
+        color: #00703c;
+        border-bottom: 1px dotted #00703c;
+        text-decoration: none; }
+        .l-content-header-meta .wrapper .breadcrumbs .breadcrumb a:hover {
+          border-bottom: 1px solid #00703c; }
+    .l-content-header-meta .wrapper .breadcrumbs span {
+      font-family: arial;
+      font-size: 16px;
+      color: #444;
+      font-size: 9px;
+      line-height: 16px;
+      display: block;
+      float: left;
+      padding: 5px; }
+.l-content-header-meta h1 {
+  font-family: "TradeGothic-CondEighteen", "Trade Gothic Cond Eighteen", "Trade Gothic Condensed Eighteen", "Trade Gothic", "TradeGothic", "Trade-Gothic", "ArialNarrow", "Arial-Narrow", "Arial Narrow", Arial, sans-serif;
+  font-stretch: condensed;
+  font-weight: 600;
+  color: #444;
+  font-size: 20px;
+  line-height: 20px;
+  font-size: 40px;
+  line-height: 42px;
+  max-width: 1200px;
+  padding: 0 10px;
+  margin: 30px auto;
+  color: #00703c;
+  text-transform: uppercase; }
 
 .block.block--bean {
   display: block;
@@ -209,8 +264,8 @@ body.longscrollv2 .l-content-header-meta {
       .block.block--bean .bean-billboard .billboard-image .field__item img {
         width: 100%;
         height: auto;
-        max-height: 800px;
-        max-width: 1200px;
+        max-height: initial;
+        max-width: initial;
         margin: auto;
         float: none; }
     .block.block--bean .bean-billboard .billboard-image.fullwidth {
@@ -236,6 +291,90 @@ body.longscrollv2 .l-content-header-meta {
         text-align: center;
         padding: 20px;
         border-radius: 8px; }
+  .block.block--bean .bean-subsections > .content {
+    display: block;
+    float: left;
+    width: 100%;
+    border-top: 5px solid #444;
+    border-bottom: 5px solid #444;
+    padding: 20px 0 20px 0;
+    margin-top: -20px; }
+    .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-gallery .field__items .field__item {
+      display: none;
+      float: left;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden; }
+      .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-gallery .field__items .field__item:first-child {
+        display: block; }
+    .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-gallery .field--name-field-caption {
+      display: none; }
+    .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-title {
+      font-family: "TradeGothic-CondEighteen", "Trade Gothic Cond Eighteen", "Trade Gothic Condensed Eighteen", "Trade Gothic", "TradeGothic", "Trade-Gothic", "ArialNarrow", "Arial-Narrow", "Arial Narrow", Arial, sans-serif;
+      font-stretch: condensed;
+      font-weight: 600;
+      color: #444;
+      font-size: 20px;
+      line-height: 20px;
+      text-align: left;
+      font-size: 20px;
+      line-height: 20px;
+      float: left;
+      width: calc(100% - 150px);
+      text-transform: uppercase;
+      padding-left: 20px; }
+    .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-intro {
+      font-family: arial;
+      font-size: 16px;
+      color: #444;
+      display: block;
+      float: left;
+      width: Calc(100% - 150px);
+      padding: 10px 20px; }
+    .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-link {
+      display: block;
+      float: left;
+      width: 100%;
+      width: auto;
+      position: relative; }
+      .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-link:after {
+        content: '\f04b';
+        font-family: FontAwesome;
+        font-size: 8px;
+        padding-left: 10px;
+        position: absolute;
+        top: calc(50% - 4px);
+        right: 5px;
+        color: #00703c; }
+      .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-link a {
+        display: block;
+        float: left;
+        padding: 10px 20px;
+        color: #00703c;
+        text-decoration: none; }
+        .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-link a:hover {
+          text-decoration: underline; }
+    .block.block--bean .bean-subsections > .content .field--name-field-promo-read-more .field__item {
+      position: relative;
+      padding-right: 20px; }
+      .block.block--bean .bean-subsections > .content .field--name-field-promo-read-more .field__item:after {
+        content: '\f04b';
+        font-family: FontAwesome;
+        font-size: 8px;
+        padding-left: 10px;
+        position: absolute;
+        top: calc(50% - 4px);
+        right: 5px;
+        color: #00703c;
+        top: calc(50% + 4px); }
+      .block.block--bean .bean-subsections > .content .field--name-field-promo-read-more .field__item a {
+        color: #00703c;
+        display: block;
+        float: right;
+        text-decoration: none; }
+        .block.block--bean .bean-subsections > .content .field--name-field-promo-read-more .field__item a:hover {
+          text-decoration: underline; }
   .block.block--bean .bean-showcase {
     display: block;
     float: left;
@@ -376,6 +515,9 @@ body.longscrollv2 .l-content-header-meta {
       float: left;
       width: 100%; }
   .block.block--bean .bean-text-and-links-promo .field--name-field-list-of-links .field__item a {
+    font-family: arial;
+    font-size: 16px;
+    color: #444;
     display: block;
     width: 90%;
     margin: 5px auto;
@@ -386,6 +528,183 @@ body.longscrollv2 .l-content-header-meta {
     text-align: center;
     padding: 10px;
     border-radius: 8px; }
+  .block.block--bean .bean-faq .content .field--name-field-question .field__item {
+    display: block;
+    float: left;
+    width: 100%; }
+    .block.block--bean .bean-faq .content .field--name-field-question .field__item .entity-field-collection-item .field--name-field-ask-question {
+      font-weight: bold; }
+      .block.block--bean .bean-faq .content .field--name-field-question .field__item .entity-field-collection-item .field--name-field-ask-question .field__item {
+        width: auto; }
+        .block.block--bean .bean-faq .content .field--name-field-question .field__item .entity-field-collection-item .field--name-field-ask-question .field__item:before {
+          content: "\f086";
+          font-family: FontAwesome;
+          color: #00703c;
+          font-size: 20px;
+          width: 30px;
+          padding-right: 7px;
+          display: block;
+          float: left; }
+        .block.block--bean .bean-faq .content .field--name-field-question .field__item .entity-field-collection-item .field--name-field-ask-question .field__item p {
+          display: block;
+          float: left;
+          width: 100%;
+          width: calc(100% - 30px);
+          font-family: arial;
+          font-size: 16px;
+          color: #444;
+          margin: 0; }
+    .block.block--bean .bean-faq .content .field--name-field-question .field__item .entity-field-collection-item .field--name-field-answer {
+      font-family: arial;
+      font-size: 16px;
+      color: #444;
+      padding-left: 30px; }
+  .block.block--bean .bean-faq .content .field--name-field-read-more-link .field__item {
+    position: relative; }
+    .block.block--bean .bean-faq .content .field--name-field-read-more-link .field__item:after {
+      content: '\f04b';
+      font-family: FontAwesome;
+      font-size: 8px;
+      padding-left: 10px;
+      position: absolute;
+      top: calc(50% - 4px);
+      right: 5px;
+      color: #00703c; }
+    .block.block--bean .bean-faq .content .field--name-field-read-more-link .field__item a {
+      text-decoration: none;
+      position: relative;
+      color: #00703c; }
+      .block.block--bean .bean-faq .content .field--name-field-read-more-link .field__item a:hover {
+        text-decoration: underline; }
+
+#block-bean-join-faqs {
+  display: block;
+  float: left;
+  width: 100%;
+  width: 100%;
+  width: 300px;
+  background: #eee;
+  border-top: 5px solid #bea848; }
+  #block-bean-join-faqs h2.block__title {
+    font-family: "TradeGothic-CondEighteen", "Trade Gothic Cond Eighteen", "Trade Gothic Condensed Eighteen", "Trade Gothic", "TradeGothic", "Trade-Gothic", "ArialNarrow", "Arial-Narrow", "Arial Narrow", Arial, sans-serif;
+    font-stretch: condensed;
+    font-weight: 600;
+    color: #444;
+    font-size: 20px;
+    line-height: 20px;
+    display: block !important;
+    margin: 0;
+    padding: 10px;
+    text-transform: uppercase; }
+
+#block-bean-join-request-more-information h2.block__title {
+  font-family: "TradeGothic-CondEighteen", "Trade Gothic Cond Eighteen", "Trade Gothic Condensed Eighteen", "Trade Gothic", "TradeGothic", "Trade-Gothic", "ArialNarrow", "Arial-Narrow", "Arial Narrow", Arial, sans-serif;
+  font-stretch: condensed;
+  font-weight: 600;
+  color: #444;
+  font-size: 20px;
+  line-height: 20px;
+  display: block !important;
+  margin: auto;
+  padding: 10px;
+  text-transform: uppercase;
+  width: 300px;
+  float: none;
+  background: white;
+  position: relative;
+  text-align: center; }
+
+#block-bean-join-the-band-introduction {
+  padding: 0; }
+  #block-bean-join-the-band-introduction.block.block--bean .bean-text-and-links-promo .promo-image {
+    padding: 0;
+    width: 100%;
+    max-width: initial; }
+    #block-bean-join-the-band-introduction.block.block--bean .bean-text-and-links-promo .promo-image img {
+      width: 100%; }
+  #block-bean-join-the-band-introduction.block.block--bean .bean-text-and-links-promo .promo-content-container {
+    width: 100%;
+    max-width: initial;
+    position: absolute; }
+    #block-bean-join-the-band-introduction.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-list-of-links {
+      max-width: 1200px;
+      padding: 0 10px;
+      margin: auto; }
+      #block-bean-join-the-band-introduction.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-list-of-links .field__items {
+        background: #fff;
+        display: block;
+        float: left;
+        width: 100%;
+        width: auto; }
+        #block-bean-join-the-band-introduction.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-list-of-links .field__items .field__item a {
+          width: 100%;
+          margin: 0;
+          border: none;
+          border-left: 5px solid #bea848;
+          border-radius: 0;
+          background: #eee;
+          color: #444;
+          margin-bottom: 1px; }
+          #block-bean-join-the-band-introduction.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-list-of-links .field__items .field__item a:hover {
+            border-left: 7px solid #00703c;
+            padding-left: 8px; }
+
+#block-bean-band-camp {
+  padding: 0; }
+  #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-image {
+    padding: 0;
+    width: 100%;
+    max-width: initial; }
+    #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-image img {
+      width: 100%; }
+  #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container {
+    width: 100%;
+    max-width: initial;
+    position: absolute; }
+    #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-intro-text {
+      max-width: 1200px;
+      padding: 0 10px;
+      margin: auto; }
+      #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-intro-text .field__items {
+        background: rgba(0, 87, 45, 0.85);
+        display: block;
+        float: left;
+        width: 100%;
+        background: #00572d;
+        margin-top: 100px;
+        width: 500px;
+        padding: 20px; }
+        #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-intro-text .field__items .field__item {
+          position: relative; }
+          #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-intro-text .field__items .field__item h2 {
+            font-family: "TradeGothic-CondEighteen", "Trade Gothic Cond Eighteen", "Trade Gothic Condensed Eighteen", "Trade Gothic", "TradeGothic", "Trade-Gothic", "ArialNarrow", "Arial-Narrow", "Arial Narrow", Arial, sans-serif;
+            font-stretch: condensed;
+            font-weight: 600;
+            color: #444;
+            font-size: 20px;
+            line-height: 20px;
+            color: white;
+            text-transform: uppercase;
+            margin: 0; }
+          #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-intro-text .field__items .field__item p {
+            font-family: arial;
+            font-size: 16px;
+            color: #444;
+            color: white; }
+          #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-intro-text .field__items .field__item div:after {
+            content: '\f04b';
+            font-family: FontAwesome;
+            font-size: 8px;
+            padding-left: 10px;
+            position: absolute;
+            top: calc(50% - 4px);
+            right: 5px;
+            color: #00703c; }
+          #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-intro-text .field__items .field__item div a {
+            color: white;
+            text-decoration: none; }
+            #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-intro-text .field__items .field__item div a:hover {
+              text-decoration: underline; }
 
 /* views blocks on sights and sounds home*/
 #block-views-media-block-1 .block__content .view-content .views-row {
@@ -419,7 +738,7 @@ body.longscrollv2 .l-content-header-meta {
   display: block;
   float: left;
   width: 100%;
-  padding: 20px 30px;
+  padding: 20px 20px 0 10px;
   width: calc(100% - 300px); }
   #block-views-news-block-1 .view-news {
     position: relative; }
@@ -512,6 +831,7 @@ body.longscrollv2 .l-content-header-meta {
     position: relative; }
   .block--views-events-block-1 .block__content {
     max-width: 1200px;
+    padding: 0 10px;
     margin: auto;
     float: none; }
     .block--views-events-block-1 .block__content .view-events .view-content {
@@ -564,22 +884,31 @@ body.longscrollv2 .l-content-header-meta {
           .block--views-events-block-1 .block__content .view-events .view-content .views-row .views-field-field-event-date-2 .event-info {
             display: block; }
 
-#a2 {
-  background: #eee; }
-  #a2 .l-region--above-content {
-    max-width: 1200px;
-    display: block;
-    margin: auto; }
-
-#a3 {
-  background: #eee; }
-  #a3 .l-region--below-content {
-    max-width: 1200px;
-    display: block;
-    margin: auto; }
+#block-bean-join-pride-of-niner-nation {
+  padding: 20px 20px 0 10px;
+  display: block;
+  float: left;
+  width: 100%;
+  width: calc(100% - 300px); }
+  #block-bean-join-pride-of-niner-nation h2.block__title {
+    font-family: "TradeGothic-CondEighteen", "Trade Gothic Cond Eighteen", "Trade Gothic Condensed Eighteen", "Trade Gothic", "TradeGothic", "Trade-Gothic", "ArialNarrow", "Arial-Narrow", "Arial Narrow", Arial, sans-serif;
+    font-stretch: condensed;
+    font-weight: 600;
+    color: #444;
+    font-size: 20px;
+    line-height: 20px;
+    display: block !important;
+    color: #444;
+    text-transform: uppercase;
+    background: #fff;
+    text-align: center;
+    margin: auto;
+    width: 250px;
+    float: none;
+    position: relative; }
 
 #block-bean-home-pride-of-niner-nation {
-  padding: 20px 30px;
+  padding: 20px 20px 0 10px;
   display: block;
   float: left;
   width: 100%;
@@ -600,87 +929,6 @@ body.longscrollv2 .l-content-header-meta {
     width: 250px;
     float: none;
     position: relative; }
-  #block-bean-home-pride-of-niner-nation .block__content .entity-bean > .content {
-    display: block;
-    float: left;
-    width: 100%;
-    border-top: 5px solid #444;
-    border-bottom: 5px solid #444;
-    padding: 20px 0 20px 0;
-    margin-top: -20px; }
-    #block-bean-home-pride-of-niner-nation .block__content .entity-bean > .content .field__item .field--name-field-subsection-gallery .field__items .field__item {
-      display: none;
-      float: left;
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      overflow: hidden; }
-      #block-bean-home-pride-of-niner-nation .block__content .entity-bean > .content .field__item .field--name-field-subsection-gallery .field__items .field__item:first-child {
-        display: block; }
-    #block-bean-home-pride-of-niner-nation .block__content .entity-bean > .content .field__item .field--name-field-subsection-gallery .field--name-field-caption {
-      display: none; }
-    #block-bean-home-pride-of-niner-nation .block__content .entity-bean > .content .field__item .field--name-field-subsection-title {
-      font-family: "TradeGothic-CondEighteen", "Trade Gothic Cond Eighteen", "Trade Gothic Condensed Eighteen", "Trade Gothic", "TradeGothic", "Trade-Gothic", "ArialNarrow", "Arial-Narrow", "Arial Narrow", Arial, sans-serif;
-      font-stretch: condensed;
-      font-weight: 600;
-      color: #444;
-      font-size: 20px;
-      line-height: 20px;
-      text-align: left;
-      font-size: 20px;
-      line-height: 20px;
-      float: left;
-      width: calc(100% - 150px);
-      text-transform: uppercase;
-      padding-left: 20px; }
-    #block-bean-home-pride-of-niner-nation .block__content .entity-bean > .content .field__item .field--name-field-subsection-intro {
-      display: block;
-      float: left;
-      width: Calc(100% - 150px);
-      padding: 10px 20px; }
-    #block-bean-home-pride-of-niner-nation .block__content .entity-bean > .content .field__item .field--name-field-subsection-link {
-      display: block;
-      float: left;
-      width: 100%;
-      width: auto;
-      position: relative; }
-      #block-bean-home-pride-of-niner-nation .block__content .entity-bean > .content .field__item .field--name-field-subsection-link:after {
-        content: '\f04b';
-        font-family: FontAwesome;
-        font-size: 8px;
-        padding-left: 10px;
-        position: absolute;
-        top: calc(50% - 4px);
-        right: 5px;
-        color: #00703c; }
-      #block-bean-home-pride-of-niner-nation .block__content .entity-bean > .content .field__item .field--name-field-subsection-link a {
-        display: block;
-        float: left;
-        padding: 10px 20px;
-        color: #00703c;
-        text-decoration: none; }
-        #block-bean-home-pride-of-niner-nation .block__content .entity-bean > .content .field__item .field--name-field-subsection-link a:hover {
-          text-decoration: underline; }
-  #block-bean-home-pride-of-niner-nation .field--name-field-promo-read-more .field__item {
-    position: relative;
-    padding-right: 20px; }
-    #block-bean-home-pride-of-niner-nation .field--name-field-promo-read-more .field__item:after {
-      content: '\f04b';
-      font-family: FontAwesome;
-      font-size: 8px;
-      padding-left: 10px;
-      position: absolute;
-      top: calc(50% - 4px);
-      right: 5px;
-      color: #00703c;
-      top: calc(50% + 4px); }
-    #block-bean-home-pride-of-niner-nation .field--name-field-promo-read-more .field__item a {
-      color: #00703c;
-      display: block;
-      float: right;
-      text-decoration: none; }
-      #block-bean-home-pride-of-niner-nation .field--name-field-promo-read-more .field__item a:hover {
-        text-decoration: underline; }
 
 #block-bean-home-support-the-band {
   display: block;
@@ -773,6 +1021,7 @@ body.longscrollv2 .l-content-header-meta {
 
 #block-bean-facilities-showcase .block__content {
   max-width: 1200px;
+  padding: 0 10px;
   margin: auto; }
 
 img {
@@ -781,31 +1030,6 @@ img {
 .more-link {
   padding: 5px;
   float: right; }
-
-.breadcrumbs {
-  padding: 10px 5px;
-  border-bottom: 2px solid #eee; }
-  .breadcrumbs .breadcrumb {
-    list-style-type: none;
-    padding: 0;
-    display: block;
-    float: left;
-    padding: 5px; }
-    .breadcrumbs .breadcrumb span {
-      padding: 0;
-      font-size: initial;
-      line-height: 16px; }
-    .breadcrumbs .breadcrumb a {
-      color: #00703c;
-      border-bottom: 1px dotted #00703c; }
-      .breadcrumbs .breadcrumb a:hover {
-        border-bottom: 1px solid #00703c; }
-  .breadcrumbs span {
-    font-size: 9px;
-    line-height: 16px;
-    display: block;
-    float: left;
-    padding: 5px; }
 
 #block-user-login {
   display: none;
@@ -907,6 +1131,7 @@ img {
     display: block;
     width: 100%;
     max-width: 1200px;
+    padding: 0 10px;
     margin: auto;
     height: auto; }
     #header-wrapper .l-header-third .container .l-region--header-third #block-menu-block-1 {
@@ -1008,7 +1233,7 @@ img {
   float: left;
   width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 0 20px 0 0;
   /*second level down*/ }
   #block-menu-block-2 .menu-block-wrapper ul li {
     display: block;
@@ -1016,31 +1241,41 @@ img {
     width: 100%;
     margin-bottom: 2px; }
     #block-menu-block-2 .menu-block-wrapper ul li a {
-      border: 2px solid #d5d5d5;
-      background: #e0e0e0;
-      color: #898989;
-      padding: 10px;
+      background: #eee;
+      color: #444;
+      padding: 10px 15px;
       display: block;
       float: left;
       width: 100%;
-      text-decoration: none; }
+      text-decoration: none;
+      border-left: 5px solid #bea848; }
     #block-menu-block-2 .menu-block-wrapper ul li.active-trail > a {
-      border: 2px solid #444444;
-      background: white; }
-    #block-menu-block-2 .menu-block-wrapper ul li:hover > a {
+      border-left: 7px solid #00703c;
       background: #e0e0e0;
-      color: #444444; }
+      padding-left: 13px; }
+    #block-menu-block-2 .menu-block-wrapper ul li:hover > a {
+      border-left: 7px solid #00703c;
+      background: #e0e0e0;
+      padding-left: 13px; }
   #block-menu-block-2 .menu-block-wrapper ul ul {
     margin-left: 10px;
     width: calc(100% - 10px);
     margin-top: 3px; }
     #block-menu-block-2 .menu-block-wrapper ul ul li a {
-      border: 2px solid #d5d5d5;
-      background: white;
-      color: #898989; }
+      background: none;
+      border: none; }
+      #block-menu-block-2 .menu-block-wrapper ul ul li a:hover {
+        background: none;
+        border: none;
+        font-weight: bold; }
+    #block-menu-block-2 .menu-block-wrapper ul ul li.active-trail a {
+      background: none;
+      border: none;
+      font-weight: bold; }
     #block-menu-block-2 .menu-block-wrapper ul ul li.active-trail.active > a {
-      border: 2px solid #444444;
-      color: #444444; }
+      background: none;
+      border: none;
+      font-weight: bold; }
 
 #block-menu-block-4 {
   float: right;
@@ -1112,6 +1347,7 @@ img {
       display: block;
       margin: auto;
       max-width: 1200px;
+      padding: 0 10px;
       /* footer menu */ }
       .l-footer .l-footer-first .l-region--footer-first #block-menu-block-6 {
         width: auto; }
@@ -1193,6 +1429,7 @@ img {
       height: 110px; }
       .l-footer #footer #footer-container #static-footer #utility-bar {
         max-width: 1200px;
+        padding: 0 10px;
         margin: auto;
         height: 32px; }
         .l-footer #footer #footer-container #static-footer #utility-bar ul {
@@ -1250,6 +1487,7 @@ img {
             padding: 0; }
       .l-footer #footer #footer-container #static-footer #footer-bottom {
         max-width: 1200px;
+        padding: 0 10px;
         margin: auto; }
         .l-footer #footer #footer-container #static-footer #footer-bottom #footer-name {
           display: block;
