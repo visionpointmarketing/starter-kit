@@ -6,8 +6,23 @@
 img, media {
   max-width: 100%; }
 
+@font-face {
+  font-family: 'TradeGothicLTStd';
+  src: url(/sites/all/themes/unc_charlotte4/font/TradeGothicLTStd.otf); }
+
+@font-face {
+  font-family: 'TradeGothicLTStd-Bd2';
+  src: url(/sites/all/themes/unc_charlotte4/font/TradeGothicLTStd-Bd2.otf); }
+
+@font-face {
+  font-family: 'TradeGothicLTStd-BdCn20';
+  src: url(/sites/all/themes/unc_charlotte4/font/TradeGothicLTStd-BdCn20.otf); }
+
+@font-face {
+  font-family: 'TradeGothicLTStd-Cn18';
+  src: url(/sites/all/themes/unc_charlotte4/font/TradeGothicLTStd-Cn18.otf); }
+
 html body {
-  max-width: 1600px;
   margin: 0 auto; }
   html body .l-page {
     overflow: hidden; }
@@ -27,12 +42,17 @@ body.front #a3 {
     margin: auto; }
 
 /* join band page */
-body.page-node-73 #a2 .wrapper,
-body.page-node-73 #a4 .wrapper {
-  max-width: 1200px;
-  padding: 0 10px;
-  display: block;
-  margin: auto; }
+body.page-node-73 #a2,
+body.page-node-73 #a4 {
+  margin-top: 50px; }
+  body.page-node-73 #a2 .wrapper,
+  body.page-node-73 #a4 .wrapper {
+    max-width: 1200px;
+    padding: 0 10px;
+    display: block;
+    margin: auto; }
+body.page-node-73 #a3 {
+  margin-top: 50px; }
 
 /*unc charlotte header*/
 #header-wrapper {
@@ -56,8 +76,10 @@ body.page-node-73 #a4 .wrapper {
             top: 20px; } }
       #header-wrapper .container #header-row #branding {
         display: block;
-        float: left;
-        height: 100px; }
+        float: left; }
+        @media (min-width: 45em) {
+          #header-wrapper .container #header-row #branding {
+            height: 100px; } }
         #header-wrapper .container #header-row #branding #site-name-title {
           font-size: 1em; }
           #header-wrapper .container #header-row #branding #site-name-title a {
@@ -99,7 +121,11 @@ body.page-node-73 #a4 .wrapper {
               text-decoration: underline; }
       #header-wrapper .container #header-row #header-utility {
         float: right;
-        height: 100px; }
+        height: 100px;
+        display: none; }
+        @media (min-width: 45em) {
+          #header-wrapper .container #header-row #header-utility {
+            display: block; } }
         #header-wrapper .container #header-row #header-utility #header-utility-links {
           list-style-type: none;
           margin-bottom: 5px;
@@ -124,6 +150,155 @@ body.page-node-73 #a4 .wrapper {
           #header-wrapper .container #header-row #header-utility #header-utility-search-wrapper input {
             width: auto;
             height: 25px; }
+          #header-wrapper .container #header-row #header-utility #header-utility-search-wrapper .search-block-form--2 input {
+            width: auto; }
+
+#mobile-navbar {
+  display: block;
+  float: left;
+  width: 100%; }
+  @media (min-width: 45em) {
+    #mobile-navbar {
+      display: none; } }
+  #mobile-navbar #mobile-buttons {
+    display: block;
+    float: left;
+    width: 100%; }
+    #mobile-navbar #mobile-buttons #mobile-menu-button {
+      width: 50%;
+      float: left;
+      height: 40px;
+      border-radius: 0 0 0 0;
+      -webkit-border-radius: 0px;
+      background-image: linear-gradient(top, #ffffff 0%, #dddddd 100%);
+      background-image: -o-linear-gradient(top, white 0%, #dddddd 100%);
+      background-image: -moz-linear-gradient(top, white 0%, #dddddd 100%);
+      background-image: -webkit-linear-gradient(top, white 0%, #dddddd 100%);
+      background-image: -ms-linear-gradient(top, white 0%, #dddddd 100%);
+      -moz-border-bottom-colors: none;
+      -moz-border-left-colors: none;
+      -moz-border-right-colors: none;
+      -moz-border-top-colors: none;
+      border-color: #DDDDDD #BBBBBB #999999;
+      border-image: none;
+      border-style: solid;
+      border-width: 1px;
+      color: #333333;
+      cursor: pointer;
+      font: bold 12px/1.2 Arial,sans-serif;
+      outline: 0 none;
+      overflow: visible;
+      text-shadow: 0 1px 1px #FFFFFF; }
+    #mobile-navbar #mobile-buttons #mobile-search-button {
+      width: 50%;
+      float: left;
+      height: 40px;
+      border-radius: 0 0 0 0;
+      -webkit-border-radius: 0px;
+      background-image: linear-gradient(top, #ffffff 0%, #dddddd 100%);
+      background-image: -o-linear-gradient(top, white 0%, #dddddd 100%);
+      background-image: -moz-linear-gradient(top, white 0%, #dddddd 100%);
+      background-image: -webkit-linear-gradient(top, white 0%, #dddddd 100%);
+      background-image: -ms-linear-gradient(top, white 0%, #dddddd 100%);
+      -moz-border-bottom-colors: none;
+      -moz-border-left-colors: none;
+      -moz-border-right-colors: none;
+      -moz-border-top-colors: none;
+      border-color: #DDDDDD #BBBBBB #999999;
+      border-image: none;
+      border-style: solid;
+      border-width: 1px;
+      color: #333333;
+      cursor: pointer;
+      font: bold 12px/1.2 Arial,sans-serif;
+      outline: 0 none;
+      overflow: visible;
+      text-shadow: 0 1px 1px #FFFFFF; }
+  #mobile-navbar #mobile-menu-container {
+    width: 100%;
+    position: relative;
+    border-radius: 0px;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    clear: both;
+    border-bottom: 5px solid #00703c; }
+    #mobile-navbar #mobile-menu-container #mobile-main-menu {
+      display: inline !important;
+      border-left: 0px;
+      border-right: 0px;
+      width: 100%; }
+      #mobile-navbar #mobile-menu-container #mobile-main-menu li {
+        width: 100% !important;
+        display: block;
+        background-color: #FFFFFF;
+        border-bottom: 2px solid #00703c;
+        border-right: 0px !important;
+        height: 45px;
+        line-height: 45px;
+        padding-left: 0px;
+        padding-right: 0px; }
+        #mobile-navbar #mobile-menu-container #mobile-main-menu li.first {
+          border-top: 5px solid #00703c; }
+        #mobile-navbar #mobile-menu-container #mobile-main-menu li a {
+          display: block;
+          color: #00703c;
+          border-left: 0px;
+          border-right: 0px;
+          font-size: 15px;
+          padding-left: 15px; }
+          #mobile-navbar #mobile-menu-container #mobile-main-menu li a.active {
+            background-color: #EEEEEE; }
+          #mobile-navbar #mobile-menu-container #mobile-main-menu li a:before {
+            content: "\f101";
+            font-family: FontAwesome;
+            color: #00703c; }
+  #mobile-navbar #mobile-search-container {
+    width: 100%;
+    background-color: #00703c;
+    height: 40px;
+    padding-top: 10px;
+    clear: both; }
+    #mobile-navbar #mobile-search-container #header-utility-links {
+      display: none;
+      list-style-type: none;
+      margin-bottom: 5px;
+      margin-right: 8px;
+      float: right;
+      margin-top: 7px;
+      font-size: 0.75em; }
+      #mobile-navbar #mobile-search-container #header-utility-links li {
+        font-family: arial,helvetica,sans-serif;
+        font-size: 1em;
+        margin-left: -4px;
+        text-align: right;
+        width: 164px;
+        line-height: 1.6em; }
+        #mobile-navbar #mobile-search-container #header-utility-links li a {
+          color: #FFFFFF !important;
+          text-decoration: none; }
+    #mobile-navbar #mobile-search-container #header-utility-search-wrapper {
+      float: none;
+      margin-right: 8px;
+      clear: both; }
+      #mobile-navbar #mobile-search-container #header-utility-search-wrapper .form-search {
+        float: none;
+        text-align: center; }
+        #mobile-navbar #mobile-search-container #header-utility-search-wrapper .form-search .form-text {
+          border: medium none;
+          display: inline-block;
+          float: none;
+          font-size: 13px;
+          height: 19px;
+          padding: 0 17px 0 6px;
+          position: relative;
+          vertical-align: middle;
+          width: 135px;
+          min-height: 0px;
+          border-radius: 0px; }
+      #mobile-navbar #mobile-search-container #header-utility-search-wrapper input {
+        width: auto;
+        height: 25px; }
 
 .l-region {
   position: relative; }
@@ -143,6 +318,9 @@ body.page-node-73 #a4 .wrapper {
 
 /* overriding default style */
 body .field-collection-view {
+  border: none; }
+
+body .field-collection-container {
   border: none; }
 
 .block {
@@ -170,7 +348,8 @@ body.front .l-page .l-main #content {
     position: absolute;
     left: 20px;
     top: -40px;
-    z-index: 99; }
+    z-index: 99;
+    margin: 0; }
   body.front .l-page .l-main #content > ul {
     margin: 0; }
 
@@ -206,8 +385,9 @@ body.front .l-region .block.block--bean .block__title {
       padding: 5px; }
       .l-content-header-meta .wrapper .breadcrumbs .breadcrumb span {
         font-family: arial;
-        font-size: 16px;
         color: #444;
+        font-size: 18px;
+        line-height: 18px;
         padding: 0;
         font-size: initial;
         line-height: 16px; }
@@ -219,20 +399,20 @@ body.front .l-region .block.block--bean .block__title {
           border-bottom: 1px solid #00703c; }
     .l-content-header-meta .wrapper .breadcrumbs span {
       font-family: arial;
-      font-size: 16px;
       color: #444;
+      font-size: 18px;
+      line-height: 18px;
       font-size: 9px;
       line-height: 16px;
       display: block;
       float: left;
       padding: 5px; }
 .l-content-header-meta h1 {
-  font-family: "TradeGothic-CondEighteen", "Trade Gothic Cond Eighteen", "Trade Gothic Condensed Eighteen", "Trade Gothic", "TradeGothic", "Trade-Gothic", "ArialNarrow", "Arial-Narrow", "Arial Narrow", Arial, sans-serif;
-  font-stretch: condensed;
+  font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
   font-weight: 600;
   color: #444;
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 42px;
+  line-height: 42px;
   font-size: 40px;
   line-height: 42px;
   max-width: 1200px;
@@ -303,8 +483,7 @@ body.front .l-region .block.block--bean .block__title {
     float: left;
     width: 100%;
     border-top: 5px solid #444;
-    border-bottom: 5px solid #444;
-    padding: 20px 0 20px 0;
+    padding: 50px 0 20px 0;
     margin-top: -20px; }
     .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-gallery .field__items .field__item {
       display: none;
@@ -318,12 +497,11 @@ body.front .l-region .block.block--bean .block__title {
     .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-gallery .field--name-field-caption {
       display: none; }
     .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-title {
-      font-family: "TradeGothic-CondEighteen", "Trade Gothic Cond Eighteen", "Trade Gothic Condensed Eighteen", "Trade Gothic", "TradeGothic", "Trade-Gothic", "ArialNarrow", "Arial-Narrow", "Arial Narrow", Arial, sans-serif;
-      font-stretch: condensed;
+      font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
       font-weight: 600;
       color: #444;
-      font-size: 20px;
-      line-height: 20px;
+      font-size: 42px;
+      line-height: 42px;
       text-align: left;
       font-size: 20px;
       line-height: 20px;
@@ -333,8 +511,9 @@ body.front .l-region .block.block--bean .block__title {
       padding-left: 20px; }
     .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-intro {
       font-family: arial;
-      font-size: 16px;
       color: #444;
+      font-size: 18px;
+      line-height: 18px;
       display: block;
       float: left;
       width: Calc(100% - 150px);
@@ -355,6 +534,11 @@ body.front .l-region .block.block--bean .block__title {
         right: 5px;
         color: #00703c; }
       .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-link a {
+        font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+        font-weight: 600;
+        color: #444;
+        font-size: 18px;
+        line-height: 18px;
         display: block;
         float: left;
         padding: 10px 20px;
@@ -391,16 +575,15 @@ body.front .l-region .block.block--bean .block__title {
     padding-toP: 40px;
     margin: 120px 0; }
     .block.block--bean .bean-showcase h2 {
-      font-family: "TradeGothic-CondEighteen", "Trade Gothic Cond Eighteen", "Trade Gothic Condensed Eighteen", "Trade Gothic", "TradeGothic", "Trade-Gothic", "ArialNarrow", "Arial-Narrow", "Arial Narrow", Arial, sans-serif;
-      font-stretch: condensed;
+      font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
       font-weight: 600;
       color: #444;
-      font-size: 20px;
-      line-height: 20px;
+      font-size: 42px;
+      line-height: 42px;
       padding: 0 10px;
       text-align: center;
       position: relative;
-      top: -50px;
+      top: -64px;
       text-transform: uppercase;
       background: white;
       width: 400px;
@@ -466,12 +649,11 @@ body.front .l-region .block.block--bean .block__title {
           position: relative;
           height: 100%; }
           .block.block--bean .bean-showcase .showcase-elements .field__item .field--name-field-caption .field__item {
-            font-family: "TradeGothic-CondEighteen", "Trade Gothic Cond Eighteen", "Trade Gothic Condensed Eighteen", "Trade Gothic", "TradeGothic", "Trade-Gothic", "ArialNarrow", "Arial-Narrow", "Arial Narrow", Arial, sans-serif;
-            font-stretch: condensed;
+            font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
             font-weight: 600;
             color: #444;
-            font-size: 20px;
-            line-height: 20px;
+            font-size: 42px;
+            line-height: 42px;
             color: white;
             text-transform: uppercase;
             text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8);
@@ -535,8 +717,9 @@ body.front .l-region .block.block--bean .block__title {
       width: 100%; }
   .block.block--bean .bean-text-and-links-promo .field--name-field-list-of-links .field__item a {
     font-family: arial;
-    font-size: 16px;
     color: #444;
+    font-size: 18px;
+    line-height: 18px;
     display: block;
     width: 90%;
     margin: 5px auto;
@@ -570,13 +753,15 @@ body.front .l-region .block.block--bean .block__title {
           width: 100%;
           width: calc(100% - 30px);
           font-family: arial;
-          font-size: 16px;
           color: #444;
+          font-size: 18px;
+          line-height: 18px;
           margin: 0; }
     .block.block--bean .bean-faq .content .field--name-field-question .field__item .entity-field-collection-item .field--name-field-answer {
       font-family: arial;
-      font-size: 16px;
       color: #444;
+      font-size: 18px;
+      line-height: 18px;
       padding-left: 30px; }
   .block.block--bean .bean-faq .content .field--name-field-read-more-link .field__item {
     position: relative; }
@@ -588,52 +773,14 @@ body.front .l-region .block.block--bean .block__title {
       position: absolute;
       top: calc(50% - 4px);
       right: 5px;
-      color: #00703c; }
+      color: #00703c;
+      right: initial; }
     .block.block--bean .bean-faq .content .field--name-field-read-more-link .field__item a {
       text-decoration: none;
       position: relative;
       color: #00703c; }
       .block.block--bean .bean-faq .content .field--name-field-read-more-link .field__item a:hover {
         text-decoration: underline; }
-
-#block-bean-join-faqs {
-  display: block;
-  float: left;
-  width: 100%;
-  width: 100%;
-  background: #eee;
-  border-top: 5px solid #bea848; }
-  @media (min-width: 45em) {
-    #block-bean-join-faqs {
-      width: 300px; } }
-  #block-bean-join-faqs h2.block__title {
-    font-family: "TradeGothic-CondEighteen", "Trade Gothic Cond Eighteen", "Trade Gothic Condensed Eighteen", "Trade Gothic", "TradeGothic", "Trade-Gothic", "ArialNarrow", "Arial-Narrow", "Arial Narrow", Arial, sans-serif;
-    font-stretch: condensed;
-    font-weight: 600;
-    color: #444;
-    font-size: 20px;
-    line-height: 20px;
-    display: block !important;
-    margin: 0;
-    padding: 10px;
-    text-transform: uppercase; }
-
-#block-bean-join-request-more-information h2.block__title {
-  font-family: "TradeGothic-CondEighteen", "Trade Gothic Cond Eighteen", "Trade Gothic Condensed Eighteen", "Trade Gothic", "TradeGothic", "Trade-Gothic", "ArialNarrow", "Arial-Narrow", "Arial Narrow", Arial, sans-serif;
-  font-stretch: condensed;
-  font-weight: 600;
-  color: #444;
-  font-size: 20px;
-  line-height: 20px;
-  display: block !important;
-  margin: auto;
-  padding: 10px;
-  text-transform: uppercase;
-  width: 300px;
-  float: none;
-  background: white;
-  position: relative;
-  text-align: center; }
 
 #block-bean-join-the-band-introduction {
   padding: 0; }
@@ -675,6 +822,28 @@ body.front .l-region .block.block--bean .block__title {
           border-left: 7px solid #00703c;
           padding-left: 8px; }
 
+#block-bean-join-faqs {
+  display: block;
+  float: left;
+  width: 100%;
+  width: 100%;
+  background: #eee;
+  border-top: 5px solid #bea848; }
+  @media (min-width: 45em) {
+    #block-bean-join-faqs {
+      width: 300px; } }
+  #block-bean-join-faqs h2.block__title {
+    font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+    font-weight: 600;
+    color: #444;
+    font-size: 42px;
+    line-height: 42px;
+    display: block !important;
+    margin: 0;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 24px; }
+
 #block-bean-band-camp {
   padding: 0; }
   #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-image {
@@ -695,47 +864,68 @@ body.front .l-region .block.block--bean .block__title {
         padding: 0 10px;
         margin: auto; } }
     #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-intro-text .field__items {
-      background: rgba(0, 87, 45, 0.85);
+      background: #00572d;
       display: block;
       float: left;
       width: 100%; }
       @media (min-width: 45em) {
         #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-intro-text .field__items {
-          background: #00572d;
-          margin-top: 100px;
-          width: 500px;
+          background: rgba(0, 87, 45, 0.6);
+          margin-top: 60px;
+          width: 50%;
           padding: 20px; } }
       #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-intro-text .field__items .field__item {
         position: relative; }
         #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-intro-text .field__items .field__item h2 {
-          font-family: "TradeGothic-CondEighteen", "Trade Gothic Cond Eighteen", "Trade Gothic Condensed Eighteen", "Trade Gothic", "TradeGothic", "Trade-Gothic", "ArialNarrow", "Arial-Narrow", "Arial Narrow", Arial, sans-serif;
-          font-stretch: condensed;
+          font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
           font-weight: 600;
           color: #444;
-          font-size: 20px;
-          line-height: 20px;
+          font-size: 48px;
+          line-height: 48px;
           color: white;
           text-transform: uppercase;
           margin: 0; }
         #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-intro-text .field__items .field__item p {
           font-family: arial;
-          font-size: 16px;
           color: #444;
+          font-size: 18px;
+          line-height: 18px;
           color: white; }
-        #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-intro-text .field__items .field__item div:after {
-          content: '\f04b';
-          font-family: FontAwesome;
-          font-size: 8px;
-          padding-left: 10px;
-          position: absolute;
-          top: calc(50% - 4px);
-          right: 5px;
-          color: #00703c; }
-        #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-intro-text .field__items .field__item div a {
-          color: white;
-          text-decoration: none; }
-          #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-intro-text .field__items .field__item div a:hover {
-            text-decoration: underline; }
+        #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-intro-text .field__items .field__item div {
+          position: relative; }
+          #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-intro-text .field__items .field__item div:after {
+            content: '\f04b';
+            font-family: FontAwesome;
+            font-size: 8px;
+            padding-left: 10px;
+            position: absolute;
+            top: calc(50% - 4px);
+            right: 5px;
+            color: #00703c;
+            right: initial;
+            color: white; }
+          #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-intro-text .field__items .field__item div a {
+            color: white;
+            text-decoration: none; }
+            #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-intro-text .field__items .field__item div a:hover {
+              text-decoration: underline; }
+
+#block-bean-join-request-more-information h2.block__title {
+  font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+  font-weight: 600;
+  color: #444;
+  font-size: 48px;
+  line-height: 48px;
+  display: block !important;
+  margin: auto;
+  padding: 10px;
+  text-transform: uppercase;
+  width: 600px;
+  float: none;
+  background: white;
+  position: relative;
+  text-align: center;
+  top: 15px; }
 
 /* views blocks on sights and sounds home*/
 #block-views-media-block-1 .block__content .view-content .views-row {
@@ -747,6 +937,19 @@ body.front .l-region .block.block--bean .block__title {
     display: none; }
     #block-views-media-block-1 .block__content .view-content .views-row .views-field-field-image-upload .field-content a:first-child {
       display: block; }
+#block-views-media-block-1 .block__content .more-link {
+  position: relative; }
+  #block-views-media-block-1 .block__content .more-link:after {
+    content: '\f04b';
+    font-family: FontAwesome;
+    font-size: 8px;
+    padding-left: 10px;
+    position: absolute;
+    top: calc(50% - 4px);
+    right: 5px;
+    color: #00703c; }
+  #block-views-media-block-1 .block__content .more-link a {
+    color: #00703c; }
 
 #block-views-media-block-2 .block__content .view-content .views-row {
   display: block;
@@ -759,6 +962,19 @@ body.front .l-region .block.block--bean .block__title {
   @media (min-width: 70em) {
     #block-views-media-block-2 .block__content .view-content .views-row {
       width: 33.3333%; } }
+#block-views-media-block-2 .block__content .more-link {
+  position: relative; }
+  #block-views-media-block-2 .block__content .more-link:after {
+    content: '\f04b';
+    font-family: FontAwesome;
+    font-size: 8px;
+    padding-left: 10px;
+    position: absolute;
+    top: calc(50% - 4px);
+    right: 5px;
+    color: #00703c; }
+  #block-views-media-block-2 .block__content .more-link a {
+    color: #00703c; }
 
 #block-views-media-block-3 .block__content .view-content .views-row {
   display: block;
@@ -768,6 +984,19 @@ body.front .l-region .block.block--bean .block__title {
   #block-views-media-block-3 .block__content .view-content .views-row .views-field-field-video-url .player iframe {
     max-width: 100%;
     max-height: 34vw; }
+#block-views-media-block-3 .block__content .more-link {
+  position: relative; }
+  #block-views-media-block-3 .block__content .more-link:after {
+    content: '\f04b';
+    font-family: FontAwesome;
+    font-size: 8px;
+    padding-left: 10px;
+    position: absolute;
+    top: calc(50% - 4px);
+    right: 5px;
+    color: #00703c; }
+  #block-views-media-block-3 .block__content .more-link a {
+    color: #00703c; }
 
 #block-views-news-block-1 {
   display: block;
@@ -776,7 +1005,7 @@ body.front .l-region .block.block--bean .block__title {
   padding: 20px 20px 0 10px; }
   @media (min-width: 45em) {
     #block-views-news-block-1 {
-      width: calc(100% - 300px); } }
+      background: url("/sites/all/themes/unc_charlotte4/img/0775-1935.png") no-repeat right bottom; } }
   #block-views-news-block-1 .view-news {
     position: relative; }
     #block-views-news-block-1 .view-news .view-content {
@@ -784,18 +1013,22 @@ body.front .l-region .block.block--bean .block__title {
       float: left;
       width: 100%;
       border-bottom: 5px solid #444; }
+      @media (min-width: 45em) {
+        #block-views-news-block-1 .view-news .view-content {
+          width: calc(100% - 300px); } }
       #block-views-news-block-1 .view-news .view-content .views-field-title {
         display: block;
         float: left;
         width: 100%;
         margin: 0; }
         #block-views-news-block-1 .view-news .view-content .views-field-title .field-content {
-          font-family: "TradeGothic-CondEighteen", "Trade Gothic Cond Eighteen", "Trade Gothic Condensed Eighteen", "Trade Gothic", "TradeGothic", "Trade-Gothic", "ArialNarrow", "Arial-Narrow", "Arial Narrow", Arial, sans-serif;
-          font-stretch: condensed;
+          font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
           font-weight: 600;
           color: #444;
-          font-size: 20px;
-          line-height: 20px; }
+          font-size: 36px;
+          line-height: 36px;
+          line-height: 44px;
+          text-transform: uppercase; }
       #block-views-news-block-1 .view-news .view-content .views-field-field-news-image {
         display: block;
         float: left;
@@ -831,7 +1064,12 @@ body.front .l-region .block.block--bean .block__title {
         box-sizing: border-box; }
     #block-views-news-block-1 .view-news .more-link {
       padding-right: 20px;
-      position: relative; }
+      position: relative;
+      width: 100%;
+      float: left; }
+      @media (min-width: 45em) {
+        #block-views-news-block-1 .view-news .more-link {
+          width: calc(100% - 300px); } }
       #block-views-news-block-1 .view-news .more-link:after {
         content: '\f04b';
         font-family: FontAwesome;
@@ -848,82 +1086,158 @@ body.front .l-region .block.block--bean .block__title {
           text-decoration: underline; }
 
 .block--views-events-block-1 {
-  position: relative;
-  top: -40vw;
-  padding-top: 40vw;
-  margin-bottom: -40vw; }
+  position: relative; }
   .block--views-events-block-1 .block__title {
-    font-family: "TradeGothic-CondEighteen", "Trade Gothic Cond Eighteen", "Trade Gothic Condensed Eighteen", "Trade Gothic", "TradeGothic", "Trade-Gothic", "ArialNarrow", "Arial-Narrow", "Arial Narrow", Arial, sans-serif;
-    font-stretch: condensed;
+    font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
     font-weight: 600;
     color: #444;
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 42px;
+    line-height: 42px;
     text-align: center;
     margin: auto;
     float: none;
-    width: 220px;
+    font-size: 48px;
+    line-height: 48px;
+    width: 520px;
     text-transform: uppercase;
     background: white;
-    position: relative; }
+    position: relative;
+    top: 26px; }
   .block--views-events-block-1 .block__content {
     max-width: 1200px;
-    padding: 0 10px;
     margin: auto;
     float: none; }
-    .block--views-events-block-1 .block__content .view-events .view-content {
-      display: block;
-      float: left;
-      width: 100%;
-      border-top: 5px solid #444;
-      border-bottom: 5px solid #444;
-      padding: 20px 0 20px 0;
-      margin-top: -20px; }
-      .block--views-events-block-1 .block__content .view-events .view-content .views-row {
+    .block--views-events-block-1 .block__content .view-events {
+      border-top: 5px solid #444; }
+      .block--views-events-block-1 .block__content .view-events .view-header {
+        position: absolute;
+        bottom: -14px;
+        z-index: 2;
+        left: 0;
+        max-width: 40%; }
+      .block--views-events-block-1 .block__content .view-events .view-content {
         display: block;
         float: left;
-        width: 33.3333%;
-        text-align: center; }
-        .block--views-events-block-1 .block__content .view-events .view-content .views-row .views-field-field-event-date-1 {
-          display: block;
-          width: 60px;
-          margin: auto; }
-          @media (min-width: 45em) {
-            .block--views-events-block-1 .block__content .view-events .view-content .views-row .views-field-field-event-date-1 {
-              margin: 10px;
-              float: left; } }
-          .block--views-events-block-1 .block__content .view-events .view-content .views-row .views-field-field-event-date-1 .d-date {
-            display: block;
-            float: left;
-            padding: 15px 10px;
-            box-sizing: border-box;
-            background: #555;
-            color: white;
-            border-radius: 5px; }
-            .block--views-events-block-1 .block__content .view-events .view-content .views-row .views-field-field-event-date-1 .d-date .month {
-              display: block;
-              float: left;
-              width: 100%;
-              text-align: center;
-              font-size: 20px; }
-            .block--views-events-block-1 .block__content .view-events .view-content .views-row .views-field-field-event-date-1 .d-date .day {
-              display: block;
-              float: left;
-              width: 100%;
-              text-align: center;
-              font-size: 14px; }
-        .block--views-events-block-1 .block__content .view-events .view-content .views-row .views-field-field-event-date-2 {
+        width: 100%;
+        padding: 20px 0 20px 0;
+        margin-top: -20px;
+        z-index: 3;
+        position: relative; }
+        .block--views-events-block-1 .block__content .view-events .view-content .views-row {
           display: block;
           float: left;
-          width: 100%;
-          text-align: center; }
-          @media (min-width: 45em) {
-            .block--views-events-block-1 .block__content .view-events .view-content .views-row .views-field-field-event-date-2 {
-              width: calc(100% - 80px);
-              text-align: left;
-              padding: 0 10px; } }
-          .block--views-events-block-1 .block__content .view-events .view-content .views-row .views-field-field-event-date-2 .event-info {
-            display: block; }
+          width: 33.3333%;
+          text-align: center;
+          padding: 70px 20px;
+          *zoom: 1;
+          filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FF99FFFF', endColorstr='#FF00FFFF');
+          background-image: -webkit-gradient(radial, 50%, 0, 50%, 70, color-stop(0%, #ffffff), color-stop(30%, rgba(255, 255, 255, 0.8)), color-stop(70%, rgba(255, 255, 255, 0)));
+          background-image: -webkit-radial-gradient(center, ellipse cover, #ffffff 0%, rgba(255, 255, 255, 0.8) 30%, rgba(255, 255, 255, 0) 70%);
+          background-image: -moz-radial-gradient(center, ellipse cover, #ffffff 0%, rgba(255, 255, 255, 0.8) 30%, rgba(255, 255, 255, 0) 70%);
+          background-image: -o-radial-gradient(center, ellipse cover, #ffffff 0%, rgba(255, 255, 255, 0.8) 30%, rgba(255, 255, 255, 0) 70%);
+          background-image: radial-gradient(center, ellipse cover, #ffffff 0%, rgba(255, 255, 255, 0.8) 30%, rgba(255, 255, 255, 0) 70%); }
+          .block--views-events-block-1 .block__content .view-events .view-content .views-row .views-field-field-event-date-1 {
+            display: block;
+            float: left;
+            width: 100%;
+            margin: auto; }
+            .block--views-events-block-1 .block__content .view-events .view-content .views-row .views-field-field-event-date-1 .field-content {
+              display: block;
+              margin: auto;
+              width: 90px; }
+              .block--views-events-block-1 .block__content .view-events .view-content .views-row .views-field-field-event-date-1 .field-content .d-date {
+                display: block;
+                float: left;
+                padding: 15px 0;
+                box-sizing: border-box;
+                background: #00703c;
+                color: white;
+                width: 90px; }
+                .block--views-events-block-1 .block__content .view-events .view-content .views-row .views-field-field-event-date-1 .field-content .d-date .month {
+                  font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+                  font-weight: 600;
+                  color: #444;
+                  font-size: 24px;
+                  line-height: 24px;
+                  display: block;
+                  float: left;
+                  width: 100%;
+                  text-align: center;
+                  text-transform: uppercase;
+                  color: white; }
+                .block--views-events-block-1 .block__content .view-events .view-content .views-row .views-field-field-event-date-1 .field-content .d-date .day {
+                  font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+                  font-weight: 600;
+                  color: #444;
+                  font-size: 60px;
+                  line-height: 60px;
+                  display: block;
+                  float: left;
+                  width: 100%;
+                  text-align: center;
+                  color: white; }
+                .block--views-events-block-1 .block__content .view-events .view-content .views-row .views-field-field-event-date-1 .field-content .d-date:after {
+                  content: '';
+                  clear: both; }
+          .block--views-events-block-1 .block__content .view-events .view-content .views-row .views-field-field-event-date-2 {
+            display: block;
+            float: left;
+            width: 100%;
+            text-align: center; }
+            .block--views-events-block-1 .block__content .view-events .view-content .views-row .views-field-field-event-date-2 .event-info {
+              display: block;
+              padding: 0 30px; }
+              .block--views-events-block-1 .block__content .view-events .view-content .views-row .views-field-field-event-date-2 .event-info h3 {
+                text-align: center; }
+                .block--views-events-block-1 .block__content .view-events .view-content .views-row .views-field-field-event-date-2 .event-info h3 a {
+                  font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+                  font-weight: 600;
+                  color: #444;
+                  font-size: 36px;
+                  line-height: 36px;
+                  text-decoration: none;
+                  text-transform: uppercase;
+                  color: #444; }
+              .block--views-events-block-1 .block__content .view-events .view-content .views-row .views-field-field-event-date-2 .event-info p {
+                font-family: arial;
+                color: #444;
+                font-size: 13px;
+                line-height: 13px;
+                margin: 0;
+                display: block;
+                float: left;
+                padding: 10px;
+                color: #444;
+                width: 50%; }
+                .block--views-events-block-1 .block__content .view-events .view-content .views-row .views-field-field-event-date-2 .event-info p.e-loc:before {
+                  content: "\f041";
+                  font-family: FontAwesome;
+                  color: #00703c;
+                  padding-right: 5px; }
+                .block--views-events-block-1 .block__content .view-events .view-content .views-row .views-field-field-event-date-2 .event-info p.e-dat:before {
+                  content: "\f017";
+                  font-family: FontAwesome;
+                  color: #00703c;
+                  padding-right: 5px; }
+
+.more-link {
+  position: relative;
+  padding: 15px;
+  float: right; }
+  .more-link:after {
+    content: '\f04b';
+    font-family: FontAwesome;
+    font-size: 8px;
+    padding-left: 10px;
+    position: absolute;
+    top: calc(50% - 4px);
+    right: 5px;
+    color: #00703c; }
+  .more-link a {
+    color: #00703c;
+    text-decoration: none; }
+    .more-link a:hover {
+      text-decoration: underline; }
 
 #block-bean-join-pride-of-niner-nation {
   padding: 20px 20px 0 10px;
@@ -934,19 +1248,17 @@ body.front .l-region .block.block--bean .block__title {
     #block-bean-join-pride-of-niner-nation {
       width: calc(100% - 300px); } }
   #block-bean-join-pride-of-niner-nation h2.block__title {
-    font-family: "TradeGothic-CondEighteen", "Trade Gothic Cond Eighteen", "Trade Gothic Condensed Eighteen", "Trade Gothic", "TradeGothic", "Trade-Gothic", "ArialNarrow", "Arial-Narrow", "Arial Narrow", Arial, sans-serif;
-    font-stretch: condensed;
+    font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
     font-weight: 600;
     color: #444;
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 42px;
+    line-height: 42px;
     display: block !important;
-    color: #444;
     text-transform: uppercase;
     background: #fff;
     text-align: center;
     margin: auto;
-    width: 250px;
+    width: 500px;
     float: none;
     position: relative; }
 
@@ -959,21 +1271,29 @@ body.front .l-region .block.block--bean .block__title {
     #block-bean-home-pride-of-niner-nation {
       width: calc(100% - 300px); } }
   #block-bean-home-pride-of-niner-nation h2.block__title {
-    font-family: "TradeGothic-CondEighteen", "Trade Gothic Cond Eighteen", "Trade Gothic Condensed Eighteen", "Trade Gothic", "TradeGothic", "Trade-Gothic", "ArialNarrow", "Arial-Narrow", "Arial Narrow", Arial, sans-serif;
-    font-stretch: condensed;
+    font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
     font-weight: 600;
     color: #444;
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 42px;
+    line-height: 42px;
     display: block !important;
     color: #444;
     text-transform: uppercase;
+    font-size: 48px;
+    line-height: 48px;
     background: #eee;
     text-align: center;
     margin: auto;
-    width: 250px;
+    width: 530px;
+    top: 5px;
     float: none;
     position: relative; }
+  #block-bean-home-pride-of-niner-nation .bean-subsections > .content .field__item .field--name-field-subsection-title {
+    font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+    font-weight: 600;
+    color: #444;
+    font-size: 36px;
+    line-height: 36px; }
 
 #block-bean-home-support-the-band {
   display: block;
@@ -985,12 +1305,6 @@ body.front .l-region .block.block--bean .block__title {
     #block-bean-home-support-the-band {
       width: 300px; } }
   #block-bean-home-support-the-band .block__content .content .header {
-    font-family: "TradeGothic-CondEighteen", "Trade Gothic Cond Eighteen", "Trade Gothic Condensed Eighteen", "Trade Gothic", "TradeGothic", "Trade-Gothic", "ArialNarrow", "Arial-Narrow", "Arial Narrow", Arial, sans-serif;
-    font-stretch: condensed;
-    font-weight: 600;
-    color: #444;
-    font-size: 20px;
-    line-height: 20px;
     display: block;
     float: left;
     width: 100%;
@@ -998,23 +1312,25 @@ body.front .l-region .block.block--bean .block__title {
     box-sizing: border-box;
     margin-bottom: 20px; }
     #block-bean-home-support-the-band .block__content .content .header h2 {
-      font-family: "TradeGothic-CondEighteen", "Trade Gothic Cond Eighteen", "Trade Gothic Condensed Eighteen", "Trade Gothic", "TradeGothic", "Trade-Gothic", "ArialNarrow", "Arial-Narrow", "Arial Narrow", Arial, sans-serif;
-      font-stretch: condensed;
+      font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
       font-weight: 600;
       color: #444;
-      font-size: 20px;
-      line-height: 20px;
+      font-size: 36px;
+      line-height: 36px;
       display: block;
       float: left;
       padding: 20px;
       box-sizing: border-box;
       width: 100%;
       text-align: center;
-      font-size: 25px;
-      line-height: 25px;
       color: white;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      margin: 0; }
     #block-bean-home-support-the-band .block__content .content .header p {
+      font-family: arial;
+      color: #444;
+      font-size: 18px;
+      line-height: 18px;
       text-align: center;
       color: white;
       font-size: 16px;
@@ -1027,11 +1343,15 @@ body.front .l-region .block.block--bean .block__title {
       position: relative;
       top: 42px;
       background: white;
-      border-left: 48vw solid rgba(255, 255, 255, 0);
-      border-right: 47vw solid rgba(255, 255, 255, 0);
       border-top: 20px solid #00703c;
+      border-left: 44vw solid rgba(255, 255, 255, 0);
+      border-right: 44vw solid rgba(255, 255, 255, 0);
       border-bottom: 0; }
-      @media (min-width: 45em) {
+      @media (min-width: 500px) {
+        #block-bean-home-support-the-band .block__content .content .header:after {
+          border-left: 46vw solid rgba(255, 255, 255, 0);
+          border-right: 46vw solid rgba(255, 255, 255, 0); } }
+      @media (min-width: 700px) {
         #block-bean-home-support-the-band .block__content .content .header:after {
           top: 20px;
           border-left: 150px solid rgba(255, 255, 255, 0);
@@ -1065,20 +1385,119 @@ body.front .l-region .block.block--bean .block__title {
       padding-top: 30px;
       text-decoration: none;
       color: #00703c; }
+      #block-bean-home-support-the-band .block__content .content .cta-content a .content h3 {
+        font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+        font-weight: 600;
+        color: #444;
+        font-size: 30px;
+        line-height: 30px;
+        color: #00703c;
+        text-transform: uppercase; }
       #block-bean-home-support-the-band .block__content .content .cta-content a .content p {
+        font-family: arial;
+        color: #444;
+        font-size: 14px;
+        line-height: 14px;
         color: #444; }
 
-#block-bean-facilities-showcase .block__content {
+#block-bean-facilities-showcase {
+  background: url("/sites/all/themes/unc_charlotte4/img/stadium_blur.jpg") no-repeat right bottom;
+  background-size: cover; }
+  #block-bean-facilities-showcase .block__content {
+    max-width: 1200px;
+    padding: 0 10px;
+    margin: auto; }
+
+#block-views-media-block-3 .block__title {
+  font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+  font-weight: 600;
+  color: #444;
+  font-size: 36px;
+  line-height: 36px;
+  width: 150px;
+  text-transform: uppercase;
+  text-align: center;
   max-width: 1200px;
-  padding: 0 10px;
+  margin: auto;
+  position: relative;
+  top: 20px;
+  background: white; }
+#block-views-media-block-3 .view-content {
+  border-top: 5px solid #444;
+  padding-top: 80px;
+  max-width: 1200px;
   margin: auto; }
+  #block-views-media-block-3 .view-content .views-field-field-video-url {
+    display: block;
+    float: left;
+    width: 100%;
+    height: 52vw; }
+    @media (min-width: 45em) {
+      #block-views-media-block-3 .view-content .views-field-field-video-url {
+        height: 36vw;
+        max-height: 360px; } }
+    #block-views-media-block-3 .view-content .views-field-field-video-url .field-content {
+      width: 100%;
+      margin: auto; }
+      @media (min-width: 45em) {
+        #block-views-media-block-3 .view-content .views-field-field-video-url .field-content {
+          width: 64vw;
+          max-width: 640px; } }
+      #block-views-media-block-3 .view-content .views-field-field-video-url .field-content iframe {
+        width: 100%;
+        height: 52vw; }
+        @media (min-width: 45em) {
+          #block-views-media-block-3 .view-content .views-field-field-video-url .field-content iframe {
+            width: 64vw;
+            height: 36vw;
+            max-height: 360px;
+            max-width: 640px; } }
+    #block-views-media-block-3 .view-content .views-field-field-video-url .video-embed-description {
+      width: 100%;
+      margin: auto; }
+      @media (min-width: 45em) {
+        #block-views-media-block-3 .view-content .views-field-field-video-url .video-embed-description {
+          width: 64vw; } }
+
+.owl-theme .owl-controls .owl-buttons .owl-prev {
+  position: absolute;
+  left: -10px;
+  top: 30%;
+  background: transparent; }
+  @media (min-width: 45em) {
+    .owl-theme .owl-controls .owl-buttons .owl-prev {
+      left: 30px;
+      top: 35%; } }
+  .owl-theme .owl-controls .owl-buttons .owl-prev:after {
+    content: '\f053';
+    font-family: FontAwesome;
+    color: #444;
+    position: relative;
+    font-size: 60px; }
+    @media (min-width: 45em) {
+      .owl-theme .owl-controls .owl-buttons .owl-prev:after {
+        font-size: 42px; } }
+.owl-theme .owl-controls .owl-buttons .owl-next {
+  position: absolute;
+  right: -10px;
+  top: 35%;
+  background: transparent; }
+  @media (min-width: 45em) {
+    .owl-theme .owl-controls .owl-buttons .owl-next {
+      right: 30px;
+      top: 35%; } }
+  .owl-theme .owl-controls .owl-buttons .owl-next:after {
+    content: '\f054';
+    font-family: FontAwesome;
+    color: #444;
+    position: relative;
+    font-size: 60px; }
+    @media (min-width: 45em) {
+      .owl-theme .owl-controls .owl-buttons .owl-next:after {
+        font-size: 42px; } }
 
 img {
   height: auto; }
-
-.more-link {
-  padding: 5px;
-  float: right; }
 
 #block-user-login {
   display: none;
@@ -1186,14 +1605,16 @@ img {
     margin: auto;
     height: auto; }
     #header-wrapper .l-header-third .container .l-region--header-third #block-menu-block-1 {
-      margin-bottom: -5px;
-      z-index: 1;
       display: block;
       float: left;
-      width: 100%; }
+      width: 100%;
+      margin-bottom: -5px;
+      z-index: 1;
+      display: none; }
       @media (min-width: 45em) {
         #header-wrapper .l-header-third .container .l-region--header-third #block-menu-block-1 {
-          width: 80%; } }
+          width: 80%;
+          display: block; } }
       #header-wrapper .l-header-third .container .l-region--header-third #block-menu-block-1 .menu-block-wrapper {
         display: block;
         float: left;
@@ -1224,12 +1645,11 @@ img {
               color: #00703c;
               border-bottom: 5px solid #00703c; }
             #header-wrapper .l-header-third .container .l-region--header-third #block-menu-block-1 .menu-block-wrapper ul li a {
-              font-family: "TradeGothic-CondEighteen", "Trade Gothic Cond Eighteen", "Trade Gothic Condensed Eighteen", "Trade Gothic", "TradeGothic", "Trade-Gothic", "ArialNarrow", "Arial-Narrow", "Arial Narrow", Arial, sans-serif;
-              font-stretch: condensed;
+              font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
               font-weight: 600;
               color: #444;
-              font-size: 20px;
-              line-height: 20px;
+              font-size: 42px;
+              line-height: 42px;
               padding: 0 10px;
               color: #00703c;
               text-decoration: none;
@@ -1254,13 +1674,15 @@ img {
               border-top: 1px solid #e0e0e0;
               border-bottom: 1px solid #d5d5d5; }
     #header-wrapper .l-header-third .container .l-region--header-third #block-menu-block-5 {
-      margin-bottom: -5px;
-      z-index: 1;
       display: block;
       float: left;
-      width: 100%; }
+      width: 100%;
+      margin-bottom: -5px;
+      z-index: 1;
+      display: none; }
       @media (min-width: 45em) {
         #header-wrapper .l-header-third .container .l-region--header-third #block-menu-block-5 {
+          display: block;
           width: 20%; } }
       #header-wrapper .l-header-third .container .l-region--header-third #block-menu-block-5 .menu-block-wrapper ul {
         display: block;
@@ -1430,12 +1852,11 @@ img {
               .l-footer .l-footer-first .l-region--footer-first #block-menu-block-6 .menu-block-wrapper ul.menu li {
                 width: auto; } }
             .l-footer .l-footer-first .l-region--footer-first #block-menu-block-6 .menu-block-wrapper ul.menu li a {
-              font-family: "TradeGothic-CondEighteen", "Trade Gothic Cond Eighteen", "Trade Gothic Condensed Eighteen", "Trade Gothic", "TradeGothic", "Trade-Gothic", "ArialNarrow", "Arial-Narrow", "Arial Narrow", Arial, sans-serif;
-              font-stretch: condensed;
+              font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
               font-weight: 600;
               color: #444;
-              font-size: 20px;
-              line-height: 20px;
+              font-size: 18px;
+              line-height: 18px;
               display: block;
               float: left;
               width: 100%;

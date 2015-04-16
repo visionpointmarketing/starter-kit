@@ -21,9 +21,29 @@
 @import "base/**/*";
 @import "components/**/*";
 
+@font-face {
+	font-family: 'TradeGothicLTStd';
+	src: url(/sites/all/themes/unc_charlotte4/font/TradeGothicLTStd.otf);
+}
+
+@font-face {
+	font-family: 'TradeGothicLTStd-Bd2';
+	src: url(/sites/all/themes/unc_charlotte4/font/TradeGothicLTStd-Bd2.otf);
+}
+
+@font-face {
+	font-family: 'TradeGothicLTStd-BdCn20';
+	src: url(/sites/all/themes/unc_charlotte4/font/TradeGothicLTStd-BdCn20.otf);
+}
+
+@font-face {
+	font-family: 'TradeGothicLTStd-Cn18';
+	src: url(/sites/all/themes/unc_charlotte4/font/TradeGothicLTStd-Cn18.otf);
+}
+
 html{
 	body{
-		max-width:1600px;
+		// max-width:1600px;
 		margin:0 auto;
 		.l-page{
 			overflow:hidden;
@@ -50,12 +70,16 @@ body.front{
 body.page-node-73{
 	#a2,
 	#a4{
+		margin-top:50px;
 		.wrapper{
 			max-width:$maxwidth;
 			padding:0 10px;
 			display:block;
 			margin:auto;
 		}
+	}
+	#a3{
+		margin-top:50px;
 	}
 }
 /*unc charlotte header*/
@@ -82,7 +106,9 @@ body.page-node-73{
 			#branding{
 				display:block;
 				float:left;
-				height:100px;
+				@include breakpoint($tab,true){
+					height:100px;
+				}
 				#site-name-title{
 					font-size: 1em;
 					a{
@@ -137,6 +163,10 @@ body.page-node-73{
 			#header-utility {
 				float: right;
 				height: 100px;
+				display:none;
+				@include breakpoint($tab,true){
+					display:block;
+				}
 				#header-utility-links {
 					list-style-type: none;
 					margin-bottom: 5px;
@@ -165,7 +195,174 @@ body.page-node-73{
 						width:auto;
 						height:25px;
 					}
+					.search-block-form--2{
+						input{
+							width:auto;
+						}
+					}
 				}
+			}
+		}
+	}
+}
+#mobile-navbar{
+	@include floatblock();
+	@include breakpoint($tab,true){
+		display:none;
+	}
+	#mobile-buttons{
+		@include floatblock();
+		#mobile-menu-button{
+			width: 50%;
+			float: left;
+			height: 40px;
+			border-radius: 0 0 0 0;
+			-webkit-border-radius: 0px;
+			background-image: linear-gradient(top , rgb(255,255,255) 0%, rgb(221,221,221) 100%);
+			background-image: -o-linear-gradient(top , rgb(255,255,255) 0%, rgb(221,221,221) 100%);
+			background-image: -moz-linear-gradient(top , rgb(255,255,255) 0%, rgb(221,221,221) 100%);
+			background-image: -webkit-linear-gradient(top , rgb(255,255,255) 0%, rgb(221,221,221) 100%);
+			background-image: -ms-linear-gradient(top , rgb(255,255,255) 0%, rgb(221,221,221) 100%);
+			-moz-border-bottom-colors: none;
+			-moz-border-left-colors: none;
+			-moz-border-right-colors: none;
+			-moz-border-top-colors: none;
+			border-color: #DDDDDD #BBBBBB #999999;
+			border-image: none;
+			border-style: solid;
+			border-width: 1px;
+			color: #333333;
+			cursor: pointer;
+			font: bold 12px/1.2 Arial,sans-serif;
+			outline: 0 none;
+			overflow: visible;
+			text-shadow: 0 1px 1px #FFFFFF;
+		}
+		#mobile-search-button{
+			width: 50%;
+			float: left;
+			height: 40px;
+			border-radius: 0 0 0 0;
+			-webkit-border-radius: 0px;
+			background-image: linear-gradient(top , rgb(255,255,255) 0%, rgb(221,221,221) 100%);
+			background-image: -o-linear-gradient(top , rgb(255,255,255) 0%, rgb(221,221,221) 100%);
+			background-image: -moz-linear-gradient(top , rgb(255,255,255) 0%, rgb(221,221,221) 100%);
+			background-image: -webkit-linear-gradient(top , rgb(255,255,255) 0%, rgb(221,221,221) 100%);
+			background-image: -ms-linear-gradient(top , rgb(255,255,255) 0%, rgb(221,221,221) 100%);
+			-moz-border-bottom-colors: none;
+			-moz-border-left-colors: none;
+			-moz-border-right-colors: none;
+			-moz-border-top-colors: none;
+			border-color: #DDDDDD #BBBBBB #999999;
+			border-image: none;
+			border-style: solid;
+			border-width: 1px;
+			color: #333333;
+			cursor: pointer;
+			font: bold 12px/1.2 Arial,sans-serif;
+			outline: 0 none;
+			overflow: visible;
+			text-shadow: 0 1px 1px #FFFFFF;
+		}
+	}
+	#mobile-menu-container{
+		width: 100%;
+		position: relative;
+		border-radius: 0px;
+		border: none;
+		padding: 0px;
+		margin: 0px;
+		clear: both;
+		border-bottom: 5px solid $green;
+		#mobile-main-menu{
+			display: inline !important;
+			border-left: 0px;
+			border-right: 0px;
+			width: 100%;
+			li{
+				width: 100% !important;
+				display: block;
+				background-color: #FFFFFF;
+				border-bottom: 2px solid $green;
+				border-right: 0px !important;
+				height: 45px;
+				line-height: 45px;
+				padding-left: 0px;
+				padding-right: 0px;
+				&.first{
+					border-top: 5px solid $green;
+				}
+				a{
+					display: block;
+					color:$green;
+					border-left: 0px;
+					border-right: 0px;
+					font-size: 15px;
+					padding-left: 15px;
+					&.active{
+						background-color: #EEEEEE;
+					}
+					&:before{
+						content:"\f101";
+						font-family:FontAwesome;
+						color:$green;
+					}
+				}
+			}
+		}
+	}
+	#mobile-search-container{
+		width: 100%;
+		background-color: $green;
+		height: 40px;
+		padding-top: 10px;
+		clear: both;
+		#header-utility-links{
+			display:none;
+			list-style-type: none;
+			margin-bottom: 5px;
+			margin-right: 8px;
+			float: right;
+			margin-top: 7px;
+			font-size: 0.75em;
+			li{
+				font-family: arial,helvetica,sans-serif;
+				font-size: 1em;
+				margin-left: -4px;
+				text-align: right;
+				width: 164px;
+				line-height: 1.6em;
+				a{
+					color: #FFFFFF !important;
+					text-decoration: none;
+				}
+			}
+		}
+		#header-utility-search-wrapper{
+			float:none;
+			margin-right:8px;
+			clear:both;
+			.form-search{
+				float: none;
+				text-align: center;
+				.form-text{
+					border: medium none;
+					display: inline-block;
+					float: none;
+					font-size: 13px;
+					height: 19px;
+					padding: 0 17px 0 6px;
+					position: relative;
+					vertical-align: middle;
+					width: 135px;
+					min-height: 0px;
+					border-radius: 0px;
+				}
+				button{}
+			}
+			input{
+				width:auto;
+				height:25px;
 			}
 		}
 	}
@@ -188,6 +385,9 @@ body.page-node-73{
 }
 /* overriding default style */
 body .field-collection-view{
+	border:none;
+}
+body .field-collection-container{
 	border:none;
 }
 .block{
@@ -216,6 +416,7 @@ body.front{
 					left:20px;
 					top:-40px;
 					z-index:99;
+					margin:0;
 				}
 				> ul{
 					margin:0;
@@ -379,8 +580,7 @@ body.front{
 			float: left;
 			width: 100%;
 			border-top: 5px solid #444;
-			border-bottom: 5px solid #444;
-			padding: 20px 0 20px 0;
+			padding: 50px 0 20px 0;
 			margin-top: -20px;
 			.field__item{
 				.field--name-field-subsection-gallery{
@@ -426,6 +626,7 @@ body.front{
 						@include arrowafter();
 					}
 					a{
+						@include f-impact(18px);
 						display:block;
 						float:left;
 						padding:10px 20px;
@@ -471,7 +672,7 @@ body.front{
 			padding:0 10px;
 			text-align: center;
 			position: relative;
-			top: -50px;
+			top: -64px;
 			text-transform: uppercase;
 			background: white;
 			width: 400px;
@@ -685,6 +886,7 @@ body.front{
 					position:relative;
 					&:after{
 						@include arrowafter();
+						right:initial;
 					}
 					a{
 						text-decoration:none;
@@ -697,36 +899,6 @@ body.front{
 				}
 			}
 		}
-	}
-}
-#block-bean-join-faqs{
-	@include floatblock();
-	width:100%;
-	@include breakpoint($tab,true){
-		width:300px;
-	}
-	background:#eee;
-	border-top:5px solid $gold;
-	h2.block__title{
-		@include f-impact();
-		display:block!important;
-		margin:0;
-		padding:10px;
-		text-transform:uppercase;
-	}
-}
-#block-bean-join-request-more-information{
-	h2.block__title{
-		@include f-impact();
-		display:block!important;
-		margin:auto;
-		padding:10px;
-		text-transform:uppercase;
-		width:300px;
-		float:none;
-		background:white;
-		position:relative;
-		text-align:center;
 	}
 }
 #block-bean-join-the-band-introduction{
@@ -783,6 +955,23 @@ body.front{
 		}
 	}
 }
+#block-bean-join-faqs{
+	@include floatblock();
+	width:100%;
+	@include breakpoint($tab,true){
+		width:300px;
+	}
+	background:#eee;
+	border-top:5px solid $gold;
+	h2.block__title{
+		@include f-impact();
+		display:block!important;
+		margin:0;
+		padding:10px;
+		text-transform:uppercase;
+		font-size:24px;
+	}
+}
 #block-bean-band-camp{
 	padding:0;
 	&.block.block--bean{
@@ -808,31 +997,34 @@ body.front{
 						margin:auto;
 					}
 					.field__items{
-						background:$dkgreen-transparent;
+						background:$dkgreen;
 						display:block;
 						float:left;
 						width:100%;
 						@include breakpoint($tab,true){
-							background:$dkgreen;
-							margin-top:100px;
-							width:500px;
+							background:$dkgreen-transparent;
+							margin-top:60px;
+							width:50%;
 							padding:20px;
 						}
 						.field__item{
 							position:relative;
 							h2{
-								@include f-impact();
+								@include f-impact(48px);
 								color:white;
 								text-transform:uppercase;
 								margin:0;
 							}
 							p{
-								@include f-text();
+								@include f-text(18px);
 								color:white;
 							}
 							div{
+								position:relative;
 								&:after{
 									@include arrowafter();
+									right:initial;
+									color:white;
 								}
 								a{
 									color:white;
@@ -847,6 +1039,21 @@ body.front{
 				}
 			}
 		}
+	}
+}
+#block-bean-join-request-more-information{
+	h2.block__title{
+		@include f-impact(48px);
+		display:block!important;
+		margin:auto;
+		padding:10px;
+		text-transform:uppercase;
+		width:600px;
+		float:none;
+		background:white;
+		position:relative;
+		text-align:center;
+		top:15px;
 	}
 }
 /* views blocks on sights and sounds home*/
@@ -868,7 +1075,15 @@ body.front{
 				}
 			}
 		}
-		.more-link{}
+		.more-link{
+			position:relative;
+			&:after{
+				@include arrowafter();
+			}
+			a{
+				color:$green;
+			}
+		}
 	}
 }
 #block-views-media-block-2{
@@ -889,7 +1104,15 @@ body.front{
 				}
 			}
 		}
-		.more-link{}
+		.more-link{
+			position:relative;
+			&:after{
+				@include arrowafter();
+			}
+			a{
+				color:$green;
+			}
+		}
 	}
 }
 #block-views-media-block-3{
@@ -908,7 +1131,15 @@ body.front{
 				}
 			}
 		}
-		.more-link{}
+		.more-link{
+			position:relative;
+			&:after{
+				@include arrowafter();
+			}
+			a{
+				color:$green;
+			}
+		}
 	}
 }
 
@@ -916,18 +1147,23 @@ body.front{
 	@include floatblock();
 	padding: 20px 20px 0 10px;
 	@include breakpoint($tab,true){
-		width:calc(100% - 300px);
+		background:url("/sites/all/themes/unc_charlotte4/img/0775-1935.png") no-repeat right bottom;
 	}
 	.view-news{
 		position:relative;
 		.view-content{
 			@include floatblock();
 			border-bottom: 5px solid #444;
+			@include breakpoint($tab,true){
+				width:calc(100% - 300px);
+			}
 			.views-field-title{
 				@include floatblock();
 				margin:0;
 				.field-content{
-					@include f-impact();
+					@include f-impact(36px);
+					line-height:44px;
+					text-transform:uppercase;
 				}
 			}
 			.views-field-field-news-image{
@@ -965,6 +1201,11 @@ body.front{
 		.more-link{
 			padding-right:20px;
 			position:relative;
+			width:100%;
+			@include breakpoint($tab,true){
+				width:calc(100% - 300px);
+			}
+			float:left;
 			&:after{
 				@include arrowafter();
 			}
@@ -980,67 +1221,86 @@ body.front{
 }
 .block--views-events-block-1{
 	position: relative;
-	top: -40vw;
-	padding-top: 40vw;
-	margin-bottom: -40vw;
+
 	.block__title{
 		@include f-impact();
 		text-align:center;
 		margin: auto;
 		float: none;
-		width: 220px;
+		font-size:48px;
+		line-height:48px;
+		width: 520px;
 		text-transform:uppercase;
 		background: white;
 		position: relative;
+		top:26px;
 	}
 	.block__content{
 		max-width: $maxwidth;
-		padding:0 10px;
 		margin: auto;
 		float: none;
 		.view-events{
+			border-top: 5px solid #444;
+			.view-header{
+				position:absolute;
+				bottom:-14px;
+				z-index:2;
+				left:0;
+				max-width:40%;
+			}
 			.view-content{
 				display:block;
 				float:left;
 				width:100%;
-				border-top: 5px solid #444;
-				border-bottom: 5px solid #444;
 				padding: 20px 0 20px 0;
 				margin-top: -20px;
+				z-index:3;
+				position:relative;
 				.views-row{
 					display:block;
 					float:left;
 					width:33.3333%;
 					text-align:center;
+					padding:70px 20px;
+					// needs latest Compass, add '@import "compass"' to your scss
+@include filter-gradient(#99ffff, #00ffff, horizontal); // IE6-9 fallback on horizontal gradient
+@include background-image(radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%, rgba(255,255,255,0.8) 30%,rgba(255,255,255,0) 70%));
 					.views-field-field-event-date-1{
-						display:block;
-						width:60px;
+						@include floatblock();
 						margin:auto;
-						@include breakpoint($tab,true){
-							margin: 10px;
-							float:left;
-						}
-						.d-date{
-							display: block;
-							float: left;
-							padding: 15px 10px;
-							box-sizing: border-box;
-							background: #555;
-							color: white;
-							border-radius: 5px;
-							.month{
-								display:block;
+						.field-content{
+							display:block;
+							margin:auto;
+							width:90px;
+							.d-date{
+								display: block;
 								float:left;
-								width:100%;
-								text-align:center;
-								font-size:20px;
-							}
-							.day{
-								display:block;
-								float:left;
-								width:100%;
-								text-align:center;
-								font-size:14px;
+								padding:15px 0;
+								box-sizing: border-box;
+								background: $green;
+								color: white;
+								width:90px;
+								.month{
+									@include f-impact(24px);
+									display:block;
+									float:left;
+									width:100%;
+									text-align:center;
+									text-transform:uppercase;
+									color:white;
+								}
+								.day{
+									@include f-impact(60px);
+									display:block;
+									float:left;
+									width:100%;
+									text-align:center;
+									color:white;
+								}
+								&:after{
+									content:'';
+									clear:both;
+								}
 							}
 						}
 					}
@@ -1049,19 +1309,62 @@ body.front{
 						float:left;
 						width:100%;
 						text-align:center;
-						@include breakpoint($tab,true){
-							width:calc(100% - 80px);
-							text-align:left;
-							padding:0 10px;
-						}
 						.event-info{
 							display:block;
-							h3{}
-							p{}
+							padding:0 30px;
+							h3{
+								text-align:center;
+								a{
+									@include f-impact(36px);
+									text-decoration:none;
+									text-transform:uppercase;
+									color:#444;
+								}
+							}
+							p{
+								@include f-text(13px);
+								margin: 0;
+								display: block;
+								float: left;
+								padding: 10px;
+								color:#444;
+								width:50%;
+								&.e-loc{
+									&:before{
+										content:"\f041";
+										font-family:FontAwesome;
+										color:$green;
+										padding-right:5px;
+									}
+								}
+								&.e-dat{
+									&:before{
+										content:"\f017";
+										font-family:FontAwesome;
+										color:$green;
+										padding-right:5px;
+									}
+								}
+							}
 						}
 					}
 				}
 			}
+		}
+	}
+}
+.more-link{
+	position:relative;
+	padding:15px;
+	float:right;
+	&:after{
+		@include arrowafter();
+	}
+	a{
+		color:$green;
+		text-decoration:none;
+		&:hover{
+			text-decoration:underline;
 		}
 	}
 }
@@ -1075,12 +1378,11 @@ body.front{
 	h2.block__title{
 		@include f-impact();
 		display:block!important;
-		color:#444;
 		text-transform:uppercase;
 		background: #fff;
 		text-align: center;
 		margin: auto;
-		width: 250px;
+		width: 500px;
 		float: none;
 		position: relative;
 	}
@@ -1096,12 +1398,24 @@ body.front{
 		display:block!important;
 		color:#444;
 		text-transform:uppercase;
+		font-size:48px;
+		line-height:48px;
 		background: #eee;
 		text-align: center;
 		margin: auto;
-		width: 250px;
+		width: 530px;
+		top:5px;
 		float: none;
 		position: relative;
+	}
+	.bean-subsections{
+		> .content{
+			.field__item{
+				.field--name-field-subsection-title{
+					@include f-impact(36px);
+				}
+			}
+		}
 	}
 }
 #block-bean-home-support-the-band{
@@ -1114,7 +1428,6 @@ body.front{
 	.block__content{
 		.content{
 			.header{
-				@include f-impact();
 				display:block;
 				float:left;
 				width:100%;
@@ -1122,19 +1435,19 @@ body.front{
 				box-sizing:border-box;
 				margin-bottom:20px;
 				h2{
-					@include f-impact();
+					@include f-impact(36px);
 					display:block;
 					float:left;
 					padding:20px;
 					box-sizing:border-box;
 					width:100%;
 					text-align:center;
-					font-size:25px;
-					line-height:25px;
 					color:white;
 					text-transform:uppercase;
+					margin:0;
 				}
 				p{
+					@include f-text(18px);
 					text-align:center;
 					color:white;
 					font-size:16px;
@@ -1148,11 +1461,15 @@ body.front{
 					position:relative;
 					top:42px;
 					background:white;
-					border-left:48vw solid rgba(255, 255, 255, 0);
-					border-right:47vw solid rgba(255, 255, 255, 0);
 					border-top:20px solid $green;
+					border-left:44vw solid rgba(255, 255, 255, 0);
+					border-right:44vw solid rgba(255, 255, 255, 0);
 					border-bottom:0;
-					@include breakpoint($tab,true){
+					@include breakpoint(500px,true){
+						border-left:46vw solid rgba(255, 255, 255, 0);
+						border-right:46vw solid rgba(255, 255, 255, 0);
+					}
+					@include breakpoint(700px,true){
 						top:20px;
 						border-left:150px solid rgba(255, 255, 255, 0);
 						border-right:150px solid rgba(255, 255, 255, 0);
@@ -1186,8 +1503,13 @@ body.front{
 					text-decoration:none;
 					color:$green;
 					.content{
-						h3{}
+						h3{
+							@include f-impact(30px);
+							color:$green;
+							text-transform:uppercase;
+						}
 						p{
+							@include f-text(14px);
 							color:#444;
 						}
 					}
@@ -1197,19 +1519,114 @@ body.front{
 	}
 }
 #block-bean-facilities-showcase{
+	background:url("/sites/all/themes/unc_charlotte4/img/stadium_blur.jpg") no-repeat right bottom;
+	background-size:cover;
 	.block__content{
 		max-width:$maxwidth;
 		padding:0 10px;
 		margin:auto;
 	}
 }
+#block-views-media-block-3{
+	.block__title{
+		@include f-impact(36px);
+		width:150px;
+		text-transform:uppercase;
+		text-align:center;
+		max-width:$maxwidth;
+		margin:auto;
+		position:relative;
+		top:20px;
+		background:white;
+	}
+	.view-content{
+		border-top:5px solid #444;
+		padding-top:80px;
+		max-width:$maxwidth;
+		margin:auto;
+		.views-field-field-video-url{
+			@include floatblock();
+			height:52vw;
+			@include breakpoint($tab,true){
+				height:36vw;
+				max-height:360px;
+			}
+			.field-content{
+				width:100%;
+				@include breakpoint($tab,true){
+					width:64vw;
+					max-width:640px;
+				}
+				margin:auto;
+				iframe{
+					width:100%;
+					height:52vw;
+					@include breakpoint($tab,true){
+						width:64vw;
+						height:36vw;
+						max-height:360px;
+						max-width:640px;
+					}
+				}
+			}
+			.video-embed-description{
+				width:100%;
+				@include breakpoint($tab,true){
+					width:64vw;
+				}
+				margin:auto;
+			}
+		}
+	}
+}
+.owl-theme{
+	.owl-controls{
+		.owl-buttons{
+			.owl-prev{
+				position:absolute;
+				left:-10px;
+				top:30%;
+				background:transparent;
+				@include breakpoint($tab,true){
+					left:30px;
+					top:35%;
+				}
+				&:after{
+					content:'\f053';
+					font-family:FontAwesome;
+					color:#444;
+					position:relative;
+					font-size:60px;
+					@include breakpoint($tab,true){
+						font-size:42px;
+					}
+				}
+			}
+			.owl-next{
+				position:absolute;
+				right:-10px;
+				top:35%;
+				background:transparent;
+				@include breakpoint($tab,true){
+					right:30px;
+					top:35%;
+				}
+				&:after{
+					content:'\f054';
+					font-family:FontAwesome;
+					color:#444;
+					position:relative;
+					font-size:60px;
+					@include breakpoint($tab,true){
+						font-size:42px;
+					}
+				}
+			}
+		}
+	}
+}
 img{
 	height:auto;
-}
-.more-link{
-	padding:5px;
-	float:right;
-
 }
 
 #block-user-login{
@@ -1335,11 +1752,13 @@ img{
 			height:auto;
 			.l-region--header-third{
 				#block-menu-block-1{
+					@include floatblock();
 					margin-bottom:-5px;
 					z-index:1;
-					@include floatblock();
+					display:none;
 					@include breakpoint($tab,true){
 						width:80%;
+						display:block;
 					}
 					.menu-block-wrapper{
 						@include floatblock();
@@ -1404,10 +1823,12 @@ img{
 					}
 				}
 				#block-menu-block-5{
+					@include floatblock();
 					margin-bottom:-5px;
 					z-index:1;
-					@include floatblock();
+					display:none;
 					@include breakpoint($tab,true){
+						display:block;
 						width:20%;
 					}
 					.menu-block-wrapper{
@@ -1462,7 +1883,6 @@ img{
 		}
 	}
 }
-
 /*default subnav block*/
 #block-menu-block-2{
 	.menu-block-wrapper{
@@ -1625,7 +2045,7 @@ img{
 								width:auto;
 							}
 							a{
-								@include f-impact();
+								@include f-impact(18px);
 								@include floatblock();
 								color:white;
 								text-decoration:none;

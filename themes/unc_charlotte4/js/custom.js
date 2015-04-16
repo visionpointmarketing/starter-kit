@@ -1,39 +1,48 @@
 jQuery( document ).ready(function () {
 
+	/* Make links to documents open in a new window */
+	jQuery('a[href$=".pdf"]').attr('target', '_blank');
+	jQuery('a[href$=".doc"]').attr('target', '_blank');
+	jQuery('a[href$=".docx"]').attr('target', '_blank');
+	jQuery('a[href$=".xls"]').attr('target', '_blank');
+	jQuery('a[href$=".xlsx"]').attr('target', '_blank');
+
+	/* Zebra striping */
+	jQuery("table.zebra tr:odd").addClass("odd");
+	jQuery("table.zebra tr:even").addClass("even");
+
+	// Hide menu and search divs
+	jQuery("#mobile-menu-container").hide();
+	jQuery("#mobile-search-container").hide();
+
+	// Unhide menu and search buttons
+	jQuery("#mobile-menu-button").show();
+	jQuery("#mobile-search-button").show();
+
+	// Add listeners
+	jQuery("#mobile-menu-button").click(function(){
+	/* Hide search */
+	jQuery("#mobile-search-container").hide();
+	/* Show menu */
+	jQuery("#mobile-menu-container").toggle();
+	});
+
+	jQuery("#mobile-search-button").click(function(){
+	/* Hide menu */
+	jQuery("#mobile-menu-container").hide();
+	/* Show search */
+	jQuery("#mobile-search-container").toggle();
+	});
+
+
+
 	jQuery('#block-menu-block-2 .block__title').on('click',function(e){
 	    jQuery(this).siblings('.menu-block-wrapper').children('ul').toggleClass("open");
 	});
 	jQuery("#block-user-login .block__title").on('click',function(e){
 		jQuery(this).siblings('.block__content').toggleClass('open');
 	});
-	jQuery(".print-buttons").on('click',function(e){
-		jQuery(this).toggleClass('open');
-	});
-	jQuery(".print-buttons button").on('click',function(e){
-		var today = new Date();
-		var dd = today.getDate();
-		var mm = today.getMonth()+1; //January is 0
-		var yyyy = today.getFullYear();
-		if(dd<10) {	dd='0'+dd	}
-		if(mm<10) {	mm='0'+mm	}
-		today = mm+'/'+dd+'/'+yyyy;
-		jQuery('body').prepend('<div class="printheader"><img src="/sites/all/themes/unc_charlotte4/images/logo-mobile.png"/><p class="date">' + today + '</p></div>');
-		var myClass = jQuery(this).attr("class");
-		jQuery("body").removeClass( function() {
-		     toReturn = '';
-		     classes = this.className.split(' ');
-		     for( i in classes ) {
-		         if( /print-/.exec( classes[i] ) ) {
-		             toReturn += classes[i] +' ';
-		         }
-		     }
-		     return toReturn ;
-		});
-		jQuery("body").addClass('print-' + myClass);
-		
-		window.print();
-		jQuery(".printheader").remove();
-	});
+
 	jQuery(".regiontoggle.open").on('click',function(e){
 	});
 	jQuery(".regiontoggle").on('click',function(e){

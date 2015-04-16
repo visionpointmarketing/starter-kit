@@ -44,9 +44,8 @@
 	-o-transition:			$element $time $type;
 	transition:				$element $time $type;
 }
-@mixin f-impact($size:20px){
-	font-family: "TradeGothic-CondEighteen", "Trade Gothic Cond Eighteen", "Trade Gothic Condensed Eighteen", "Trade Gothic", "TradeGothic", "Trade-Gothic", "ArialNarrow", "Arial-Narrow", "Arial Narrow", Arial, sans-serif;
-	font-stretch: condensed;
+@mixin f-impact($size:42px){
+	font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
 	font-weight:600;
 	color:#444;
 	font-size:$size;
@@ -62,8 +61,9 @@
 	right: 5px;
 	color:$green;
 }
-@mixin f-text(){
+@mixin f-text($size:18px){
 	font-family:arial;
-	font-size:16px;
 	color:#444;
+	font-size:$size;
+	line-height:$size;
 }

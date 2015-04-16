@@ -122,7 +122,22 @@
       </div>
     </header>
   </div>
+<?php if ($main_menu || $secondary_menu): ?>
+  <div id="mobile-navbar" class="visible-phone">
+    <?php $search_type = theme_get_setting('search_box_type'); ?>
+    <div id="mobile-buttons" class="<?php print ($search_type == 'disabled') ? "search-disabled" : "search-enabled"; ?>">
+      <button id="mobile-menu-button"><i class="fa fa-bars"></i> Menu</button>
+      <button id="mobile-search-button"><i class="fa fa-search"></i> Search</button>
+    </div>
+    <div id="mobile-menu-container">
+      <?php print theme('links__system_mobile_menu', array('links' => $main_menu, 'attributes' => array('id' => 'mobile-main-menu', 'class' => 'links inline main-menu nav-count-' . $nav_count))); ?>
+    </div>
+    <div id="mobile-search-container">
+      <?php print $header_utility; ?>
+    </div>
+  </div>
 
+<?php endif; ?>
   <div class="l-main">
     <?php 
 /*The following lines provide the longscroll "dot navigation"
