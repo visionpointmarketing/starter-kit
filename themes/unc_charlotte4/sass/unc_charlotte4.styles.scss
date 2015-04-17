@@ -82,6 +82,15 @@ body.page-node-73{
 		margin-top:50px;
 	}
 }
+/* sights and sounds */
+body.page-node-77{
+	#a2{
+		background:#eee;
+	}
+	#a3{
+		margin-top:50px;
+	}
+}
 /*unc charlotte header*/
 #header-wrapper{
 	height:100px;
@@ -111,6 +120,7 @@ body.page-node-73{
 				}
 				#site-name-title{
 					font-size: 1em;
+					margin:0;
 					a{
 						color:white;
 						text-decoration:none;
@@ -425,8 +435,7 @@ body.front{
 		}
 	}
 }
-body.page-node-73,
-body.front{
+body{
 	.l-region{
 		.block.block--bean{
 			.block__title{
@@ -437,16 +446,17 @@ body.front{
 }
 .bean-button-promo-1{
 	.field__item{
+		&:after{
+			@include arrowafter();
+		}
 		a{
 			display: block;
 			float: left;
 			width: 100%;
-			text-align: center;
-			border: 4px solid #555;
-			background: #666;
-			color: #ccc;
+			text-align: left;
+			background: $green;
+			color: white;
 			line-height: 42px;
-			border-radius: 8px;
 			text-decoration: none;
 		}
 	}
@@ -588,8 +598,12 @@ body.front{
 						.field__item{
 							display:none;
 							float:left;
-							width:150px;
-							height:150px;
+							width:80px;
+							height:80px;
+							@include breakpoint($tab,true){
+								width:150px;
+								height:150px;
+							}
 							border-radius:50%;
 							overflow:hidden;
 							&:first-child{
@@ -606,16 +620,24 @@ body.front{
 					text-align:left;
 					font-size:20px;
 					line-height:20px;
-					float: left;
-					width: calc(100% - 150px);
+					width:calc(100% - 80px);
+					float:right;
+					@include breakpoint($tab,true){
+						float: left;
+						width: calc(100% - 150px);
+					}
 					text-transform:uppercase;
 					padding-left:20px;
 				}
 				.field--name-field-subsection-intro{
 					@include f-text();
 					display: block;
-					float: left;
-					width: Calc(100% - 150px);
+					width:calc(100% - 80px);
+					float:right;
+					@include breakpoint($tab,true){
+						float: left;
+						width: calc(100% - 150px);
+					}
 					padding: 10px 20px;
 				}
 				.field--name-field-subsection-link{
@@ -665,8 +687,11 @@ body.front{
 		max-width:100%;
 		width:100%;
 		border-top: 5px solid #444;
-		padding-toP: 40px;
-		margin: 120px 0;
+		padding-top: 40px;
+		margin:50px 0;
+		@include breakpoint($tab,true){
+			margin: 120px 0;
+		}
 		h2{
 			@include f-impact();
 			padding:0 10px;
@@ -675,7 +700,10 @@ body.front{
 			top: -64px;
 			text-transform: uppercase;
 			background: white;
-			width: 400px;
+			width:auto;
+			@include breakpoint($tab,true){
+				width: 400px;
+			}
 			margin: auto;
 		}
 		.showcase-intro{
@@ -716,6 +744,12 @@ body.front{
 				display:block;
 				float:left;
 				width:100%;
+				position:relative;
+				overflow:hidden;
+				height:50vw;
+				@include breakpoint($tab,true){
+					padding:0 20px;
+				}
 				.field--name-field-image-upload{
 					.field__items{
 						.field__item{
@@ -729,7 +763,13 @@ body.front{
 				img{
 					display:block;
 					float:left;
-					width:100%;
+					height:100%;
+					position:absolute;
+					margin:auto;
+					top: -9999px;
+					bottom: -9999px;
+					left: -9999px;
+					right: -9999px;
 				}
 				iframe{
 					max-width:100%;
@@ -750,14 +790,14 @@ body.front{
 						color:white;
 						text-transform:uppercase;
 						text-shadow:1px 1px 0px rgba(0,0,0,0.8);
-						width: calc(100% - 40px);
+						width: 100%;
 						font-size:16px;
 						line-height:18px;
 						padding:15px;
-						margin: 0 20px;
 						box-sizing: border-box;
 						position: absolute;
 						bottom: 0;
+						height:auto;
 						@include filter-gradient(#000000, #a60000, vertical); // IE6-9
 						@include background-image(linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 18%,rgba(0,0,0,0.45) 100%));
 						@include breakpoint($desk,true){
@@ -775,17 +815,26 @@ body.front{
 			}
 			&.one{
 				.field__item{
-					width:100%;
+					@include breakpoint($tab,true){
+						width:100%;
+						height:50vw;
+					}
 				}
 			}
 			&.two{
 				.field__item{
-					width:50%;
+					@include breakpoint($tab,true){
+						width:50%;
+						height:25vw;
+					}
 				}
 			}
 			&.three{
 				.field__item{
-					width:33.3333%;
+					@include breakpoint($tab,true){
+						width:33.3333%;
+						height:16vw;
+					}
 				}
 			}
 		}
@@ -808,7 +857,9 @@ body.front{
 			display:block;
 			float:left;
 			width:100%;
-			padding:10px;
+			@include breakpoint($tab,true){
+				padding:10px;
+			}
 			box-sizing:border-box;
 			@include breakpoint($tab,true){
 				max-width:30%;
@@ -1001,11 +1052,11 @@ body.front{
 						display:block;
 						float:left;
 						width:100%;
+						padding:20px;
 						@include breakpoint($tab,true){
 							background:$dkgreen-transparent;
 							margin-top:60px;
 							width:50%;
-							padding:20px;
 						}
 						.field__item{
 							position:relative;
@@ -1048,7 +1099,10 @@ body.front{
 		margin:auto;
 		padding:10px;
 		text-transform:uppercase;
-		width:600px;
+		width:auto;
+		@include breakpoint($tab,true){
+			width:600px;
+		}
 		float:none;
 		background:white;
 		position:relative;
@@ -1057,19 +1111,86 @@ body.front{
 	}
 }
 /* views blocks on sights and sounds home*/
+/* galleries */
 #block-views-media-block-1{
+	float:none;
+	max-width:$maxwidth;
+	margin:auto;
+	.block__title{
+		@include f-impact(36px);
+		text-align:center;
+		width: 300px;
+		text-transform:uppercase;
+		margin: auto;
+		background: white;
+		top: 20px;
+		position: relative;
+	}
 	.block__content{
+		border-top: 5px solid #444;
+		padding-top: 60px;
 		.view-content{
 			.views-row{
 				@include floatblock();
-				width:20%;
+				width:100%;
+				@include breakpoint($tab,true){
+					width:33.3333%;
+				}
 				.views-field-field-image-upload{
+					@include floatblock();
+					margin-top:30px;
+					@include breakpoint($tab,true){
+						margin-top:0px;
+					}
 					.field-content{
+						@include floatblock();
+						overflow:hidden;
+						position:relative;
 						a{
 							display:none;
 							&:first-child{
 								display:block;
 							}
+						}
+						img{
+							display:inline-block;
+							width:100%;
+							float:left;
+							vertical-align: middle;
+							margin:auto;
+							display: block;
+							height: auto;
+							padding:0 20px;
+						}
+					}
+				}
+				.views-field-field-caption{
+					@include floatblock();
+					position:relative;
+					height:100%;
+					.field-content{
+						@include f-impact(16px);
+						color:white;
+						text-transform:uppercase;
+						text-shadow:1px 1px 0px rgba(0,0,0,0.8);
+						width: calc(100% - 40px);
+						line-height:18px;
+						padding:15px;
+						margin: 0 20px;
+						box-sizing: border-box;
+						position: absolute;
+						bottom: 0;
+						@include filter-gradient(#000000, #a60000, vertical); // IE6-9
+						@include background-image(linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 18%,rgba(0,0,0,0.45) 100%));
+						@include breakpoint($desk,true){
+							font-size:22px;
+							line-height:24px;
+							padding: 30px 15px;
+						}
+						@include breakpoint($desk,true){
+							font-size:30px;
+							line-height:32px;
+							padding: 20px 15px;
 						}
 					}
 				}
@@ -1086,8 +1207,106 @@ body.front{
 		}
 	}
 }
-#block-views-media-block-2{
+/* instagram feed */
+#block-block-17{
+	margin:40px 0;
 	.block__content{
+		border-top:5px solid #444;
+		margin:auto;
+		max-width:$maxwidth;
+		h2{
+			max-width:$maxwidth;
+			@include f-impact(36px);
+			text-transform:uppercase;
+			text-align:center;
+			width:auto;
+			@include breakpoint($tab,true){
+				width: 380px;
+			}
+			margin: auto;
+			background: white;
+			top: -20px;
+			position: relative;
+		}
+		#instafeed{
+			margin-top:40px;
+			.item{
+				@include floatblock();
+				@include breakpoint($tab,true){
+					width:33.3333%;
+				}
+				padding:0 20px;
+				a{
+					position:relative;
+					img{
+
+					}
+					h3{
+						@include f-impact(16px);
+						color:white;
+						text-transform:uppercase;
+						text-shadow:1px 1px 0px rgba(0,0,0,0.8);
+						width:100%;
+						line-height:18px;
+						padding:15px;
+						box-sizing: border-box;
+						position: absolute;
+						bottom: 3px;
+						margin:0;
+						@include filter-gradient(#000000, #a60000, vertical); // IE6-9
+						@include background-image(linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 18%,rgba(0,0,0,0.45) 100%));
+						&:before{
+							content:"\f16d";
+							font-family:FontAwesome;
+							padding-right:10px;
+						}
+					}
+				}
+			}
+		}
+		span{
+			@include f-impact(16px);
+			color:$green;
+			text-transform:uppercase;
+			width:100%;
+			line-height:18px;
+			box-sizing: border-box;
+			position: relative;
+			margin:0;
+			float:right;
+			text-align:right;
+			padding:20px;
+			a{
+				color:$green;
+				text-decoration:none;
+			}
+			&:before{
+				content:"\f16d";
+				font-family:FontAwesome;
+				padding-right:10px;
+			}
+		}
+	}
+}
+/* audio samples */
+#block-views-media-block-2{
+	@include floatblock();
+	.block__title{
+		max-width:$maxwidth;
+		@include f-impact(36px);
+		text-transform:uppercase;
+		text-align:center;
+		width: 350px;
+		margin: auto;
+		background: white;
+		top: 20px;
+		position: relative;
+	}
+	.block__content{
+		max-width:$maxwidth;
+		margin:auto;
+		border-top: 5px solid #444;
+		padding-top: 60px;
 		.view-content{
 			.views-row{
 				@include floatblock();
@@ -1095,12 +1314,12 @@ body.front{
 				@include breakpoint($tab,true){
 					width:50%;
 				}
-				@include breakpoint($desk,true){
-					width:33.3333%;
-				}
 				.views-field-field-audio-file{
 					.jp-audio{
 					}
+				}
+				.views-field-field-caption{
+					display:none;
 				}
 			}
 		}
@@ -1128,11 +1347,20 @@ body.front{
 							max-height:34vw;
 						}
 					}
+					.video-embed-description{
+						display:none;
+					}
+				}
+				.views-field-field-caption{
+					display:none;
 				}
 			}
 		}
 		.more-link{
 			position:relative;
+			max-width:$maxwidth;
+			margin:auto;
+			float:none;
 			&:after{
 				@include arrowafter();
 			}
@@ -1145,9 +1373,23 @@ body.front{
 
 #block-views-news-block-1{
 	@include floatblock();
-	padding: 20px 20px 0 10px;
 	@include breakpoint($tab,true){
+		padding: 20px 20px 0 10px;
 		background:url("/sites/all/themes/unc_charlotte4/img/0775-1935.png") no-repeat right bottom;
+	}
+	h2.block__title{
+		max-width:$maxwidth;
+		@include f-impact(36px);
+		text-transform:uppercase;
+		text-align:center;
+		width:auto;
+		top:0;
+		@include breakpoint($tab,true){
+			width: calc(100% - 300px);
+		}
+		margin: auto;
+		background: white;
+		position: relative;
 	}
 	.view-news{
 		position:relative;
@@ -1160,9 +1402,12 @@ body.front{
 			.views-field-title{
 				@include floatblock();
 				margin:0;
+				h2{
+					margin:15px 0;
+				}
 				.field-content{
 					@include f-impact(36px);
-					line-height:44px;
+					line-height:50px;
 					text-transform:uppercase;
 				}
 			}
@@ -1219,9 +1464,9 @@ body.front{
 		}
 	}
 }
+
 .block--views-events-block-1{
 	position: relative;
-
 	.block__title{
 		@include f-impact();
 		text-align:center;
@@ -1229,11 +1474,14 @@ body.front{
 		float: none;
 		font-size:48px;
 		line-height:48px;
-		width: 520px;
 		text-transform:uppercase;
 		background: white;
 		position: relative;
 		top:26px;
+		width:auto;
+		@include breakpoint($tab,true){
+			width: 520px;
+		}
 	}
 	.block__content{
 		max-width: $maxwidth;
@@ -1247,26 +1495,40 @@ body.front{
 				z-index:2;
 				left:0;
 				max-width:40%;
+				display:none;
+				@include breakpoint($tab,true){
+					display:block;
+				}
 			}
 			.view-content{
 				display:block;
 				float:left;
 				width:100%;
-				padding: 20px 0 20px 0;
-				margin-top: -20px;
+				@include breakpoint($tab,true){
+					padding: 20px 0;
+					margin-top: -20px;
+				}
 				z-index:3;
 				position:relative;
 				.views-row{
 					display:block;
 					float:left;
-					width:33.3333%;
+					width:100%;
+					padding:20px;
+					@include breakpoint($tab,true){
+						width:33.3333%;
+						padding:70px 20px;
+					}
 					text-align:center;
-					padding:70px 20px;
 					// needs latest Compass, add '@import "compass"' to your scss
 @include filter-gradient(#99ffff, #00ffff, horizontal); // IE6-9 fallback on horizontal gradient
 @include background-image(radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%, rgba(255,255,255,0.8) 30%,rgba(255,255,255,0) 70%));
 					.views-field-field-event-date-1{
 						@include floatblock();
+						width:90px;
+						@include breakpoint($tab,true){
+							width:100%;
+						}
 						margin:auto;
 						.field-content{
 							display:block;
@@ -1275,11 +1537,14 @@ body.front{
 							.d-date{
 								display: block;
 								float:left;
-								padding:15px 0;
+								padding:5px;
 								box-sizing: border-box;
 								background: $green;
 								color: white;
 								width:90px;
+								@include breakpoint($tab,true){
+									padding:15px 0;
+								}
 								.month{
 									@include f-impact(24px);
 									display:block;
@@ -1307,15 +1572,30 @@ body.front{
 					.views-field-field-event-date-2{
 						display:block;
 						float:left;
-						width:100%;
+						padding-left:20px;
+						@include breakpoint($tab,true){
+							width:100%;
+							padding-left:0;
+						}
+						width:calc(100% - 90px);
 						text-align:center;
 						.event-info{
 							display:block;
-							padding:0 30px;
+							@include breakpoint($tab,true){
+								padding:0 30px;
+							}
 							h3{
 								text-align:center;
+								margin:0;
+								@include breakpoint($tab,true){
+									margin-top:20px;
+								}
 								a{
-									@include f-impact(36px);
+									@include f-impact(26px);
+									@include breakpoint($tab,true){
+										font-size:36px;
+										line-height:36px;
+									}
 									text-decoration:none;
 									text-transform:uppercase;
 									color:#444;
@@ -1328,7 +1608,11 @@ body.front{
 								float: left;
 								padding: 10px;
 								color:#444;
-								width:50%;
+								width:100%;
+								@include breakpoint($tab,true){
+									width:50%;
+									padding:5px 0;
+								}
 								&.e-loc{
 									&:before{
 										content:"\f041";
@@ -1382,7 +1666,10 @@ body.front{
 		background: #fff;
 		text-align: center;
 		margin: auto;
-		width: 500px;
+		width:auto;
+		@include breakpoint($tab,true){
+			width: 500px;
+		}
 		float: none;
 		position: relative;
 	}
@@ -1403,10 +1690,13 @@ body.front{
 		background: #eee;
 		text-align: center;
 		margin: auto;
-		width: 530px;
 		top:5px;
 		float: none;
 		position: relative;
+		width:auto;
+		@include breakpoint($tab,true){
+			width: 530px;
+		}
 	}
 	.bean-subsections{
 		> .content{
@@ -1459,7 +1749,7 @@ body.front{
 				&:after{
 					content:'';
 					position:relative;
-					top:42px;
+					top:38px;
 					background:white;
 					border-top:20px solid $green;
 					border-left:44vw solid rgba(255, 255, 255, 0);
@@ -1469,7 +1759,7 @@ body.front{
 						border-left:46vw solid rgba(255, 255, 255, 0);
 						border-right:46vw solid rgba(255, 255, 255, 0);
 					}
-					@include breakpoint(700px,true){
+					@include breakpoint($tab,true){
 						top:20px;
 						border-left:150px solid rgba(255, 255, 255, 0);
 						border-right:150px solid rgba(255, 255, 255, 0);
@@ -1782,6 +2072,7 @@ img{
 								}
 								&.active-trail,
 								&:hover{
+									border-bottom:1px solid $green;
 									a{
 										color:$green;
 										border-bottom:5px solid $green;
@@ -2018,7 +2309,162 @@ img{
 		}
 	}
 }
-
+.view-id-news.view-display-id-page{
+	.views-row{
+		@include floatblock();
+		padding-bottom:20px;
+		margin-bottom:20px;
+		border-bottom:1px solid #444;
+		.views-field-title{
+			.image{
+				@include floatblock();
+				position:relative;
+				img{
+					@include floatblock();
+				}
+				h2{
+					@include f-impact(32px);
+					color:white;
+					text-transform:uppercase;
+					text-shadow:1px 1px 0px rgba(0,0,0,0.8);
+					width:100%;
+					line-height:18px;
+					padding:15px;
+					box-sizing: border-box;
+					position: absolute;
+					bottom: 0;
+					margin:0;
+					@include filter-gradient(#000000, #a60000, vertical); // IE6-9
+					@include background-image(linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 18%,rgba(0,0,0,0.45) 100%));
+					a{
+						color:$green;
+						text-decoration:none;
+					}
+				}
+			}
+		}
+		.views-field-created{
+			@include f-text(18px);
+			@include floatblock();
+			padding:10px;
+			color:#444;
+		}
+		.views-field-body{
+			@include f-text(18px);
+			@include floatblock();
+			padding:0 10px;
+			color:#444;
+		}
+		.views-field-title-1{
+			.field-content{
+				@include floatblock();
+				position:relative;
+				padding-right:20px;
+				&:after{
+					@include arrowafter();
+				}
+				a{
+					color:$green;
+					display:block;
+					float:right;
+					text-decoration:none;
+					&:hover{
+						text-decoration:underline;
+					}
+				}
+			}
+		}
+	}
+}
+.view-id-events.view-display-id-page{
+	.views-row{
+		@include floatblock();
+		padding-bottom:20px;
+		.views-field-field-event-date-1{
+			@include floatblock();
+			width:auto;
+			margin:auto;
+			.field-content{
+				display:block;
+				margin:auto;
+				width:90px;
+				.d-date{
+					display: block;
+					float:left;
+					padding:15px 0;
+					box-sizing: border-box;
+					background: $green;
+					color: white;
+					width:90px;
+					.month{
+						@include f-impact(24px);
+						display:block;
+						float:left;
+						width:100%;
+						text-align:center;
+						text-transform:uppercase;
+						color:white;
+					}
+					.day{
+						@include f-impact(60px);
+						display:block;
+						float:left;
+						width:100%;
+						text-align:center;
+						color:white;
+					}
+					&:after{
+						content:'';
+						clear:both;
+					}
+				}
+			}
+		}
+		.views-field-title{
+			a{
+				@include floatblock();
+				@include f-impact(32px);
+				color:#444;
+				padding:0 10px;
+				width:calc(100% - 90px);
+				text-decoration:none;
+				text-transform:uppercase;
+			}
+		}
+		.views-field-field-event-location{
+			@include floatblock();
+			@include f-text(18px);
+			line-height:22px;
+			color:#444;
+			padding:0 10px;
+			width:calc(100% - 90px);
+		}
+		.views-field-field-event-date-2{
+			@include floatblock();
+			@include f-text(18px);
+			line-height:22px;
+			color:#444;
+			padding:0 10px;
+			width:calc(100% - 90px);
+		}
+	}
+}
+.l-region--nav-sidebar{
+	padding-right:20px;
+	.block{
+		padding-bottom:20px;
+		border-bottom:1px solid #ccc;
+		&:last-child{
+			border-bottom:none;
+		}
+	}
+}
+.hidden-phone{
+	display:none!important;
+	@include breakpoint($tab,true){
+		display:block!important;
+	}
+}
 .l-footer{
 	@include floatblock();
 	.l-footer-first{
@@ -2066,7 +2512,9 @@ img{
 			}
 			#block-menu-block-5--2{
 				width:auto;
-				width:120px;
+				@include breakpoint($tab,true){
+					width:120px;
+				}
 				margin:auto;
 				float:none;
 				padding-right:20px;
@@ -2076,13 +2524,13 @@ img{
 				}
 				.menu-block-wrapper{
 					ul.menu{
-						margin:0;
+						margin:0 auto;
 						padding:0;
 						display:block;
-						float:right;
-						width:100%;
+						width:120px;
 						@include breakpoint($tab,true){
 							width:auto;
+							float:right;
 						}
 						li{
 							@include floatblock();

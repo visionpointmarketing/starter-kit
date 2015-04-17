@@ -1,5 +1,15 @@
 jQuery( document ).ready(function () {
 
+	var userFeed = new Instafeed({
+		get: 'user',
+		userId: 440589911,
+		limit:3,
+		resolution:'standard_resolution',
+		accessToken: '440589911.467ede5.9c2c542ddd0a430298838e495b779131',
+		template: '<div class="item"><a href="{{link}}" target="_blank"><img src="{{image}}" /><h3>@UNCCMARCH</h3></a></div>'
+	});
+	userFeed.run();
+
 	/* Make links to documents open in a new window */
 	jQuery('a[href$=".pdf"]').attr('target', '_blank');
 	jQuery('a[href$=".doc"]').attr('target', '_blank');
