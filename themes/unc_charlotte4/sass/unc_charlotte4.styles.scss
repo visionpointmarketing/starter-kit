@@ -40,7 +40,7 @@
 	font-family: 'TradeGothicLTStd-Cn18';
 	src: url(/sites/all/themes/unc_charlotte4/font/TradeGothicLTStd-Cn18.otf);
 }
-
+/* some base default styles */
 html{
 	body{
 		// max-width:1600px;
@@ -50,47 +50,109 @@ html{
 		}
 	}
 }
+.l-region{
+	position:relative;
+	&.l-region--nav-sidebar{
+		padding-right:20px;
+		.block{
+			padding-bottom:20px;
+			margin-bottom:20px;
+			border-bottom:1px solid #ccc;
+			&:last-child{
+				border-bottom:none;
+			}
+		}
+	}
+}
+h1{
+	@include f-impact();
+	font-size:40px;
+	line-height:42px;
+	max-width:$maxwidth;
+	padding:0 10px;
+	margin:30px auto;
+	color:$green;
+	text-transform:uppercase;
+}
+h2{
+	@include f-impact(42px);
+	display:block;
+	margin:0;
+	padding:10px;
+	text-transform:uppercase;
+}
+h3{
+	@include f-impact(20px);
+	margin:0;
+	padding:10px;
+	text-transform:uppercase;
+}
 p{
 	color:#444;
 	margin:10px 0;
 }
-body.front{
-	#a2,
-	#a3{
-		background:#eee;
-		.wrapper{
-			max-width:$maxwidth;
-			padding:0 10px;
-			display:block;
-			margin:auto;
+.block{
+	@include floatblock();
+}
+form{
+	label{
+		@include floatblock();
+		width:30%;
+	}
+	input{
+		@include floatblock();
+		width:70%;
+	}
+}
+/* end base default styles */
+
+/* page-specific region styling */
+body{
+	&.front{
+		#a2,
+		#a3{
+			background:#eee;
+			.wrapper{
+				max-width:$maxwidth;
+				padding:0 10px;
+				display:block;
+				margin:auto;
+			}
+		}
+		h1{
+			font-family: times,"times new roman",serif;
+			text-transform:initial;
+			font-weight:normal;
+		}
+	}
+		/* join band page */
+	&.page-node-73{
+		#a2,
+		#a4{
+			margin-top:50px;
+			.wrapper{
+				max-width:$maxwidth;
+				padding:0 10px;
+				display:block;
+				margin:auto;
+			}
+		}
+		#a3{
+			margin-top:50px;
+		}
+	}
+		/* sights and sounds */
+	&.page-node-77{
+		#a2{
+			background:#eee;
+		}
+		#a3{
+			margin-top:50px;
 		}
 	}
 }
-/* join band page */
-body.page-node-73{
-	#a2,
-	#a4{
-		margin-top:50px;
-		.wrapper{
-			max-width:$maxwidth;
-			padding:0 10px;
-			display:block;
-			margin:auto;
-		}
-	}
-	#a3{
-		margin-top:50px;
-	}
-}
-/* sights and sounds */
-body.page-node-77{
-	#a2{
-		background:#eee;
-	}
-	#a3{
-		margin-top:50px;
-	}
-}
+/* end page-specific region styling */
+
 /*unc charlotte header*/
 #header-wrapper{
 	height:100px;
@@ -115,8 +177,10 @@ body.page-node-77{
 			#branding{
 				display:block;
 				float:left;
+				padding-left:10px;	
 				@include breakpoint($tab,true){
 					height:100px;
+					width:40%;
 				}
 				#site-name-title{
 					font-size: 1em;
@@ -173,6 +237,7 @@ body.page-node-77{
 			#header-utility {
 				float: right;
 				height: 100px;
+				width:33%;
 				display:none;
 				@include breakpoint($tab,true){
 					display:block;
@@ -206,8 +271,21 @@ body.page-node-77{
 						height:25px;
 					}
 					.search-block-form--2{
-						input{
-							width:auto;
+						.form-item-search-block-form{
+							input{  
+								display: inline-block;
+								height: 16px !important;
+								width: 121px;
+								padding-left: 6px;
+								padding-right: 30px;
+								padding-top: 2px;
+								font-size: 13px;
+								border: none;
+								position: relative;
+								top: -6px !important;
+								padding-bottom: 1px !important;
+								margin: 6px 0 !important;
+							}
 						}
 					}
 				}
@@ -222,6 +300,8 @@ body.page-node-77{
 	}
 	#mobile-buttons{
 		@include floatblock();
+		width:92%;
+		margin:4%;
 		#mobile-menu-button{
 			width: 50%;
 			float: left;
@@ -285,6 +365,7 @@ body.page-node-77{
 		clear: both;
 		border-bottom: 5px solid $green;
 		#mobile-main-menu{
+			padding:0;
 			display: inline !important;
 			border-left: 0px;
 			border-right: 0px;
@@ -377,90 +458,23 @@ body.page-node-77{
 		}
 	}
 }
-.l-region{
-	position:relative;
-	&.l-region--header-second{
-		@include floatblock();
-		background:#005429;
-	}
-}
+/*end unc charlotte header*/
 
-/*don't need to see these for display purposes*/
-.messages{
-	display:none;
-}
+
 /*it's somehow getting a width...*/
 .element-invisible{
 	max-width:1px;
 }
-/* overriding default style */
+/* overriding default module styles */
 body .field-collection-view{
 	border:none;
 }
 body .field-collection-container{
 	border:none;
 }
-.block{
-	@include floatblock();
-}
-form{
-	label{
-		@include floatblock();
-		width:30%;
-	}
-	input{
-		@include floatblock();
-		width:70%;
-	}
-}
-body.front{
-	.l-page{
-		.l-main{
-			#content{
-				display:block;
-				float:left;
-				position:relative;
-				width:100%;
-				h1{
-					position:absolute;
-					left:20px;
-					top:-40px;
-					z-index:99;
-					margin:0;
-				}
-				> ul{
-					margin:0;
-				}
-			}
-		}
-	}
-}
-body{
-	.l-region{
-		.block.block--bean{
-			.block__title{
-				display:none;
-			}
-		}
-	}
-}
-.bean-button-promo-1{
-	.field__item{
-		&:after{
-			@include arrowafter();
-		}
-		a{
-			display: block;
-			float: left;
-			width: 100%;
-			text-align: left;
-			background: $green;
-			color: white;
-			line-height: 42px;
-			text-decoration: none;
-		}
-	}
-}
+/* end default module styles overrides */
+
+
 .l-content-header-meta{
 	.container{
 		border-bottom:2px solid #eee;
@@ -471,6 +485,7 @@ body{
 		margin:auto;
 		.breadcrumbs{
 			padding:10px 5px;
+			margin:0;
 			.breadcrumb{
 				list-style-type:none;
 				padding:0;
@@ -502,33 +517,16 @@ body{
 			}
 		}
 	}
-	h1{
-		@include f-impact();
-		font-size:40px;
-		line-height:42px;
-		max-width:$maxwidth;
-		padding:0 10px;
-		margin:30px auto;
-		color:$green;
-		text-transform:uppercase;
-	}
 }
 
 .block.block--bean{
 	@include floatblock();
-	padding:5px;
-	&#block-bean-homepage-billboard{
-		padding:0;
-	}
 	.block__title{
-		display:block;
+		display:none;
 		float:left;
 		width:auto;
 		font-size:14px;
 		color:rgba(0,0,0,0.4);
-		&:before{
-			content:'';
-		}
 	}
 	.bean-billboard{
 		.billboard-image{
@@ -584,6 +582,236 @@ body{
 			}
 		}
 	}
+	.bean-button-promo-1{
+		.field__item{
+			&:after{
+				@include arrowafter();
+				top:calc(50% - 14px);
+				color:white;
+				right:10px;
+			}
+			a{
+				display: block;
+				float: left;
+				width: 100%;
+				text-align: left;
+				background: $green;
+				color: white;
+				line-height: 42px;
+				text-decoration: none;
+				padding:0 10px;
+			}
+		}
+	}
+	.bean-faq{
+		.content{
+			.field--name-field-question{
+				.field__item{
+					@include floatblock();
+					.entity-field-collection-item{
+						.field--name-field-ask-question{
+							
+							font-weight:bold;
+							.field__item{
+								width:auto;
+								&:before{
+									content:"\f086";
+									font-family:FontAwesome;
+									color:$green;
+									font-size:20px;
+									width:30px;
+									padding-right:7px;
+									display:block;
+									float:left;
+								}
+								p{
+									@include f-text();
+									@include floatblock();
+									width:calc(100% - 30px);
+									margin:0;
+								}
+							}
+						}
+						.field--name-field-answer{
+							@include f-text();
+							padding-left:30px;
+						}
+					}
+				}
+			}
+			.field--name-field-read-more-link{
+				.field__item{
+					position:relative;
+					float:right;
+					padding:10px 20px;
+					&:after{
+						@include arrowafter();
+						right:initial;
+						padding-left:5px;
+					}
+					a{
+						@include f-text();
+						text-decoration:none;
+						position:relative;
+						color:$green;
+						&:hover{
+							text-decoration:underline;
+						}
+					}
+				}
+			}
+		}
+	}
+	.bean-showcase{
+		@include floatblock();
+		max-width:100%;
+		border-top: 5px solid #444;
+		padding-top: 40px;
+		margin:50px 0;
+		@include breakpoint($tab,true){
+			margin: 120px 0;
+		}
+		h2{
+			@include f-impact();
+			padding:0 10px;
+			text-align: center;
+			position: relative;
+			top: -64px;
+			text-transform: uppercase;
+			background: white;
+			width:auto;
+			@include breakpoint($tab,true){
+				width: 400px;
+			}
+			margin: auto;
+		}
+		.showcase-intro{
+			@include f-text();
+			@include floatblock();
+			padding:0 10px;
+			@include breakpoint($tab,true){
+				width:25%;
+			}
+			.field--name-field-read-more-link{
+				display:block;
+				float:left;
+				padding-right:20px;
+				position:relative;
+				&:after{
+					@include arrowafter();
+				}
+				a{
+					color:$green;
+					text-decoration:none;
+					&:hover{
+						text-decoration:underline;
+					}
+				}
+			}
+		}
+		.showcase-elements{
+			@include floatblock();
+			padding-top:20px;
+			@include breakpoint($tab,true){
+				width:75%;
+				padding-top:0;
+			}
+			.field__item{
+				@include floatblock();
+				position:relative;
+				overflow:hidden;
+				height:60vw;
+				@include breakpoint($tab,true){
+					padding:0 20px;
+				}
+				.field--name-field-image-upload{
+					.field__items{
+						.field__item{
+							display:none;
+							&:first-child{
+								display:block;
+							}
+						}
+					}
+				}
+				img{
+					display:block;
+					float:left;
+					height:100%;
+					position:absolute;
+					margin:auto;
+					top: -9999px;
+					bottom: -9999px;
+					left: -9999px;
+					right: -9999px;
+				}
+				iframe{
+					max-width:100%;
+				}
+				.field--name-field-image-upload{
+					.field__item{
+						width:100%;
+						padding:0 20px;
+						box-sizing:border-box;
+					}
+				}
+				.field--name-field-caption{
+					@include floatblock();
+					position:relative;
+					height:100%;
+					.field__item{
+						@include f-impact(22px);
+						color:white;
+						text-transform:uppercase;
+						text-shadow:1px 1px 0px rgba(0,0,0,0.8);
+						width: 100%;
+						line-height:24px;
+						padding:15px;
+						box-sizing: border-box;
+						position: absolute;
+						bottom: 0;
+						height:auto;
+						@include filter-gradient(#000000, #a60000, vertical); // IE6-9
+						@include background-image(linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 18%,rgba(0,0,0,0.45) 100%));
+						@include breakpoint($tab,true){
+							font-size:16px;
+							line-height:18px;
+							padding: 20px 15px;
+						}
+						@include breakpoint($desk,true){
+							font-size:30px;
+							line-height:32px;
+							padding: 20px 15px;
+						}
+					}
+				}
+			}
+			&.one{
+				.field__item{
+					@include breakpoint($tab,true){
+						width:100%;
+						height:50vw;
+					}
+				}
+			}
+			&.two{
+				.field__item{
+					@include breakpoint($tab,true){
+						width:50%;
+						height:25vw;
+					}
+				}
+			}
+			&.three{
+				.field__item{
+					@include breakpoint($tab,true){
+						width:33.3333%;
+						height:16vw;
+					}
+				}
+			}
+		}
+	}
 	.bean-subsections{
 		> .content{
 			display: block;
@@ -600,7 +828,7 @@ body{
 							float:left;
 							width:80px;
 							height:80px;
-							@include breakpoint($tab,true){
+							@include breakpoint($desk,true){
 								width:150px;
 								height:150px;
 							}
@@ -616,25 +844,26 @@ body{
 					}
 				}
 				.field--name-field-subsection-title{
-					@include f-impact();
+					@include f-impact(20px);
 					text-align:left;
-					font-size:20px;
-					line-height:20px;
-					width:calc(100% - 80px);
 					float:right;
-					@include breakpoint($tab,true){
+					text-transform:uppercase;
+					padding-left:20px;
+					width: calc(100% - 80px);
+					@include breakpoint($desk,true){
 						float: left;
 						width: calc(100% - 150px);
 					}
-					text-transform:uppercase;
-					padding-left:20px;
 				}
 				.field--name-field-subsection-intro{
 					@include f-text();
 					display: block;
-					width:calc(100% - 80px);
+					width:100%;
 					float:right;
 					@include breakpoint($tab,true){
+						width: calc(100% - 80px);
+					}
+					@include breakpoint($desk,true){
 						float: left;
 						width: calc(100% - 150px);
 					}
@@ -676,164 +905,6 @@ body{
 						&:hover{
 							text-decoration:underline;
 						}
-					}
-				}
-			}
-		}
-	}
-	.bean-showcase{
-		display:block;
-		float:left;
-		max-width:100%;
-		width:100%;
-		border-top: 5px solid #444;
-		padding-top: 40px;
-		margin:50px 0;
-		@include breakpoint($tab,true){
-			margin: 120px 0;
-		}
-		h2{
-			@include f-impact();
-			padding:0 10px;
-			text-align: center;
-			position: relative;
-			top: -64px;
-			text-transform: uppercase;
-			background: white;
-			width:auto;
-			@include breakpoint($tab,true){
-				width: 400px;
-			}
-			margin: auto;
-		}
-		.showcase-intro{
-			display:block;
-			float:left;
-			width:100%;
-			padding:0 10px;
-			@include breakpoint($tab,true){
-				width:25%;
-			}
-			.field--name-field-read-more-link{
-				display:block;
-				float:left;
-				padding-right:20px;
-				position:relative;
-				&:after{
-					@include arrowafter();
-				}
-				a{
-					color:$green;
-					text-decoration:none;
-					&:hover{
-						text-decoration:underline;
-					}
-				}
-			}
-		}
-		.showcase-elements{
-			display:block;
-			float:left;
-			width:100%;
-			padding-top:40px;
-			@include breakpoint($tab,true){
-				width:75%;
-				padding-top:0;
-			}
-			.field__item{
-				display:block;
-				float:left;
-				width:100%;
-				position:relative;
-				overflow:hidden;
-				height:50vw;
-				@include breakpoint($tab,true){
-					padding:0 20px;
-				}
-				.field--name-field-image-upload{
-					.field__items{
-						.field__item{
-							display:none;
-							&:first-child{
-								display:block;
-							}
-						}
-					}
-				}
-				img{
-					display:block;
-					float:left;
-					height:100%;
-					position:absolute;
-					margin:auto;
-					top: -9999px;
-					bottom: -9999px;
-					left: -9999px;
-					right: -9999px;
-				}
-				iframe{
-					max-width:100%;
-				}
-				.field--name-field-image-upload{
-					.field__item{
-						width:100%;
-						padding:0 20px;
-						box-sizing:border-box;
-					}
-				}
-				.field--name-field-caption{
-					@include floatblock();
-					position:relative;
-					height:100%;
-					.field__item{
-						@include f-impact();
-						color:white;
-						text-transform:uppercase;
-						text-shadow:1px 1px 0px rgba(0,0,0,0.8);
-						width: 100%;
-						font-size:16px;
-						line-height:18px;
-						padding:15px;
-						box-sizing: border-box;
-						position: absolute;
-						bottom: 0;
-						height:auto;
-						@include filter-gradient(#000000, #a60000, vertical); // IE6-9
-						@include background-image(linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 18%,rgba(0,0,0,0.45) 100%));
-						@include breakpoint($desk,true){
-							font-size:22px;
-							line-height:24px;
-							padding: 30px 15px;
-						}
-						@include breakpoint($desk,true){
-							font-size:30px;
-							line-height:32px;
-							padding: 20px 15px;
-						}
-					}
-				}
-			}
-			&.one{
-				.field__item{
-					@include breakpoint($tab,true){
-						width:100%;
-						height:50vw;
-					}
-				}
-			}
-			&.two{
-				.field__item{
-					@include breakpoint($tab,true){
-						width:50%;
-						height:25vw;
-					}
-				}
-			}
-			&.three{
-				.field__item{
-					@include breakpoint($tab,true){
-						width:33.3333%;
-						height:16vw;
 					}
 				}
 			}
@@ -893,64 +964,10 @@ body{
 			}
 		}
 	}
-	.bean-basic-wyswiyg-block{
-		.content{}
-	}
-	.bean-faq{
-		.content{
-			.field--name-field-question{
-				.field__item{
-					@include floatblock();
-					.entity-field-collection-item{
-						.field--name-field-ask-question{
-							
-							font-weight:bold;
-							.field__item{
-								width:auto;
-								&:before{
-									content:"\f086";
-									font-family:FontAwesome;
-									color:$green;
-									font-size:20px;
-									width:30px;
-									padding-right:7px;
-									display:block;
-									float:left;
-								}
-								p{
-									@include floatblock();
-									width:calc(100% - 30px);
-									@include f-text();
-									margin:0;
-								}
-							}
-						}
-						.field--name-field-answer{
-							@include f-text();
-							padding-left:30px;
-						}
-					}
-				}
-			}
-			.field--name-field-read-more-link{
-				.field__item{
-					position:relative;
-					&:after{
-						@include arrowafter();
-						right:initial;
-					}
-					a{
-						text-decoration:none;
-						position:relative;
-						color:$green;
-						&:hover{
-							text-decoration:underline;
-						}
-					}
-				}
-			}
-		}
-	}
+	
+}
+#block-bean-homepage-billboard{
+		padding:0;
 }
 #block-bean-join-the-band-introduction{
 	padding:0;
@@ -994,7 +1011,10 @@ body{
 								background:#eee;
 								color:#444;
 								margin-bottom:1px;
-								&:hover{
+							}
+							&:hover{
+								a{
+									background: #e0e0e0;
 									border-left:7px solid $green;
 									padding-left:8px;
 								}
@@ -1061,10 +1081,13 @@ body{
 						.field__item{
 							position:relative;
 							h2{
-								@include f-impact(48px);
+								@include f-impact(32px);
 								color:white;
 								text-transform:uppercase;
 								margin:0;
+								@include breakpoint($tab,true){
+									@include f-impact(48px);
+								}
 							}
 							p{
 								@include f-text(18px);
@@ -1669,6 +1692,7 @@ body{
 		width:auto;
 		@include breakpoint($tab,true){
 			width: 500px;
+			max-width:100%;
 		}
 		float: none;
 		position: relative;
@@ -2079,7 +2103,7 @@ img{
 									}
 								}
 								a{
-									@include f-impact();
+									@include f-impact(20px);
 									padding:0 10px;
 									color:$green;
 									text-decoration:none;
@@ -2089,13 +2113,15 @@ img{
 									line-height:$main-nav-height;
 									font-weight:bold;
 									text-transform:uppercase;
-									font-size:20px;
+									@include breakpoint($tab,true){
+										font-size:15px;
+									}
+									@include breakpoint($desk,true){
+										font-size:20px;
+									}
 								}
 								@include breakpoint($tab,true){
 									width:auto;
-									a{
-
-									}
 								}
 								&:nth-child(1){
 									background:white;
@@ -2158,17 +2184,6 @@ img{
 							}
 						}
 					}
-					#block-menu-block-5{
-						.menu-block-wrapper{
-							ul{
-								li{
-									a{
-										i{}
-									}
-								}
-							}
-						}
-					}
 				}
 			}
 		}
@@ -2180,7 +2195,7 @@ img{
 		ul{
 			@include floatblock();
 			margin:0;
-			padding:0 20px 0 0;
+			padding:0;
 			li{
 				@include floatblock();
 				margin-bottom:2px;
@@ -2449,16 +2464,6 @@ img{
 		}
 	}
 }
-.l-region--nav-sidebar{
-	padding-right:20px;
-	.block{
-		padding-bottom:20px;
-		border-bottom:1px solid #ccc;
-		&:last-child{
-			border-bottom:none;
-		}
-	}
-}
 .hidden-phone{
 	display:none!important;
 	@include breakpoint($tab,true){
@@ -2477,11 +2482,13 @@ img{
 			padding:0 10px;
 			/* footer menu */
 			#block-menu-block-6{
-				width:auto;
+				@include breakpoint($tab,true){
+					width:auto;
+				}
 				.menu-block-wrapper{
 					ul.menu{
 						margin:0;
-						padding:30px 0;
+						padding:10px 0 0 0;
 						@include floatblock();
 						li{
 							@include floatblock();
@@ -2491,16 +2498,18 @@ img{
 								width:auto;
 							}
 							a{
-								@include f-impact(18px);
+								@include f-impact(16px);
 								@include floatblock();
 								color:white;
 								text-decoration:none;
 								text-transform:uppercase;
 								padding:14px 20px;
 								text-align:center;
+								line-height:30px;
 								@include breakpoint($tab,true){
-									padding:0 20px;
+									padding:0 15px;
 									text-align:left;
+									line-height:60px;
 								}
 								&:hover{
 									text-decoration:underline;
@@ -2511,6 +2520,7 @@ img{
 				}
 			}
 			#block-menu-block-5--2{
+				@include floatblock();
 				width:auto;
 				@include breakpoint($tab,true){
 					width:120px;
@@ -2559,7 +2569,6 @@ img{
 	}
 	//unc charlotte footer
 	#footer {
-	  @include floatblock();
 	  #footer-container{
 	    #static-footer {
 	      background: url("../img/footer-bg.png") repeat-x scroll left top transparent;
@@ -2658,7 +2667,14 @@ img{
 	        }
 	        #footer-follow{
 	          display:block;
-	          float:right;
+	          width:215px;
+	          text-align:center;
+	     	  margin: auto;
+	          @include breakpoint($tab,true){
+	          	float:right;
+	          	margin:0;
+	          }	
+
 	          p{
 	            &#social-title {
 	              border-bottom: 0 none;
@@ -2666,9 +2682,11 @@ img{
 	              font-family: arial,helvetica,sans-serif;
 	              font-size: 1.13em;
 	              font-weight: bold;
-	              margin-bottom: 5px;
-	              margin-right: 20px;
-	              margin-top:10px;
+	              @include breakpoint($tab,true){
+		              margin-bottom: 5px;
+		              margin-right: 20px;
+		              margin-top:10px;
+		          }
 	            }
 	          }
 	          div.social-icons{

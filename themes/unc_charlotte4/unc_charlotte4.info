@@ -52,8 +52,7 @@ layout[longscroll][all][] = css/layouts/longscroll/longscroll.layout.css
 ; Settings
 ; ========================================
 settings[toggle_logo] = 1
-settings[toggle_name] = 0
-settings[toggle_search] = 1
+settings[toggle_name] = 1
 settings[toggle_slogan] = 1
 settings[toggle_node_user_picture] = 1
 settings[toggle_comment_user_picture] = 1
@@ -95,3 +94,12 @@ settings[omega_libraries][selectivizr][status] = 1
 settings[omega_libraries][respond][status] = 1
 settings[omega_libraries][pie][status] = 1
 settings[omega_libraries][html5shiv][status] = 1
+settings[subbrand_text] = UNC Charlotte Marching Band
+settings[subbrand_link] = ""
+settings[utility_link_3_text] = ""
+settings[utility_link_3_link] = ""
+settings[utility_link_4_text] = ""
+settings[utility_link_4_link] = ""
+settings[search_box_type] = drupal
+settings[nav_style] = default
+settings[mobile_menu] = main-menu
