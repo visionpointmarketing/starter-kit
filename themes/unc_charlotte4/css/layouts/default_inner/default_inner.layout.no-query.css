@@ -81,6 +81,7 @@ html body .l-page {
         clear: none;
         padding-bottom: 2000px;
         margin-bottom: -2000px;
+        padding-right: 20px;
         width: 25%;
         float: left;
         margin-right: -100%;
@@ -92,6 +93,7 @@ html body .l-page {
         width: 100%;
         padding-bottom: 2000px;
         margin-bottom: -2000px;
+        padding-right: 20px;
         overflow: hidden;
         width: 75%;
         float: right;
@@ -113,6 +115,7 @@ html body .l-page {
           width: 100%;
           padding-bottom: 2000px;
           margin-bottom: -2000px;
+          padding-right: 20px;
           width: 75%;
           clear: right;
           float: left;
@@ -132,6 +135,7 @@ html body .l-page {
           width: 100%;
           padding-bottom: 2000px;
           margin-bottom: -2000px;
+          padding-right: 20px;
           width: 25%;
           clear: right;
           float: left;
@@ -151,7 +155,6 @@ html body .l-page {
     width: 100%; }
     html body .l-page .l-footer .l-footer-first .l-region--footer-first {
       display: block;
-      float: left;
       width: 100%; }
     html body .l-page .l-footer .l-footer-second .l-region--footer-second {
       display: block;
@@ -188,10 +191,12 @@ html body .l-page {
         margin-right: 0;
         clear: none;
         padding-bottom: 2000px;
-        margin-bottom: -2000px; }
+        margin-bottom: -2000px;
+        padding-right: 20px; }
       body.print-tablet .l-page .l-main .l-content-center .l-content-wrapper {
         padding-bottom: 2000px;
         margin-bottom: -2000px;
+        padding-right: 20px;
         overflow: hidden;
         width: 75%;
         float: left;
@@ -201,6 +206,7 @@ html body .l-page {
         body.print-tablet .l-page .l-main .l-content-center .l-content-wrapper .l-content {
           padding-bottom: 2000px;
           margin-bottom: -2000px;
+          padding-right: 20px;
           width: 75%;
           clear: right;
           float: left;
@@ -209,6 +215,7 @@ html body .l-page {
         body.print-tablet .l-page .l-main .l-content-center .l-content-wrapper .l-promo-sidebar {
           padding-bottom: 2000px;
           margin-bottom: -2000px;
+          padding-right: 20px;
           width: 25%;
           clear: right;
           float: left;
@@ -240,6 +247,7 @@ html body .l-page {
       body.print-desktop .l-page .l-main .l-content-center .l-nav-sidebar {
         padding-bottom: 2000px;
         margin-bottom: -2000px;
+        padding-right: 20px;
         width: 25%;
         float: left;
         margin-right: -100%;
@@ -248,6 +256,7 @@ html body .l-page {
       body.print-desktop .l-page .l-main .l-content-center .l-content-wrapper {
         padding-bottom: 2000px;
         margin-bottom: -2000px;
+        padding-right: 20px;
         overflow: hidden;
         width: 75%;
         float: right;
@@ -257,6 +266,7 @@ html body .l-page {
         body.print-desktop .l-page .l-main .l-content-center .l-content-wrapper .l-content {
           padding-bottom: 2000px;
           margin-bottom: -2000px;
+          padding-right: 20px;
           width: 75%;
           clear: right;
           float: left;
@@ -265,6 +275,7 @@ html body .l-page {
         body.print-desktop .l-page .l-main .l-content-center .l-content-wrapper .l-promo-sidebar {
           padding-bottom: 2000px;
           margin-bottom: -2000px;
+          padding-right: 20px;
           width: 25%;
           clear: right;
           float: left;

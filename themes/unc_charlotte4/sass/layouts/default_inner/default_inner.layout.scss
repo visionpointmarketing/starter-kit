@@ -150,7 +150,8 @@ html{
 				@include floatblock();
 				.l-footer-first{
 					.l-region--footer-first{
-						@include floatblock();
+						display:block;
+						width:100%;
 						@include breakpoint($tab,true){}
 						@include breakpoint($desk,true){}
 					}

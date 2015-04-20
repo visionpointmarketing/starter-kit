@@ -21,22 +21,19 @@
 @mixin eq(){
 	padding-bottom:2000px;
 	margin-bottom:-2000px;
+	padding-right:20px;
 }
 @mixin font($weight-keyword,$size,$lineheight,$stack,$weight:""){
 	font: $weight-keyword #{$size}/#{$lineheight} $stack;
 	font-weight:#{$weight};
 }
-@mixin gradient($start,$end){
-	background-color: $end; // Old browsers
-	@include filter-gradient($start, $end, horizontal); // IE6-9
-	background-image: -ms-linear-gradient(left, $start 0%, $end 60%);
-	@include background-image(linear-gradient(left,  $start 0%,$end 60%));
-}
-@mixin gradient-v($start,$end){
-	background-color: $end; // Old browsers
-	@include filter-gradient($start, $end, vertical); // IE6-9
-	background-image: -ms-linear-gradient(top, $start 0%, $end 60%);
-	@include background-image(linear-gradient(top,  $start 0%,$end 60%));
+@mixin v-gradient(){
+	// needs latest Compass, add '@import "compass"' to your scss
+	@include filter-gradient(#000000, #730000, vertical); // IE6-8
+	// IE9 SVG, needs conditional override of 'filter' to 'none'
+	$experimental-support-for-svg: true;
+	@include background-image(linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 18%,rgba(0,0,0,0.45) 100%));
+	filter:none \0/IE9;
 }
 @mixin transition($time,$type,$element:"all"){
 	-webkit-transition:		$element $time $type;

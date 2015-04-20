@@ -45,7 +45,9 @@ jQuery( document ).ready(function () {
 	});
 
 
-
+	jQuery('#block-menu-block-2 h2.block__title').on('click',function(e){
+		jQuery(this).parents('#block-menu-block-2').toggleClass('open');
+	});
 	jQuery('#block-menu-block-2 .block__title').on('click',function(e){
 	    jQuery(this).siblings('.menu-block-wrapper').children('ul').toggleClass("open");
 	});
