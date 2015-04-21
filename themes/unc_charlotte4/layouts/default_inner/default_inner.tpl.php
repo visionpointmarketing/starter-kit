@@ -162,7 +162,6 @@
         <div class="l-content-wrapper l-region-container">
           <?php print render($page['featured']); ?>
           <div class="l-content l-region-container" role="main">
-            <a id="main-content"></a>
             <?php print render($page['above_content']); ?>
                 <?php print $messages; ?>
                 <?php print render($tabs); ?>
@@ -208,7 +207,7 @@
                   </ul>
                 </div> <!--/#footer-links-->
                 <div id="footer-search" class="span3">
-                  <form action="http://search.uncc.edu/website/" method="get" id="utility-search" onsubmit="var searchbox = document.getElementById('utility-search-input'); if (searchbox.value == 'Search uncc.edu' || searchbox.value == '') { searchbox.value=''; searchbox.focus(); return false; }"><input type="image" src="/sites/all/themes/unc_charlotte4/img/utility-edu-search-mag.png" id="utility-search-button"><input type="text" name="q" value="Search uncc.edu" size="25" maxlength="100" title="" onclick="if (this.value == 'Search uncc.edu') { this.value = ''; }" id="utility-search-input"></form>
+                  <form action="http://search.uncc.edu/website/" method="get" id="utility-search" onsubmit="var searchbox = document.getElementById('utility-search-input'); if (searchbox.value == 'Search uncc.edu' || searchbox.value == '') { searchbox.value=''; searchbox.focus(); return false; }"><input type="image" src="/sites/all/themes/unc_charlotte4/img/utility-edu-search-mag.png" alt="search" id="utility-search-button"><input type="text" name="q" value="Search uncc.edu" size="25" maxlength="100" title="" onclick="if (this.value == 'Search uncc.edu') { this.value = ''; }" id="utility-search-input"></form>
                 </div> <!--/#footer-search-->
               </div> <!--/.row-->
             </div> <!--#utility-bar -->

@@ -208,7 +208,7 @@
                   </ul>
                 </div> <!--/#footer-links-->
                 <div id="footer-search" class="span3">
-                  <form action="http://search.uncc.edu/website/" method="get" id="utility-search" onsubmit="var searchbox = document.getElementById('utility-search-input'); if (searchbox.value == 'Search uncc.edu' || searchbox.value == '') { searchbox.value=''; searchbox.focus(); return false; }"><input type="image" src="/sites/all/themes/unc_charlotte4/img/utility-edu-search-mag.png" id="utility-search-button"><input type="text" name="q" value="Search uncc.edu" size="25" maxlength="100" title="" onclick="if (this.value == 'Search uncc.edu') { this.value = ''; }" id="utility-search-input"></form>
+                  <form action="http://search.uncc.edu/website/" method="get" id="utility-search" onsubmit="var searchbox = document.getElementById('utility-search-input'); if (searchbox.value == 'Search uncc.edu' || searchbox.value == '') { searchbox.value=''; searchbox.focus(); return false; }"><input type="image" src="/sites/all/themes/unc_charlotte4/img/utility-edu-search-mag.png" alt="search" id="utility-search-button"><input type="text" name="q" value="Search uncc.edu" size="25" maxlength="100" title="" onclick="if (this.value == 'Search uncc.edu') { this.value = ''; }" id="utility-search-input"></form>
                 </div> <!--/#footer-search-->
               </div> <!--/.row-->
             </div> <!--#utility-bar -->
@@ -220,7 +220,7 @@
                   <p style="font-weight: bold; text-transform: none !important; font-family: arial, helvetica, sans-serif !important; color: #00703c; font-size: 1.13em; margin-bottom: 5px;">
                     <a style="color: #00703c;" title="www.uncc.edu" href="http://www.uncc.edu">The University of North Carolina at Charlotte</a>
                   </p>
-                  <p style="line-height: 10px;">9201 University City Blvd, Charlotte, NC 28223-0001 <b>&middot;</b> 704-687-8622</p>
+                  <p style="line-height: 10px;">9201 University City Blvd, Charlotte, NC 28223-0001 <strong>&middot;</strong> 704-687-8622</p>
                   <p style="line-height: 10px;">&copy; <?php print date('Y'); ?> UNC Charlotte | All Rights Reserved | <a style="text-decoration: underline;" title="" href="http://legal.uncc.edu/termsofuse">Terms of Use</a> | <a style="text-decoration: underline;" title="" href="http://legal.uncc.edu/policies">University Policies</a></p>
                 </div> <!-- #footer-name -->
                 <div id="footer-follow" class="span3 offset3">

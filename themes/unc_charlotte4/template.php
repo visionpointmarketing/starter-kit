@@ -20,7 +20,7 @@ function unc_charlotte4_breadcrumb($variables) {
     $i = 0;
     while ( $i < $array_size) {
       if ($i == 0) {
-        $crumbs .= '<li class="breadcrumb"><a href="/"><i class="fa fa-home"></i></a></li><span><i class="fa fa-th-large"></i></span>';
+        $crumbs .= '<li class="breadcrumb"><a href="/"><i class="fa fa-home" aria-hidden="true"></i></a></li><span><i class="fa fa-th-large" aria-hidden="true"></i></span>';
         $i++;
       }
       else{
@@ -30,7 +30,7 @@ function unc_charlotte4_breadcrumb($variables) {
         }
         $crumbs .=  '">' . $breadcrumb[$i].'</li>';
         if ($i+1 != $array_size) {
-          $crumbs .= '<span><i class="fa fa-th-large"></i></span>';
+          $crumbs .= '<span><i class="fa fa-th-large" aria-hidden="true"></i></span>';
         }
         $i++;
       }
@@ -47,7 +47,7 @@ function unc_charlotte4_menu_tree__menu_social_menu($variables){
 }
 function unc_charlotte4_menu_link__menu_social_menu($variables){
   $element = $variables['element'];
-  return '<li' . drupal_attributes($element['#attributes']) . '><a href="' . $element['#href'] . '" target="_blank" class="btn btn-default" role="button"><i class="fa fa-' . $element['#title'] . '"></i></a></li>';
+  return '<li' . drupal_attributes($element['#attributes']) . '><a href="' . $element['#href'] . '" target="_blank" class="btn btn-default" role="button"><i class="fa fa-' . $element['#title'] . '" aria-hidden="true"></i></a></li>';
 }
 /**
  * Preprocess function
@@ -229,9 +229,9 @@ function unc_charlotte4_links__system_mobile_menu($variables) {
         // Pass in $link as $options, they share the same keys.
         $link['html'] = TRUE;
         if ($link['href'] == '<front>') {
-          $output .= '<div class="primary-link-container" onclick="location.href=\'' . $GLOBALS['base_url'] . '/' . '\';"><div class="primary-link-wrapper"><div class="primary-link">' . l('<i class="icon-double-angle-right"></i>' . $link['title'], $link['href'], $link) . '</div></div></div>';
+          $output .= '<div class="primary-link-container" onclick="location.href=\'' . $GLOBALS['base_url'] . '/' . '\';"><div class="primary-link-wrapper"><div class="primary-link">' . l('<i class="icon-double-angle-right" aria-hidden="true"></i>' . $link['title'], $link['href'], $link) . '</div></div></div>';
         } else {
-          $output .= '<div class="primary-link-container" onclick="location.href=\'' . $GLOBALS['base_url'] . '/' . $link['href'] . '\';"><div class="primary-link-wrapper"><div class="primary-link">' . l('<i class="icon-double-angle-right"></i>' . $link['title'], $link['href'], $link) . '</div></div></div>';
+          $output .= '<div class="primary-link-container" onclick="location.href=\'' . $GLOBALS['base_url'] . '/' . $link['href'] . '\';"><div class="primary-link-wrapper"><div class="primary-link">' . l('<i class="icon-double-angle-right" aria-hidden="true"></i>' . $link['title'], $link['href'], $link) . '</div></div></div>';
         }
       }
       elseif (!empty($link['title'])) {
@@ -243,7 +243,7 @@ function unc_charlotte4_links__system_mobile_menu($variables) {
         if (isset($link['attributes'])) {
           $span_attributes = drupal_attributes($link['attributes']);
         }
-        $output .= '<span' . $span_attributes . '><i class="icon-double-angle-right"></i>' . $link['title'] . '</span>';
+        $output .= '<span' . $span_attributes . '><i class="icon-double-angle-right" aria-hidden="true"></i>' . $link['title'] . '</span>';
       }
       $i++;
       $output .= "</li>\n";
