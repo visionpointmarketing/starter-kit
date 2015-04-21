@@ -815,13 +815,15 @@ body .field-collection-container{
 						padding:15px;
 						box-sizing: border-box;
 						position: absolute;
-						bottom: 0;
+						bottom: 20px;
 						height:auto;
+						margin-top:0;
 						@include v-gradient();
 						@include breakpoint($tab,true){
 							font-size:16px;
 							line-height:18px;
 							padding: 20px 15px;
+							bottom:0;
 						}
 						@include breakpoint($desk,true){
 							font-size:30px;
