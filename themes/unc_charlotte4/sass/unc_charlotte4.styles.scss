@@ -74,20 +74,17 @@ h1{
 	padding:0 10px;
 	margin:30px auto;
 	color:$green;
-	text-transform:uppercase;
 }
 h2{
 	@include f-impact(42px);
 	display:block;
 	margin:0;
 	padding:10px;
-	text-transform:uppercase;
 }
 h3{
 	@include f-impact(24px);
 	margin:0;
 	padding:10px;
-	text-transform:uppercase;
 }
 p{
 	color:#444;
@@ -118,10 +115,9 @@ img{
 		@include arrowafter();
 	}
 	a{
-		@include f-impact();
+		@include f-impact(18px);
 		color:$green;
 		text-decoration:none;
-		text-transform:uppercase;
 		&:hover{
 			text-decoration:underline;
 		}
@@ -191,7 +187,7 @@ body{
 			background: url("/sites/all/themes/unc_charlotte4/img/header-logo-watermark.png") repeat-x scroll center center #FFFFFF;
 			height: 100px;
 			#logo-wrapper{
-				width: 25%;
+				width: 20%;
 				margin-left: 2%;
 				float: left;
 				margin-top:25px;
@@ -208,7 +204,7 @@ body{
 				width:73%;
 				@include breakpoint($tab,true){
 					height:100px;
-					width:40%;
+					width:50%;
 				}
 				#site-name-wrapper{
 					#site-name{
@@ -269,7 +265,7 @@ body{
 			#header-utility {
 				float: right;
 				height: 100px;
-				width:33%;
+				width:28%;
 				display:none;
 				@include breakpoint($tab,true){
 					display:block;
@@ -295,10 +291,11 @@ body{
 					}
 				}
 				#header-utility-search-wrapper {
-					float: right;
+					float:right;
 					clear: both;
 					margin-right: 8px;
 					input{
+						float: left;
 						width:auto;
 						height:16px;
 					}
@@ -332,8 +329,6 @@ body{
 	}
 	#mobile-buttons{
 		@include floatblock();
-		width:92%;
-		margin:4%;
 		#mobile-menu-button{
 			width: 50%;
 			float: left;
@@ -584,6 +579,15 @@ body .field-collection-container{
 					max-width: $billboard-w;
 					margin: auto;
 					float: none;
+					@include breakpoint($tab,true){
+						width:120%;
+						position:relative;
+						left:-10%;
+					}
+					@include breakpoint($desk,true){
+						width:100%;
+						left:0;
+					}
 				}
 			}
 			&.fullwidth{
@@ -691,7 +695,7 @@ body .field-collection-container{
 						padding-left:5px;
 					}
 					a{
-						@include f-text();
+						@include f-impact(18px);
 						text-decoration:none;
 						position:relative;
 						color:$green;
@@ -718,7 +722,6 @@ body .field-collection-container{
 			text-align: center;
 			position: relative;
 			top: -64px;
-			text-transform: uppercase;
 			background: white;
 			width:auto;
 			@include breakpoint($tab,true){
@@ -745,6 +748,7 @@ body .field-collection-container{
 					top: calc(50% - 8px);
 				}
 				a{
+					@include f-impact(18px);
 					color:$green;
 					text-decoration:none;
 					&:hover{
@@ -808,7 +812,6 @@ body .field-collection-container{
 					.field__item{
 						@include f-impact(22px);
 						color:white;
-						text-transform:uppercase;
 						text-shadow:1px 1px 0px rgba(0,0,0,0.8);
 						width: 100%;
 						line-height:24px;
@@ -895,7 +898,6 @@ body .field-collection-container{
 					@include f-impact(20px);
 					text-align:left;
 					float:right;
-					text-transform:uppercase;
 					padding-left:20px;
 					width: calc(100% - 80px);
 					@include breakpoint($desk,true){
@@ -906,11 +908,8 @@ body .field-collection-container{
 				.field--name-field-subsection-intro{
 					@include f-text();
 					display: block;
-					width:100%;
 					float:right;
-					@include breakpoint($tab,true){
-						width: calc(100% - 80px);
-					}
+					width: calc(100% - 80px);
 					@include breakpoint($desk,true){
 						float: left;
 						width: calc(100% - 150px);
@@ -931,7 +930,6 @@ body .field-collection-container{
 						padding:10px 20px;
 						color:$green;
 						text-decoration:none;
-						text-transform:uppercase;
 						&:hover{
 							text-decoration:underline;
 						}
@@ -952,7 +950,6 @@ body .field-collection-container{
 						display:block;
 						float:right;
 						text-decoration:none;
-						text-transform:uppercase;
 						top: 50px;
 						position: absolute;
 						right: 20px;
@@ -999,14 +996,45 @@ body .field-collection-container{
 				}
 			}
 		}
-		.field--name-field-list-of-links{
-			.field__item{
-				a{
-					@include f-text(16px);
-					display: block;
-					text-decoration: none;
-					padding: 5px 10px;
-					color:$green;
+		.list-links{
+			@include floatblock();
+			margin-bottom:20px;
+			h2.block__title{
+				@include floatblock();
+				@include f-text();
+				color:$green;
+				background:#eee;
+				border:1px solid #ccc;
+				margin-bottom:2px;
+				cursor:pointer;
+				&:before{
+					content:"\f0c9";
+					font-family:FontAwesome;
+					color:#444;
+					padding-right:5px;
+				}
+				@include breakpoint($tab,true){
+					display:none;
+				}
+			}
+			.field--name-field-list-of-links{
+				display:none;
+				@include breakpoint($tab,true){
+					display:block;
+				}
+				.field__item{
+					a{
+						@include f-text();
+						display: block;
+						text-decoration: none;
+						padding: 5px 10px;
+						color:$green;
+					}
+				}
+			}
+			&.open{
+				.field--name-field-list-of-links{
+					display:block;
 				}
 			}
 		}
@@ -1035,7 +1063,6 @@ html #block-views-basic-page-featured-block{
 		text-align:center;
 		margin: auto;
 		float: none;
-		text-transform:uppercase;
 		background: white;
 		position: relative;
 		width:auto;
@@ -1043,8 +1070,8 @@ html #block-views-basic-page-featured-block{
 		@include breakpoint($tab,true){
 			font-size:48px;
 			line-height:48px;
-			top:26px;
-			width: 520px;
+			top:36px;
+			width: 420px;
 		}
 	}
 	.block__content{
@@ -1059,10 +1086,13 @@ html #block-views-basic-page-featured-block{
 				bottom:-14px;
 				z-index:2;
 				left:-25px;
-				max-width:40%;
+				max-width:60%;
 				display:none;
 				@include breakpoint($tab,true){
 					display:block;
+				}
+				@include breakpoint($tab-large,true){
+					max-width:40%;
 				}
 			}
 			.view-content{
@@ -1103,7 +1133,7 @@ html #block-views-basic-page-featured-block{
 							.d-date{
 								display: block;
 								float:left;
-								padding:5px;
+								padding:8px;
 								box-sizing: border-box;
 								background: $green;
 								color: white;
@@ -1112,21 +1142,28 @@ html #block-views-basic-page-featured-block{
 									padding:15px 0;
 								}
 								.month{
-									@include f-impact(24px);
+									@include f-impact(22px);
 									display:block;
 									float:left;
 									width:100%;
 									text-align:center;
-									text-transform:uppercase;
 									color:white;
+									@include breakpoint($tab,true){
+										font-size:24px;
+										line-height:24px;
+									}
 								}
 								.day{
-									@include f-impact(60px);
+									@include f-impact(54px);
 									display:block;
 									float:left;
 									width:100%;
 									text-align:center;
 									color:white;
+									@include breakpoint($tab,true){
+										font-size:60px;
+										line-height:60px;
+									}
 								}
 								&:after{
 									content:'';
@@ -1164,7 +1201,6 @@ html #block-views-basic-page-featured-block{
 										line-height:36px;
 									}
 									text-decoration:none;
-									text-transform:uppercase;
 									color:#444;
 								}
 							}
@@ -1176,9 +1212,11 @@ html #block-views-basic-page-featured-block{
 								padding:10px 10px 0 10px;
 								color:#444;
 								width:100%;
-								@include breakpoint($tab,true){
+								text-align:center;
+								@include breakpoint($desk,true){
 									width:50%;
 									padding:5px 0;
+									text-align:left;
 								}
 								&.e-loc{
 									&:before{
@@ -1215,11 +1253,6 @@ html #block-views-basic-page-featured-block{
 		@include f-impact(32px);
 		display:block!important;
 		color:#444;
-		text-transform:uppercase;
-		@include breakpoint($tab,true){
-			font-size:48px;
-			line-height:48px;
-		}
 		background: #eee;
 		text-align: center;
 		margin: auto;
@@ -1228,6 +1261,11 @@ html #block-views-basic-page-featured-block{
 		position: relative;
 		width:auto;
 		@include breakpoint($tab,true){
+			font-size:48px;
+			line-height:48px;
+			top:16px;
+		}
+		@include breakpoint($desk,true){
 			width: 530px;
 		}
 	}
@@ -1270,11 +1308,10 @@ html #block-views-basic-page-featured-block{
 					width:100%;
 					text-align:center;
 					color:white;
-					text-transform:uppercase;
 					margin:0;
 				}
 				p{
-					@include f-text(18px);
+					@include f-text();
 					text-align:center;
 					color:white;
 					font-size:16px;
@@ -1285,13 +1322,15 @@ html #block-views-basic-page-featured-block{
 				}
 				&:after{
 					content:'';
+					display:block;
 					position:relative;
-					top:38px;
+					top:20px;
 					background:white;
 					border-top:20px solid $green;
 					border-left:44vw solid rgba(255, 255, 255, 0);
 					border-right:44vw solid rgba(255, 255, 255, 0);
 					border-bottom:0;
+					margin:auto;
 					@include breakpoint(500px,true){
 						border-left:46vw solid rgba(255, 255, 255, 0);
 						border-right:46vw solid rgba(255, 255, 255, 0);
@@ -1333,7 +1372,6 @@ html #block-views-basic-page-featured-block{
 						h3{
 							@include f-impact(30px);
 							color:$green;
-							text-transform:uppercase;
 						}
 						p{
 							@include f-text(14px);
@@ -1354,7 +1392,6 @@ html #block-views-basic-page-featured-block{
 	h2.block__title{
 		display:none;
 		@include f-impact(36px);
-		text-transform:uppercase;
 		text-align:center;
 		width:auto;
 		top:0;
@@ -1382,7 +1419,6 @@ html #block-views-basic-page-featured-block{
 				.field-content{
 					@include f-impact(36px);
 					line-height:50px;
-					text-transform:uppercase;
 				}
 			}
 			.views-field-field-news-image{
@@ -1407,7 +1443,6 @@ html #block-views-basic-page-featured-block{
 					@include f-impact(18px);
 					color:$green;
 					text-decoration:none;
-					text-transform:uppercase;
 					&:hover{
 						text-decoration:underline;
 					}
@@ -1460,6 +1495,10 @@ html #block-views-basic-page-featured-block{
 	padding:0;
 	&.block.block--bean{
 		.bean-text-and-links-promo{
+			padding:20px;
+			@include breakpoint($tab,true){
+				padding:0;
+			}
 			border:none;
 			background:none;
 			margin-top:0;
@@ -1467,6 +1506,10 @@ html #block-views-basic-page-featured-block{
 				padding:0;
 				width:100%;
 				max-width:initial;
+				border:1px solid #ccc;
+				@include breakpoint($tab,true){
+					border:none;
+				}
 				img{
 					width:100%;
 				}
@@ -1493,7 +1536,7 @@ html #block-views-basic-page-featured-block{
 						}
 						.field__item{
 							a{
-								@include f-text(15px);
+								@include f-text();
 								width:100%;
 								margin:0;
 								border:none;
@@ -1528,7 +1571,6 @@ html #block-views-basic-page-featured-block{
 	h2.block__title{
 		@include f-impact(32px);
 		display:block!important;
-		text-transform:uppercase;
 		background: #fff;
 		text-align: center;
 		margin: auto;
@@ -1557,7 +1599,6 @@ html #block-views-basic-page-featured-block{
 		@include f-impact(32px);
 		display:block!important;
 		margin:0;
-		text-transform:uppercase;
 	}
 }
 #block-bean-band-camp{
@@ -1603,11 +1644,10 @@ html #block-views-basic-page-featured-block{
 							h2{
 								@include f-impact(32px);
 								color:white;
-								text-transform:uppercase;
 								margin:0;
 								@include breakpoint($tab,true){
-									font-size:28px;
-									line-height:28px;
+									font-size:40px;
+									line-height:36px;
 								}
 								@include breakpoint($desk,true){
 									font-size:42px;
@@ -1615,13 +1655,14 @@ html #block-views-basic-page-featured-block{
 								}
 							}
 							p{
-								@include f-text(16px);
+								@include f-text();
 								line-height:22px;
 								color:white;
 								margin:0;
 								padding:10px;
 							}
 							div{
+								@include f-impact(16px);
 								position:relative;
 								padding:10px;
 								&:after{
@@ -1650,7 +1691,6 @@ html #block-views-basic-page-featured-block{
 		display:block!important;
 		margin:auto;
 		padding:10px;
-		text-transform:uppercase;
 		width:auto;
 		@include breakpoint($tab,true){
 			width:600px;
@@ -1673,12 +1713,11 @@ html #block-views-basic-page-featured-block{
 	.block__title{
 		@include f-impact(36px);
 		width:150px;
-		text-transform:uppercase;
 		text-align:center;
 		max-width:$maxwidth;
 		margin:auto;
 		position:relative;
-		top:20px;
+		top:30px;
 		background:white;
 	}
 	.block__content{
@@ -1739,7 +1778,6 @@ html #block-views-basic-page-featured-block{
 		@include f-impact(36px);
 		text-align:center;
 		width: 300px;
-		text-transform:uppercase;
 		margin: auto;
 		background: #eee;
 		top: 30px;
@@ -1790,7 +1828,6 @@ html #block-views-basic-page-featured-block{
 					.field-content{
 						@include f-impact(16px);
 						color:white;
-						text-transform:uppercase;
 						text-shadow:1px 1px 0px rgba(0,0,0,0.8);
 						width: calc(100% - 40px);
 						line-height:18px;
@@ -1835,7 +1872,6 @@ html #block-views-basic-page-featured-block{
 		h2{
 			max-width:$maxwidth;
 			@include f-impact(36px);
-			text-transform:uppercase;
 			text-align:center;
 			width:auto;
 			@include breakpoint($tab,true){
@@ -1862,7 +1898,6 @@ html #block-views-basic-page-featured-block{
 					h3{
 						@include f-impact(16px);
 						color:white;
-						text-transform:uppercase;
 						text-shadow:1px 1px 0px rgba(0,0,0,0.8);
 						width:100%;
 						line-height:18px;
@@ -1885,7 +1920,6 @@ html #block-views-basic-page-featured-block{
 		span{
 			@include f-impact(16px);
 			color:$green;
-			text-transform:uppercase;
 			width:100%;
 			line-height:18px;
 			box-sizing: border-box;
@@ -1912,14 +1946,13 @@ html #block-views-basic-page-featured-block{
 	.block__title{
 		max-width:$maxwidth;
 		@include f-impact(36px);
-		text-transform:uppercase;
 		text-align:center;
 		@include breakpoint($tab,true){
 			width: 350px;
 		}
 		margin: auto;
 		background: white;
-		top: 20px;
+		top: 30px;
 		position: relative;
 	}
 	.block__content{
@@ -2104,11 +2137,10 @@ html{
 								display:block;
 								line-height:$main-nav-height;
 								font-weight:bold;
-								text-transform:uppercase;
 								@include breakpoint($tab,true){
 									font-size:15px;
 								}
-								@include breakpoint(865px,true){
+								@include breakpoint($tab-large,true){
 									font-size:20px;
 								}
 							}
@@ -2180,6 +2212,7 @@ html{
 		}
 	}
 }
+
 /*default subnav block*/
 #block-menu-block-2{
 /* 	.contextual-links-wrapper{
@@ -2192,7 +2225,7 @@ html{
 	} */
 	h2.block__title{
 		@include floatblock();
-		@include f-text(16px);
+		@include f-text();
 		color:$green;
 		background:#eee;
 		border:1px solid #ccc;
@@ -2301,7 +2334,6 @@ html{
 					h2{
 						@include f-impact(32px);
 						color:white;
-						text-transform:uppercase;
 						text-shadow:1px 1px 0px rgba(0,0,0,0.8);
 						width:100%;
 						line-height:18px;
@@ -2319,13 +2351,13 @@ html{
 				}
 			}
 			.views-field-created{
-				@include f-text(18px);
+				@include f-text();
 				@include floatblock();
 				padding:10px;
 				color:#444;
 			}
 			.views-field-body{
-				@include f-text(18px);
+				@include f-text();
 				@include floatblock();
 				padding:0 10px;
 				color:#444;
@@ -2377,7 +2409,6 @@ html{
 							float:left;
 							width:100%;
 							text-align:center;
-							text-transform:uppercase;
 							color:white;
 						}
 						.day{
@@ -2403,12 +2434,11 @@ html{
 					padding:0 10px;
 					width:calc(100% - 90px);
 					text-decoration:none;
-					text-transform:uppercase;
 				}
 			}
 			.views-field-field-event-location{
 				@include floatblock();
-				@include f-text(18px);
+				@include f-text();
 				line-height:22px;
 				color:#444;
 				padding:0 10px;
@@ -2416,7 +2446,7 @@ html{
 			}
 			.views-field-field-event-date-2{
 				@include floatblock();
-				@include f-text(18px);
+				@include f-text();
 				line-height:22px;
 				color:#444;
 				padding:0 10px;
@@ -2458,7 +2488,6 @@ html{
 								@include floatblock();
 								color:white;
 								text-decoration:none;
-								text-transform:uppercase;
 								padding:14px 20px;
 								text-align:center;
 								line-height:30px;

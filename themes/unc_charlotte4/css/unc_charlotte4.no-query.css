@@ -40,8 +40,9 @@ html body {
         border-bottom: none; }
 
 h1 {
-  font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+  font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
   font-weight: 600;
+  text-transform: uppercase;
   color: #444;
   font-size: 42px;
   line-height: 42px;
@@ -50,29 +51,28 @@ h1 {
   max-width: 1200px;
   padding: 0 10px;
   margin: 30px auto;
-  color: #00703c;
-  text-transform: uppercase; }
+  color: #00703c; }
 
 h2 {
-  font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+  font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
   font-weight: 600;
+  text-transform: uppercase;
   color: #444;
   font-size: 42px;
   line-height: 42px;
   display: block;
   margin: 0;
-  padding: 10px;
-  text-transform: uppercase; }
+  padding: 10px; }
 
 h3 {
-  font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+  font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
   font-weight: 600;
+  text-transform: uppercase;
   color: #444;
   font-size: 24px;
   line-height: 24px;
   margin: 0;
-  padding: 10px;
-  text-transform: uppercase; }
+  padding: 10px; }
 
 p {
   color: #444;
@@ -112,14 +112,14 @@ img {
     right: 5px;
     color: #00703c; }
   .more-link a {
-    font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+    font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
     font-weight: 600;
+    text-transform: uppercase;
     color: #444;
-    font-size: 42px;
-    line-height: 42px;
+    font-size: 18px;
+    line-height: 18px;
     color: #00703c;
-    text-decoration: none;
-    text-transform: uppercase; }
+    text-decoration: none; }
     .more-link a:hover {
       text-decoration: underline; }
 
@@ -170,7 +170,7 @@ body {
       background: url("/sites/all/themes/unc_charlotte4/img/header-logo-watermark.png") repeat-x scroll center center white;
       height: 100px; }
       #header-wrapper .container #header-row #logo-wrapper {
-        width: 25%;
+        width: 20%;
         margin-left: 2%;
         float: left;
         margin-top: 25px;
@@ -183,7 +183,7 @@ body {
         padding-left: 10px;
         width: 73%;
         height: 100px;
-        width: 40%; }
+        width: 50%; }
         #header-wrapper .container #header-row #branding #site-name-wrapper #site-name {
           text-align: left;
           top: 25px;
@@ -230,7 +230,7 @@ body {
       #header-wrapper .container #header-row #header-utility {
         float: right;
         height: 100px;
-        width: 33%;
+        width: 28%;
         display: none;
         display: block; }
         #header-wrapper .container #header-row #header-utility #header-utility-links {
@@ -255,6 +255,7 @@ body {
           clear: both;
           margin-right: 8px; }
           #header-wrapper .container #header-row #header-utility #header-utility-search-wrapper input {
+            float: left;
             width: auto;
             height: 16px; }
           #header-wrapper .container #header-row #header-utility #header-utility-search-wrapper .search-block-form--2 .form-item-search-block-form input {
@@ -279,9 +280,7 @@ body {
   #mobile-navbar #mobile-buttons {
     display: block;
     float: left;
-    width: 100%;
-    width: 92%;
-    margin: 4%; }
+    width: 100%; }
     #mobile-navbar #mobile-buttons #mobile-menu-button {
       width: 50%;
       float: left;
@@ -456,8 +455,8 @@ body .field-collection-container {
       .l-content-header-meta .wrapper .breadcrumbs .breadcrumb span {
         font-family: arial;
         color: #444;
-        font-size: 18px;
-        line-height: 18px;
+        font-size: 16px;
+        line-height: 22px;
         padding: 0;
         font-size: initial;
         line-height: 16px; }
@@ -470,8 +469,8 @@ body .field-collection-container {
     .l-content-header-meta .wrapper .breadcrumbs span {
       font-family: arial;
       color: #444;
-      font-size: 18px;
-      line-height: 18px;
+      font-size: 16px;
+      line-height: 22px;
       font-size: 9px;
       line-height: 16px;
       display: block;
@@ -502,7 +501,12 @@ body .field-collection-container {
         max-height: initial;
         max-width: initial;
         margin: auto;
-        float: none; }
+        float: none;
+        width: 120%;
+        position: relative;
+        left: -10%;
+        width: 100%;
+        left: 0; }
     .block.block--bean .bean-billboard .billboard-image.fullwidth {
       width: 100%; }
   .block.block--bean .bean-billboard .billboard-ctas {
@@ -571,8 +575,8 @@ body .field-collection-container {
         .block.block--bean .bean-faq .content .field--name-field-question .field__item .entity-field-collection-item .field--name-field-ask-question .field__item p {
           font-family: arial;
           color: #444;
-          font-size: 18px;
-          line-height: 18px;
+          font-size: 16px;
+          line-height: 22px;
           display: block;
           float: left;
           width: 100%;
@@ -581,8 +585,8 @@ body .field-collection-container {
     .block.block--bean .bean-faq .content .field--name-field-question .field__item .entity-field-collection-item .field--name-field-answer {
       font-family: arial;
       color: #444;
-      font-size: 18px;
-      line-height: 18px;
+      font-size: 16px;
+      line-height: 22px;
       padding-left: 30px; }
   .block.block--bean .bean-faq .content .field--name-field-read-more-link .field__item {
     position: relative;
@@ -600,7 +604,9 @@ body .field-collection-container {
       right: initial;
       padding-left: 5px; }
     .block.block--bean .bean-faq .content .field--name-field-read-more-link .field__item a {
-      font-family: arial;
+      font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
       color: #444;
       font-size: 18px;
       line-height: 18px;
@@ -619,8 +625,9 @@ body .field-collection-container {
     margin: 50px 0;
     margin: 120px 0; }
     .block.block--bean .bean-showcase h2 {
-      font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+      font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
       font-weight: 600;
+      text-transform: uppercase;
       color: #444;
       font-size: 32px;
       line-height: 32px;
@@ -628,7 +635,6 @@ body .field-collection-container {
       text-align: center;
       position: relative;
       top: -64px;
-      text-transform: uppercase;
       background: white;
       width: auto;
       width: 400px;
@@ -638,8 +644,8 @@ body .field-collection-container {
     .block.block--bean .bean-showcase .showcase-intro {
       font-family: arial;
       color: #444;
-      font-size: 18px;
-      line-height: 18px;
+      font-size: 16px;
+      line-height: 22px;
       display: block;
       float: left;
       width: 100%;
@@ -661,6 +667,12 @@ body .field-collection-container {
           color: #00703c;
           top: calc(50% - 8px); }
         .block.block--bean .bean-showcase .showcase-intro .field--name-field-read-more-link a {
+          font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
+          font-weight: 600;
+          text-transform: uppercase;
+          color: #444;
+          font-size: 18px;
+          line-height: 18px;
           color: #00703c;
           text-decoration: none; }
           .block.block--bean .bean-showcase .showcase-intro .field--name-field-read-more-link a:hover {
@@ -709,13 +721,13 @@ body .field-collection-container {
           position: relative;
           height: 100%; }
           .block.block--bean .bean-showcase .showcase-elements .field__item .field--name-field-caption .field__item {
-            font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+            font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
             font-weight: 600;
+            text-transform: uppercase;
             color: #444;
             font-size: 22px;
             line-height: 22px;
             color: white;
-            text-transform: uppercase;
             text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8);
             width: 100%;
             line-height: 24px;
@@ -773,14 +785,14 @@ body .field-collection-container {
     .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-gallery .field--name-field-caption {
       display: none; }
     .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-title {
-      font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+      font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
       font-weight: 600;
+      text-transform: uppercase;
       color: #444;
       font-size: 20px;
       line-height: 20px;
       text-align: left;
       float: right;
-      text-transform: uppercase;
       padding-left: 20px;
       width: calc(100% - 80px);
       float: left;
@@ -788,10 +800,9 @@ body .field-collection-container {
     .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-intro {
       font-family: arial;
       color: #444;
-      font-size: 18px;
-      line-height: 18px;
+      font-size: 16px;
+      line-height: 22px;
       display: block;
-      width: 100%;
       float: right;
       width: calc(100% - 80px);
       float: left;
@@ -813,8 +824,9 @@ body .field-collection-container {
         right: 5px;
         color: #00703c; }
       .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-link a {
-        font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+        font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
         font-weight: 600;
+        text-transform: uppercase;
         color: #444;
         font-size: 18px;
         line-height: 18px;
@@ -822,8 +834,7 @@ body .field-collection-container {
         float: left;
         padding: 10px 20px;
         color: #00703c;
-        text-decoration: none;
-        text-transform: uppercase; }
+        text-decoration: none; }
         .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-link a:hover {
           text-decoration: underline; }
     .block.block--bean .bean-subsections > .content .field--name-field-promo-read-more .field__item {
@@ -840,8 +851,9 @@ body .field-collection-container {
         color: #00703c;
         top: 54px; }
       .block.block--bean .bean-subsections > .content .field--name-field-promo-read-more .field__item a {
-        font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+        font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
         font-weight: 600;
+        text-transform: uppercase;
         color: #444;
         font-size: 18px;
         line-height: 18px;
@@ -849,7 +861,6 @@ body .field-collection-container {
         display: block;
         float: right;
         text-decoration: none;
-        text-transform: uppercase;
         top: 50px;
         position: absolute;
         right: 20px; }
@@ -860,8 +871,9 @@ body .field-collection-container {
     background: #eee;
     margin-top: 20px; }
     .block.block--bean .bean-text-and-links-promo .content h2 {
-      font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+      font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
       font-weight: 600;
+      text-transform: uppercase;
       color: #444;
       font-size: 24px;
       line-height: 24px; }
@@ -883,15 +895,44 @@ body .field-collection-container {
         display: block;
         float: left;
         width: 100%; }
-    .block.block--bean .bean-text-and-links-promo .field--name-field-list-of-links .field__item a {
-      font-family: arial;
-      color: #444;
-      font-size: 16px;
-      line-height: 16px;
+    .block.block--bean .bean-text-and-links-promo .list-links {
       display: block;
-      text-decoration: none;
-      padding: 5px 10px;
-      color: #00703c; }
+      float: left;
+      width: 100%;
+      margin-bottom: 20px; }
+      .block.block--bean .bean-text-and-links-promo .list-links h2.block__title {
+        display: block;
+        float: left;
+        width: 100%;
+        font-family: arial;
+        color: #444;
+        font-size: 16px;
+        line-height: 22px;
+        color: #00703c;
+        background: #eee;
+        border: 1px solid #ccc;
+        margin-bottom: 2px;
+        cursor: pointer;
+        display: none; }
+        .block.block--bean .bean-text-and-links-promo .list-links h2.block__title:before {
+          content: "\f0c9";
+          font-family: FontAwesome;
+          color: #444;
+          padding-right: 5px; }
+      .block.block--bean .bean-text-and-links-promo .list-links .field--name-field-list-of-links {
+        display: none;
+        display: block; }
+        .block.block--bean .bean-text-and-links-promo .list-links .field--name-field-list-of-links .field__item a {
+          font-family: arial;
+          color: #444;
+          font-size: 16px;
+          line-height: 22px;
+          display: block;
+          text-decoration: none;
+          padding: 5px 10px;
+          color: #00703c; }
+      .block.block--bean .bean-text-and-links-promo .list-links.open .field--name-field-list-of-links {
+        display: block; }
 
 /* end default bean styling */
 /* specific views blocks */
@@ -908,23 +949,23 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
 .block--views-events-block-1 {
   position: relative; }
   .block--views-events-block-1 .block__title {
-    font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+    font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
     font-weight: 600;
+    text-transform: uppercase;
     color: #444;
     font-size: 32px;
     line-height: 32px;
     text-align: center;
     margin: auto;
     float: none;
-    text-transform: uppercase;
     background: white;
     position: relative;
     width: auto;
     top: 5px;
     font-size: 48px;
     line-height: 48px;
-    top: 26px;
-    width: 520px; }
+    top: 36px;
+    width: 420px; }
   .block--views-events-block-1 .block__content {
     max-width: 1200px;
     margin: auto;
@@ -937,9 +978,10 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
         bottom: -14px;
         z-index: 2;
         left: -25px;
-        max-width: 40%;
+        max-width: 60%;
         display: none;
-        display: block; }
+        display: block;
+        max-width: 40%; }
       .block--views-events-block-1 .block__content .view-events .view-content {
         display: block;
         float: left;
@@ -980,35 +1022,40 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
               .block--views-events-block-1 .block__content .view-events .view-content .views-row .views-field-field-event-date-1 .field-content .d-date {
                 display: block;
                 float: left;
-                padding: 5px;
+                padding: 8px;
                 box-sizing: border-box;
                 background: #00703c;
                 color: white;
                 width: 90px;
                 padding: 15px 0; }
                 .block--views-events-block-1 .block__content .view-events .view-content .views-row .views-field-field-event-date-1 .field-content .d-date .month {
-                  font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+                  font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
                   font-weight: 600;
-                  color: #444;
-                  font-size: 24px;
-                  line-height: 24px;
-                  display: block;
-                  float: left;
-                  width: 100%;
-                  text-align: center;
                   text-transform: uppercase;
-                  color: white; }
-                .block--views-events-block-1 .block__content .view-events .view-content .views-row .views-field-field-event-date-1 .field-content .d-date .day {
-                  font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
-                  font-weight: 600;
                   color: #444;
-                  font-size: 60px;
-                  line-height: 60px;
+                  font-size: 22px;
+                  line-height: 22px;
                   display: block;
                   float: left;
                   width: 100%;
                   text-align: center;
-                  color: white; }
+                  color: white;
+                  font-size: 24px;
+                  line-height: 24px; }
+                .block--views-events-block-1 .block__content .view-events .view-content .views-row .views-field-field-event-date-1 .field-content .d-date .day {
+                  font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
+                  font-weight: 600;
+                  text-transform: uppercase;
+                  color: #444;
+                  font-size: 54px;
+                  line-height: 54px;
+                  display: block;
+                  float: left;
+                  width: 100%;
+                  text-align: center;
+                  color: white;
+                  font-size: 60px;
+                  line-height: 60px; }
                 .block--views-events-block-1 .block__content .view-events .view-content .views-row .views-field-field-event-date-1 .field-content .d-date:after {
                   content: '';
                   clear: both; }
@@ -1029,29 +1076,31 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
                 margin-top: 20px;
                 text-align: center; }
                 .block--views-events-block-1 .block__content .view-events .view-content .views-row .views-field-field-event-date-2 .event-info h3 a {
-                  font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+                  font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
                   font-weight: 600;
+                  text-transform: uppercase;
                   color: #444;
                   font-size: 26px;
                   line-height: 26px;
                   font-size: 36px;
                   line-height: 36px;
                   text-decoration: none;
-                  text-transform: uppercase;
                   color: #444; }
               .block--views-events-block-1 .block__content .view-events .view-content .views-row .views-field-field-event-date-2 .event-info p {
                 font-family: arial;
                 color: #444;
                 font-size: 13px;
-                line-height: 13px;
+                line-height: 19px;
                 margin: 0;
                 display: block;
                 float: left;
                 padding: 10px 10px 0 10px;
                 color: #444;
                 width: 100%;
+                text-align: center;
                 width: 50%;
-                padding: 5px 0; }
+                padding: 5px 0;
+                text-align: left; }
                 .block--views-events-block-1 .block__content .view-events .view-content .views-row .views-field-field-event-date-2 .event-info p.e-loc:before {
                   content: "\f041";
                   font-family: FontAwesome;
@@ -1071,16 +1120,14 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
   padding: 20px 20px 0 0px;
   width: calc(100% - 300px); }
   #block-bean-home-pride-of-niner-nation h2.block__title {
-    font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+    font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
     font-weight: 600;
+    text-transform: uppercase;
     color: #444;
     font-size: 32px;
     line-height: 32px;
     display: block !important;
     color: #444;
-    text-transform: uppercase;
-    font-size: 48px;
-    line-height: 48px;
     background: #eee;
     text-align: center;
     margin: auto;
@@ -1088,10 +1135,14 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
     float: none;
     position: relative;
     width: auto;
+    font-size: 48px;
+    line-height: 48px;
+    top: 16px;
     width: 530px; }
   #block-bean-home-pride-of-niner-nation .bean-subsections > .content .field__item .field--name-field-subsection-title {
-    font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+    font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
     font-weight: 600;
+    text-transform: uppercase;
     color: #444;
     font-size: 24px;
     line-height: 24px;
@@ -1113,8 +1164,9 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
     box-sizing: border-box;
     margin-bottom: 20px; }
     #block-bean-home-support-the-band .block__content .content .header h2 {
-      font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+      font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
       font-weight: 600;
+      text-transform: uppercase;
       color: #444;
       font-size: 36px;
       line-height: 36px;
@@ -1125,13 +1177,12 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
       width: 100%;
       text-align: center;
       color: white;
-      text-transform: uppercase;
       margin: 0; }
     #block-bean-home-support-the-band .block__content .content .header p {
       font-family: arial;
       color: #444;
-      font-size: 18px;
-      line-height: 18px;
+      font-size: 16px;
+      line-height: 22px;
       text-align: center;
       color: white;
       font-size: 16px;
@@ -1141,13 +1192,15 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
       padding-bottom: 10px; }
     #block-bean-home-support-the-band .block__content .content .header:after {
       content: '';
+      display: block;
       position: relative;
-      top: 38px;
+      top: 20px;
       background: white;
       border-top: 20px solid #00703c;
       border-left: 44vw solid rgba(255, 255, 255, 0);
       border-right: 44vw solid rgba(255, 255, 255, 0);
       border-bottom: 0;
+      margin: auto;
       border-left: 46vw solid rgba(255, 255, 255, 0);
       border-right: 46vw solid rgba(255, 255, 255, 0);
       top: 20px;
@@ -1183,18 +1236,18 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
       text-decoration: none;
       color: #00703c; }
       #block-bean-home-support-the-band .block__content .content .cta-content a .content h3 {
-        font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+        font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
         font-weight: 600;
+        text-transform: uppercase;
         color: #444;
         font-size: 30px;
         line-height: 30px;
-        color: #00703c;
-        text-transform: uppercase; }
+        color: #00703c; }
       #block-bean-home-support-the-band .block__content .content .cta-content a .content p {
         font-family: arial;
         color: #444;
         font-size: 14px;
-        line-height: 14px;
+        line-height: 20px;
         color: #444; }
 
 #block-views-news-block-1 {
@@ -1205,12 +1258,12 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
   background: url("/sites/all/themes/unc_charlotte4/img/0775-1935.png") no-repeat right bottom; }
   #block-views-news-block-1 h2.block__title {
     display: none;
-    font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+    font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
     font-weight: 600;
+    text-transform: uppercase;
     color: #444;
     font-size: 36px;
     line-height: 36px;
-    text-transform: uppercase;
     text-align: center;
     width: auto;
     top: 0;
@@ -1234,13 +1287,13 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
         #block-views-news-block-1 .view-news .view-content .views-field-title h2 {
           margin: 15px 0; }
         #block-views-news-block-1 .view-news .view-content .views-field-title .field-content {
-          font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+          font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
           font-weight: 600;
+          text-transform: uppercase;
           color: #444;
           font-size: 36px;
           line-height: 36px;
-          line-height: 50px;
-          text-transform: uppercase; }
+          line-height: 50px; }
       #block-views-news-block-1 .view-news .view-content .views-field-field-news-image {
         display: block;
         float: left;
@@ -1264,14 +1317,14 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
           right: 5px;
           color: #00703c; }
         #block-views-news-block-1 .view-news .view-content .views-field-title-1 a {
-          font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+          font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
           font-weight: 600;
+          text-transform: uppercase;
           color: #444;
           font-size: 18px;
           line-height: 18px;
           color: #00703c;
-          text-decoration: none;
-          text-transform: uppercase; }
+          text-decoration: none; }
           #block-views-news-block-1 .view-news .view-content .views-field-title-1 a:hover {
             text-decoration: underline; }
       #block-views-news-block-1 .view-news .view-content .views-field-created,
@@ -1296,8 +1349,9 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
         right: 5px;
         color: #00703c; }
       #block-views-news-block-1 .view-news .more-link a {
-        font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+        font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
         font-weight: 600;
+        text-transform: uppercase;
         color: #444;
         font-size: 18px;
         line-height: 18px;
@@ -1319,13 +1373,17 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
 #block-bean-join-the-band-introduction {
   padding: 0; }
   #block-bean-join-the-band-introduction.block.block--bean .bean-text-and-links-promo {
+    padding: 20px;
+    padding: 0;
     border: none;
     background: none;
     margin-top: 0; }
     #block-bean-join-the-band-introduction.block.block--bean .bean-text-and-links-promo .promo-image {
       padding: 0;
       width: 100%;
-      max-width: initial; }
+      max-width: initial;
+      border: 1px solid #ccc;
+      border: none; }
       #block-bean-join-the-band-introduction.block.block--bean .bean-text-and-links-promo .promo-image img {
         width: 100%; }
     #block-bean-join-the-band-introduction.block.block--bean .bean-text-and-links-promo .promo-content-container {
@@ -1345,8 +1403,8 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
           #block-bean-join-the-band-introduction.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-list-of-links .field__items .field__item a {
             font-family: arial;
             color: #444;
-            font-size: 15px;
-            line-height: 15px;
+            font-size: 16px;
+            line-height: 22px;
             width: 100%;
             margin: 0;
             border: none;
@@ -1369,13 +1427,13 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
   padding: 0px 20px 0 10px;
   width: calc(100% - 300px); }
   #block-bean-join-pride-of-niner-nation h2.block__title {
-    font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+    font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
     font-weight: 600;
+    text-transform: uppercase;
     color: #444;
     font-size: 32px;
     line-height: 32px;
     display: block !important;
-    text-transform: uppercase;
     background: #fff;
     text-align: center;
     margin: auto;
@@ -1398,14 +1456,14 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
   border-top: 5px solid #bea848;
   padding: 20px; }
   #block-bean-join-faqs h2.block__title {
-    font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+    font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
     font-weight: 600;
+    text-transform: uppercase;
     color: #444;
     font-size: 32px;
     line-height: 32px;
     display: block !important;
-    margin: 0;
-    text-transform: uppercase; }
+    margin: 0; }
 
 #block-bean-band-camp {
   padding: 0; }
@@ -1439,28 +1497,34 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
           #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-intro-text .field__items .field__item {
             position: relative; }
             #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-intro-text .field__items .field__item h2 {
-              font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+              font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
               font-weight: 600;
+              text-transform: uppercase;
               color: #444;
               font-size: 32px;
               line-height: 32px;
               color: white;
-              text-transform: uppercase;
               margin: 0;
-              font-size: 28px;
-              line-height: 28px;
+              font-size: 40px;
+              line-height: 36px;
               font-size: 42px;
               line-height: 42px; }
             #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-intro-text .field__items .field__item p {
               font-family: arial;
               color: #444;
               font-size: 16px;
-              line-height: 16px;
+              line-height: 22px;
               line-height: 22px;
               color: white;
               margin: 0;
               padding: 10px; }
             #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-intro-text .field__items .field__item div {
+              font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
+              font-weight: 600;
+              text-transform: uppercase;
+              color: #444;
+              font-size: 16px;
+              line-height: 16px;
               position: relative;
               padding: 10px; }
               #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-intro-text .field__items .field__item div:after {
@@ -1481,15 +1545,15 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
                   text-decoration: underline; }
 
 #block-bean-join-request-more-information h2.block__title {
-  font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+  font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
   font-weight: 600;
+  text-transform: uppercase;
   color: #444;
   font-size: 32px;
   line-height: 32px;
   display: block !important;
   margin: auto;
   padding: 10px;
-  text-transform: uppercase;
   width: auto;
   width: 600px;
   font-size: 48px;
@@ -1504,18 +1568,18 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
 /* sights and sounds - specific elements*/
 /* videos */
 #block-views-media-block-3 .block__title {
-  font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+  font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
   font-weight: 600;
+  text-transform: uppercase;
   color: #444;
   font-size: 36px;
   line-height: 36px;
   width: 150px;
-  text-transform: uppercase;
   text-align: center;
   max-width: 1200px;
   margin: auto;
   position: relative;
-  top: 20px;
+  top: 30px;
   background: white; }
 #block-views-media-block-3 .block__content .view-content {
   border-top: 5px solid #444;
@@ -1558,14 +1622,14 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
   max-width: 1200px;
   margin: auto; }
   #block-views-media-block-1 h2.block__title {
-    font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+    font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
     font-weight: 600;
+    text-transform: uppercase;
     color: #444;
     font-size: 36px;
     line-height: 36px;
     text-align: center;
     width: 300px;
-    text-transform: uppercase;
     margin: auto;
     background: #eee;
     top: 30px;
@@ -1611,13 +1675,13 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
         position: relative;
         height: 100%; }
         #block-views-media-block-1 .block__content .view-content .views-row .views-field-field-caption .field-content {
-          font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+          font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
           font-weight: 600;
+          text-transform: uppercase;
           color: #444;
           font-size: 16px;
           line-height: 16px;
           color: white;
-          text-transform: uppercase;
           text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8);
           width: calc(100% - 40px);
           line-height: 18px;
@@ -1665,12 +1729,12 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
     max-width: 1200px; }
     #block-block-17 .block__content h2 {
       max-width: 1200px;
-      font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+      font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
       font-weight: 600;
+      text-transform: uppercase;
       color: #444;
       font-size: 36px;
       line-height: 36px;
-      text-transform: uppercase;
       text-align: center;
       width: auto;
       width: 380px;
@@ -1689,13 +1753,13 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
         #block-block-17 .block__content #instafeed .item a {
           position: relative; }
           #block-block-17 .block__content #instafeed .item a h3 {
-            font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+            font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
             font-weight: 600;
+            text-transform: uppercase;
             color: #444;
             font-size: 16px;
             line-height: 16px;
             color: white;
-            text-transform: uppercase;
             text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8);
             width: 100%;
             line-height: 18px;
@@ -1720,13 +1784,13 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
               font-family: FontAwesome;
               padding-right: 10px; }
     #block-block-17 .block__content span {
-      font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+      font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
       font-weight: 600;
+      text-transform: uppercase;
       color: #444;
       font-size: 16px;
       line-height: 16px;
       color: #00703c;
-      text-transform: uppercase;
       width: 100%;
       line-height: 18px;
       box-sizing: border-box;
@@ -1750,17 +1814,17 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
   width: 100%; }
   #block-views-media-block-2 .block__title {
     max-width: 1200px;
-    font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+    font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
     font-weight: 600;
+    text-transform: uppercase;
     color: #444;
     font-size: 36px;
     line-height: 36px;
-    text-transform: uppercase;
     text-align: center;
     width: 350px;
     margin: auto;
     background: white;
-    top: 20px;
+    top: 30px;
     position: relative; }
   #block-views-media-block-2 .block__content {
     max-width: 1200px;
@@ -1899,8 +1963,9 @@ html body div.jp-audio {
                 color: #00703c;
                 border-bottom: 5px solid #00703c; }
             .l-header-third .container .l-region--header-third #block-menu-block-1 .menu-block-wrapper ul li a {
-              font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+              font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
               font-weight: 600;
+              text-transform: uppercase;
               color: #444;
               font-size: 20px;
               line-height: 20px;
@@ -1912,7 +1977,6 @@ html body div.jp-audio {
               display: block;
               line-height: 60px;
               font-weight: bold;
-              text-transform: uppercase;
               font-size: 15px;
               font-size: 20px; }
             .l-header-third .container .l-region--header-third #block-menu-block-1 .menu-block-wrapper ul li:nth-child(1) {
@@ -1977,7 +2041,7 @@ html body div.jp-audio {
     font-family: arial;
     color: #444;
     font-size: 16px;
-    line-height: 16px;
+    line-height: 22px;
     color: #00703c;
     background: #eee;
     border: 1px solid #ccc;
@@ -2061,13 +2125,13 @@ html body div.jp-audio {
       float: left;
       width: 100%; }
     .view-display-id-page.view-id-news .views-row .views-field-title .image h2 {
-      font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+      font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
       font-weight: 600;
+      text-transform: uppercase;
       color: #444;
       font-size: 32px;
       line-height: 32px;
       color: white;
-      text-transform: uppercase;
       text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8);
       width: 100%;
       line-height: 18px;
@@ -2092,8 +2156,8 @@ html body div.jp-audio {
   .view-display-id-page.view-id-news .views-row .views-field-created {
     font-family: arial;
     color: #444;
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 22px;
     display: block;
     float: left;
     width: 100%;
@@ -2102,8 +2166,8 @@ html body div.jp-audio {
   .view-display-id-page.view-id-news .views-row .views-field-body {
     font-family: arial;
     color: #444;
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 22px;
     display: block;
     float: left;
     width: 100%;
@@ -2155,8 +2219,9 @@ html body div.jp-audio {
         color: white;
         width: 90px; }
         .view-display-id-page.view-id-events .views-row .views-field-field-event-date-1 .field-content .d-date .month {
-          font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+          font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
           font-weight: 600;
+          text-transform: uppercase;
           color: #444;
           font-size: 24px;
           line-height: 24px;
@@ -2164,11 +2229,11 @@ html body div.jp-audio {
           float: left;
           width: 100%;
           text-align: center;
-          text-transform: uppercase;
           color: white; }
         .view-display-id-page.view-id-events .views-row .views-field-field-event-date-1 .field-content .d-date .day {
-          font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+          font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
           font-weight: 600;
+          text-transform: uppercase;
           color: #444;
           font-size: 60px;
           line-height: 60px;
@@ -2184,24 +2249,24 @@ html body div.jp-audio {
     display: block;
     float: left;
     width: 100%;
-    font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+    font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
     font-weight: 600;
+    text-transform: uppercase;
     color: #444;
     font-size: 32px;
     line-height: 32px;
     color: #444;
     padding: 0 10px;
     width: calc(100% - 90px);
-    text-decoration: none;
-    text-transform: uppercase; }
+    text-decoration: none; }
   .view-display-id-page.view-id-events .views-row .views-field-field-event-location {
     display: block;
     float: left;
     width: 100%;
     font-family: arial;
     color: #444;
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 22px;
     line-height: 22px;
     color: #444;
     padding: 0 10px;
@@ -2212,8 +2277,8 @@ html body div.jp-audio {
     width: 100%;
     font-family: arial;
     color: #444;
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 22px;
     line-height: 22px;
     color: #444;
     padding: 0 10px;
@@ -2253,8 +2318,9 @@ html body div.jp-audio {
             line-height: 60px;
             width: auto; }
             .l-footer .l-footer-first .l-region--footer-first #block-menu-block-6 .menu-block-wrapper ul.menu li a {
-              font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+              font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
               font-weight: 600;
+              text-transform: uppercase;
               color: #444;
               font-size: 16px;
               line-height: 16px;
@@ -2263,7 +2329,6 @@ html body div.jp-audio {
               width: 100%;
               color: white;
               text-decoration: none;
-              text-transform: uppercase;
               padding: 14px 20px;
               text-align: center;
               line-height: 30px;

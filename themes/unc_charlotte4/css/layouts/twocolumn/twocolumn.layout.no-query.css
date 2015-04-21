@@ -70,8 +70,6 @@ html body .l-page {
     margin: auto;
     clear: both;
     max-width: 1020px; }
-    html body .l-page .l-main p {
-      font: 300 16px/16px Arial; }
     html body .l-page .l-main .l-content-header {
       display: block;
       float: left;

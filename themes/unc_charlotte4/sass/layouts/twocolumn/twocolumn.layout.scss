@@ -63,9 +63,7 @@ html{
 			.l-main{
 				@include centerblock(1020px);
 				//default styles for the main content area
-				p{
-					@include font(300,16px,16px,Arial);
-				}
+				p{}
 				h1{}
 				h2{}
 				h3{}

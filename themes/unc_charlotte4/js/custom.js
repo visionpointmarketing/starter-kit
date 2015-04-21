@@ -44,7 +44,9 @@ jQuery( document ).ready(function () {
 	jQuery("#mobile-search-container").toggle();
 	});
 
-
+	jQuery('.list-links h2.block__title').on('click',function(e){
+		jQuery(this).parents('.list-links').toggleClass('open');
+	});
 	jQuery('#block-menu-block-2 h2.block__title').on('click',function(e){
 		jQuery(this).parents('#block-menu-block-2').toggleClass('open');
 	});

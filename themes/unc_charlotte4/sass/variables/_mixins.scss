@@ -23,10 +23,6 @@
 	margin-bottom:-2000px;
 	padding-right:20px;
 }
-@mixin font($weight-keyword,$size,$lineheight,$stack,$weight:""){
-	font: $weight-keyword #{$size}/#{$lineheight} $stack;
-	font-weight:#{$weight};
-}
 @mixin v-gradient(){
 	// needs latest Compass, add '@import "compass"' to your scss
 	@include filter-gradient(#000000, #730000, vertical); // IE6-8
@@ -42,11 +38,18 @@
 	transition:				$element $time $type;
 }
 @mixin f-impact($size:42px){
-	font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+	font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
 	font-weight:600;
+	text-transform:uppercase;
 	color:#444;
 	font-size:$size;
 	line-height:$size;
+}
+@mixin f-text($size:16px){
+	font-family:arial;
+	color:#444;
+	font-size:$size;
+	line-height:$size + 6px;
 }
 @mixin arrowafter(){
 	content: '\f04b';
@@ -57,10 +60,4 @@
 	top: calc(50% - 4px);
 	right: 5px;
 	color:$green;
-}
-@mixin f-text($size:18px){
-	font-family:arial;
-	color:#444;
-	font-size:$size;
-	line-height:$size;
 }
