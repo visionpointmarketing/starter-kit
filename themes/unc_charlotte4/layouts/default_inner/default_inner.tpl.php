@@ -217,7 +217,7 @@
             <div id="footer-bottom" class="span12">
               <div class="row">
                 <div id="footer-name" class="span6 hidden-phone">
-                  <p style="font-weight: bold; text-transform: none !important; font-family: arial, helvetica, sans-serif !important; color: #00703c; font-size: 1.13em; margin-bottom: 5px;">
+                  <p style="font-weight: bold; text-transform: none !important; font-family: arial, helvetica, sans-serif !important; color: #00703c; font-size: 14px; margin-bottom: 5px; line-height:16px;">
                     <a style="color: #00703c;" title="www.uncc.edu" href="http://www.uncc.edu">The University of North Carolina at Charlotte</a>
                   </p>
                   <p style="line-height: 10px;">9201 University City Blvd, Charlotte, NC 28223-0001 <b>&middot;</b> 704-687-8622</p>

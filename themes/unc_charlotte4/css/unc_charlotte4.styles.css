@@ -113,6 +113,11 @@ img {
     right: 5px;
     color: #00703c; }
   .more-link a {
+    font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+    font-weight: 600;
+    color: #444;
+    font-size: 42px;
+    line-height: 42px;
     color: #00703c;
     text-decoration: none;
     text-transform: uppercase; }
@@ -263,7 +268,7 @@ body {
           #header-wrapper .container #header-row #header-utility #header-utility-search-wrapper .search-block-form--2 .form-item-search-block-form input {
             display: inline-block;
             height: 16px !important;
-            width: 121px;
+            width: 160px;
             padding-left: 6px;
             padding-right: 30px;
             padding-top: 2px;
@@ -422,6 +427,7 @@ body {
           border-radius: 0px; }
       #mobile-navbar #mobile-search-container #header-utility-search-wrapper input {
         width: auto;
+        float: left;
         height: 25px; }
 
 /*end unc charlotte header*/
@@ -665,7 +671,7 @@ body .field-collection-container {
       .block.block--bean .bean-showcase .showcase-intro .field--name-field-read-more-link {
         display: block;
         float: left;
-        padding-right: 20px;
+        padding: 10px 20px 10px 0;
         position: relative; }
         .block.block--bean .bean-showcase .showcase-intro .field--name-field-read-more-link:after {
           content: '\f04b';
@@ -675,7 +681,8 @@ body .field-collection-container {
           position: absolute;
           top: calc(50% - 4px);
           right: 5px;
-          color: #00703c; }
+          color: #00703c;
+          top: calc(50% - 8px); }
         .block.block--bean .bean-showcase .showcase-intro .field--name-field-read-more-link a {
           color: #00703c;
           text-decoration: none; }
@@ -696,10 +703,12 @@ body .field-collection-container {
         width: 100%;
         position: relative;
         overflow: hidden;
-        height: 60vw; }
+        height: 60vw;
+        margin-top: 20px; }
         @media (min-width: 45em) {
           .block.block--bean .bean-showcase .showcase-elements .field__item {
-            padding: 0 20px; } }
+            padding: 0 20px;
+            margin-top: 0; } }
         .block.block--bean .bean-showcase .showcase-elements .field__item .field--name-field-image-upload .field__items .field__item {
           display: none; }
           .block.block--bean .bean-showcase .showcase-elements .field__item .field--name-field-image-upload .field__items .field__item:first-child {
@@ -768,11 +777,11 @@ body .field-collection-container {
           height: 50vw; } }
       @media (min-width: 45em) {
         .block.block--bean .bean-showcase .showcase-elements.two .field__item {
-          width: 33vw;
+          width: 50%;
           height: 25vw; } }
       @media (min-width: 45em) {
         .block.block--bean .bean-showcase .showcase-elements.three .field__item {
-          width: 22vw;
+          width: 33%;
           height: 16vw; } }
   .block.block--bean .bean-subsections > .content {
     display: block;
@@ -871,6 +880,11 @@ body .field-collection-container {
         color: #00703c;
         top: 54px; }
       .block.block--bean .bean-subsections > .content .field--name-field-promo-read-more .field__item a {
+        font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+        font-weight: 600;
+        color: #444;
+        font-size: 18px;
+        line-height: 18px;
         color: #00703c;
         display: block;
         float: right;
@@ -1334,6 +1348,11 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
           right: 5px;
           color: #00703c; }
         #block-views-news-block-1 .view-news .view-content .views-field-title-1 a {
+          font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+          font-weight: 600;
+          color: #444;
+          font-size: 18px;
+          line-height: 18px;
           color: #00703c;
           text-decoration: none;
           text-transform: uppercase; }
@@ -1363,14 +1382,21 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
         right: 5px;
         color: #00703c; }
       #block-views-news-block-1 .view-news .more-link a {
+        font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Arial, sans-serif;
+        font-weight: 600;
+        color: #444;
+        font-size: 18px;
+        line-height: 18px;
         color: #00703c;
         text-decoration: none; }
         #block-views-news-block-1 .view-news .more-link a:hover {
           text-decoration: underline; }
 
 #block-bean-facilities-showcase {
-  background: url("/sites/all/themes/unc_charlotte4/img/stadium_blur.jpg") no-repeat right bottom;
   background-size: cover; }
+  @media (min-width: 45em) {
+    #block-bean-facilities-showcase {
+      background: url("/sites/all/themes/unc_charlotte4/img/stadium_blur.jpg") no-repeat center bottom; } }
   #block-bean-facilities-showcase .block__content {
     max-width: 1200px;
     padding: 0 10px;
@@ -2408,7 +2434,7 @@ html body div.jp-audio {
             line-height: 30px; }
             @media (min-width: 45em) {
               .l-footer .l-footer-first .l-region--footer-first #block-menu-block-6 .menu-block-wrapper ul.menu li a {
-                padding: 0 15px;
+                padding: 0 30px 0 0;
                 text-align: left;
                 line-height: 60px; } }
             .l-footer .l-footer-first .l-region--footer-first #block-menu-block-6 .menu-block-wrapper ul.menu li a:hover {
@@ -2419,8 +2445,7 @@ html body div.jp-audio {
         width: 100%;
         width: auto;
         margin: auto;
-        float: none;
-        padding-right: 20px; }
+        float: none; }
         @media (min-width: 45em) {
           .l-footer .l-footer-first .l-region--footer-first #block-menu-block-5--2 {
             width: 120px; } }
@@ -2463,6 +2488,9 @@ html body div.jp-audio {
     clear: both;
     height: 110px;
     position: relative; }
+    @media (min-width: 45em) {
+      .l-footer #footer #footer-container #static-footer {
+        height: 200px; } }
     .l-footer #footer #footer-container #static-footer #utility-bar {
       max-width: 1200px;
       padding: 0 10px;
@@ -2475,7 +2503,7 @@ html body div.jp-audio {
         list-style-type: none;
         padding-top: 0;
         margin-bottom: 0px;
-        padding-left: 10px;
+        padding-left: 0px;
         margin-top: 0; }
         .l-footer #footer #footer-container #static-footer #utility-bar ul li {
           display: block;
@@ -2495,7 +2523,8 @@ html body div.jp-audio {
               text-decoration: underline; }
       .l-footer #footer #footer-container #static-footer #utility-bar #footer-search {
         display: block;
-        float: right; }
+        float: right;
+        padding-right: 10px; }
         .l-footer #footer #footer-container #static-footer #utility-bar #footer-search #utility-search-input {
           border: medium none;
           display: block;
@@ -2540,7 +2569,9 @@ html body div.jp-audio {
           font-family: arial,helvetica,sans-serif;
           margin-bottom: 8px;
           margin-top: 0px;
-          margin-left: 20px; }
+          margin-left: 0px;
+          font-size: 12px;
+          line-height: 14px; }
         .l-footer #footer #footer-container #static-footer #footer-bottom #footer-name a {
           text-decoration: none; }
           .l-footer #footer #footer-container #static-footer #footer-bottom #footer-name a:hover {
@@ -2563,7 +2594,7 @@ html body div.jp-audio {
           @media (min-width: 45em) {
             .l-footer #footer #footer-container #static-footer #footer-bottom #footer-follow p#social-title {
               margin-bottom: 5px;
-              margin-right: 20px;
+              margin-right: 0px;
               margin-top: 10px; } }
         .l-footer #footer #footer-container #static-footer #footer-bottom #footer-follow div.social-icons {
           display: inline-block;
