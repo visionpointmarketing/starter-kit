@@ -54,7 +54,7 @@
 			$cta_title = $content['field_cta'][$i]['entity']['field_collection_item'][$i + $val + 1]['field_cta_title']['#items'][0]['title'];
 			$cta_link = $content['field_cta'][$i]['entity']['field_collection_item'][$i + $val + 1]['field_cta_title']['#items'][0]['url'];
 			$cta_intro = $content['field_cta'][$i]['entity']['field_collection_item'][$i + $val + 1]['field_cta_intro']['#items'][0]['value'];
-			$string .= "<div class='cta-content'><div class='icon'><i class='fa fa-".$fa_icon."'aria-hidden='true'></i></div><a href='".$cta_link."'><div class='content'><h3>".$cta_title."</h3><p>".$cta_intro."</p></div></a></div>";
+			$string .= "<div class='cta-content'><div class='icon'><span class='fa fa-".$fa_icon."'aria-hidden='true'></span></div><a href='".$cta_link."'><div class='content'><h3>".$cta_title."</h3><p>".$cta_intro."</p></div></a></div>";
 		}
 			echo $string;
 		?>

@@ -124,6 +124,9 @@ img {
     .more-link a:hover {
       text-decoration: underline; }
 
+.fa {
+  font-family: FontAwesome !important; }
+
 /* end base default styles */
 /* page-specific region styling */
 body {
@@ -472,7 +475,12 @@ body .field-collection-container {
         padding: 0;
         font-size: initial;
         line-height: 16px; }
+        .l-content-header-meta .wrapper .breadcrumbs .breadcrumb span.fa {
+          color: #00703c; }
       .l-content-header-meta .wrapper .breadcrumbs .breadcrumb a {
+        display: block;
+        float: left;
+        width: 100%;
         color: #00703c;
         border-bottom: 1px dotted #00703c;
         text-decoration: none; }
@@ -488,6 +496,9 @@ body .field-collection-container {
       display: block;
       float: left;
       padding: 5px; }
+      .l-content-header-meta .wrapper .breadcrumbs span.fa {
+        color: #444;
+        padding: 0px; }
 
 /* default bean styling */
 .block.block--bean {
@@ -2191,7 +2202,7 @@ html body div.jp-audio {
             width: 30px;
             height: 30px;
             border-radius: 50%; }
-            .l-header-third .container .l-region--header-third #block-menu-block-5 .menu-block-wrapper ul li a i {
+            .l-header-third .container .l-region--header-third #block-menu-block-5 .menu-block-wrapper ul li a span {
               color: white;
               font-size: 16px; }
     .l-header-third .container .l-region--header-third.open #block-menu-block-1 ul {

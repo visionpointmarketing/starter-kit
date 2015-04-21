@@ -126,8 +126,8 @@
   <div id="mobile-navbar" class="visible-phone">
     <?php $search_type = theme_get_setting('search_box_type'); ?>
     <div id="mobile-buttons" class="<?php print ($search_type == 'disabled') ? "search-disabled" : "search-enabled"; ?>">
-      <button id="mobile-menu-button"><i class="fa fa-bars"></i> Menu</button>
-      <button id="mobile-search-button"><i class="fa fa-search"></i> Search</button>
+      <button id="mobile-menu-button"><span class="fa fa-bars"></span> Menu</button>
+      <button id="mobile-search-button"><span class="fa fa-search"></span> Search</button>
     </div>
     <div id="mobile-menu-container">
       <?php print theme('links__system_mobile_menu', array('links' => $main_menu, 'attributes' => array('id' => 'mobile-main-menu', 'class' => 'links inline main-menu nav-count-' . $nav_count))); ?>

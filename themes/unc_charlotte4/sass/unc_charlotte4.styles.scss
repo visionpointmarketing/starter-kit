@@ -123,7 +123,9 @@ img{
 		}
 	}
 }
-
+.fa{
+	font-family:FontAwesome!important;
+}
 /* end base default styles */
 
 /* page-specific region styling */
@@ -531,8 +533,12 @@ body .field-collection-container{
 					padding:0;
 					font-size:initial;
 					line-height:16px;
+					&.fa{
+						color:$green;
+					}
 				}
 				a{
+					@include floatblock();
 					color:$green;
 					border-bottom:1px dotted $green;
 					text-decoration:none;
@@ -548,6 +554,10 @@ body .field-collection-container{
 				display:block;
 				float:left;
 				padding:5px;
+				&.fa{
+					color:#444;
+					padding:0px;
+				}
 			}
 		}
 	}
@@ -2190,7 +2200,7 @@ html{
 								width: 30px;
 								height: 30px;
 								border-radius: 50%;
-								i{
+								span{
 									color:white;
 									font-size:16px;
 								}
