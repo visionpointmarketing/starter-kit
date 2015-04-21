@@ -178,7 +178,7 @@
           </div>
         </li>
         <li id="a2"><div class="wrapper"><?php print render($page['above_content']); ?></div></li>
-
+            <a id="main-content"></a>
         <li id="a3"><div class="wrapper"><?php print render($page['below_content']); ?></div></li>
         <li id="a4"><div class="wrapper"><?php print render($page['content_footer']); ?></div></li>
       </ul>
