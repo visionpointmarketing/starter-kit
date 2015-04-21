@@ -268,7 +268,9 @@ function unc_charlotte4_header_utility() {
   
   $output = '<ul id="header-utility-links">';
   foreach ($utility_links as $link) {
-    $output .= '<li>' . $link . '</li>';
+    if($link !=""){
+      $output .= '<li>' . $link . '</li>';
+    }
   }
   if ($search_type == 'disabled') {
     $output .= '<li>' . l(theme_get_setting('utility_link_4_text'), theme_get_setting('utility_link_4_link')) . '</li>';
