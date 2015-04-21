@@ -103,6 +103,7 @@ form{
 	}
 	input{
 		@include floatblock();
+		float:right;
 		width:70%;
 	}
 }
@@ -119,6 +120,7 @@ img{
 	a{
 		color:$green;
 		text-decoration:none;
+		text-transform:uppercase;
 		&:hover{
 			text-decoration:underline;
 		}
@@ -835,7 +837,7 @@ body .field-collection-container{
 			&.two{
 				.field__item{
 					@include breakpoint($tab,true){
-						width:50%;
+						width:33vw;
 						height:25vw;
 					}
 				}
@@ -843,7 +845,7 @@ body .field-collection-container{
 			&.three{
 				.field__item{
 					@include breakpoint($tab,true){
-						width:33.3333%;
+						width:22vw;
 						height:16vw;
 					}
 				}
@@ -922,6 +924,7 @@ body .field-collection-container{
 						padding:10px 20px;
 						color:$green;
 						text-decoration:none;
+						text-transform:uppercase;
 						&:hover{
 							text-decoration:underline;
 						}
@@ -934,13 +937,17 @@ body .field-collection-container{
 					padding-right:20px;
 					&:after{
 						@include arrowafter();
-						top:calc(50% + 4px);
+						top:54px;
 					}
 					a{
 						color:$green;
 						display:block;
 						float:right;
 						text-decoration:none;
+						text-transform:uppercase;
+						top: 50px;
+						position: absolute;
+						right: 20px;
 						&:hover{
 							text-decoration:underline;
 						}
@@ -1190,9 +1197,10 @@ html #block-views-basic-page-featured-block{
 	}
 }
 #block-bean-home-pride-of-niner-nation{
-	padding:20px 20px 0 0px;
 	@include floatblock();
+	padding: 20px 0 40px 0px;
 	@include breakpoint($tab,true){
+		padding:20px 20px 0 0px;
 		width:calc(100% - 300px);
 	}
 	h2.block__title{
@@ -1390,6 +1398,7 @@ html #block-views-basic-page-featured-block{
 				a{
 					color:$green;
 					text-decoration:none;
+					text-transform:uppercase;
 					&:hover{
 						text-decoration:underline;
 					}
