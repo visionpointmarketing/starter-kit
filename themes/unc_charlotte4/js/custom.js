@@ -143,6 +143,7 @@ function frontWaypoints(){
 						jQuery('#a1').css('position', 'relative');
 						jQuery('#a2').css('position', 'relative');
 						jQuery('#a3').css('position', 'fixed');
+						jQuery('#a4').css('min-height', '510px');
 					} else {
 						jQuery('#a1').css('position', 'relative');
 						jQuery('#a2').css('position', 'fixed');
@@ -157,6 +158,7 @@ function frontWaypoints(){
 						jQuery('#a1').css('position', 'relative');
 						jQuery('#a2').css('position', 'relative');
 						jQuery('#a3').css('position', 'relative');
+						jQuery('#a4').css('min-height', '0');
 					} else {
 						jQuery('#a1').css('position', 'relative');
 						jQuery('#a2').css('position', 'relative');
