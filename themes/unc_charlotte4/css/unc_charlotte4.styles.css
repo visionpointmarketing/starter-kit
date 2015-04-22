@@ -1072,8 +1072,8 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
         left: -400px;
         max-width: 60%;
         display: none;
-        -webkit-transition: left 3s;
-        transition: left 3s;
+        -webkit-transition: left 2s ease-in-out;
+        transition: left 2s ease-in-out;
         padding-top: 20vw; }
         @media (min-width: 45em) {
           .block--views-events-block-1 .block__content .view-events .view-header {

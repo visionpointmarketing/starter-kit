@@ -1132,8 +1132,9 @@ html #block-views-basic-page-featured-block{
 				left:-400px;
 				max-width:60%;
 				display:none;
-				-webkit-transition: left 3s;
-				transition: left 3s;padding-top:20vw;
+				-webkit-transition: left 2s ease-in-out;
+				transition: left 2s ease-in-out;
+				padding-top:20vw;
 				@include breakpoint($tab,true){
 					display:block;
 				}

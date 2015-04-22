@@ -123,7 +123,7 @@ function frontWaypoints(){
 			},
 			{ offset: 0 }
 		);
-		jQuery('body.front #a1').waypoint(
+		jQuery('body.front #block-bean-homepage-billboard').waypoint(
 				function(direction){
 					if(direction == "down") {
 						jQuery('#a1').css('position', 'relative');
