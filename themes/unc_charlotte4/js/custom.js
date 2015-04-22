@@ -143,7 +143,7 @@ function frontWaypoints(){
 						jQuery('#a1').css('position', 'relative');
 						jQuery('#a2').css('position', 'relative');
 						jQuery('#a3').css('position', 'fixed');
-						jQuery('#a4').css('min-height', '50vh');
+						jQuery('#a4').css('min-height', '100vh');
 					} else {
 						jQuery('#a1').css('position', 'relative');
 						jQuery('#a2').css('position', 'fixed');
