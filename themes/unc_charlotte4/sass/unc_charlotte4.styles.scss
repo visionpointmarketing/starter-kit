@@ -134,7 +134,7 @@ body{
 		#a1{
 			z-index:998;
 			background:white;
-			border-bottom:8px solid $gold;
+			border-bottom:8px solid #444;
 			position:relative;
 /* 			&:after{
 				content:'';
@@ -149,7 +149,7 @@ body{
 			position:relative;
 			z-index:997;
 			background:#eee;
-			border-bottom:8px solid $gold;
+			border-bottom:5px solid #444;
 			min-height:100vh;
 			.wrapper{
 				max-width:$maxwidth;
