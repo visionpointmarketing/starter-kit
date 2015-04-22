@@ -150,6 +150,7 @@ body{
 			z-index:997;
 			background:#eee;
 			border-bottom:8px solid $gold;
+			min-height:100vh;
 			.wrapper{
 				max-width:$maxwidth;
 				padding:0 10px;
@@ -161,6 +162,7 @@ body{
 			position:relative;
 			z-index:996;
 			background:#eee;
+			min-height:100vh;
 			.wrapper{
 				max-width:$maxwidth;
 				padding:0 10px;
@@ -1131,7 +1133,7 @@ html #block-views-basic-page-featured-block{
 				max-width:60%;
 				display:none;
 				-webkit-transition: left 3s;
-				transition: left 3s;
+				transition: left 3s;padding-top:20vw;
 				@include breakpoint($tab,true){
 					display:block;
 				}

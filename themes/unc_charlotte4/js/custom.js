@@ -117,13 +117,18 @@ function addLoadEvent(func) {
 }
 function frontWaypoints(){
 	if(isDesktop()){
+		jQuery('.block--views-events-block-1 .view-header').waypoint(
+			function(direction){
+				jQuery(this).addClass('open');
+			},
+			{ offset: 0 }
+		);
 		jQuery('body.front #a1').waypoint(
 				function(direction){
 					if(direction == "down") {
 						jQuery('#a1').css('position', 'relative');
 						jQuery('#a2').css('position', 'fixed');
 						jQuery('#a3').css('position', 'relative');
-						jQuery('.block--views-events-block-1 .view-header').addClass('open');
 					} else {
 						jQuery('#a1').css('position', 'relative');
 						jQuery('#a2').css('position', 'relative');
