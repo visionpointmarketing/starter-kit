@@ -1,5 +1,6 @@
 jQuery(document).ready(function () {
-	//when an <a> tag is clicked in the on-page fixed nav
+
+/*	//when an <a> tag is clicked in the on-page fixed nav
 	jQuery('#nav a[href^="#"]').on('click', function(event) {
 		//get the object we're going to
 		var target = jQuery( jQuery(this).attr('href') );
@@ -26,5 +27,5 @@ jQuery(document).ready(function () {
 		//build the selector to activate
 		var selector = '#nav li.a' + target_id + ' a';
 		jQuery(selector).addClass('active');
-	});
+	});*/
 });

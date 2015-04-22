@@ -1,4 +1,10 @@
+window.onresize = function() {
+	frontWaypoints();
+}
+
 jQuery( document ).ready(function () {
+
+	frontWaypoints();
 
 	var userFeed = new Instafeed({
 		get: 'user',
@@ -107,6 +113,111 @@ function addLoadEvent(func) {
 			}
 			func();
 		}
+	}
+}
+function frontWaypoints(){
+	if(isDesktop()){
+		jQuery('body.front #a1').waypoint(
+				function(direction){
+					if(direction == "down") {
+						jQuery('#a1').css('position', 'relative');
+						jQuery('#a2').css('position', 'fixed');
+						jQuery('#a3').css('position', 'relative');
+						jQuery('.block--views-events-block-1 .view-header').addClass('open');
+					} else {
+						jQuery('#a1').css('position', 'relative');
+						jQuery('#a2').css('position', 'relative');
+						jQuery('#a3').css('position', 'relative');
+					}
+				},
+				{ offset: 157 }
+		);
+		jQuery('body.front #a2').waypoint(
+				function(direction){
+					if(direction == "down") {
+						jQuery('#a1').css('position', 'relative');
+						jQuery('#a2').css('position', 'relative');
+						jQuery('#a3').css('position', 'fixed');
+					} else {
+						jQuery('#a1').css('position', 'relative');
+						jQuery('#a2').css('position', 'fixed');
+						jQuery('#a3').css('position', 'relative');
+					}
+				},
+				{ offset: 148 }
+		);
+		jQuery('body.front #a3').waypoint(
+				function(direction){
+					if(direction == "down") {
+						jQuery('#a1').css('position', 'relative');
+						jQuery('#a2').css('position', 'relative');
+						jQuery('#a3').css('position', 'relative');
+					} else {
+						jQuery('#a1').css('position', 'relative');
+						jQuery('#a2').css('position', 'relative');
+						jQuery('#a3').css('position', 'fixed');
+					}
+				},
+				{ offset: 141 }
+		);
+	}else{
+		jQuery('body.front #a1').waypoint(
+				function(direction){
+					if(direction == "down") {
+						jQuery('#a1').css('position', 'relative');
+						jQuery('#a2').css('position', 'relative');
+						jQuery('#a3').css('position', 'relative');
+						jQuery('.block--views-events-block-1 .view-header').addClass('open');
+					} else {
+						jQuery('#a1').css('position', 'relative');
+						jQuery('#a2').css('position', 'relative');
+						jQuery('#a3').css('position', 'relative');
+					}
+				},
+				{ offset: 157 }
+		);
+		jQuery('body.front #a2').waypoint(
+				function(direction){
+					if(direction == "down") {
+						jQuery('#a1').css('position', 'relative');
+						jQuery('#a2').css('position', 'relative');
+						jQuery('#a3').css('position', 'relative');
+					} else {
+						jQuery('#a1').css('position', 'relative');
+						jQuery('#a2').css('position', 'relative');
+						jQuery('#a3').css('position', 'relative');
+					}
+				},
+				{ offset: 148 }
+		);
+		jQuery('body.front #a3').waypoint(
+				function(direction){
+					if(direction == "down") {
+						jQuery('#a1').css('position', 'relative');
+						jQuery('#a2').css('position', 'relative');
+						jQuery('#a3').css('position', 'relative');
+					} else {
+						jQuery('#a1').css('position', 'relative');
+						jQuery('#a2').css('position', 'relative');
+						jQuery('#a3').css('position', 'relative');
+					}
+				},
+				{ offset: 141 }
+		);
+	}
+}
+function isDesktop() {
+	var w = window,
+	d = document,
+	e = d.documentElement,
+	g = d.getElementsByTagName('body')[0],
+	x = w.innerWidth || e.clientWidth || g.clientWidth,
+	y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+	//console.log(x);
+	if(x >= 1200) {
+		return true;
+	} else {
+		return false;
 	}
 }
 addLoadEvent(preloader);

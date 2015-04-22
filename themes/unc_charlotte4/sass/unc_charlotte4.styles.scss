@@ -131,8 +131,35 @@ img{
 /* page-specific region styling */
 body{
 	&.front{
-		#a2,
+		#a1{
+			z-index:998;
+			background:white;
+			border-bottom:8px solid $gold;
+			position:relative;
+/* 			&:after{
+				content:'';
+				height:5px;
+				display:block;
+				float:left;
+				width:100%;
+				background:$gold;
+			} */
+		}
+		#a2{
+			position:relative;
+			z-index:997;
+			background:#eee;
+			border-bottom:8px solid $gold;
+			.wrapper{
+				max-width:$maxwidth;
+				padding:0 10px;
+				display:block;
+				margin:auto;
+			}
+		}
 		#a3{
+			position:relative;
+			z-index:996;
 			background:#eee;
 			.wrapper{
 				max-width:$maxwidth;
@@ -140,6 +167,11 @@ body{
 				display:block;
 				margin:auto;
 			}
+		}
+		#a4{
+			position:relative;
+			z-index:995;
+			background:white;
 		}
 		h1{
 			font-family: times,"times new roman",serif;
@@ -1095,14 +1127,19 @@ html #block-views-basic-page-featured-block{
 				position:absolute;
 				bottom:-14px;
 				z-index:2;
-				left:-25px;
+				left:-400px;
 				max-width:60%;
 				display:none;
+				-webkit-transition: left 3s;
+				transition: left 3s;
 				@include breakpoint($tab,true){
 					display:block;
 				}
 				@include breakpoint($tab-large,true){
 					max-width:40%;
+				}
+				&.open{
+					left:-25px;
 				}
 			}
 			.view-content{
@@ -2092,6 +2129,8 @@ html{
 .l-header-third{
 	@include floatblock();
 	background:#eee;
+	z-index:999;
+	position:relative;
 	.container{
 		display: block;
 		width: 100%;
@@ -2131,7 +2170,7 @@ html{
 							}
 							&.active-trail,
 							&:hover{
-								border-bottom:1px solid $green;
+								border-bottom:1px solid $green!important;
 								a{
 									color:$green;
 									border-bottom:5px solid $green;

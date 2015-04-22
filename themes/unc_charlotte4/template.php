@@ -268,7 +268,8 @@ function unc_charlotte4_header_utility() {
   
   $output = '<ul id="header-utility-links">';
   foreach ($utility_links as $link) {
-    if($link !=""){
+    //need this check to make sure we don't print an empty link
+    if($link != '<a href="/"></a>'){
       $output .= '<li>' . $link . '</li>';
     }
   }
