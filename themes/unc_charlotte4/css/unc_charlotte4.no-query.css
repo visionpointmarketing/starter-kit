@@ -308,7 +308,9 @@ body {
   display: block;
   float: left;
   width: 100%;
-  display: none; }
+  display: none;
+  position: relative;
+  z-index: 999; }
   #mobile-navbar #mobile-buttons {
     display: block;
     float: left;

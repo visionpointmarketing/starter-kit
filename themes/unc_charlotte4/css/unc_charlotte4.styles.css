@@ -315,7 +315,9 @@ body {
 #mobile-navbar {
   display: block;
   float: left;
-  width: 100%; }
+  width: 100%;
+  position: relative;
+  z-index: 999; }
   @media (min-width: 45em) {
     #mobile-navbar {
       display: none; } }

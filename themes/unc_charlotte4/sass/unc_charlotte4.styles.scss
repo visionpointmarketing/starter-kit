@@ -363,6 +363,8 @@ body{
 	@include breakpoint($tab,true){
 		display:none;
 	}
+	position:relative;
+	z-index:999;
 	#mobile-buttons{
 		@include floatblock();
 		#mobile-menu-button{
