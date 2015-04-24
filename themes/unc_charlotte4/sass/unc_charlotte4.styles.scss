@@ -834,8 +834,7 @@ body .field-collection-container{
 					}
 				}
 				img{
-					display:block;
-					float:left;
+					@include floatblock();
 					height:100%;
 					position:absolute;
 					margin:auto;
@@ -1931,6 +1930,11 @@ html #block-views-basic-page-featured-block{
 				display:none;
 			}
 		}
+		.more-link{
+			max-width:$maxwidth;
+			margin:0;
+			float:none;
+		}
 	}
 }
 /* images */
@@ -2627,6 +2631,37 @@ html{
 		}
 	}
 }
+
+.view-id-media{
+	//video archive
+	&.view-display-id-page_1{
+		.views-row{
+			@include floatblock();
+			padding:5px;
+		}
+	}
+	//image archive
+	&.view-display-id-page_2{
+		.views-row{
+			@include floatblock();
+			padding:5px;
+			@include breakpoint($tab,true){
+				width:50%;
+			}
+			@include breakpoint($desk,true){
+				width:33.3333%;
+			}
+		}
+	}
+	//audio archive
+	&.view-display-id-page_3{
+		.views-row{
+			@include floatblock();
+			padding:5px;
+		}
+	}
+}
+
 /* end styling for specific node pages */
 .l-footer{
 	@include floatblock();

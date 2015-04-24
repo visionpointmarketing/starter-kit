@@ -775,6 +775,7 @@ body .field-collection-container {
         .block.block--bean .bean-showcase .showcase-elements .field__item img {
           display: block;
           float: left;
+          width: 100%;
           height: 100%;
           position: absolute;
           margin: auto;
@@ -1881,6 +1882,10 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
           width: 64vw; } }
   #block-views-media-block-3 .block__content .view-content .views-field-field-caption {
     display: none; }
+#block-views-media-block-3 .block__content .more-link {
+  max-width: 1200px;
+  margin: 0;
+  float: none; }
 
 /* images */
 #block-views-media-block-1 {
@@ -2597,6 +2602,28 @@ html body div.jp-audio {
     color: #444;
     padding: 0 10px;
     width: calc(100% - 90px); }
+
+.view-id-media.view-display-id-page_1 .views-row {
+  display: block;
+  float: left;
+  width: 100%;
+  padding: 5px; }
+.view-id-media.view-display-id-page_2 .views-row {
+  display: block;
+  float: left;
+  width: 100%;
+  padding: 5px; }
+  @media (min-width: 45em) {
+    .view-id-media.view-display-id-page_2 .views-row {
+      width: 50%; } }
+  @media (min-width: 70em) {
+    .view-id-media.view-display-id-page_2 .views-row {
+      width: 33.3333%; } }
+.view-id-media.view-display-id-page_3 .views-row {
+  display: block;
+  float: left;
+  width: 100%;
+  padding: 5px; }
 
 /* end styling for specific node pages */
 .l-footer {
