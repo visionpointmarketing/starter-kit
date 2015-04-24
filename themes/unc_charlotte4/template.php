@@ -20,7 +20,7 @@ function unc_charlotte4_breadcrumb($variables) {
     $i = 0;
     while ( $i < $array_size) {
       if ($i == 0) {
-        $crumbs .= '<li class="breadcrumb"><a href="/"><span class="fa fa-home" aria-hidden="true"></span></a></li><span><span class="fa fa-th-large" aria-hidden="true"></span></span>';
+        $crumbs .= '<li class="breadcrumb"><a href="/"><span class="fa fa-home" aria-hidden="true"></span></a></li><span><span class="fa fa-angle-right" aria-hidden="true"></span></span>';
         $i++;
       }
       else{
@@ -30,7 +30,7 @@ function unc_charlotte4_breadcrumb($variables) {
         }
         $crumbs .=  '">' . $breadcrumb[$i].'</li>';
         if ($i+1 != $array_size) {
-          $crumbs .= '<span><span class="fa fa-th-large" aria-hidden="true"></span></span>';
+          $crumbs .= '<span><span class="fa fa-angle-right" aria-hidden="true"></span></span>';
         }
         $i++;
       }
@@ -385,3 +385,14 @@ function unc_charlotte4_menu_link(array $variables) {
 function unc_charlotte4_date_all_day_label() {
   return '<span class="date-all-day-tag">(' . t('All day') . ')</span>';
 }
+
+/*add ie-specific stylesheet*/
+drupal_add_css(
+  path_to_theme() . '/css/ie.css',
+  array(
+    'browsers' => array(
+      'IE' => TRUE,
+      '!IE' => FALSE
+    )
+  )
+);

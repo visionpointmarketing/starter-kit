@@ -175,7 +175,7 @@ body{
 		}
 		h1{
 			font-family: times,"times new roman",serif;
-			text-transform:initial;
+			text-transform:none;
 			font-weight:normal;
 		}
 	}
@@ -221,21 +221,24 @@ body{
 			background: url("/sites/all/themes/unc_charlotte4/img/header-logo-watermark.png") repeat-x scroll center center #FFFFFF;
 			height: 100px;
 			#logo-wrapper{
-				width: 20%;
-				margin-left: 2%;
+				width:30%;
 				float: left;
+				margin-left: 2%;
+				margin-right:2%;
 				margin-top:25px;
 				@include breakpoint($tab,true){
+					width: 20%;
 					position: relative;
 					top: 20px;
+					margin-right:0;
 					margin-top:0;
 				}
 			}
 			#branding{
+				width:66%;
 				display:block;
 				float:left;
 				padding-left:10px;
-				width:73%;
 				@include breakpoint($tab,true){
 					height:100px;
 					width:50%;
@@ -584,7 +587,7 @@ body .field-collection-container{
 			}
 			span{
 				@include f-text();
-				font-size:9px;
+				font-size:12px;
 				line-height:16px;
 				display:block;
 				float:left;
@@ -700,7 +703,7 @@ body .field-collection-container{
 					.entity-field-collection-item{
 						.field--name-field-ask-question{
 							
-							font-weight:bold;
+							
 							.field__item{
 								width:auto;
 								padding:5px;
@@ -767,12 +770,13 @@ body .field-collection-container{
 			text-align: center;
 			position: relative;
 			top: -64px;
-			background: white;
+			background: #eee;
 			width:auto;
 			@include breakpoint($tab,true){
 				width: 400px;
 				font-size:42px;
 				line-height:42px;
+				background:white;
 			}
 			margin: auto;
 		}
@@ -806,7 +810,8 @@ body .field-collection-container{
 			@include floatblock();
 			padding-top:20px;
 			@include breakpoint($tab,true){
-				width:75%;
+				width:auto;
+				float:right;
 				padding-top:0;
 			}
 			.field__item{
@@ -814,9 +819,9 @@ body .field-collection-container{
 				position:relative;
 				overflow:hidden;
 				height:60vw;
-				margin-top:20px;
+				margin:20px 0;
 				@include breakpoint($tab,true){
-					margin-top:0;
+					margin:0 20px;
 				}
 				.field--name-field-image-upload{
 					.field__items{
@@ -838,6 +843,7 @@ body .field-collection-container{
 					bottom: -9999px;
 					left: -9999px;
 					right: -9999px;
+					max-width:auto;
 				}
 				iframe{
 					max-width:100%;
@@ -887,53 +893,45 @@ body .field-collection-container{
 								color:white;
 								text-decoration:none;
 								height:100%;
-								padding:60% 20px 20px 20px;
 							}
 						}
 					}
 				}
 			}
-			&.one{
-				.field__item{
-					@include breakpoint($tab,true){
-						width:100%;
-						height:50vw;
-					}
-					.field--name-field-showcased-image{
-						.field__item{
-							width:100%;
-						}
-					}
-				}
-			}
+			&.one{}
 			&.two{
-				.field__item{
-					@include breakpoint($tab,true){
-						width:48%;
-						margin:1%;
-						height:25vw;
-					}
-					.field--name-field-showcased-image{
-						.field__item{
-							width:100%;
+				.field__items{
+					.field__item{
+						width:100%;
+						height:100vw;
+						a{
+							padding:80vw 20px 0 20px;
+						}
+						@include breakpoint($tab,true){
+							width:210px;
+							height:210px;
+							a{
+								padding:160px 20px 0 20px;
+							}
+						}
+						@include breakpoint($tab-large){
+							width:275px;
+							height:275px;
+							a{
+								padding:235px 20px 0 20px;
+							}
+						}
+						@include breakpoint($desk,true){
+							width:360px;
+							height:360px;
+							a{
+								padding:300px 20px 0 20px;
+							}
 						}
 					}
 				}
 			}
-			&.three{
-				.field__item{
-					@include breakpoint($tab,true){
-						width:31%;
-						margin:1%;
-						height:16vw;
-					}
-					.field--name-field-showcased-image{
-						.field__item{
-							width:100%;
-						}
-					}
-				}
-			}
+			&.three{}
 		}
 	}
 	.bean-subsections{
@@ -946,6 +944,7 @@ body .field-collection-container{
 			padding: 50px 0 20px 0;
 			margin: -20px 0 10px 0;
 			.field__item{
+				margin-top:20px;
 				.field--name-field-subsection-image{
 					.field__items{
 						.field__item{
@@ -1189,6 +1188,9 @@ html #block-views-basic-page-featured-block{
 						@include floatblock();
 						width:90px;
 						@include breakpoint($tab,true){
+							width:120px;
+						}
+						@include breakpoint($tab,true){
 							width:100%;
 						}
 						margin:auto;
@@ -1196,6 +1198,9 @@ html #block-views-basic-page-featured-block{
 							display:block;
 							margin:auto;
 							width:90px;
+							@include breakpoint($tab,true){
+								width:120px;
+							}
 							.d-date{
 								display: block;
 								float:left;
@@ -1206,6 +1211,7 @@ html #block-views-basic-page-featured-block{
 								width:90px;
 								@include breakpoint($tab,true){
 									padding:15px 0;
+									width:120px;
 								}
 								.month{
 									@include f-impact(22px);
@@ -1278,7 +1284,10 @@ html #block-views-basic-page-featured-block{
 								padding:10px 10px 0 10px;
 								color:#444;
 								width:100%;
-								text-align:center;
+								text-align:left;
+								@include breakpoint($tab,true){
+									text-align:center;
+								}
 								@include breakpoint($desk,true){
 									width:50%;
 									padding:5px 0;
@@ -1364,7 +1373,7 @@ html #block-views-basic-page-featured-block{
 				width:100%;
 				background:$green;
 				box-sizing:border-box;
-				margin-bottom:20px;
+				margin-bottom:30px;
 				h2{
 					@include f-impact(36px);
 					display:block;
@@ -2210,19 +2219,23 @@ html{
 							}
 							a{
 								@include f-impact(20px);
-								padding:0 10px;
+								padding:0 20px;
 								color:$green;
 								text-decoration:none;
 								width:100%;
 								height:$main-nav-height;
 								display:block;
 								line-height:$main-nav-height;
-								font-weight:bold;
+								
 								@include breakpoint($tab,true){
-									font-size:15px;
+									font-size:14px;
+									padding:0 13px;
 								}
 								@include breakpoint($tab-large,true){
-									font-size:20px;
+									font-size:19px;
+								}
+								@include breakpoint($desk,true){
+									padding:0 25px;
 								}
 							}
 							@include breakpoint($tab,true){
@@ -2369,20 +2382,20 @@ html{
 						&:hover{
 							background:none;
 							border:none;
-							font-weight:bold;
+							
 						}
 					}
 				&.active-trail{
 						a{
 							background:none;
 							border:none;
-							font-weight:bold;
+							
 						}
 						&.active{
 							&>a{
 								background:none;
 								border:none;
-								font-weight:bold;
+								
 							}
 						}
 					}
@@ -2555,7 +2568,7 @@ html{
 				.menu-block-wrapper{
 					ul.menu{
 						margin:0;
-						padding:10px 0 0 0;
+						padding:7px 0 0 0;
 						@include floatblock();
 						li{
 							@include floatblock();
@@ -2569,7 +2582,7 @@ html{
 								@include floatblock();
 								color:white;
 								text-decoration:none;
-								padding:14px 20px;
+								padding:10px 20px;
 								text-align:center;
 								line-height:30px;
 								@include breakpoint($tab,true){
@@ -2611,7 +2624,7 @@ html{
 							@include floatblock();
 							width:auto;
 							list-style:none;
-							margin:25px 10px;
+							margin:20px 10px;
 							a{
 								@include floatblock();
 								color:#fff;
@@ -2758,8 +2771,10 @@ html{
 	              border-bottom: 0 none;
 	              color: #666666 !important;
 	              font-family: arial,helvetica,sans-serif;
-	              font-size: 1.13em;
+	              font-size: 14px;
 	              font-weight: bold;
+	              text-align:left;
+	              padding-left:15px;
 	              @include breakpoint($tab,true){
 		              margin-bottom: 5px;
 		              margin-right: 0px;
