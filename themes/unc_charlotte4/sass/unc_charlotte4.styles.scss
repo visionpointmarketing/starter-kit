@@ -164,8 +164,6 @@ body{
 			background:#eee;
 			min-height:100vh;
 			.wrapper{
-				max-width:$maxwidth;
-				padding:0 10px;
 				display:block;
 				margin:auto;
 			}
@@ -540,6 +538,7 @@ body{
 body .field-collection-view{
 	border:none;
 	margin:0;
+	padding:0;
 }
 body .field-collection-container{
 	border:none;
@@ -817,7 +816,6 @@ body .field-collection-container{
 				height:60vw;
 				margin-top:20px;
 				@include breakpoint($tab,true){
-					padding:0 20px;
 					margin-top:0;
 				}
 				.field--name-field-image-upload{
@@ -851,33 +849,46 @@ body .field-collection-container{
 						box-sizing:border-box;
 					}
 				}
-				.field--name-field-caption{
-					@include floatblock();
-					position:relative;
-					height:100%;
+				.field--name-field-showcased-image{
 					.field__item{
-						@include f-impact(22px);
-						color:white;
-						text-shadow:1px 1px 0px rgba(0,0,0,0.8);
-						width: 100%;
-						line-height:24px;
-						padding:15px;
-						box-sizing: border-box;
-						position: absolute;
-						bottom: 20px;
-						height:auto;
-						margin-top:0;
-						@include v-gradient();
-						@include breakpoint($tab,true){
-							font-size:16px;
-							line-height:18px;
-							padding: 20px 15px;
-							bottom:0;
-						}
-						@include breakpoint($desk,true){
-							font-size:30px;
-							line-height:32px;
-							padding: 20px 15px;
+						margin:0;
+					}
+				}
+				.field--name-field-showcase-link{
+					@include floatblock();
+					position:absolute;
+					height:100%;
+					.field__items{
+						@include floatblock();
+						height:100%;
+						.field__item{
+							@include floatblock();
+							height:100%;
+							@include f-impact(22px);
+							color:white;
+							text-shadow:1px 1px 0px rgba(0,0,0,0.8);
+							line-height:24px;
+							box-sizing: border-box;
+							position: absolute;
+							bottom: 0;
+							padding:0px;
+							margin:0;
+							@include v-gradient();
+							@include breakpoint($tab,true){
+								font-size:16px;
+								line-height:18px;
+							}
+							@include breakpoint($desk,true){
+								font-size:24px;
+								line-height:28px;
+							}
+							a{
+								@include floatblock();
+								color:white;
+								text-decoration:none;
+								height:100%;
+								padding:60% 20px 20px 20px;
+							}
 						}
 					}
 				}
@@ -888,21 +899,38 @@ body .field-collection-container{
 						width:100%;
 						height:50vw;
 					}
+					.field--name-field-showcased-image{
+						.field__item{
+							width:100%;
+						}
+					}
 				}
 			}
 			&.two{
 				.field__item{
 					@include breakpoint($tab,true){
-						width:50%;
+						width:48%;
+						margin:1%;
 						height:25vw;
+					}
+					.field--name-field-showcased-image{
+						.field__item{
+							width:100%;
+						}
 					}
 				}
 			}
 			&.three{
 				.field__item{
 					@include breakpoint($tab,true){
-						width:33%;
+						width:31%;
+						margin:1%;
 						height:16vw;
+					}
+					.field--name-field-showcased-image{
+						.field__item{
+							width:100%;
+						}
 					}
 				}
 			}
@@ -918,7 +946,7 @@ body .field-collection-container{
 			padding: 50px 0 20px 0;
 			margin: -20px 0 10px 0;
 			.field__item{
-				.field--name-field-subsection-gallery{
+				.field--name-field-subsection-image{
 					.field__items{
 						.field__item{
 							display:none;
@@ -936,19 +964,24 @@ body .field-collection-container{
 							}
 						}
 					}
-					.field--name-field-caption{
-						display:none;
-					}
 				}
-				.field--name-field-subsection-title{
+				.field--name-field-subsection-link{
 					@include f-impact(20px);
 					text-align:left;
 					float:right;
 					padding-left:20px;
 					width: calc(100% - 80px);
 					@include breakpoint($desk,true){
+						font-size:28px;
 						float: left;
 						width: calc(100% - 150px);
+					}
+					a{
+						text-decoration:none;
+						color:#444;
+						&:hover{
+							text-decoration:underline;
+						}
 					}
 				}
 				.field--name-field-subsection-intro{
@@ -961,25 +994,6 @@ body .field-collection-container{
 						width: calc(100% - 150px);
 					}
 					padding: 10px 20px;
-				}
-				.field--name-field-subsection-link{
-					@include floatblock();
-					width:auto;
-					position:relative;
-					&:after{
-						@include arrowafter();
-					}
-					a{
-						@include f-impact(18px);
-						display:block;
-						float:left;
-						padding:10px 20px;
-						color:$green;
-						text-decoration:none;
-						&:hover{
-							text-decoration:underline;
-						}
-					}
 				}
 			}
 			.field--name-field-promo-read-more{
@@ -1440,6 +1454,13 @@ html #block-views-basic-page-featured-block{
 	@include breakpoint($tab,true){
 		padding: 20px 20px 0 0px;
 		background:url("/sites/all/themes/unc_charlotte4/img/0775-1935.png") no-repeat right bottom;
+		max-width:$maxwidth;
+		margin:auto;
+		float:none;
+		min-height:800px;
+	}
+	@include breakpoint($desk,true){
+		min-height:900px;
 	}
 	h2.block__title{
 		display:none;
@@ -1531,8 +1552,14 @@ html #block-views-basic-page-featured-block{
 #block-bean-facilities-showcase{
 	@include breakpoint($tab,true){
 		background:url("/sites/all/themes/unc_charlotte4/img/stadium_blur.jpg") no-repeat center bottom;
+		background-size:cover;
 	}
-	background-size:cover;
+	h2.block__title{
+		background:#eee;
+		@include breakpoint($tab,true){
+			background:white;
+		}
+	}
 	.block__content{
 		max-width:$maxwidth;
 		padding:0 10px;
@@ -2177,7 +2204,7 @@ html{
 							&:hover{
 								border-bottom:1px solid $green!important;
 								a{
-									color:$green;
+									color:#444;
 									border-bottom:5px solid $green;
 								}
 							}

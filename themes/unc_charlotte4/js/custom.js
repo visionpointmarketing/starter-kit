@@ -136,7 +136,6 @@ function frontWaypoints(){
 						jQuery('#a3').css('position', 'relative');
 						jQuery('#a4').css('min-height', '0');
 					}
-					console.log(direction);
 				},
 				{ offset: 157 }
 		);

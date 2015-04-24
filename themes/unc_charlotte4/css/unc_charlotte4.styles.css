@@ -162,8 +162,6 @@ body {
     background: #eee;
     min-height: 100vh; }
     body.front #a3 .wrapper {
-      max-width: 1200px;
-      padding: 0 10px;
       display: block;
       margin: auto; }
   body.front #a4 {
@@ -477,7 +475,8 @@ body {
 
 body .field-collection-view {
   border: none;
-  margin: 0; }
+  margin: 0;
+  padding: 0; }
 
 body .field-collection-container {
   border: none; }
@@ -765,7 +764,6 @@ body .field-collection-container {
         margin-top: 20px; }
         @media (min-width: 45em) {
           .block.block--bean .bean-showcase .showcase-elements .field__item {
-            padding: 0 20px;
             margin-top: 0; } }
         .block.block--bean .bean-showcase .showcase-elements .field__item .field--name-field-image-upload .field__items .field__item {
           display: none; }
@@ -787,62 +785,84 @@ body .field-collection-container {
           width: 100%;
           padding: 0 20px;
           box-sizing: border-box; }
-        .block.block--bean .bean-showcase .showcase-elements .field__item .field--name-field-caption {
+        .block.block--bean .bean-showcase .showcase-elements .field__item .field--name-field-showcased-image .field__item {
+          margin: 0; }
+        .block.block--bean .bean-showcase .showcase-elements .field__item .field--name-field-showcase-link {
           display: block;
           float: left;
           width: 100%;
-          position: relative;
+          position: absolute;
           height: 100%; }
-          .block.block--bean .bean-showcase .showcase-elements .field__item .field--name-field-caption .field__item {
-            font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
-            font-weight: 600;
-            text-transform: uppercase;
-            color: #444;
-            font-size: 22px;
-            line-height: 22px;
-            color: white;
-            text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8);
+          .block.block--bean .bean-showcase .showcase-elements .field__item .field--name-field-showcase-link .field__items {
+            display: block;
+            float: left;
             width: 100%;
-            line-height: 24px;
-            padding: 15px;
-            box-sizing: border-box;
-            position: absolute;
-            bottom: 20px;
-            height: auto;
-            margin-top: 0;
-            *zoom: 1;
-            filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF000000', endColorstr='#FF730000');
-            background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0icmdiYSgwLCAwLCAwLCAwKSIvPjxzdG9wIG9mZnNldD0iMTglIiBzdG9wLWNvbG9yPSJyZ2JhKDAsIDAsIDAsIDApIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJyZ2JhKDAsIDAsIDAsIDAuNDUpIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
-            background-size: 100%;
-            background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(18%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.45)));
-            background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 18%, rgba(0, 0, 0, 0.45) 100%);
-            background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 18%, rgba(0, 0, 0, 0.45) 100%);
-            background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 18%, rgba(0, 0, 0, 0.45) 100%);
-            background-image: linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 18%, rgba(0, 0, 0, 0.45) 100%);
-            filter: none \0/IE9; }
-            @media (min-width: 45em) {
-              .block.block--bean .bean-showcase .showcase-elements .field__item .field--name-field-caption .field__item {
-                font-size: 16px;
-                line-height: 18px;
-                padding: 20px 15px;
-                bottom: 0; } }
-            @media (min-width: 70em) {
-              .block.block--bean .bean-showcase .showcase-elements .field__item .field--name-field-caption .field__item {
-                font-size: 30px;
-                line-height: 32px;
-                padding: 20px 15px; } }
+            height: 100%; }
+            .block.block--bean .bean-showcase .showcase-elements .field__item .field--name-field-showcase-link .field__items .field__item {
+              display: block;
+              float: left;
+              width: 100%;
+              height: 100%;
+              font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
+              font-weight: 600;
+              text-transform: uppercase;
+              color: #444;
+              font-size: 22px;
+              line-height: 22px;
+              color: white;
+              text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8);
+              line-height: 24px;
+              box-sizing: border-box;
+              position: absolute;
+              bottom: 0;
+              padding: 0px;
+              margin: 0;
+              *zoom: 1;
+              filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF000000', endColorstr='#FF730000');
+              background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0icmdiYSgwLCAwLCAwLCAwKSIvPjxzdG9wIG9mZnNldD0iMTglIiBzdG9wLWNvbG9yPSJyZ2JhKDAsIDAsIDAsIDApIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJyZ2JhKDAsIDAsIDAsIDAuNDUpIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+              background-size: 100%;
+              background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(18%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.45)));
+              background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 18%, rgba(0, 0, 0, 0.45) 100%);
+              background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 18%, rgba(0, 0, 0, 0.45) 100%);
+              background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 18%, rgba(0, 0, 0, 0.45) 100%);
+              background-image: linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 18%, rgba(0, 0, 0, 0.45) 100%);
+              filter: none \0/IE9; }
+              @media (min-width: 45em) {
+                .block.block--bean .bean-showcase .showcase-elements .field__item .field--name-field-showcase-link .field__items .field__item {
+                  font-size: 16px;
+                  line-height: 18px; } }
+              @media (min-width: 70em) {
+                .block.block--bean .bean-showcase .showcase-elements .field__item .field--name-field-showcase-link .field__items .field__item {
+                  font-size: 24px;
+                  line-height: 28px; } }
+              .block.block--bean .bean-showcase .showcase-elements .field__item .field--name-field-showcase-link .field__items .field__item a {
+                display: block;
+                float: left;
+                width: 100%;
+                color: white;
+                text-decoration: none;
+                height: 100%;
+                padding: 60% 20px 20px 20px; }
       @media (min-width: 45em) {
         .block.block--bean .bean-showcase .showcase-elements.one .field__item {
           width: 100%;
           height: 50vw; } }
+      .block.block--bean .bean-showcase .showcase-elements.one .field__item .field--name-field-showcased-image .field__item {
+        width: 100%; }
       @media (min-width: 45em) {
         .block.block--bean .bean-showcase .showcase-elements.two .field__item {
-          width: 50%;
+          width: 48%;
+          margin: 1%;
           height: 25vw; } }
+      .block.block--bean .bean-showcase .showcase-elements.two .field__item .field--name-field-showcased-image .field__item {
+        width: 100%; }
       @media (min-width: 45em) {
         .block.block--bean .bean-showcase .showcase-elements.three .field__item {
-          width: 33%;
+          width: 31%;
+          margin: 1%;
           height: 16vw; } }
+      .block.block--bean .bean-showcase .showcase-elements.three .field__item .field--name-field-showcased-image .field__item {
+        width: 100%; }
   .block.block--bean .bean-subsections > .content {
     display: block;
     float: left;
@@ -851,7 +871,7 @@ body .field-collection-container {
     border-bottom: 5px solid #444;
     padding: 50px 0 20px 0;
     margin: -20px 0 10px 0; }
-    .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-gallery .field__items .field__item {
+    .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-image .field__items .field__item {
       display: none;
       float: left;
       width: 80px;
@@ -859,14 +879,12 @@ body .field-collection-container {
       border-radius: 50%;
       overflow: hidden; }
       @media (min-width: 70em) {
-        .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-gallery .field__items .field__item {
+        .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-image .field__items .field__item {
           width: 150px;
           height: 150px; } }
-      .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-gallery .field__items .field__item:first-child {
+      .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-image .field__items .field__item:first-child {
         display: block; }
-    .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-gallery .field--name-field-caption {
-      display: none; }
-    .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-title {
+    .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-link {
       font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
       font-weight: 600;
       text-transform: uppercase;
@@ -878,9 +896,15 @@ body .field-collection-container {
       padding-left: 20px;
       width: calc(100% - 80px); }
       @media (min-width: 70em) {
-        .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-title {
+        .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-link {
+          font-size: 28px;
           float: left;
           width: calc(100% - 150px); } }
+      .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-link a {
+        text-decoration: none;
+        color: #444; }
+        .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-link a:hover {
+          text-decoration: underline; }
     .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-intro {
       font-family: arial;
       color: #444;
@@ -894,35 +918,6 @@ body .field-collection-container {
         .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-intro {
           float: left;
           width: calc(100% - 150px); } }
-    .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-link {
-      display: block;
-      float: left;
-      width: 100%;
-      width: auto;
-      position: relative; }
-      .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-link:after {
-        content: '\f04b';
-        font-family: FontAwesome;
-        font-size: 8px;
-        padding-left: 10px;
-        position: absolute;
-        top: calc(50% - 4px);
-        right: 5px;
-        color: #00703c; }
-      .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-link a {
-        font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
-        font-weight: 600;
-        text-transform: uppercase;
-        color: #444;
-        font-size: 18px;
-        line-height: 18px;
-        display: block;
-        float: left;
-        padding: 10px 20px;
-        color: #00703c;
-        text-decoration: none; }
-        .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-link a:hover {
-          text-decoration: underline; }
     .block.block--bean .bean-subsections > .content .field--name-field-promo-read-more .field__item {
       position: relative;
       padding-right: 20px; }
@@ -1396,7 +1391,14 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
   @media (min-width: 45em) {
     #block-views-news-block-1 {
       padding: 20px 20px 0 0px;
-      background: url("/sites/all/themes/unc_charlotte4/img/0775-1935.png") no-repeat right bottom; } }
+      background: url("/sites/all/themes/unc_charlotte4/img/0775-1935.png") no-repeat right bottom;
+      max-width: 1200px;
+      margin: auto;
+      float: none;
+      min-height: 800px; } }
+  @media (min-width: 70em) {
+    #block-views-news-block-1 {
+      min-height: 900px; } }
   #block-views-news-block-1 h2.block__title {
     display: none;
     font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
@@ -1507,15 +1509,19 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
         #block-views-news-block-1 .view-news .more-link a:hover {
           text-decoration: underline; }
 
-#block-bean-facilities-showcase {
-  background-size: cover; }
+@media (min-width: 45em) {
+  #block-bean-facilities-showcase {
+    background: url("/sites/all/themes/unc_charlotte4/img/stadium_blur.jpg") no-repeat center bottom;
+    background-size: cover; } }
+#block-bean-facilities-showcase h2.block__title {
+  background: #eee; }
   @media (min-width: 45em) {
-    #block-bean-facilities-showcase {
-      background: url("/sites/all/themes/unc_charlotte4/img/stadium_blur.jpg") no-repeat center bottom; } }
-  #block-bean-facilities-showcase .block__content {
-    max-width: 1200px;
-    padding: 0 10px;
-    margin: auto; }
+    #block-bean-facilities-showcase h2.block__title {
+      background: white; } }
+#block-bean-facilities-showcase .block__content {
+  max-width: 1200px;
+  padding: 0 10px;
+  margin: auto; }
 
 /* end homepage - specific elements */
 /* join band - specific elements */
@@ -2174,7 +2180,7 @@ html body div.jp-audio {
             .l-header-third .container .l-region--header-third #block-menu-block-1 .menu-block-wrapper ul li.active-trail, .l-header-third .container .l-region--header-third #block-menu-block-1 .menu-block-wrapper ul li:hover {
               border-bottom: 1px solid #00703c !important; }
               .l-header-third .container .l-region--header-third #block-menu-block-1 .menu-block-wrapper ul li.active-trail a, .l-header-third .container .l-region--header-third #block-menu-block-1 .menu-block-wrapper ul li:hover a {
-                color: #00703c;
+                color: #444;
                 border-bottom: 5px solid #00703c; }
             .l-header-third .container .l-region--header-third #block-menu-block-1 .menu-block-wrapper ul li a {
               font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
