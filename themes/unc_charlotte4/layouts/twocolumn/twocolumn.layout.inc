@@ -22,3 +22,4 @@ regions[footer_second] = Footer Second
 ; ========================================
 stylesheets[all][] = css/layouts/twocolumn/twocolumn.layout.css
 stylesheets[all][] = css/layouts/twocolumn/twocolumn.layout.no-query.css
+scripts[] = libraries/waypoints/waypoints.min.js

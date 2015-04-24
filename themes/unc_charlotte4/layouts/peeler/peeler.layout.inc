@@ -28,3 +28,5 @@ stylesheets[all][] = css/layouts/peeler/peeler.layout.no-query.css
 ; ========================================
 ; Scripts
 ; ========================================
+
+scripts[] = libraries/waypoints/waypoints.min.js

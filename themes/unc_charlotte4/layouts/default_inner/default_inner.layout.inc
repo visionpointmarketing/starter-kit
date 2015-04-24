@@ -26,3 +26,5 @@ regions[footer_second] = Footer Second
 ; ========================================
 stylesheets[all][] = css/layouts/default_inner/default_inner.layout.css
 stylesheets[all][] = css/layouts/default_inner/default_inner.layout.no-query.css
+
+scripts[] = libraries/waypoints/waypoints.min.js

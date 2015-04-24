@@ -25,3 +25,4 @@ stylesheets[all][] = css/layouts/sitemap/sitemap.layout.no-query.css
 ; ========================================
 scripts[] = libraries/underscore/underscore-min.js
 scripts[] = js/sitemap.js
+scripts[] = libraries/waypoints/waypoints.min.js
