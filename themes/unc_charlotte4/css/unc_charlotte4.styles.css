@@ -846,9 +846,29 @@ body .field-collection-container {
                 color: white;
                 text-decoration: none;
                 height: 100%; }
+      .block.block--bean .bean-showcase .showcase-elements.one {
+        width: 100%; }
+        @media (min-width: 45em) {
+          .block.block--bean .bean-showcase .showcase-elements.one {
+            width: 70%; } }
+        .block.block--bean .bean-showcase .showcase-elements.one .field__items .field__item {
+          width: 90vw;
+          height: 90vw;
+          margin: 0; }
+          .block.block--bean .bean-showcase .showcase-elements.one .field__items .field__item a {
+            padding: 75vw 20px 0 20px; }
+          @media (min-width: 45em) {
+            .block.block--bean .bean-showcase .showcase-elements.one .field__items .field__item {
+              width: 400px;
+              height: 400px;
+              margin: 0 15%; }
+              .block.block--bean .bean-showcase .showcase-elements.one .field__items .field__item a {
+                padding: 350px 20px 0 20px; } }
+          .block.block--bean .bean-showcase .showcase-elements.one .field__items .field__item .field__item {
+            margin: auto; }
       .block.block--bean .bean-showcase .showcase-elements.two .field__items .field__item {
         width: 100%;
-        height: 100vw; }
+        height: 95vw; }
         .block.block--bean .bean-showcase .showcase-elements.two .field__items .field__item a {
           padding: 80vw 20px 0 20px; }
         @media (min-width: 45em) {
@@ -869,13 +889,37 @@ body .field-collection-container {
             height: 360px; }
             .block.block--bean .bean-showcase .showcase-elements.two .field__items .field__item a {
               padding: 300px 20px 0 20px; } }
+      .block.block--bean .bean-showcase .showcase-elements.three .field__items .field__item {
+        width: 100%;
+        height: 95vw; }
+        .block.block--bean .bean-showcase .showcase-elements.three .field__items .field__item a {
+          padding: 80vw 20px 0 20px; }
+        @media (min-width: 45em) {
+          .block.block--bean .bean-showcase .showcase-elements.three .field__items .field__item {
+            width: 160px;
+            height: 160px;
+            margin: 0 5px; }
+            .block.block--bean .bean-showcase .showcase-elements.three .field__items .field__item a {
+              padding: 100px 20px 0 20px; } }
+        @media (min-width: 55em) {
+          .block.block--bean .bean-showcase .showcase-elements.three .field__items .field__item {
+            width: 200px;
+            height: 200px; }
+            .block.block--bean .bean-showcase .showcase-elements.three .field__items .field__item a {
+              padding: 150px 20px 0 20px; } }
+        @media (min-width: 70em) {
+          .block.block--bean .bean-showcase .showcase-elements.three .field__items .field__item {
+            width: 250px;
+            height: 250px; }
+            .block.block--bean .bean-showcase .showcase-elements.three .field__items .field__item a {
+              padding: 175px 20px 0 20px; } }
   .block.block--bean .bean-subsections > .content {
     display: block;
     float: left;
     width: 100%;
     border-top: 5px solid #444;
     border-bottom: 5px solid #444;
-    padding: 50px 0 20px 0;
+    padding: 20px 0;
     margin: -20px 0 10px 0; }
     .block.block--bean .bean-subsections > .content .field__item {
       margin-top: 20px; }
@@ -971,6 +1015,8 @@ body .field-collection-container {
       float: left;
       width: 100%;
       box-sizing: border-box; }
+      .block.block--bean .bean-text-and-links-promo .promo-image img {
+        width: 100%; }
     .block.block--bean .bean-text-and-links-promo .promo-content-container {
       display: block;
       float: left;
@@ -1023,6 +1069,8 @@ body .field-collection-container {
           font-size: 16px;
           line-height: 22px;
           display: block;
+          float: left;
+          width: 100%;
           text-decoration: none;
           padding: 5px 10px;
           color: #00703c; }
@@ -1055,8 +1103,8 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
     float: none;
     background: white;
     position: relative;
-    width: auto;
-    top: 5px; }
+    width: 220px;
+    top: 50px; }
     @media (min-width: 45em) {
       .block--views-events-block-1 .block__title {
         font-size: 48px;
@@ -1092,6 +1140,7 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
         display: block;
         float: left;
         width: 100%;
+        margin-top: 50px;
         z-index: 3;
         position: relative; }
         @media (min-width: 45em) {
@@ -1271,17 +1320,19 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
     background: #eee;
     text-align: center;
     margin: auto;
-    top: 5px;
+    top: 25px;
     float: none;
     position: relative;
-    width: auto; }
+    width: 250px; }
     @media (min-width: 45em) {
       #block-bean-home-pride-of-niner-nation h2.block__title {
-        font-size: 48px;
+        font-size: 30px;
         line-height: 48px;
-        top: 16px; } }
+        top: 16px;
+        width: 320px; } }
     @media (min-width: 70em) {
       #block-bean-home-pride-of-niner-nation h2.block__title {
+        font-size: 48px;
         width: 530px; } }
   #block-bean-home-pride-of-niner-nation .bean-subsections > .content .field__item .field--name-field-subsection-title {
     font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
@@ -1440,10 +1491,12 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
       display: block;
       float: left;
       width: 100%;
-      border-bottom: 5px solid #444; }
+      border-bottom: 5px solid #444;
+      padding: 0 20px; }
       @media (min-width: 45em) {
         #block-views-news-block-1 .view-news .view-content {
-          width: calc(100% - 300px); } }
+          width: calc(100% - 300px);
+          padding: 0; } }
       #block-views-news-block-1 .view-news .view-content .views-field-title {
         display: block;
         float: left;
@@ -1531,15 +1584,15 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
   #block-bean-facilities-showcase {
     background: url("/sites/all/themes/unc_charlotte4/img/stadium_blur.jpg") no-repeat center bottom;
     background-size: cover; } }
-#block-bean-facilities-showcase h2.block__title {
-  background: #eee; }
-  @media (min-width: 45em) {
-    #block-bean-facilities-showcase h2.block__title {
-      background: white; } }
 #block-bean-facilities-showcase .block__content {
   max-width: 1200px;
   padding: 0 10px;
   margin: auto; }
+  #block-bean-facilities-showcase .block__content .content h2 {
+    background: #eee; }
+    @media (min-width: 45em) {
+      #block-bean-facilities-showcase .block__content .content h2 {
+        background: white; } }
 
 /* end homepage - specific elements */
 /* join band - specific elements */
@@ -1556,13 +1609,13 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
     #block-bean-join-the-band-introduction.block.block--bean .bean-text-and-links-promo .promo-image {
       padding: 0;
       width: 100%;
-      max-width: initial;
-      border: 1px solid #ccc; }
+      max-width: initial; }
       @media (min-width: 45em) {
         #block-bean-join-the-band-introduction.block.block--bean .bean-text-and-links-promo .promo-image {
           border: none; } }
       #block-bean-join-the-band-introduction.block.block--bean .bean-text-and-links-promo .promo-image img {
-        width: 100%; }
+        width: 100%;
+        border: 1px solid #ccc; }
     #block-bean-join-the-band-introduction.block.block--bean .bean-text-and-links-promo .promo-content-container {
       width: 100%; }
       @media (min-width: 45em) {
@@ -1666,12 +1719,13 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
       #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-image img {
         width: 100%; }
     #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container {
-      width: 100%; }
-      @media (min-width: 45em) {
+      width: 100%;
+      padding: 0; }
+      @media (min-width: 55em) {
         #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container {
           max-width: initial;
           position: absolute; } }
-      @media (min-width: 45em) {
+      @media (min-width: 55em) {
         #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-intro-text {
           max-width: 1200px;
           padding: 0 10px;
@@ -1683,6 +1737,9 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
         width: 100%;
         padding: 20px; }
         @media (min-width: 45em) {
+          #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-intro-text .field__items {
+            margin-top: -30px; } }
+        @media (min-width: 55em) {
           #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-intro-text .field__items {
             background: rgba(0, 87, 45, 0.9);
             margin-top: 60px;
@@ -1733,6 +1790,7 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
               top: calc(50% - 4px);
               right: 5px;
               color: #00703c;
+              top: calc(50% - 8px);
               right: initial;
               color: white; }
             #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-intro-text .field__items .field__item div a {
@@ -1752,6 +1810,7 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
   margin: auto;
   padding: 10px;
   width: auto;
+  width: 250px;
   float: none;
   background: white;
   position: relative;
@@ -1836,7 +1895,7 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
     font-size: 36px;
     line-height: 36px;
     text-align: center;
-    width: 300px;
+    width: 250px;
     margin: auto;
     background: #eee;
     top: 30px;
@@ -1944,6 +2003,7 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
     max-width: 1200px; }
     #block-block-17 .block__content h2 {
       max-width: 1200px;
+      width: 250px;
       font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
       font-weight: 400;
       text-transform: uppercase;
@@ -2040,6 +2100,7 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
     font-size: 36px;
     line-height: 36px;
     text-align: center;
+    width: 250px;
     margin: auto;
     background: white;
     top: 30px;

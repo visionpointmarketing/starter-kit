@@ -811,9 +811,25 @@ body .field-collection-container {
                 color: white;
                 text-decoration: none;
                 height: 100%; }
+      .block.block--bean .bean-showcase .showcase-elements.one {
+        width: 100%;
+        width: 70%; }
+        .block.block--bean .bean-showcase .showcase-elements.one .field__items .field__item {
+          width: 90vw;
+          height: 90vw;
+          margin: 0;
+          width: 400px;
+          height: 400px;
+          margin: 0 15%; }
+          .block.block--bean .bean-showcase .showcase-elements.one .field__items .field__item a {
+            padding: 75vw 20px 0 20px; }
+          .block.block--bean .bean-showcase .showcase-elements.one .field__items .field__item a {
+            padding: 350px 20px 0 20px; }
+          .block.block--bean .bean-showcase .showcase-elements.one .field__items .field__item .field__item {
+            margin: auto; }
       .block.block--bean .bean-showcase .showcase-elements.two .field__items .field__item {
         width: 100%;
-        height: 100vw;
+        height: 95vw;
         width: 210px;
         height: 210px;
         width: 360px;
@@ -824,13 +840,27 @@ body .field-collection-container {
           padding: 160px 20px 0 20px; }
         .block.block--bean .bean-showcase .showcase-elements.two .field__items .field__item a {
           padding: 300px 20px 0 20px; }
+      .block.block--bean .bean-showcase .showcase-elements.three .field__items .field__item {
+        width: 100%;
+        height: 95vw;
+        width: 160px;
+        height: 160px;
+        margin: 0 5px;
+        width: 250px;
+        height: 250px; }
+        .block.block--bean .bean-showcase .showcase-elements.three .field__items .field__item a {
+          padding: 80vw 20px 0 20px; }
+        .block.block--bean .bean-showcase .showcase-elements.three .field__items .field__item a {
+          padding: 100px 20px 0 20px; }
+        .block.block--bean .bean-showcase .showcase-elements.three .field__items .field__item a {
+          padding: 175px 20px 0 20px; }
   .block.block--bean .bean-subsections > .content {
     display: block;
     float: left;
     width: 100%;
     border-top: 5px solid #444;
     border-bottom: 5px solid #444;
-    padding: 50px 0 20px 0;
+    padding: 20px 0;
     margin: -20px 0 10px 0; }
     .block.block--bean .bean-subsections > .content .field__item {
       margin-top: 20px; }
@@ -920,6 +950,8 @@ body .field-collection-container {
       float: left;
       width: 100%;
       box-sizing: border-box; }
+      .block.block--bean .bean-text-and-links-promo .promo-image img {
+        width: 100%; }
     .block.block--bean .bean-text-and-links-promo .promo-content-container {
       display: block;
       float: left;
@@ -966,6 +998,8 @@ body .field-collection-container {
           font-size: 16px;
           line-height: 22px;
           display: block;
+          float: left;
+          width: 100%;
           text-decoration: none;
           padding: 5px 10px;
           color: #00703c; }
@@ -998,8 +1032,8 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
     float: none;
     background: white;
     position: relative;
-    width: auto;
-    top: 5px;
+    width: 220px;
+    top: 50px;
     font-size: 48px;
     line-height: 48px;
     top: 36px;
@@ -1029,6 +1063,7 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
         display: block;
         float: left;
         width: 100%;
+        margin-top: 50px;
         padding: 20px 10px;
         margin-top: -20px;
         z-index: 3;
@@ -1178,13 +1213,15 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
     background: #eee;
     text-align: center;
     margin: auto;
-    top: 5px;
+    top: 25px;
     float: none;
     position: relative;
-    width: auto;
-    font-size: 48px;
+    width: 250px;
+    font-size: 30px;
     line-height: 48px;
     top: 16px;
+    width: 320px;
+    font-size: 48px;
     width: 530px; }
   #block-bean-home-pride-of-niner-nation .bean-subsections > .content .field__item .field--name-field-subsection-title {
     font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
@@ -1330,7 +1367,9 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
       float: left;
       width: 100%;
       border-bottom: 5px solid #444;
-      width: calc(100% - 300px); }
+      padding: 0 20px;
+      width: calc(100% - 300px);
+      padding: 0; }
       #block-views-news-block-1 .view-news .view-content .views-field-title {
         display: block;
         float: left;
@@ -1415,13 +1454,13 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
 #block-bean-facilities-showcase {
   background: url("/sites/all/themes/unc_charlotte4/img/stadium_blur.jpg") no-repeat center bottom;
   background-size: cover; }
-  #block-bean-facilities-showcase h2.block__title {
-    background: #eee;
-    background: white; }
   #block-bean-facilities-showcase .block__content {
     max-width: 1200px;
     padding: 0 10px;
     margin: auto; }
+    #block-bean-facilities-showcase .block__content .content h2 {
+      background: #eee;
+      background: white; }
 
 /* end homepage - specific elements */
 /* join band - specific elements */
@@ -1437,10 +1476,10 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
       padding: 0;
       width: 100%;
       max-width: initial;
-      border: 1px solid #ccc;
       border: none; }
       #block-bean-join-the-band-introduction.block.block--bean .bean-text-and-links-promo .promo-image img {
-        width: 100%; }
+        width: 100%;
+        border: 1px solid #ccc; }
     #block-bean-join-the-band-introduction.block.block--bean .bean-text-and-links-promo .promo-content-container {
       width: 100%;
       max-width: initial;
@@ -1534,6 +1573,7 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
         width: 100%; }
     #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container {
       width: 100%;
+      padding: 0;
       max-width: initial;
       position: absolute; }
       #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-intro-text {
@@ -1546,6 +1586,7 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
           float: left;
           width: 100%;
           padding: 20px;
+          margin-top: -30px;
           background: rgba(0, 87, 45, 0.9);
           margin-top: 60px;
           width: 50%; }
@@ -1591,6 +1632,7 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
                 top: calc(50% - 4px);
                 right: 5px;
                 color: #00703c;
+                top: calc(50% - 8px);
                 right: initial;
                 color: white; }
               #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-intro-text .field__items .field__item div a {
@@ -1610,6 +1652,7 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
   margin: auto;
   padding: 10px;
   width: auto;
+  width: 250px;
   width: 600px;
   font-size: 48px;
   line-height: 48px;
@@ -1684,7 +1727,7 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
     font-size: 36px;
     line-height: 36px;
     text-align: center;
-    width: 300px;
+    width: 250px;
     margin: auto;
     background: #eee;
     top: 30px;
@@ -1784,6 +1827,7 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
     max-width: 1200px; }
     #block-block-17 .block__content h2 {
       max-width: 1200px;
+      width: 250px;
       font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
       font-weight: 400;
       text-transform: uppercase;
@@ -1876,6 +1920,7 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
     font-size: 36px;
     line-height: 36px;
     text-align: center;
+    width: 250px;
     width: 350px;
     margin: auto;
     background: white;
