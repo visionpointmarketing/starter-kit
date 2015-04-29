@@ -281,7 +281,7 @@ function unc_charlotte4_header_utility() {
     $output .= '<div id="header-utility-search-wrapper">';
     if ($search_type == 'google') {
       $search_box = <<<EOF
-<form onsubmit="var searchbox = document.getElementById('utility-search-input'); if (searchbox.value == 'Keyword / Search' || searchbox.value == '') { searchbox.value=''; searchbox.focus(); return false; }" id="utility-search" method="get" action="http://search.uncc.edu/website/"><input type="image" id="utility-search-button" src="/sites/all/themes/unc_charlotte/img/utility-edu-search-mag.png"></input><input type="text" id="utility-search-input" onclick="if (this.value == 'Keyword / Search') { this.value = ''; }" title="" maxlength="100" size="25" value="Keyword / Search" name="q"></form>
+<form onsubmit="var searchbox = document.getElementById('utility-search-input'); if (searchbox.value == 'Keyword / Search' || searchbox.value == '') { searchbox.value=''; searchbox.focus(); return false; }" id="utility-search" method="get" action="http://search.uncc.edu/website/"><input type="image" alt="search this site" id="utility-search-button" src="/sites/all/themes/unc_charlotte/img/utility-edu-search-mag.png"></input><input type="text" id="utility-search-input" onclick="if (this.value == 'Keyword / Search') { this.value = ''; }" title="" maxlength="100" size="25" value="Keyword / Search" name="q"></form>
 EOF;
       $output .= $search_box;
     }  
