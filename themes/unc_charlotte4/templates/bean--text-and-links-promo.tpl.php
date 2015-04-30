@@ -38,7 +38,7 @@
 			<?php print render($content['field_intro_text']); ?>
 			<?php if(isset($content['field_list_of_links']) && $content['field_list_of_links'] != ''){ ?>
 				<div class="list-links">
-					<h2 class="block__title">Select A Page</h2>
+					<h2 class="block__title">Select a Page</h2>
 					<?php print render($content['field_list_of_links']); ?>
 				</div>
 				<?php } ?>
