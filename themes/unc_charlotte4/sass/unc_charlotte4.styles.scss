@@ -23,22 +23,22 @@
 
 @font-face {
 	font-family: 'TradeGothicLTStd';
-	src: url(/sites/all/themes/unc_charlotte4/font/TradeGothicLTStd.otf);
+	src: url('/sites/all/themes/unc_charlotte4/font/TradeGothicLTStd.otf');
 }
 
 @font-face {
 	font-family: 'TradeGothicLTStd-Bd2';
-	src: url(/sites/all/themes/unc_charlotte4/font/TradeGothicLTStd-Bd2.otf);
+	src: url('/sites/all/themes/unc_charlotte4/font/TradeGothicLTStd-Bd2.otf');
 }
 
 @font-face {
 	font-family: 'TradeGothicLTStd-BdCn20';
-	src: url(/sites/all/themes/unc_charlotte4/font/TradeGothicLTStd-BdCn20.otf);
+	src: url('/sites/all/themes/unc_charlotte4/font/TradeGothicLTStd-BdCn20.otf');
 }
 
 @font-face {
 	font-family: 'TradeGothicLTStd-Cn18';
-	src: url(/sites/all/themes/unc_charlotte4/font/TradeGothicLTStd-Cn18.otf);
+	src: url('/sites/all/themes/unc_charlotte4/font/TradeGothicLTStd-Cn18.otf');
 }
 /* base default styles */
 html{
@@ -216,10 +216,16 @@ body{
 	.container{
 		margin:auto;
 		max-width:$maxwidth;
-		padding:0 10px;
 		#header-row{
-			background: url("/sites/all/themes/unc_charlotte4/img/header-logo-watermark.png") repeat-x scroll center center #FFFFFF;
-			height: 100px;
+			background: url("/sites/all/themes/unc_charlotte4/img/header-logo-watermark.png") no-repeat 48% 62%;
+			background-size: 1230px 165px;
+			height: 94px;
+			padding:0 10px;
+			@include breakpoint($tab,true){
+				background: url("/sites/all/themes/unc_charlotte4/img/header-logo-watermark.png") no-repeat 0 0;
+				background-size: auto;
+				height: 100px;
+			}
 			#logo-wrapper{
 				width:30%;
 				float: left;
@@ -246,12 +252,15 @@ body{
 				#site-name-wrapper{
 					#site-name{
 						text-align: left;
-						top: 25px;
+						top: 30px;
 						position: relative;
 						display:block;
 						float: left;
 						color: white;
 						font-family: times,"times new roman",serif;
+						@include breakpoint($tab,true){
+							top: 38px;
+						}
 						a{
 							color:white;
 							text-decoration:none;
@@ -260,8 +269,12 @@ body{
 							}
 						}
 						.site-title{
-							line-height:24px;
-							font-size:18px;
+							line-height:20px;
+							font-size: 19px;
+							@include breakpoint($tab,true){
+								font-size: 21px;
+								font-weight: 600;
+							}
 						}
 					}
 					#site-name-title{
@@ -722,6 +735,7 @@ body .field-collection-container{
 									@include floatblock();
 									width:calc(100% - 30px);
 									margin:0;
+									font-weight: 600;
 								}
 							}
 						}
@@ -766,19 +780,19 @@ body .field-collection-container{
 		}
 		h2{
 			@include f-impact(32px);
+			line-height:42px;
 			padding:0 10px;
 			text-align: center;
 			position: relative;
 			top: -64px;
 			background: #eee;
-			width:auto;
+			width: 220px;
+			margin: auto;
 			@include breakpoint($tab,true){
 				width: 400px;
 				font-size:42px;
-				line-height:42px;
 				background:white;
 			}
-			margin: auto;
 		}
 		.showcase-intro{
 			@include f-text();
@@ -1126,6 +1140,7 @@ body .field-collection-container{
 				border:1px solid #ccc;
 				margin-bottom:2px;
 				cursor:pointer;
+				text-transform: initial;
 				&:before{
 					content:"\f0c9";
 					font-family:FontAwesome;
@@ -1624,6 +1639,7 @@ html #block-views-basic-page-featured-block{
 	}
 }
 #block-bean-facilities-showcase{
+	background: white;
 	@include breakpoint($tab,true){
 		background:url("/sites/all/themes/unc_charlotte4/img/stadium_blur.jpg") no-repeat center bottom;
 		background-size:cover;
@@ -1634,10 +1650,7 @@ html #block-views-basic-page-featured-block{
 		margin:auto;
 		.content{
 			h2{
-				background:#eee;
-				@include breakpoint($tab,true){
-					background:white;
-				}
+				background: white;
 			}
 			.showcase-intro{}
 			.showcase-elements{}
@@ -1663,12 +1676,8 @@ html #block-views-basic-page-featured-block{
 				padding:0;
 				width:100%;
 				max-width:initial;
-				@include breakpoint($tab,true){
-					border:none;
-				}
 				img{
 					width:100%;
-					border:1px solid #ccc;
 				}
 			}
 			.promo-content-container{
@@ -1690,6 +1699,7 @@ html #block-views-basic-page-featured-block{
 						width:100%;
 						@include breakpoint($tab,true){
 							width:auto;
+							max-width: 250px;
 						}
 						.field__item{
 							a{
@@ -1731,12 +1741,16 @@ html #block-views-basic-page-featured-block{
 		background: #fff;
 		text-align: center;
 		margin: auto;
-		width:auto;
+		width: 60%;
+		min-width: 200px;
 		@include breakpoint($tab,true){
-			width: 500px;
+			width: 275px;
 			max-width:100%;
 			font-size:48px;
 			line-height:48px;
+		}
+		@include breakpoint($desk,true){
+			width: 500px;
 		}
 		float: none;
 		position: relative;
@@ -1824,12 +1838,13 @@ html #block-views-basic-page-featured-block{
 							}
 							div{
 								@include f-impact(16px);
+								display: inline-block;
 								position:relative;
 								padding:10px;
 								&:after{
 									@include arrowafter();
 									top: calc(50% - 8px);
-									right:initial;
+									right: -7px;
 									color:white;
 								}
 								a{
@@ -2280,8 +2295,11 @@ html{
 						height:0px;
 							overflow:hidden;
 						@include breakpoint($tab,true){
-							margin:0 10px;
+							margin: 0;
 							height:auto;
+						}
+						@include breakpoint($tab-large,true){
+							margin: 0 10px;
 						}
 						-webkit-transition:all 1s;
 						transition:all 1s;
@@ -2310,14 +2328,16 @@ html{
 								line-height:$main-nav-height;
 								
 								@include breakpoint($tab,true){
-									font-size:14px;
-									padding:0 13px;
+									padding: 0 9px;
+									font-size: 16px;
 								}
 								@include breakpoint($tab-large,true){
-									font-size:19px;
+									padding: 0 12px;
+									font-size: 20px;
 								}
 								@include breakpoint($desk,true){
-									padding:0 25px;
+									padding: 0 22px;
+									font-size: 22px;
 								}
 							}
 							@include breakpoint($tab,true){
@@ -2491,8 +2511,8 @@ html{
 		}
 	}
 }
-/* styling for specific node pages */
 
+/* styling for specific node pages */
 .view-display-id-page{
 	&.view-id-news{
 		.views-row{
@@ -2661,8 +2681,52 @@ html{
 		}
 	}
 }
-
 /* end styling for specific node pages */
+
+/* search results page */
+body.page-search {
+	.l-main {
+		ul.breadcrumbs {
+			display: none;
+		}
+		h2 {
+			@include floatblock();
+			margin: 20px 0 15px 0;
+			padding: 10px 10px 10px 0;
+			border-bottom: 1px solid #ddd;
+		}
+		a {
+			color: #00703c;
+		}
+		form.search-form {
+			input#edit-keys {
+				margin: 0 0 10px 0;
+				padding: 0px 5px;
+			}
+			fieldset.search-advanced {
+				display: inline-block;
+				margin: 25px 0 0 0;
+				padding: 0;
+				border: none;
+			}
+		}
+		section.search-results {
+			@include floatblock();
+			padding-bottom: 40px;
+			li.search-result {
+				@include floatblock();
+				padding: 10px 0;
+				border-bottom: 1px solid #ddd;
+				h3 {
+					padding: 10px 10px 10px 0;
+				}
+			}
+		}
+	}
+}
+/* end search results page */
+
+/* footer */
 .l-footer{
 	@include floatblock();
 	.l-footer-first{

@@ -8,19 +8,19 @@ img, media {
 
 @font-face {
   font-family: 'TradeGothicLTStd';
-  src: url(/sites/all/themes/unc_charlotte4/font/TradeGothicLTStd.otf); }
+  src: url("/sites/all/themes/unc_charlotte4/font/TradeGothicLTStd.otf"); }
 
 @font-face {
   font-family: 'TradeGothicLTStd-Bd2';
-  src: url(/sites/all/themes/unc_charlotte4/font/TradeGothicLTStd-Bd2.otf); }
+  src: url("/sites/all/themes/unc_charlotte4/font/TradeGothicLTStd-Bd2.otf"); }
 
 @font-face {
   font-family: 'TradeGothicLTStd-BdCn20';
-  src: url(/sites/all/themes/unc_charlotte4/font/TradeGothicLTStd-BdCn20.otf); }
+  src: url("/sites/all/themes/unc_charlotte4/font/TradeGothicLTStd-BdCn20.otf"); }
 
 @font-face {
   font-family: 'TradeGothicLTStd-Cn18';
-  src: url(/sites/all/themes/unc_charlotte4/font/TradeGothicLTStd-Cn18.otf); }
+  src: url("/sites/all/themes/unc_charlotte4/font/TradeGothicLTStd-Cn18.otf"); }
 
 /* base default styles */
 html body {
@@ -196,11 +196,17 @@ body {
   background: url("/sites/all/themes/unc_charlotte4/img/header-bg.png") repeat-x scroll center top white; }
   #header-wrapper .container {
     margin: auto;
-    max-width: 1200px;
-    padding: 0 10px; }
+    max-width: 1200px; }
     #header-wrapper .container #header-row {
-      background: url("/sites/all/themes/unc_charlotte4/img/header-logo-watermark.png") repeat-x scroll center center white;
-      height: 100px; }
+      background: url("/sites/all/themes/unc_charlotte4/img/header-logo-watermark.png") no-repeat 48% 62%;
+      background-size: 1230px 165px;
+      height: 94px;
+      padding: 0 10px; }
+      @media (min-width: 45em) {
+        #header-wrapper .container #header-row {
+          background: url("/sites/all/themes/unc_charlotte4/img/header-logo-watermark.png") no-repeat 0 0;
+          background-size: auto;
+          height: 100px; } }
       #header-wrapper .container #header-row #logo-wrapper {
         width: 30%;
         float: left;
@@ -225,20 +231,27 @@ body {
             width: 50%; } }
         #header-wrapper .container #header-row #branding #site-name-wrapper #site-name {
           text-align: left;
-          top: 25px;
+          top: 30px;
           position: relative;
           display: block;
           float: left;
           color: white;
           font-family: times,"times new roman",serif; }
+          @media (min-width: 45em) {
+            #header-wrapper .container #header-row #branding #site-name-wrapper #site-name {
+              top: 38px; } }
           #header-wrapper .container #header-row #branding #site-name-wrapper #site-name a {
             color: white;
             text-decoration: none; }
             #header-wrapper .container #header-row #branding #site-name-wrapper #site-name a:hover {
               text-decoration: underline; }
           #header-wrapper .container #header-row #branding #site-name-wrapper #site-name .site-title {
-            line-height: 24px;
-            font-size: 18px; }
+            line-height: 20px;
+            font-size: 19px; }
+            @media (min-width: 45em) {
+              #header-wrapper .container #header-row #branding #site-name-wrapper #site-name .site-title {
+                font-size: 21px;
+                font-weight: 600; } }
         #header-wrapper .container #header-row #branding #site-name-wrapper #site-name-title {
           font-size: 1em;
           margin: 0;
@@ -644,7 +657,8 @@ body .field-collection-container {
         float: left;
         width: 100%;
         width: calc(100% - 30px);
-        margin: 0; }
+        margin: 0;
+        font-weight: 600; }
     .block.block--bean .bean-faq .content .field--name-field-question .field__item .entity-field-collection-item .field--name-field-answer {
       font-family: arial;
       color: #444;
@@ -696,18 +710,18 @@ body .field-collection-container {
       color: #444;
       font-size: 32px;
       line-height: 32px;
+      line-height: 42px;
       padding: 0 10px;
       text-align: center;
       position: relative;
       top: -64px;
       background: #eee;
-      width: auto;
+      width: 220px;
       margin: auto; }
       @media (min-width: 45em) {
         .block.block--bean .bean-showcase h2 {
           width: 400px;
           font-size: 42px;
-          line-height: 42px;
           background: white; } }
     .block.block--bean .bean-showcase .showcase-intro {
       font-family: arial;
@@ -1050,7 +1064,8 @@ body .field-collection-container {
         background: #eee;
         border: 1px solid #ccc;
         margin-bottom: 2px;
-        cursor: pointer; }
+        cursor: pointer;
+        text-transform: initial; }
         .block.block--bean .bean-text-and-links-promo .list-links h2.block__title:before {
           content: "\f0c9";
           font-family: FontAwesome;
@@ -1581,19 +1596,18 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
         #block-views-news-block-1 .view-news .more-link a:hover {
           text-decoration: underline; }
 
-@media (min-width: 45em) {
-  #block-bean-facilities-showcase {
-    background: url("/sites/all/themes/unc_charlotte4/img/stadium_blur.jpg") no-repeat center bottom;
-    background-size: cover; } }
-#block-bean-facilities-showcase .block__content {
-  max-width: 1200px;
-  padding: 0 10px;
-  margin: auto; }
-  #block-bean-facilities-showcase .block__content .content h2 {
-    background: #eee; }
-    @media (min-width: 45em) {
-      #block-bean-facilities-showcase .block__content .content h2 {
-        background: white; } }
+#block-bean-facilities-showcase {
+  background: white; }
+  @media (min-width: 45em) {
+    #block-bean-facilities-showcase {
+      background: url("/sites/all/themes/unc_charlotte4/img/stadium_blur.jpg") no-repeat center bottom;
+      background-size: cover; } }
+  #block-bean-facilities-showcase .block__content {
+    max-width: 1200px;
+    padding: 0 10px;
+    margin: auto; }
+    #block-bean-facilities-showcase .block__content .content h2 {
+      background: white; }
 
 /* end homepage - specific elements */
 /* join band - specific elements */
@@ -1611,12 +1625,8 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
       padding: 0;
       width: 100%;
       max-width: initial; }
-      @media (min-width: 45em) {
-        #block-bean-join-the-band-introduction.block.block--bean .bean-text-and-links-promo .promo-image {
-          border: none; } }
       #block-bean-join-the-band-introduction.block.block--bean .bean-text-and-links-promo .promo-image img {
-        width: 100%;
-        border: 1px solid #ccc; }
+        width: 100%; }
     #block-bean-join-the-band-introduction.block.block--bean .bean-text-and-links-promo .promo-content-container {
       width: 100%; }
       @media (min-width: 45em) {
@@ -1635,7 +1645,8 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
         width: 100%; }
         @media (min-width: 45em) {
           #block-bean-join-the-band-introduction.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-list-of-links .field__items {
-            width: auto; } }
+            width: auto;
+            max-width: 250px; } }
         #block-bean-join-the-band-introduction.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-list-of-links .field__items .field__item a {
           font-family: arial;
           color: #444;
@@ -1675,16 +1686,20 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
     background: #fff;
     text-align: center;
     margin: auto;
-    width: auto;
+    width: 60%;
+    min-width: 200px;
     float: none;
     position: relative;
     top: 12px; }
     @media (min-width: 45em) {
       #block-bean-join-pride-of-niner-nation h2.block__title {
-        width: 500px;
+        width: 275px;
         max-width: 100%;
         font-size: 48px;
         line-height: 48px; } }
+    @media (min-width: 70em) {
+      #block-bean-join-pride-of-niner-nation h2.block__title {
+        width: 500px; } }
 
 #block-bean-join-faqs {
   display: block;
@@ -1780,6 +1795,7 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
             color: #444;
             font-size: 16px;
             line-height: 16px;
+            display: inline-block;
             position: relative;
             padding: 10px; }
             #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-intro-text .field__items .field__item div:after {
@@ -1792,7 +1808,7 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
               right: 5px;
               color: #00703c;
               top: calc(50% - 8px);
-              right: initial;
+              right: -7px;
               color: white; }
             #block-bean-band-camp.block.block--bean .bean-text-and-links-promo .promo-content-container .field--name-field-intro-text .field__items .field__item div a {
               color: white;
@@ -2251,8 +2267,11 @@ html body div.jp-audio {
           transition: all 1s; }
           @media (min-width: 45em) {
             .l-header-third .container .l-region--header-third #block-menu-block-1 .menu-block-wrapper ul {
-              margin: 0 10px;
+              margin: 0;
               height: auto; } }
+          @media (min-width: 55em) {
+            .l-header-third .container .l-region--header-third #block-menu-block-1 .menu-block-wrapper ul {
+              margin: 0 10px; } }
           .l-header-third .container .l-region--header-third #block-menu-block-1 .menu-block-wrapper ul li {
             display: block;
             float: left;
@@ -2282,14 +2301,16 @@ html body div.jp-audio {
               line-height: 60px; }
               @media (min-width: 45em) {
                 .l-header-third .container .l-region--header-third #block-menu-block-1 .menu-block-wrapper ul li a {
-                  font-size: 14px;
-                  padding: 0 13px; } }
+                  padding: 0 9px;
+                  font-size: 16px; } }
               @media (min-width: 55em) {
                 .l-header-third .container .l-region--header-third #block-menu-block-1 .menu-block-wrapper ul li a {
-                  font-size: 19px; } }
+                  padding: 0 12px;
+                  font-size: 20px; } }
               @media (min-width: 70em) {
                 .l-header-third .container .l-region--header-third #block-menu-block-1 .menu-block-wrapper ul li a {
-                  padding: 0 25px; } }
+                  padding: 0 22px;
+                  font-size: 22px; } }
             @media (min-width: 45em) {
               .l-header-third .container .l-region--header-third #block-menu-block-1 .menu-block-wrapper ul li {
                 width: auto; } }
@@ -2626,6 +2647,42 @@ html body div.jp-audio {
   padding: 5px; }
 
 /* end styling for specific node pages */
+/* search results page */
+body.page-search .l-main ul.breadcrumbs {
+  display: none; }
+body.page-search .l-main h2 {
+  display: block;
+  float: left;
+  width: 100%;
+  margin: 20px 0 15px 0;
+  padding: 10px 10px 10px 0;
+  border-bottom: 1px solid #ddd; }
+body.page-search .l-main a {
+  color: #00703c; }
+body.page-search .l-main form.search-form input#edit-keys {
+  margin: 0 0 10px 0;
+  padding: 0px 5px; }
+body.page-search .l-main form.search-form fieldset.search-advanced {
+  display: inline-block;
+  margin: 25px 0 0 0;
+  padding: 0;
+  border: none; }
+body.page-search .l-main section.search-results {
+  display: block;
+  float: left;
+  width: 100%;
+  padding-bottom: 40px; }
+  body.page-search .l-main section.search-results li.search-result {
+    display: block;
+    float: left;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd; }
+    body.page-search .l-main section.search-results li.search-result h3 {
+      padding: 10px 10px 10px 0; }
+
+/* end search results page */
+/* footer */
 .l-footer {
   display: block;
   float: left;
