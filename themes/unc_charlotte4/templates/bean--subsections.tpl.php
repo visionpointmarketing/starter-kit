@@ -30,36 +30,37 @@
 <div class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <div class="content"<?php print $content_attributes; ?>>
     <?php
-     // print render($content);
+	//print render($content);
     ?>
 	<div class="field-collection-container clearfix">
 		<div class="field field--name-field-subsection field--type-field-collection field--label-hidden">
 			<div class="field__items">
 				<?php 
 				$count = count($content['field_subsection']['#items']);
-				for($i = 0; $i < $count; $i++){ ?>
+				for($i = 0; $i < $count; $i++){ 
+				?>
 				<div class="field__item">
 					<div class="field-collection-view clearfix view-mode-full">
 						<div class="entity entity-field-collection-item field-collection-item-field-subsection clearfix" typeof="">
 							<div class="content">
-								<a href="<?php print($content['field_subsection'][$i]['entity']['field_collection_item'][$i+1]['field_subsection_link']['#items'][0]['url']); ?>">
+								<a href="<?php print($content['field_subsection'][$i]['entity']['field_collection_item'][$content['field_subsection']['#items'][$i]['value']]['field_subsection_link']['#items'][0]['url']); ?>">
 									<div class="field field--name-field-subsection-image field--type-image field--label-hidden">
 										<div class="field__items">
 											<div class="field__item">
-												<img typeof="foaf:Image" src="http://cf-5.dev/sites/default/files/<?php print($content['field_subsection'][$i]['entity']['field_collection_item'][$i + 1]['field_subsection_image']['#items'][0]['filename']); ?>" width="300" height="300" alt="">
+												<img typeof="foaf:Image" src="http://cf-5.dev/sites/default/files/<?php print($content['field_subsection'][$i]['entity']['field_collection_item'][$content['field_subsection']['#items'][$i]['value']]['field_subsection_image']['#items'][0]['filename']); ?>" width="300" height="300" alt="">
 											</div>
 										</div>
 									</div>
 									<div class="field field--name-field-subsection-link field--type-link-field field--label-hidden">
 										<div class="field__items">
 											<div class="field__item">
-												<?php print($content['field_subsection'][$i]['entity']['field_collection_item'][$i+1]['field_subsection_link']['#items'][0]['title']); ?>
+												<?php print($content['field_subsection'][$i]['entity']['field_collection_item'][$content['field_subsection']['#items'][$i]['value']]['field_subsection_link']['#items'][0]['title']); ?>
 											</div>
 										</div>
 									</div>
 									<div class="field field--name-field-subsection-intro field--type-text-long field--label-hidden">
 										<div class="field__items">
-											<div class="field__item"><?php print($content['field_subsection'][$i]['entity']['field_collection_item'][$i + 1]['field_subsection_intro']['#items'][0]['value']); ?></div>
+											<div class="field__item"><?php print($content['field_subsection'][$i]['entity']['field_collection_item'][$content['field_subsection']['#items'][$i]['value']]['field_subsection_intro']['#items'][0]['value']); ?></div>
 										</div>
 									</div>
 								</a>
