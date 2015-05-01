@@ -157,9 +157,6 @@ html body .l-page {
           width: 100%; }
           @media (min-width: 45em) {
             html body .l-page .l-main .l-content-center .wrapper .l-content-wrapper .l-promo-sidebar {
-              padding-bottom: 2000px;
-              margin-bottom: -2000px;
-              padding-right: 20px;
               width: 25%;
               clear: right;
               float: left;

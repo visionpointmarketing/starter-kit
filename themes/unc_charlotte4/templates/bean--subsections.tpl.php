@@ -47,7 +47,7 @@
 									<div class="field field--name-field-subsection-image field--type-image field--label-hidden">
 										<div class="field__items">
 											<div class="field__item">
-												<img typeof="foaf:Image" src="http://cf-5.dev/sites/default/files/<?php print($content['field_subsection'][$i]['entity']['field_collection_item'][$content['field_subsection']['#items'][$i]['value']]['field_subsection_image']['#items'][0]['filename']); ?>" width="300" height="300" alt="">
+												<img typeof="foaf:Image" src="/sites/default/files/<?php print($content['field_subsection'][$i]['entity']['field_collection_item'][$content['field_subsection']['#items'][$i]['value']]['field_subsection_image']['#items'][0]['filename']); ?>" width="300" height="300" alt="">
 											</div>
 										</div>
 									</div>
@@ -72,5 +72,6 @@
 			</div>
 		</div>
 	</div>
+	<?php print render($content['field_promo_read_more']); ?>
   </div>
 </div>

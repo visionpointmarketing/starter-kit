@@ -158,8 +158,7 @@ body {
   body.front #a3 {
     position: relative;
     z-index: 996;
-    background: #eee;
-    min-height: 100vh; }
+    background: #eee; }
     body.front #a3 .wrapper {
       display: block;
       margin: auto; }
@@ -604,6 +603,7 @@ body .field-collection-container {
       color: white;
       line-height: 42px;
       text-decoration: none;
+      text-transform: uppercase;
       padding: 0 10px; }
   .block.block--bean .bean-faq .content .field--name-field-question .field__item {
     display: block;
@@ -871,6 +871,8 @@ body .field-collection-container {
     border-bottom: 5px solid #444;
     padding: 20px 0;
     margin: -20px 0 10px 0; }
+    .block.block--bean .bean-subsections > .content a:hover .field--name-field-subsection-link {
+      text-decoration: underline; }
     .block.block--bean .bean-subsections > .content .field__item {
       margin-top: 20px; }
       .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-image .field__items .field__item {
@@ -952,8 +954,8 @@ body .field-collection-container {
       font-weight: 400;
       text-transform: uppercase;
       color: #444;
-      font-size: 24px;
-      line-height: 24px; }
+      font-size: 20px;
+      line-height: 20px; }
     .block.block--bean .bean-text-and-links-promo .promo-image {
       display: block;
       float: left;
@@ -965,7 +967,7 @@ body .field-collection-container {
       display: block;
       float: left;
       width: 100%;
-      padding: 10px;
+      padding: 5px 10px 0 10px;
       box-sizing: border-box; }
     .block.block--bean .bean-text-and-links-promo.noimg .promo-content-container {
       width: 100%;
@@ -1010,9 +1012,18 @@ body .field-collection-container {
           display: block;
           float: left;
           width: 100%;
+          position: relative;
           text-decoration: none;
-          padding: 5px 10px;
+          padding: 2px 10px 2px 25px;
           color: #00703c; }
+          .block.block--bean .bean-text-and-links-promo .list-links .field--name-field-list-of-links .field__item a:before {
+            content: '\f054';
+            font-family: FontAwesome;
+            font-size: 8px;
+            padding-left: 10px;
+            position: absolute;
+            color: black;
+            left: 0; }
       .block.block--bean .bean-text-and-links-promo .list-links.open .field--name-field-list-of-links {
         display: block; }
 
@@ -1351,10 +1362,7 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
   padding: 20px 20px 0 0px;
   background: url("/sites/all/themes/unc_charlotte4/img/0775-1935.png") no-repeat right bottom;
   max-width: 1200px;
-  margin: auto;
-  float: none;
-  min-height: 800px;
-  min-height: 900px; }
+  margin: auto; }
   #block-views-news-block-1 h2.block__title {
     display: none;
     font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
@@ -1673,6 +1681,19 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
   position: relative;
   text-align: center;
   top: 15px; }
+#block-bean-join-request-more-information .content {
+  border-bottom: none; }
+  #block-bean-join-request-more-information .content .field__item .field--name-field-subsection-link {
+    font-family: 'TradeGothicLTStd-Cn18', Impact, Arial, sans-serif; }
+    #block-bean-join-request-more-information .content .field__item .field--name-field-subsection-link strong {
+      font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif; }
+  #block-bean-join-request-more-information .content .field--name-field-subsection-intro {
+    padding: 0 20px; }
+  #block-bean-join-request-more-information .content .field--name-field-promo-read-more .field__item a {
+    position: static;
+    float: right;
+    width: calc(100% - 80px);
+    padding: 0 20px; }
 
 /* end join band - specific elements */
 /* sights and sounds - specific elements*/
@@ -2097,7 +2118,7 @@ html body div.jp-audio {
               line-height: 60px;
               padding: 0 9px;
               font-size: 16px;
-              padding: 0 12px;
+              padding: 0 11px;
               font-size: 20px;
               padding: 0 22px;
               font-size: 22px; }

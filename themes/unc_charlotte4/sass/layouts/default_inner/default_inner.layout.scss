@@ -55,14 +55,6 @@ html{
 				}
 			}
 			.l-main{
-				//default styles for the main content area
-				p{}
-				h1{}
-				h2{}
-				h3{}
-				h4{}
-				h5{}
-				h6{}
 				.l-content-header{
 					@include floatblock();
 					.l-region--content-header{}
@@ -125,7 +117,6 @@ html{
 							.l-promo-sidebar{
 								@include floatblock();
 								@include breakpoint($tab,true){
-									@include eq();
 									@include float-span(3);
 								}
 								.l-region--promo-sidebar{

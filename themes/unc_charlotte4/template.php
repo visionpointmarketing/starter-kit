@@ -50,29 +50,6 @@ function unc_charlotte4_menu_link__menu_social_menu($variables){
   return '<li' . drupal_attributes($element['#attributes']) . '><a href="' . $element['#href'] . '" target="_blank" class="btn btn-default" role="button" title="icon for '.$element['#title'].'"><span class="fa fa-' . $element['#title'] . '" aria-hidden="true"></span></a></li>';
 }
 /**
- * Preprocess function
- */
-function unc_charlotte4_preprocess_page(&$vars) {
-  // Get theme settings
-  $vars['subbrand_text'] = theme_get_setting('subbrand_text');
-  $vars['subbrand_link'] = theme_get_setting('subbrand_link');
-  $vars['nav_style'] = theme_get_setting('nav_style');
-  $vars['nav_count'] = count($vars['main_menu']);
-  $vars['header_utility'] = theme('header_utility');
-
-  // Provide custom 404 page template.
-  $status = drupal_get_http_header("status");
-  if($status == "404 Not Found") {
-    $vars['theme_hook_suggestions'][] = 'page__404';
-  }
-
-  // Provide custom 403 page template.
-  $status = drupal_get_http_header("status");
-  if($status == "403 Forbidden") {
-    $vars['theme_hook_suggestions'][] = 'page__403';
-  }
-}
-/**
  * Implementation of hook_theme().
  */
 function unc_charlotte4_theme() {
