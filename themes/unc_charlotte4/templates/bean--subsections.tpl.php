@@ -71,7 +71,7 @@
 				<?php } ?>
 			</div>
 		</div>
+		<?php print render($content['field_promo_read_more']); ?>
 	</div>
-	<?php print render($content['field_promo_read_more']); ?>
   </div>
 </div>

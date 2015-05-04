@@ -87,7 +87,7 @@ h3{
 	padding:10px;
 }
 p{
-	color:#444;
+	@include f-text(16px);
 	margin:10px 0;
 }
 .block{
@@ -199,7 +199,10 @@ body{
 	}
 		/* sights and sounds */
 	&.page-node-77{
-		#a2{
+		#a1, #a2, #a3, #a4 {
+			padding: 0 10px;
+		}
+ 		#a2{
 			background:#eee;
 		}
 		#a3{
@@ -349,6 +352,7 @@ body{
 						width:auto;
 						height:16px;
 					}
+					.search-block-form,
 					.search-block-form--2{
 						.form-item-search-block-form{
 							input{  
@@ -1074,7 +1078,7 @@ body .field-collection-container{
 					padding-right:20px;
 					&:after{
 						@include arrowafter();
-						top:54px;
+						top: 24px;
 					}
 					a{
 						@include f-impact(18px);
@@ -1082,9 +1086,8 @@ body .field-collection-container{
 						display:block;
 						float:right;
 						text-decoration:none;
-						top: 50px;
-						position: absolute;
-						right: 20px;
+						position: relative;
+						top: 20px;
 						&:hover{
 							text-decoration:underline;
 						}
@@ -1096,7 +1099,7 @@ body .field-collection-container{
 	.bean-text-and-links-promo{
 		border-top:5px solid $gold;
 		background:#eee;
-		margin-top:20px;
+		margin: 20px 0;
 		&.a-left{}
 		&.a-right{}
 		.content{
@@ -1166,15 +1169,6 @@ body .field-collection-container{
 						text-decoration: none;
 						padding: 2px 10px 2px 25px;
 						color:$green;
-						&:before {
-							content: '\f054';
-							font-family: FontAwesome;
-							font-size: 8px;
-							padding-left: 10px;
-							position: absolute;
-							color: black;
-							left: 0;
-						}
 					}
 				}
 			}
@@ -1183,6 +1177,23 @@ body .field-collection-container{
 					display:block;
 				}
 			}
+		}
+	}
+}
+.l-promo-sidebar .block.block--bean .bean-text-and-links-promo .list-links {
+	h2.block__title {
+		display: none;
+	}
+	.field--name-field-list-of-links {
+		display: block;
+		.field__item a:before {
+			content: '\f054';
+			font-family: FontAwesome;
+			font-size: 8px;
+			padding-left: 10px;
+			position: absolute;
+			color: black;
+			left: 0;
 		}
 	}
 }
@@ -1975,7 +1986,7 @@ html #block-views-basic-page-featured-block{
 		}
 		.more-link{
 			max-width:$maxwidth;
-			margin:0;
+			margin:0 auto;
 			float:none;
 		}
 	}
@@ -1988,7 +1999,7 @@ html #block-views-basic-page-featured-block{
 	h2.block__title{
 		@include f-impact(36px);
 		text-align:center;
-		width: 250px;
+		width: 260px;
 		margin: auto;
 		background: #eee;
 		top: 30px;
@@ -1997,6 +2008,9 @@ html #block-views-basic-page-featured-block{
 	.block__content{
 		border-top: 5px solid #444;
 		padding-top: 60px;
+		p {
+			margin: 0px 20px 30px 20px;
+		}
 		.view-content{
 			.views-row{
 				@include floatblock();
@@ -2085,9 +2099,8 @@ html #block-views-basic-page-featured-block{
 			width:250px;
 			@include f-impact(36px);
 			text-align:center;
-			width:auto;
 			@include breakpoint($tab,true){
-				width: 380px;
+				width: 400px;
 			}
 			margin: auto;
 			background: white;
@@ -2177,7 +2190,7 @@ html #block-views-basic-page-featured-block{
 			.views-row{
 				@include floatblock();
 				width:100%;
-				@include breakpoint($tab,true){
+				@include breakpoint($desk,true){
 					width:50%;
 				}
 				.views-field-title{
@@ -2208,20 +2221,29 @@ html #block-views-basic-page-featured-block{
 /* generic owl carousel styling */
 .owl-theme{
 	.owl-controls{
+		.owl-pagination {
+			@include breakpoint($tab,true){
+				display: none;
+			}
+		}
 		.owl-buttons{
 			.owl-prev{
+				display: none;
 				position:absolute;
 				left:-10px;
 				top:30%;
 				background:transparent;
+				opacity: 1;
 				@include breakpoint($tab,true){
+					display: block;
 					left:30px;
 					top:35%;
 				}
 				&:after{
-					content:'\f053';
+					//content:'\f053';
+					content: url('/sites/all/themes/unc_charlotte4/img/owl-prev-green');
 					font-family:FontAwesome;
-					color:#444;
+					color:#00703c;
 					position:relative;
 					font-size:60px;
 					@include breakpoint($tab,true){
@@ -2230,18 +2252,22 @@ html #block-views-basic-page-featured-block{
 				}
 			}
 			.owl-next{
+				display: none;
 				position:absolute;
 				right:-10px;
 				top:30%;
 				background:transparent;
+				opacity: 1;
 				@include breakpoint($tab,true){
+					display: block;
 					right:30px;
 					top:35%;
 				}
 				&:after{
-					content:'\f054';
+					//content:'\f054';
+					content: url('/sites/all/themes/unc_charlotte4/img/owl-next-green');
 					font-family:FontAwesome;
-					color:#444;
+					color:#00703c;
 					position:relative;
 					font-size:60px;
 					@include breakpoint($tab,true){
@@ -2711,6 +2737,14 @@ html{
 }
 /* end styling for specific node pages */
 
+/* 404 and 403 errors */
+body.page-node-119,
+body.page-node-120 {
+	.l-main {
+		min-height: 400px;
+	}
+}
+
 /* search results page */
 body.page-search {
 	.l-main {
@@ -2858,7 +2892,7 @@ body.page-search {
 	      clear: both;
 	      height:110px;
 	      @include breakpoint($tab,true){
-	      	height: 200px;
+	      	height: 150px;
 	      }
 	      position:relative;
 	      .hidden-phone{}
@@ -2944,7 +2978,7 @@ body.page-search {
 	        #footer-name{
 	          display:block;
 	          float:left;
-	          margin-top:10px;
+	          margin-top:15px;
 	          p{
 	            color: #666666;
 	            font-family: arial,helvetica,sans-serif;
@@ -2956,6 +2990,7 @@ body.page-search {
 	          }
 	          a{
 	            text-decoration:none;
+	            color:$green;
 	            &:hover{
 	              text-decoration:underline;
 	            }
@@ -3041,10 +3076,21 @@ body.page-search {
 	html{
 		body{
 			.l-page{
-				.l-header{
-					.l-header-third{
-						clear:both!important;
+				#mobile-navbar {
+					display: none !important;
+				}
+				.l-header-third .container .l-region--header-third #block-menu-block-1 {
+					display: block;
+					.menu-block-wrapper ul {
+						overflow: visible;
+						margin-bottom: 200px;
+						li {
+							width: auto;
+						}
 					}
+				}
+				.l-header-third{
+					//clear:both!important;
 				}
 			}
 		}
