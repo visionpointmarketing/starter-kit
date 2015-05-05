@@ -2019,7 +2019,7 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
   left: 30px;
   top: 35%; }
   .owl-theme .owl-controls .owl-buttons .owl-prev:after {
-    content: url("/sites/all/themes/unc_charlotte4/img/owl-prev-green");
+    content: url("/sites/all/themes/unc_charlotte4/img/owl-prev-green.png");
     font-family: FontAwesome;
     color: #00703c;
     position: relative;
@@ -2036,7 +2036,7 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
   right: 30px;
   top: 35%; }
   .owl-theme .owl-controls .owl-buttons .owl-next:after {
-    content: url("/sites/all/themes/unc_charlotte4/img/owl-next-green");
+    content: url("/sites/all/themes/unc_charlotte4/img/owl-next-green.png");
     font-family: FontAwesome;
     color: #00703c;
     position: relative;
