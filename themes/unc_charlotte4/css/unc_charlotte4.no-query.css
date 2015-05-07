@@ -1564,7 +1564,7 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
   float: left;
   width: 100%;
   width: calc(100% - 300px);
-  margin-top: -37px;
+  margin-top: -47px;
   padding: 0px 20px 0 10px; }
   #block-bean-join-pride-of-niner-nation h2.block__title {
     font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
@@ -1718,12 +1718,28 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
       font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif; }
   #block-bean-join-request-more-information .content .field--name-field-subsection-intro {
     padding: 0 20px; }
-  #block-bean-join-request-more-information .content .field--name-field-promo-read-more .field__item a {
+  #block-bean-join-request-more-information .content .field--name-field-promo-read-more {
     position: static;
     float: right;
     width: calc(100% - 80px);
     padding: 0 20px;
     width: calc(100% - 150px); }
+    #block-bean-join-request-more-information .content .field--name-field-promo-read-more .field__item {
+      margin-top: -50px; }
+      #block-bean-join-request-more-information .content .field--name-field-promo-read-more .field__item:after {
+        content: ''; }
+      #block-bean-join-request-more-information .content .field--name-field-promo-read-more .field__item a {
+        display: inline-block;
+        float: left;
+        position: relative; }
+        #block-bean-join-request-more-information .content .field--name-field-promo-read-more .field__item a:after {
+          content: '\f04b';
+          font-family: FontAwesome;
+          font-size: 10px;
+          position: absolute;
+          top: 0;
+          right: -18px;
+          color: #00703c; }
 
 /* end join band - specific elements */
 /* sights and sounds - specific elements*/

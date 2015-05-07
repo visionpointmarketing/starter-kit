@@ -1736,7 +1736,7 @@ html #block-views-basic-page-featured-block{
 	@include floatblock();
 	@include breakpoint($tab,true){
 		width:calc(100% - 300px);
-		margin-top: -37px;
+		margin-top: -47px;
 		padding:0px 20px 0 10px;
 	}
 	h2.block__title{
@@ -1896,13 +1896,35 @@ html #block-views-basic-page-featured-block{
 		.field--name-field-subsection-intro {
 			padding: 0 20px;
 		}
-		.field--name-field-promo-read-more .field__item a{
+		.field--name-field-promo-read-more {
 			position: static;
 			float: right;
 			width: calc(100% - 80px);
 			padding: 0 20px;
 			@include breakpoint($desk,true){
 				width: calc(100% - 150px);
+			}
+			.field__item {
+				@include breakpoint($desk,true){
+					margin-top: -50px;
+				}
+				&:after {
+					content: '';
+				}
+				a {
+					display: inline-block;
+					float: left;
+					position: relative;
+					&:after {
+						content: '\f04b';
+						font-family: FontAwesome;
+						font-size: 10px;
+						position: absolute;
+						top: 0;
+						right: -18px;
+						color: #00703c;
+					}
+				}
 			}
 		}
 	}
