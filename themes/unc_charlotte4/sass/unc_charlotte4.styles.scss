@@ -21,25 +21,6 @@
 @import "base/**/*";
 @import "components/**/*";
 
-@font-face {
-	font-family: 'TradeGothicLTStd';
-	src: url('/sites/all/themes/unc_charlotte4/font/TradeGothicLTStd.otf');
-}
-
-@font-face {
-	font-family: 'TradeGothicLTStd-Bd2';
-	src: url('/sites/all/themes/unc_charlotte4/font/TradeGothicLTStd-Bd2.otf');
-}
-
-@font-face {
-	font-family: 'TradeGothicLTStd-BdCn20';
-	src: url('/sites/all/themes/unc_charlotte4/font/TradeGothicLTStd-BdCn20.otf');
-}
-
-@font-face {
-	font-family: 'TradeGothicLTStd-Cn18';
-	src: url('/sites/all/themes/unc_charlotte4/font/TradeGothicLTStd-Cn18.otf');
-}
 /* base default styles */
 html{
 	body{
@@ -65,30 +46,6 @@ html{
 			}
 		}
 	}
-}
-h1{
-	@include f-impact();
-	font-size:40px;
-	line-height:42px;
-	max-width:$maxwidth;
-	padding:0 10px;
-	margin:30px auto;
-	color:$green;
-}
-h2{
-	@include f-impact(42px);
-	display:block;
-	margin:0;
-	padding:10px;
-}
-h3{
-	@include f-impact(24px);
-	margin:0;
-	padding:10px;
-}
-p{
-	@include f-text(16px);
-	margin:10px 0;
 }
 .block{
 	@include floatblock();
@@ -179,7 +136,7 @@ body{
 			font-weight:normal;
 		}
 	}
-		/* join band page */
+	/* join band page */
 	&.page-node-73{
 		#a2,
 		#a4{
@@ -197,7 +154,7 @@ body{
 			margin-top:50px;
 		}
 	}
-		/* sights and sounds */
+	/* sights and sounds */
 	&.page-node-77{
 		#a1, #a2, #a3, #a4 {
 			padding: 0 10px;
@@ -575,7 +532,7 @@ body .field-collection-container{
 		padding:0 10px;
 		margin:auto;
 		.breadcrumbs{
-			padding:10px 5px;
+			padding: 15px 5px 10px 5px;
 			margin:0;
 			.breadcrumb{
 				list-style-type:none;
@@ -586,7 +543,7 @@ body .field-collection-container{
 				span{
 					@include f-text();
 					padding:0;
-					font-size:initial;
+					font-size: 14px;
 					line-height:16px;
 					&.fa{
 						color:$green;
@@ -594,6 +551,7 @@ body .field-collection-container{
 				}
 				a{
 					@include floatblock();
+					font-size: 14px;
 					color:$green;
 					border-bottom:1px dotted $green;
 					text-decoration:none;
@@ -694,10 +652,10 @@ body .field-collection-container{
 		position:relative;
 		.field__item{
 			&:after{
+				top: 44%;
 				@include arrowafter();
-				top:calc(50% - 4px);
 				color:white;
-				right:10px;
+				right: 10px;
 			}
 			a{
 				display: block;
@@ -752,7 +710,7 @@ body .field-collection-container{
 			.field--name-field-read-more-link{
 				.field__item{
 					position:relative;
-					float:right;
+					float: left;
 					padding:10px 20px;
 					&:after{
 						@include arrowafter();
@@ -901,8 +859,8 @@ body .field-collection-container{
 								line-height:18px;
 							}
 							@include breakpoint($desk,true){
-								font-size:24px;
-								line-height:28px;
+								font-size: 30px;
+								line-height: 32px;
 							}
 							a{
 								@include floatblock();
@@ -1032,6 +990,7 @@ body .field-collection-container{
 							@include breakpoint($desk,true){
 								width:150px;
 								height:150px;
+								margin-top: 15px;
 							}
 							border-radius:50%;
 							overflow:hidden;
@@ -1065,11 +1024,14 @@ body .field-collection-container{
 					display: block;
 					float:right;
 					width: calc(100% - 80px);
+					padding: 10px 20px;
 					@include breakpoint($desk,true){
 						float: left;
 						width: calc(100% - 150px);
 					}
-					padding: 10px 20px;
+					.field__item {
+						margin-top: 10px;
+					}
 				}
 			}
 			.field--name-field-promo-read-more{
@@ -1423,6 +1385,9 @@ html #block-views-basic-page-featured-block{
 		padding:20px 20px 0 0px;
 		width:calc(100% - 300px);
 	}
+	@include breakpoint($desk,true){
+		width:calc(100% - 350px);
+	}
 	h2.block__title{
 		@include f-impact(32px);
 		display:block!important;
@@ -1461,11 +1426,14 @@ html #block-views-basic-page-featured-block{
 }
 #block-bean-home-support-the-band{
 	@include floatblock();
-	@include breakpoint($tab,true){
-		width:300px;
-	}
-	padding:0;
+	padding: 0 0 30px 0;
 	background:white;
+	@include breakpoint($tab,true){
+		width: 300px;
+	}
+	@include breakpoint($desk,true){
+		width: 350px;
+	}
 	.block__content{
 		.content{
 			.header{
@@ -1552,6 +1520,7 @@ html #block-views-basic-page-featured-block{
 						p{
 							@include f-text(14px);
 							color:#444;
+							margin: 0 0 5px 0;
 						}
 					}
 				}
@@ -1563,12 +1532,12 @@ html #block-views-basic-page-featured-block{
 	@include floatblock();
 	@include breakpoint($tab,true){
 		padding: 20px 20px 0 0px;
-		background:url("/sites/all/themes/unc_charlotte4/img/0775-1935.png") no-repeat right bottom;
+		background:url("/sites/all/themes/unc_charlotte4/img/band-member-85.png") no-repeat right bottom;
 		max-width:$maxwidth;
 		margin:auto;
 	}
 	@include breakpoint($desk,true){
-		
+		background:url("/sites/all/themes/unc_charlotte4/img/band-member-92.png") no-repeat right bottom;
 	}
 	h2.block__title{
 		display:none;
@@ -1576,12 +1545,15 @@ html #block-views-basic-page-featured-block{
 		text-align:center;
 		width:auto;
 		top:0;
-		@include breakpoint($tab,true){
-			width: calc(100% - 300px);
-		}
 		margin: auto;
 		background: white;
 		position: relative;
+		@include breakpoint($tab,true){
+			width: calc(100% - 300px);
+		}
+		@include breakpoint($desk,true){
+			width: calc(100% - 350px);
+		}
 	}
 	.view-news{
 		position:relative;
@@ -1590,14 +1562,18 @@ html #block-views-basic-page-featured-block{
 			border-bottom: 5px solid #444;
 			padding:0 20px;
 			@include breakpoint($tab,true){
-				width:calc(100% - 300px);
+				width: calc(100% - 300px);
 				padding:0;
+			}
+			@include breakpoint($desk,true){
+				width: calc(100% - 350px);
 			}
 			.views-field-title{
 				@include floatblock();
 				margin:0;
 				h2{
-					margin:15px 0;
+					margin: 15px 0 5px 0;
+					padding: 10px 0 0 0;
 				}
 				.field-content{
 					@include f-impact(36px);
@@ -1618,7 +1594,7 @@ html #block-views-basic-page-featured-block{
 				float:left;
 				padding-right:20px;
 				position:relative;
-				margin:20px 0;
+				margin: 10px 0 30px 0;
 				&:after{
 					@include arrowafter();
 				}
@@ -1641,10 +1617,16 @@ html #block-views-basic-page-featured-block{
 			padding-right:20px;
 			position:relative;
 			width:100%;
-			@include breakpoint($tab,true){
-				width:calc(100% - 300px);
-			}
 			float:left;
+			@include breakpoint($tab,true){
+				width: 70%;
+				width: calc(100% - 300px);
+				min-width: 355px;
+				margin-bottom: 40px;
+			}
+			@include breakpoint($desk,true){
+				width: calc(100% - 350px);
+			}
 			&:after{
 				@include arrowafter();
 			}
@@ -1753,17 +1735,21 @@ html #block-views-basic-page-featured-block{
 #block-bean-join-pride-of-niner-nation{
 	@include floatblock();
 	@include breakpoint($tab,true){
-		padding:0px 20px 0 10px;
 		width:calc(100% - 300px);
+		margin-top: -37px;
+		padding:0px 20px 0 10px;
 	}
 	h2.block__title{
 		@include f-impact(32px);
 		display:block!important;
-		background: #fff;
-		text-align: center;
-		margin: auto;
+		float: none;
 		width: 60%;
 		min-width: 200px;
+		margin: auto;
+		position: relative;
+		top: 16px;
+		background: #fff;
+		text-align: center;
 		@include breakpoint($tab,true){
 			width: 275px;
 			max-width:100%;
@@ -1773,9 +1759,6 @@ html #block-views-basic-page-featured-block{
 		@include breakpoint($desk,true){
 			width: 500px;
 		}
-		float: none;
-		position: relative;
-		top:12px;
 	}
 }
 #block-bean-join-faqs{
@@ -1918,6 +1901,9 @@ html #block-views-basic-page-featured-block{
 			float: right;
 			width: calc(100% - 80px);
 			padding: 0 20px;
+			@include breakpoint($desk,true){
+				width: calc(100% - 150px);
+			}
 		}
 	}
 }
@@ -1941,7 +1927,7 @@ html #block-views-basic-page-featured-block{
 		.view-content{
 			border-top:5px solid #444;
 			padding-top:80px;
-			max-width:$maxwidth;
+			max-width: 1160px;
 			margin:auto;
 			.views-field-field-video-url{
 				@include floatblock();
@@ -1994,7 +1980,7 @@ html #block-views-basic-page-featured-block{
 /* images */
 #block-views-media-block-1{
 	float:none;
-	max-width:$maxwidth;
+	max-width: 1160px;
 	margin:auto;
 	h2.block__title{
 		@include f-impact(36px);
@@ -2093,7 +2079,7 @@ html #block-views-basic-page-featured-block{
 	.block__content{
 		border-top:5px solid #444;
 		margin:auto;
-		max-width:$maxwidth;
+		max-width: 1160px;
 		h2{
 			max-width:$maxwidth;
 			width:250px;
@@ -2112,7 +2098,8 @@ html #block-views-basic-page-featured-block{
 			.item{
 				@include floatblock();
 				@include breakpoint($tab,true){
-					width:33.3333%;
+					//width:33.3333%;
+					width: 33%;
 				}
 				padding:0 20px;
 				a{
@@ -2169,7 +2156,7 @@ html #block-views-basic-page-featured-block{
 #block-views-media-block-2{
 	@include floatblock();
 	.block__title{
-		max-width:$maxwidth;
+		max-width: 1160px;
 		@include f-impact(36px);
 		text-align:center;
 		width:250px;
@@ -2182,7 +2169,7 @@ html #block-views-basic-page-featured-block{
 		position: relative;
 	}
 	.block__content{
-		max-width:$maxwidth;
+		max-width: 1160px;
 		margin:auto;
 		border-top: 5px solid #444;
 		padding-top: 60px;
@@ -2330,6 +2317,9 @@ html{
 		padding:0 10px;
 		margin: auto;
 		height:auto;
+		@include breakpoint($desk,true){
+			padding-left: 0;
+		}
 		.l-region--header-third{
 			#block-menu-block-1{
 				@include floatblock();
@@ -2347,7 +2337,7 @@ html{
 						list-style-type:none;
 						padding:0;
 						height:0px;
-							overflow:hidden;
+						overflow:hidden;
 						@include breakpoint($tab,true){
 							margin: 0;
 							height:auto;
@@ -2363,12 +2353,18 @@ html{
 							@include breakpoint($tab,true){
 								margin:0;
 							}
-							&.active-trail,
-							&:hover{
-								border-bottom:1px solid $green!important;
+							&.active-trail {
+								border-bottom:1px solid $green !important;
 								a{
 									color:#444;
 									border-bottom:5px solid $green;
+								}
+							}
+							&:hover{
+								border-bottom:1px solid $gold !important;
+								a{
+									color:#444;
+									border-bottom:5px solid $gold;
 								}
 							}
 							a{
@@ -2724,6 +2720,16 @@ html{
 			}
 			@include breakpoint($desk,true){
 				width:33.3333%;
+			}
+			.views-field-field-image-upload {
+				.field-content {
+					a {
+						display: none;
+					}
+					a:first-child {
+						display: block;
+					}
+				}
 			}
 		}
 	}

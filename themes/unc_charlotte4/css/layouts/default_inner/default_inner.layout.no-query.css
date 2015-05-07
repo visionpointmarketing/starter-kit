@@ -61,8 +61,7 @@ html body .l-page {
   html body .l-page .l-main .l-content-center {
     display: block;
     float: left;
-    width: 100%;
-    overflow: hidden; }
+    width: 100%; }
     html body .l-page .l-main .l-content-center .wrapper {
       max-width: 1200px;
       margin: auto;
@@ -77,22 +76,16 @@ html body .l-page {
         margin-right: -100%;
         margin-left: 0%;
         clear: none;
-        padding-bottom: 2000px;
-        margin-bottom: -2000px;
-        padding-right: 20px;
         width: 25%;
         float: left;
         margin-right: -100%;
         margin-left: 0%;
-        clear: none; }
+        clear: none;
+        padding-right: 10px; }
       html body .l-page .l-main .l-content-center .wrapper .l-content-wrapper {
         display: block;
         float: left;
         width: 100%;
-        padding-bottom: 2000px;
-        margin-bottom: -2000px;
-        padding-right: 20px;
-        overflow: hidden;
         width: 75%;
         float: right;
         margin-left: 0;
@@ -111,14 +104,13 @@ html body .l-page {
           display: block;
           float: left;
           width: 100%;
-          padding-bottom: 2000px;
-          margin-bottom: -2000px;
-          padding-right: 20px;
+          padding: 10px 0 0 0;
           width: 75%;
           clear: right;
           float: left;
           margin-left: 0;
-          margin-right: 0%; }
+          margin-right: 0%;
+          padding: 20px 20px 50px 0; }
           html body .l-page .l-main .l-content-center .wrapper .l-content-wrapper .l-content .l-region--above-content {
             display: block;
             float: left;
@@ -177,45 +169,30 @@ html body .l-page {
       margin-left: 0;
       margin-right: 0;
       clear: none; }
-    body.print-tablet .l-page .l-main .l-content-center {
-      overflow: hidden; }
-      body.print-tablet .l-page .l-main .l-content-center .l-nav-sidebar {
-        width: 25%;
-        float: right;
-        margin-left: 0;
-        margin-right: 0;
-        clear: none;
-        padding-bottom: 2000px;
-        margin-bottom: -2000px;
-        padding-right: 20px; }
-      body.print-tablet .l-page .l-main .l-content-center .l-content-wrapper {
-        padding-bottom: 2000px;
-        margin-bottom: -2000px;
-        padding-right: 20px;
-        overflow: hidden;
+    body.print-tablet .l-page .l-main .l-content-center .l-nav-sidebar {
+      width: 25%;
+      float: right;
+      margin-left: 0;
+      margin-right: 0;
+      clear: none; }
+    body.print-tablet .l-page .l-main .l-content-center .l-content-wrapper {
+      width: 75%;
+      float: left;
+      margin-right: -100%;
+      margin-left: 0%;
+      clear: none; }
+      body.print-tablet .l-page .l-main .l-content-center .l-content-wrapper .l-content {
         width: 75%;
+        clear: right;
         float: left;
-        margin-right: -100%;
-        margin-left: 0%;
-        clear: none; }
-        body.print-tablet .l-page .l-main .l-content-center .l-content-wrapper .l-content {
-          padding-bottom: 2000px;
-          margin-bottom: -2000px;
-          padding-right: 20px;
-          width: 75%;
-          clear: right;
-          float: left;
-          margin-left: 0;
-          margin-right: 0%; }
-        body.print-tablet .l-page .l-main .l-content-center .l-content-wrapper .l-promo-sidebar {
-          padding-bottom: 2000px;
-          margin-bottom: -2000px;
-          padding-right: 20px;
-          width: 25%;
-          clear: right;
-          float: left;
-          margin-left: 0;
-          margin-right: 0%; }
+        margin-left: 0;
+        margin-right: 0%; }
+      body.print-tablet .l-page .l-main .l-content-center .l-content-wrapper .l-promo-sidebar {
+        width: 25%;
+        clear: right;
+        float: left;
+        margin-left: 0;
+        margin-right: 0%; }
 
   body.print-desktop {
     width: 70em !important; }
@@ -237,42 +214,27 @@ html body .l-page {
       margin-left: 0;
       margin-right: 0;
       clear: none; }
-    body.print-desktop .l-page .l-main .l-content-center {
-      overflow: hidden; }
-      body.print-desktop .l-page .l-main .l-content-center .l-nav-sidebar {
-        padding-bottom: 2000px;
-        margin-bottom: -2000px;
-        padding-right: 20px;
-        width: 25%;
-        float: left;
-        margin-right: -100%;
-        margin-left: 0%;
-        clear: none; }
-      body.print-desktop .l-page .l-main .l-content-center .l-content-wrapper {
-        padding-bottom: 2000px;
-        margin-bottom: -2000px;
-        padding-right: 20px;
-        overflow: hidden;
+    body.print-desktop .l-page .l-main .l-content-center .l-nav-sidebar {
+      width: 25%;
+      float: left;
+      margin-right: -100%;
+      margin-left: 0%;
+      clear: none; }
+    body.print-desktop .l-page .l-main .l-content-center .l-content-wrapper {
+      width: 75%;
+      float: right;
+      margin-left: 0;
+      margin-right: 0;
+      clear: none; }
+      body.print-desktop .l-page .l-main .l-content-center .l-content-wrapper .l-content {
         width: 75%;
-        float: right;
+        clear: right;
+        float: left;
         margin-left: 0;
-        margin-right: 0;
-        clear: none; }
-        body.print-desktop .l-page .l-main .l-content-center .l-content-wrapper .l-content {
-          padding-bottom: 2000px;
-          margin-bottom: -2000px;
-          padding-right: 20px;
-          width: 75%;
-          clear: right;
-          float: left;
-          margin-left: 0;
-          margin-right: 0%; }
-        body.print-desktop .l-page .l-main .l-content-center .l-content-wrapper .l-promo-sidebar {
-          padding-bottom: 2000px;
-          margin-bottom: -2000px;
-          padding-right: 20px;
-          width: 25%;
-          clear: right;
-          float: left;
-          margin-left: 0;
-          margin-right: 0%; } }
+        margin-right: 0%; }
+      body.print-desktop .l-page .l-main .l-content-center .l-content-wrapper .l-promo-sidebar {
+        width: 25%;
+        clear: right;
+        float: left;
+        margin-left: 0;
+        margin-right: 0%; } }

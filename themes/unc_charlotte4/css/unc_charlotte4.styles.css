@@ -22,23 +22,8 @@ img, media {
   font-family: 'TradeGothicLTStd-Cn18';
   src: url("/sites/all/themes/unc_charlotte4/font/TradeGothicLTStd-Cn18.otf"); }
 
-/* base default styles */
-html body {
-  margin: 0 auto; }
-  html body .l-page {
-    overflow: hidden; }
-
-.l-region {
-  position: relative; }
-  @media (min-width: 45em) {
-    .l-region.l-region--nav-sidebar {
-      padding-right: 20px; } }
-  .l-region.l-region--nav-sidebar .block {
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #ccc; }
-    .l-region.l-region--nav-sidebar .block:last-child {
-      border-bottom: none; }
+html {
+  -webkit-font-smoothing: antialiased !important; }
 
 h1 {
   font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
@@ -79,8 +64,26 @@ p {
   font-family: arial;
   color: #444;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 24px;
   margin: 10px 0; }
+
+/* base default styles */
+html body {
+  margin: 0 auto; }
+  html body .l-page {
+    overflow: hidden; }
+
+.l-region {
+  position: relative; }
+  @media (min-width: 45em) {
+    .l-region.l-region--nav-sidebar {
+      padding-right: 20px; } }
+  .l-region.l-region--nav-sidebar .block {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc; }
+    .l-region.l-region--nav-sidebar .block:last-child {
+      border-bottom: none; }
 
 .block {
   display: block;
@@ -510,7 +513,7 @@ body .field-collection-container {
   padding: 0 10px;
   margin: auto; }
   .l-content-header-meta .wrapper .breadcrumbs {
-    padding: 10px 5px;
+    padding: 15px 5px 10px 5px;
     margin: 0; }
     .l-content-header-meta .wrapper .breadcrumbs .breadcrumb {
       list-style-type: none;
@@ -522,9 +525,9 @@ body .field-collection-container {
         font-family: arial;
         color: #444;
         font-size: 16px;
-        line-height: 22px;
+        line-height: 24px;
         padding: 0;
-        font-size: initial;
+        font-size: 14px;
         line-height: 16px; }
         .l-content-header-meta .wrapper .breadcrumbs .breadcrumb span.fa {
           color: #00703c; }
@@ -532,6 +535,7 @@ body .field-collection-container {
         display: block;
         float: left;
         width: 100%;
+        font-size: 14px;
         color: #00703c;
         border-bottom: 1px dotted #00703c;
         text-decoration: none; }
@@ -541,7 +545,7 @@ body .field-collection-container {
       font-family: arial;
       color: #444;
       font-size: 16px;
-      line-height: 22px;
+      line-height: 24px;
       font-size: 12px;
       line-height: 16px;
       display: block;
@@ -616,6 +620,7 @@ body .field-collection-container {
   .block.block--bean .bean-button-promo-1 {
     position: relative; }
     .block.block--bean .bean-button-promo-1 .field__item:after {
+      top: 44%;
       content: '\f04b';
       font-family: FontAwesome;
       font-size: 8px;
@@ -624,7 +629,6 @@ body .field-collection-container {
       top: calc(50% - 4px);
       right: 5px;
       color: #00703c;
-      top: calc(50% - 4px);
       color: white;
       right: 10px; }
     .block.block--bean .bean-button-promo-1 .field__item a {
@@ -658,7 +662,7 @@ body .field-collection-container {
         font-family: arial;
         color: #444;
         font-size: 16px;
-        line-height: 22px;
+        line-height: 24px;
         display: block;
         float: left;
         width: 100%;
@@ -669,11 +673,11 @@ body .field-collection-container {
       font-family: arial;
       color: #444;
       font-size: 16px;
-      line-height: 22px;
+      line-height: 24px;
       padding-left: 30px; }
   .block.block--bean .bean-faq .content .field--name-field-read-more-link .field__item {
     position: relative;
-    float: right;
+    float: left;
     padding: 10px 20px; }
     .block.block--bean .bean-faq .content .field--name-field-read-more-link .field__item:after {
       content: '\f04b';
@@ -733,7 +737,7 @@ body .field-collection-container {
       font-family: arial;
       color: #444;
       font-size: 16px;
-      line-height: 22px;
+      line-height: 24px;
       display: block;
       float: left;
       width: 100%;
@@ -858,8 +862,8 @@ body .field-collection-container {
                   line-height: 18px; } }
               @media (min-width: 70em) {
                 .block.block--bean .bean-showcase .showcase-elements .field__item .field--name-field-showcase-link .field__items .field__item {
-                  font-size: 24px;
-                  line-height: 28px; } }
+                  font-size: 30px;
+                  line-height: 32px; } }
               .block.block--bean .bean-showcase .showcase-elements .field__item .field--name-field-showcase-link .field__items .field__item a {
                 display: block;
                 float: left;
@@ -956,7 +960,8 @@ body .field-collection-container {
         @media (min-width: 70em) {
           .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-image .field__items .field__item {
             width: 150px;
-            height: 150px; } }
+            height: 150px;
+            margin-top: 15px; } }
         .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-image .field__items .field__item:first-child {
           display: block; }
       .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-link {
@@ -984,7 +989,7 @@ body .field-collection-container {
         font-family: arial;
         color: #444;
         font-size: 16px;
-        line-height: 22px;
+        line-height: 24px;
         display: block;
         float: right;
         width: calc(100% - 80px);
@@ -993,6 +998,8 @@ body .field-collection-container {
           .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-intro {
             float: left;
             width: calc(100% - 150px); } }
+        .block.block--bean .bean-subsections > .content .field__item .field--name-field-subsection-intro .field__item {
+          margin-top: 10px; }
     .block.block--bean .bean-subsections > .content .field--name-field-promo-read-more .field__item {
       position: relative;
       padding-right: 20px; }
@@ -1066,7 +1073,7 @@ body .field-collection-container {
         font-family: arial;
         color: #444;
         font-size: 16px;
-        line-height: 22px;
+        line-height: 24px;
         color: #00703c;
         background: #eee;
         border: 1px solid #ccc;
@@ -1090,7 +1097,7 @@ body .field-collection-container {
           font-family: arial;
           color: #444;
           font-size: 16px;
-          line-height: 22px;
+          line-height: 24px;
           display: block;
           float: left;
           width: 100%;
@@ -1309,7 +1316,7 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
                 font-family: arial;
                 color: #444;
                 font-size: 13px;
-                line-height: 19px;
+                line-height: 21px;
                 margin: 0;
                 display: block;
                 float: left;
@@ -1345,6 +1352,9 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
     #block-bean-home-pride-of-niner-nation {
       padding: 20px 20px 0 0px;
       width: calc(100% - 300px); } }
+  @media (min-width: 70em) {
+    #block-bean-home-pride-of-niner-nation {
+      width: calc(100% - 350px); } }
   #block-bean-home-pride-of-niner-nation h2.block__title {
     font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
     font-weight: 400;
@@ -1387,11 +1397,14 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
   display: block;
   float: left;
   width: 100%;
-  padding: 0;
+  padding: 0 0 30px 0;
   background: white; }
   @media (min-width: 45em) {
     #block-bean-home-support-the-band {
       width: 300px; } }
+  @media (min-width: 70em) {
+    #block-bean-home-support-the-band {
+      width: 350px; } }
   #block-bean-home-support-the-band .block__content .content .header {
     display: block;
     float: left;
@@ -1418,7 +1431,7 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
       font-family: arial;
       color: #444;
       font-size: 16px;
-      line-height: 22px;
+      line-height: 24px;
       text-align: center;
       color: white;
       font-size: 16px;
@@ -1487,8 +1500,9 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
         font-family: arial;
         color: #444;
         font-size: 14px;
-        line-height: 20px;
-        color: #444; }
+        line-height: 22px;
+        color: #444;
+        margin: 0 0 5px 0; }
 
 #block-views-news-block-1 {
   display: block;
@@ -1497,9 +1511,12 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
   @media (min-width: 45em) {
     #block-views-news-block-1 {
       padding: 20px 20px 0 0px;
-      background: url("/sites/all/themes/unc_charlotte4/img/0775-1935.png") no-repeat right bottom;
+      background: url("/sites/all/themes/unc_charlotte4/img/band-member-85.png") no-repeat right bottom;
       max-width: 1200px;
       margin: auto; } }
+  @media (min-width: 70em) {
+    #block-views-news-block-1 {
+      background: url("/sites/all/themes/unc_charlotte4/img/band-member-92.png") no-repeat right bottom; } }
   #block-views-news-block-1 h2.block__title {
     display: none;
     font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
@@ -1517,6 +1534,9 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
     @media (min-width: 45em) {
       #block-views-news-block-1 h2.block__title {
         width: calc(100% - 300px); } }
+    @media (min-width: 70em) {
+      #block-views-news-block-1 h2.block__title {
+        width: calc(100% - 350px); } }
   #block-views-news-block-1 .view-news {
     position: relative; }
     #block-views-news-block-1 .view-news .view-content {
@@ -1529,13 +1549,17 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
         #block-views-news-block-1 .view-news .view-content {
           width: calc(100% - 300px);
           padding: 0; } }
+      @media (min-width: 70em) {
+        #block-views-news-block-1 .view-news .view-content {
+          width: calc(100% - 350px); } }
       #block-views-news-block-1 .view-news .view-content .views-field-title {
         display: block;
         float: left;
         width: 100%;
         margin: 0; }
         #block-views-news-block-1 .view-news .view-content .views-field-title h2 {
-          margin: 15px 0; }
+          margin: 15px 0 5px 0;
+          padding: 10px 0 0 0; }
         #block-views-news-block-1 .view-news .view-content .views-field-title .field-content {
           font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
           font-weight: 400;
@@ -1556,7 +1580,7 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
         float: left;
         padding-right: 20px;
         position: relative;
-        margin: 20px 0; }
+        margin: 10px 0 30px 0; }
         #block-views-news-block-1 .view-news .view-content .views-field-title-1:after {
           content: '\f04b';
           font-family: FontAwesome;
@@ -1590,7 +1614,13 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
       float: left; }
       @media (min-width: 45em) {
         #block-views-news-block-1 .view-news .more-link {
-          width: calc(100% - 300px); } }
+          width: 70%;
+          width: calc(100% - 300px);
+          min-width: 355px;
+          margin-bottom: 40px; } }
+      @media (min-width: 70em) {
+        #block-views-news-block-1 .view-news .more-link {
+          width: calc(100% - 350px); } }
       #block-views-news-block-1 .view-news .more-link:after {
         content: '\f04b';
         font-family: FontAwesome;
@@ -1667,7 +1697,7 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
           font-family: arial;
           color: #444;
           font-size: 16px;
-          line-height: 22px;
+          line-height: 24px;
           width: 100%;
           margin: 0;
           border: none;
@@ -1689,8 +1719,9 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
   width: 100%; }
   @media (min-width: 45em) {
     #block-bean-join-pride-of-niner-nation {
-      padding: 0px 20px 0 10px;
-      width: calc(100% - 300px); } }
+      width: calc(100% - 300px);
+      margin-top: -37px;
+      padding: 0px 20px 0 10px; } }
   #block-bean-join-pride-of-niner-nation h2.block__title {
     font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
     font-weight: 400;
@@ -1699,14 +1730,14 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
     font-size: 32px;
     line-height: 32px;
     display: block !important;
-    background: #fff;
-    text-align: center;
-    margin: auto;
+    float: none;
     width: 60%;
     min-width: 200px;
-    float: none;
+    margin: auto;
     position: relative;
-    top: 12px; }
+    top: 16px;
+    background: #fff;
+    text-align: center; }
     @media (min-width: 45em) {
       #block-bean-join-pride-of-niner-nation h2.block__title {
         width: 275px;
@@ -1799,7 +1830,7 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
             font-family: arial;
             color: #444;
             font-size: 16px;
-            line-height: 22px;
+            line-height: 24px;
             line-height: 22px;
             color: white;
             margin: 0;
@@ -1867,6 +1898,9 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
     float: right;
     width: calc(100% - 80px);
     padding: 0 20px; }
+    @media (min-width: 70em) {
+      #block-bean-join-request-more-information .content .field--name-field-promo-read-more .field__item a {
+        width: calc(100% - 150px); } }
 
 /* end join band - specific elements */
 /* sights and sounds - specific elements*/
@@ -1888,7 +1922,7 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
 #block-views-media-block-3 .block__content .view-content {
   border-top: 5px solid #444;
   padding-top: 80px;
-  max-width: 1200px;
+  max-width: 1160px;
   margin: auto; }
   #block-views-media-block-3 .block__content .view-content .views-field-field-video-url {
     display: block;
@@ -1935,7 +1969,7 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
 /* images */
 #block-views-media-block-1 {
   float: none;
-  max-width: 1200px;
+  max-width: 1160px;
   margin: auto; }
   #block-views-media-block-1 h2.block__title {
     font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
@@ -2052,7 +2086,7 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
   #block-block-17 .block__content {
     border-top: 5px solid #444;
     margin: auto;
-    max-width: 1200px; }
+    max-width: 1160px; }
     #block-block-17 .block__content h2 {
       max-width: 1200px;
       width: 250px;
@@ -2079,7 +2113,7 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
         padding: 0 20px; }
         @media (min-width: 45em) {
           #block-block-17 .block__content #instafeed .item {
-            width: 33.3333%; } }
+            width: 33%; } }
         #block-block-17 .block__content #instafeed .item a {
           position: relative; }
           #block-block-17 .block__content #instafeed .item a h3 {
@@ -2143,7 +2177,7 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
   float: left;
   width: 100%; }
   #block-views-media-block-2 .block__title {
-    max-width: 1200px;
+    max-width: 1160px;
     font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
     font-weight: 400;
     text-transform: uppercase;
@@ -2160,7 +2194,7 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
       #block-views-media-block-2 .block__title {
         width: 350px; } }
   #block-views-media-block-2 .block__content {
-    max-width: 1200px;
+    max-width: 1160px;
     margin: auto;
     border-top: 5px solid #444;
     padding-top: 60px; }
@@ -2279,6 +2313,9 @@ html body div.jp-audio {
     padding: 0 10px;
     margin: auto;
     height: auto; }
+    @media (min-width: 70em) {
+      .l-header-third .container {
+        padding-left: 0; } }
     .l-header-third .container .l-region--header-third #block-menu-block-1 {
       display: block;
       float: left;
@@ -2319,11 +2356,16 @@ html body div.jp-audio {
             @media (min-width: 45em) {
               .l-header-third .container .l-region--header-third #block-menu-block-1 .menu-block-wrapper ul li {
                 margin: 0; } }
-            .l-header-third .container .l-region--header-third #block-menu-block-1 .menu-block-wrapper ul li.active-trail, .l-header-third .container .l-region--header-third #block-menu-block-1 .menu-block-wrapper ul li:hover {
+            .l-header-third .container .l-region--header-third #block-menu-block-1 .menu-block-wrapper ul li.active-trail {
               border-bottom: 1px solid #00703c !important; }
-              .l-header-third .container .l-region--header-third #block-menu-block-1 .menu-block-wrapper ul li.active-trail a, .l-header-third .container .l-region--header-third #block-menu-block-1 .menu-block-wrapper ul li:hover a {
+              .l-header-third .container .l-region--header-third #block-menu-block-1 .menu-block-wrapper ul li.active-trail a {
                 color: #444;
                 border-bottom: 5px solid #00703c; }
+            .l-header-third .container .l-region--header-third #block-menu-block-1 .menu-block-wrapper ul li:hover {
+              border-bottom: 1px solid #bea848 !important; }
+              .l-header-third .container .l-region--header-third #block-menu-block-1 .menu-block-wrapper ul li:hover a {
+                color: #444;
+                border-bottom: 5px solid #bea848; }
             .l-header-third .container .l-region--header-third #block-menu-block-1 .menu-block-wrapper ul li a {
               font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
               font-weight: 400;
@@ -2419,7 +2461,7 @@ html body div.jp-audio {
     font-family: arial;
     color: #444;
     font-size: 16px;
-    line-height: 22px;
+    line-height: 24px;
     color: #00703c;
     background: #eee;
     border: 1px solid #ccc;
@@ -2536,7 +2578,7 @@ html body div.jp-audio {
     font-family: arial;
     color: #444;
     font-size: 16px;
-    line-height: 22px;
+    line-height: 24px;
     display: block;
     float: left;
     width: 100%;
@@ -2546,7 +2588,7 @@ html body div.jp-audio {
     font-family: arial;
     color: #444;
     font-size: 16px;
-    line-height: 22px;
+    line-height: 24px;
     display: block;
     float: left;
     width: 100%;
@@ -2645,7 +2687,7 @@ html body div.jp-audio {
     font-family: arial;
     color: #444;
     font-size: 16px;
-    line-height: 22px;
+    line-height: 24px;
     line-height: 22px;
     color: #444;
     padding: 0 10px;
@@ -2657,7 +2699,7 @@ html body div.jp-audio {
     font-family: arial;
     color: #444;
     font-size: 16px;
-    line-height: 22px;
+    line-height: 24px;
     line-height: 22px;
     color: #444;
     padding: 0 10px;
@@ -2679,6 +2721,10 @@ html body div.jp-audio {
   @media (min-width: 70em) {
     .view-id-media.view-display-id-page_2 .views-row {
       width: 33.3333%; } }
+  .view-id-media.view-display-id-page_2 .views-row .views-field-field-image-upload .field-content a {
+    display: none; }
+  .view-id-media.view-display-id-page_2 .views-row .views-field-field-image-upload .field-content a:first-child {
+    display: block; }
 .view-id-media.view-display-id-page_3 .views-row {
   display: block;
   float: left;

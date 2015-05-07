@@ -1,14 +1,12 @@
 jQuery( document ).ready(function () {
 
-	frontWaypoints();
-
 	var userFeed = new Instafeed({
 		get: 'user',
 		userId: 1802894417,
 		limit:3,
 		resolution:'standard_resolution',
 		accessToken: '1802894417.467ede5.8fd8ec2dd0944d89b7cb8aa0c1f927b9',
-		template: '<div class="item"><a href="{{link}}" target="_blank"><img src="{{image}}" /><h3>@UNCCMARCH</h3></a></div>'
+		template: '<div class="item"><a href="{{link}}" target="_blank"><img src="{{image}}" /><h3>@UNCCBANDS</h3></a></div>'
 	});
 	userFeed.run();
 
@@ -111,80 +109,7 @@ function addLoadEvent(func) {
 		}
 	}
 }
-function frontWaypoints(){
-		jQuery('.block--views-events-block-1 .view-header').waypoint(
-			function(direction){
-				jQuery(this).addClass('open');
-			},
-			{ offset: 0 }
-		);
-		jQuery('body.front #block-bean-homepage-billboard').waypoint(
-				function(direction){
-					if(isDesktop()){
-						if(direction == "down") {
-							jQuery('#a1').css('position', 'relative');
-							jQuery('#a2').css('position', 'fixed');
-							jQuery('#a3').css('position', 'relative');
-						} else {
-							jQuery('#a1').css('position', 'relative');
-							jQuery('#a2').css('position', 'relative');
-							jQuery('#a3').css('position', 'relative');
-						}
-					}else{
-						jQuery('#a1').css('position', 'relative');
-						jQuery('#a2').css('position', 'relative');
-						jQuery('#a3').css('position', 'relative');
-						jQuery('#a4').css('min-height', '0');
-					}
-				},
-				{ offset: 157 }
-		);
-		jQuery('body.front #a2').waypoint(
-				function(direction){
-					if(isDesktop()){
-						if(direction == "down") {
-							jQuery('#a1').css('position', 'relative');
-							jQuery('#a2').css('position', 'relative');
-							jQuery('#a3').css('position', 'fixed');
-							jQuery('#a4').css('min-height', '100vh');
-						} else {
-							jQuery('#a1').css('position', 'relative');
-							jQuery('#a2').css('position', 'fixed');
-							jQuery('#a3').css('position', 'relative');
-						}
-					}else{
-						jQuery('#a1').css('position', 'relative');
-						jQuery('#a2').css('position', 'relative');
-						jQuery('#a3').css('position', 'relative');
-						jQuery('#a4').css('min-height', '0');
-					}
-				},
-				{ offset: 148 }
-		);
-		jQuery('body.front #a3').waypoint(
-				function(direction){
-					if(isDesktop()){
-						if(direction == "down") {
-							jQuery('#a1').css('position', 'relative');
-							jQuery('#a2').css('position', 'relative');
-							jQuery('#a3').css('position', 'relative');
-							jQuery('#a4').css('min-height', '0');
-						} else {
-							jQuery('#a1').css('position', 'relative');
-							jQuery('#a2').css('position', 'relative');
-							jQuery('#a3').css('position', 'fixed');
-							jQuery('#a4').css('min-height', '100vh');
-						}
-					}else{
-						jQuery('#a1').css('position', 'relative');
-						jQuery('#a2').css('position', 'relative');
-						jQuery('#a3').css('position', 'relative');
-						jQuery('#a4').css('min-height', '0');
-					}
-				},
-				{ offset: 141 }
-		);
-}
+
 function isDesktop() {
 	var w = window,
 	d = document,

@@ -62,9 +62,6 @@ html{
 				}
 				.l-content-center{
 					@include floatblock();
-					@include breakpoint($tab,true){
-						@include eq-p();
-					}
 					.wrapper{
 						max-width:$maxwidth;
 						margin:auto;
@@ -74,18 +71,16 @@ html{
 							@include floatblock();
 							@include breakpoint($tab,true){
 								@include grid-span(3,1);
-								@include eq();
 							}
 							@include breakpoint($desk,true){
 								@include grid-span(3,1);
+								padding-right: 10px;
 							}
 							.l-region--nav-sidebar{}
 						}
 						.l-content-wrapper{
 							@include floatblock();
 							@include breakpoint($tab,true){
-								@include eq();
-								@include eq-p();
 								@include grid-span(9,4);
 							}
 							@include breakpoint($desk,true){
@@ -98,9 +93,10 @@ html{
 							}
 							.l-content{
 								@include floatblock();
+								padding: 10px 0 0 0;
 								@include breakpoint($tab,true){
-									@include eq();
 									@include float-span(9);
+									padding: 20px 20px 50px 0;
 								}
 								.l-region--above-content{
 									@include floatblock();
@@ -177,21 +173,15 @@ html{
 			}
 			.l-main{
 				.l-content-center{
-						@include eq-p();
 					.l-nav-sidebar{
 							@include grid-span(3,10);
-							@include eq();
 					}
 					.l-content-wrapper{
-							@include eq();
-							@include eq-p();
 							@include grid-span(9,1);
 						.l-content{
-								@include eq();
 								@include float-span(9);
 							}
 						.l-promo-sidebar{
-								@include eq();
 								@include float-span(3);
 						}
 					}
@@ -215,21 +205,15 @@ html{
 			}
 			.l-main{
 				.l-content-center{
-						@include eq-p();
 					.l-nav-sidebar{
-							@include eq();
 							@include grid-span(3,1);
 					}
 					.l-content-wrapper{
-							@include eq();
-							@include eq-p();
 							@include grid-span(9,4);
 						.l-content{
-								@include eq();
 								@include float-span(9);
 							}
 						.l-promo-sidebar{
-								@include eq();
 								@include float-span(3);
 						}
 					}
