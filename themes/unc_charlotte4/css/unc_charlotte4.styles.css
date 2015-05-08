@@ -165,7 +165,7 @@ body {
   body.front #a3 {
     position: relative;
     z-index: 996;
-    background: #eee;
+    background: #E8E8E4;
     min-height: 100vh; }
     body.front #a3 .wrapper {
       display: block;
