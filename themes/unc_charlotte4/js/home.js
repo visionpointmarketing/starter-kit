@@ -55,7 +55,7 @@ function frontWaypoints(){
 						jQuery('#a4').css('min-height', '0');
 					}
 				},
-				{ offset: 0 }
+				{ offset: 1 }
 		);
 		jQuery('body.front #a3').waypoint(
 				function(direction){
