@@ -38,7 +38,7 @@
 	transition:				$element $time $type;
 }
 @mixin f-impact($size:42px){
-	font-family: 'TradeGothicLTStd-BdCn20','Impact W01 2010',Impact, Arial, sans-serif;
+	font-family: 'TradeGothicLTStd-BdCn20', Impact, Arial, sans-serif;
 	font-weight:400;
 	text-transform:uppercase;
 	color:#444;

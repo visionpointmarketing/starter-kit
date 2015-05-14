@@ -88,6 +88,7 @@ img{
 /* page-specific region styling */
 body{
 	&.front{
+		#a1, #a2, #a3, #a4 { top: 0; }
 		#a1{
 			z-index:998;
 			background:white;
@@ -172,8 +173,10 @@ body{
 
 /*unc charlotte header*/
 #header-wrapper{
-	height:100px;
+	height: 100px;
+	position: relative;
 	background: url("/sites/all/themes/unc_charlotte4/img/header-bg.png") repeat-x scroll center top #FFFFFF;
+	z-index: 999;
 	.container{
 		margin:auto;
 		max-width:$maxwidth;
@@ -232,9 +235,9 @@ body{
 						.site-title{
 							line-height:20px;
 							font-size: 19px;
-							@include breakpoint($tab,true){
+							@include breakpoint($tab-large,true){
 								font-size: 21px;
-								font-weight: 600;
+								//font-weight: 600;
 							}
 						}
 					}
@@ -1454,6 +1457,9 @@ html #block-views-basic-page-featured-block{
 					text-align:center;
 					color:white;
 					margin:0;
+					@include breakpoint($desk,true){
+						padding: 50px 20px 20px 20px;
+					}
 				}
 				p{
 					@include f-text();
@@ -1464,6 +1470,9 @@ html #block-views-basic-page-featured-block{
 					width:75%;
 					margin:auto;
 					padding-bottom:10px;
+					@include breakpoint($desk,true){
+						padding-bottom: 0;
+					}
 				}
 				&:after{
 					content:'';
@@ -1484,6 +1493,11 @@ html #block-views-basic-page-featured-block{
 						top:20px;
 						border-left:150px solid rgba(255, 255, 255, 0);
 						border-right:150px solid rgba(255, 255, 255, 0);
+					}
+					@include breakpoint($desk,true){
+						top:20px;
+						border-left:175px solid rgba(255, 255, 255, 0);
+						border-right:175px solid rgba(255, 255, 255, 0);
 					}
 				}
 			}
@@ -1509,11 +1523,11 @@ html #block-views-basic-page-featured-block{
 				}
 				a{
 					@include floatblock();
-					border-top:3px solid #444;
-					padding-top:40px;
 					text-decoration:none;
 					color:$green;
 					.content{
+						border-top:3px solid #444;
+						padding-top:40px;
 						h3{
 							@include f-impact(30px);
 							color:$green;
