@@ -118,7 +118,7 @@ function isDesktop() {
 	x = w.innerWidth || e.clientWidth || g.clientWidth,
 	y = w.innerHeight|| e.clientHeight|| g.clientHeight;
 	//console.log(x);
-	if(x >= 1200) {
+	if(x >= 1120) {
 		return true;
 	} else {
 		return false;

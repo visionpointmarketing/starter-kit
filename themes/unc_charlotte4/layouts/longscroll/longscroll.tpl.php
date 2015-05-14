@@ -225,11 +225,11 @@
                 </div> <!-- #footer-name -->
                 <div id="footer-follow" class="span3 offset3">
                   <p id="social-title">Follow UNC Charlotte</p>
-                  <div class="facebook social-icons"><a target="_blank" title="Facebook" href="http://www.facebook.com/UNCCharlotte"><img height="20" width="20" alt="Facebook" src="/sites/all/themes/unc_charlotte4/img/1x1.gif"></a></div>
-                  <div class="blog social-icons"><a target="_blank" title="Blogger" href="http://unccltnews.blogspot.com/"><img height="20" width="20" alt="Blogger" src="/sites/all/themes/unc_charlotte4/img/1x1.gif"></a></div>
-                  <div class="twitter social-icons"><a target="_blank" title="Twitter" href="http://twitter.com/UNCCharlotte"><img height="20" width="20" alt="Twitter" src="/sites/all/themes/unc_charlotte4/img/1x1.gif"></a></div>
-                  <div class="flickr social-icons"><a target="_blank" title="Flickr" href="http://www.flickr.com/photos/stakeyourclaim/sets"><img height="20" width="20" alt="Flickr" src="/sites/all/themes/unc_charlotte4/img/1x1.gif"></a></div>
-                  <div class="youtube social-icons"><a target="_blank" title="YouTube" href="http://www.youtube.com/unccharlottevideo"><img height="20" width="20" alt="YouTube" src="/sites/all/themes/unc_charlotte4/img/1x1.gif"></a></div>
+                  <div class="facebook social-icons"><a target="_blank" title="Visit us on Facebook" href="http://www.facebook.com/UNCCharlotte"><img height="20" width="20" alt="Facebook" src="/sites/all/themes/unc_charlotte4/img/1x1.gif"></a></div>
+                  <div class="blog social-icons"><a target="_blank" title="Visit us on Blogger" href="http://unccltnews.blogspot.com/"><img height="20" width="20" alt="Blogger" src="/sites/all/themes/unc_charlotte4/img/1x1.gif"></a></div>
+                  <div class="twitter social-icons"><a target="_blank" title="Follow us on Twitter" href="http://twitter.com/UNCCharlotte"><img height="20" width="20" alt="Twitter" src="/sites/all/themes/unc_charlotte4/img/1x1.gif"></a></div>
+                  <div class="flickr social-icons"><a target="_blank" title="Visit us on Flickr" href="http://www.flickr.com/photos/stakeyourclaim/sets"><img height="20" width="20" alt="Flickr" src="/sites/all/themes/unc_charlotte4/img/1x1.gif"></a></div>
+                  <div class="youtube social-icons"><a target="_blank" title="Visit us on YouTube" href="http://www.youtube.com/unccharlottevideo"><img height="20" width="20" alt="YouTube" src="/sites/all/themes/unc_charlotte4/img/1x1.gif"></a></div>
                 </div> <!-- #footer-follow -->
               </div> <!--/.row-->
             </div> <!-- #footer-bottom -->

@@ -1,18 +1,7 @@
 @font-face {
-	font-family: 'TradeGothicLTStd';
-	src: url('/sites/all/themes/unc_charlotte4/font/TradeGothicLTStd.otf');
-}
-@font-face {
-	font-family: 'TradeGothicLTStd-Bd2';
-	src: url('/sites/all/themes/unc_charlotte4/font/TradeGothicLTStd-Bd2.otf');
-}
-@font-face {
 	font-family: 'TradeGothicLTStd-BdCn20';
-	src: url('/sites/all/themes/unc_charlotte4/font/TradeGothicLTStd-BdCn20.otf');
-}
-@font-face {
-	font-family: 'TradeGothicLTStd-Cn18';
-	src: url('/sites/all/themes/unc_charlotte4/font/TradeGothicLTStd-Cn18.otf');
+	src: url('/sites/all/themes/unc_charlotte4/fonts/TradeGothicLTStd-BdCn20.otf') format('embedded-opentype'),
+		 url('/sites/all/themes/unc_charlotte4/fonts/TradeGothicLTStd-BdCn20.woff') format('woff');
 }
 
 html {
@@ -41,4 +30,8 @@ h3{
 p{
 	@include f-text(16px);
 	margin:10px 0;
+}
+a {
+	text-decoration: none;
+	a:hover { text-decoration: underline; }
 }

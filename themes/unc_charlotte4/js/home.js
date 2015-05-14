@@ -55,7 +55,7 @@ function frontWaypoints(){
 						jQuery('#a4').css('min-height', '0');
 					}
 				},
-				{ offset: 148 }
+				{ offset: 0 }
 		);
 		jQuery('body.front #a3').waypoint(
 				function(direction){
@@ -78,6 +78,6 @@ function frontWaypoints(){
 						jQuery('#a4').css('min-height', '0');
 					}
 				},
-				{ offset: 141 }
+				{ offset: 0 }
 		);
 }
