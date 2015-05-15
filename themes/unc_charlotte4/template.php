@@ -47,7 +47,7 @@ function unc_charlotte4_menu_tree__menu_social_menu($variables){
 }
 function unc_charlotte4_menu_link__menu_social_menu($variables){
   $element = $variables['element'];
-  return '<li' . drupal_attributes($element['#attributes']) . '><a href="' . $element['#href'] . '" target="_blank" class="btn btn-default" role="button" title="icon for '.$element['#title'].'"><span class="fa fa-' . $element['#title'] . '" aria-hidden="true"></span></a></li>';
+  return '<li' . drupal_attributes($element['#attributes']) . '><a href="' . $element['#href'] . '" target="_blank" class="btn btn-default" role="button" title="'.$element['#localized_options']['attributes']['title'].'"><span class="fa fa-' . $element['#title'] . '" aria-hidden="true"></span></a></li>';
 }
 /**
  * Implementation of hook_theme().
