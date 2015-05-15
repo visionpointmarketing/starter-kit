@@ -24,12 +24,13 @@ function unc_charlotte4_preprocess_page(&$vars) {
 
 
   if(drupal_is_front_page()){
-  	drupal_add_js(drupal_get_path('theme', 'unccadmiss_theme') . '/sites/all/themes/unc_charlotte4/js/home.js');
+  	drupal_add_js(drupal_get_path('theme', 'unc_charlotte4') . '/js/home.js');
   	//drupal_add_library('waypoints', 'waypoints');
   }
-  /*if ($variables['node']->nid == '21') {
-    drupal_add_js(drupal_get_path('theme', 'visionpoint') . '/js/instafeed.js');
-  }*/
+  if ($vars['node']->nid == '77') {
+    drupal_add_js(drupal_get_path('theme', 'unc_charlotte4') . '/js/instafeed.min.js');
+    drupal_add_js(drupal_get_path('theme', 'unc_charlotte4') . '/js/sights.js');
+  }
 
 }
 

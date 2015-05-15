@@ -18,7 +18,6 @@ stylesheets[all][] = css/unc_charlotte4.no-query.css
 ; ========================================
 scripts[] = js/unc_charlotte4.behaviors.js
 scripts[] = js/custom.js
-scripts[] = js/instafeed.min.js
 
 ; ========================================
 ; Regions
