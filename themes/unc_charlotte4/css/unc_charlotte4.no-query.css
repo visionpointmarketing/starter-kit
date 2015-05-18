@@ -136,15 +136,7 @@ body {
     z-index: 998;
     background: white;
     border-bottom: 8px solid #bea848;
-    position: relative;
-    /* 			&:after{
-    				content:'';
-    				height:5px;
-    				display:block;
-    				float:left;
-    				width:100%;
-    				background:$gold;
-    			} */ }
+    position: relative; }
   body.front #a2 {
     position: relative;
     z-index: 997;

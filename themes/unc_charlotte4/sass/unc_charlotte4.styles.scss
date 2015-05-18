@@ -94,21 +94,15 @@ body{
 			background:white;
 			border-bottom:8px solid $gold;
 			position:relative;
-/* 			&:after{
-				content:'';
-				height:5px;
-				display:block;
-				float:left;
-				width:100%;
-				background:$gold;
-			} */
 		}
 		#a2{
 			position:relative;
 			z-index:997;
 			background:#eee;
 			border-bottom:8px solid $gold;
-			min-height:100vh;
+			@include breakpoint($desk,true){
+				min-height:100vh;
+			}
 			.wrapper{
 				max-width:$maxwidth;
 				padding:0 10px;
@@ -121,7 +115,9 @@ body{
 			z-index:996;
 			//background:#eee;
 			background: #E8E8E4;
-			min-height:100vh;
+			@include breakpoint($desk,true){
+				min-height:100vh;
+			}
 			.wrapper{
 				display:block;
 				margin:auto;
