@@ -56,8 +56,9 @@ p {
   margin: 10px 0; }
 
 a {
+  color: #006633;
   text-decoration: none; }
-  a a:hover {
+  a:hover {
     text-decoration: underline; }
 
 /* base default styles */
@@ -1752,6 +1753,8 @@ html #block-views-basic-page-featured-block .contextual-links-wrapper {
     @media (min-width: 70em) {
       #block-bean-join-pride-of-niner-nation h2.block__title {
         width: 500px; } }
+  #block-bean-join-pride-of-niner-nation .field-collection-item-field-subsection a {
+    pointer-events: none; }
 
 #block-bean-join-faqs {
   display: block;

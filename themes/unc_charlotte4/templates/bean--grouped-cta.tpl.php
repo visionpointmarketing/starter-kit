@@ -29,10 +29,10 @@
 ?>
 <div class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 	<div class="content"<?php print $content_attributes; ?>>
-		<div class="header">
+		<a href='/support-band'><div class="header">
 			<h2><?php print $title; ?></h2>
 			<p><?php print_r($content['field_intro'][0]['#markup']); ?></p>
-		</div>
+		</div></a>
 		<?php
 		if(isset($content['field_cta'][0])){
 			if(isset($content['field_cta'][1])){

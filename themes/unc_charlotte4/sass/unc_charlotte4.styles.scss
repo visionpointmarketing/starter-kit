@@ -1771,6 +1771,11 @@ html #block-views-basic-page-featured-block{
 			width: 500px;
 		}
 	}
+	.field-collection-item-field-subsection {
+		a {
+			pointer-events: none;
+		}
+	}
 }
 #block-bean-join-faqs{
 	@include floatblock();
