@@ -42,9 +42,6 @@ regions[footer_second] = Footer Second
 ; Layout
 ; ========================================
 layout[default_inner][all][] = css/layouts/default_inner/unc_charlotte4_default_inner.layout.css
-layout[twocolumn][all][] = css/layouts/twocolumn/unc_charlotte4_twocolumn.layout.css
-layout[sitemap][all][] = css/layouts/sitemap/unc_charlotte4_sitemap.layout.css
-layout[peeler][all][] = css/layouts/peeler/peeler.layout.css
 layout[longscroll][all][] = css/layouts/longscroll/longscroll.layout.css
 
 ; ========================================
