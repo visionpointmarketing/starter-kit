@@ -1,8 +1,6 @@
 jQuery( document ).ready(function () {
 
-	//console.log(window.innerHeight);
 	jQuery('.l-footer').appendTo('#a3');
-	if ( window.innerHeight < 1286 ){}
 	frontWaypoints();
 
 });
