@@ -26,6 +26,7 @@
  * @see template_preprocess_'entity'()
  * @see template_process()
  */
+
 ?>
 <div class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 	<div class="content"<?php print $content_attributes; ?>>
@@ -34,29 +35,17 @@
 			<p><?php print_r($content['field_intro'][0]['#markup']); ?></p>
 		</div></a>
 		<?php
-		if(isset($content['field_cta'][0])){
-			if(isset($content['field_cta'][1])){
-				if(isset($content['field_cta'][2])){
-					$val = 3;
-				}else{
-					$val = 2;
-				}
-			}else{
-				$val = 1;
-			}
-		}else{
-			$val = 0;
-		}
-		//print_r($content['field_cta'][0]['entity']['field_collection_item'][4]['field_cta_intro']['#items']);
 		$string = "";
-		for($i = 0; $i <= $val - 1; $i++){
-			$fa_icon = $content['field_cta'][$i]['entity']['field_collection_item'][$i + $val + 1]['field_fontawesome_icon']['#items'][0]['value'];
-			$cta_title = $content['field_cta'][$i]['entity']['field_collection_item'][$i + $val + 1]['field_cta_title']['#items'][0]['title'];
-			$cta_link = $content['field_cta'][$i]['entity']['field_collection_item'][$i + $val + 1]['field_cta_title']['#items'][0]['url'];
-			$cta_intro = $content['field_cta'][$i]['entity']['field_collection_item'][$i + $val + 1]['field_cta_intro']['#items'][0]['value'];
+		$ids = element_children($content['field_cta']);
+		foreach ($ids as $delta) {
+			$item = array_shift($content['field_cta'][$delta]['entity']['field_collection_item']);
+			$fa_icon = $item['field_fontawesome_icon']['#items'][0]['value'];
+			$cta_title = $item['field_cta_title']['#items'][0]['title'];
+			$cta_link = $item['field_cta_title']['#items'][0]['url'];
+			$cta_intro = $item['field_cta_intro']['#items'][0]['value'];
 			$string .= "<div class='cta-content'><a href='".$cta_link."'><div class='icon'><span class='fa fa-".$fa_icon."'aria-hidden='true'></span></div><div class='content'><h3>".$cta_title."</h3><p>".$cta_intro."</p></div></a></div>";
 		}
-			echo $string;
+		echo $string;
 		?>
 	</div>
 </div>
